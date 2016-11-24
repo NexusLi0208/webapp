@@ -1,0 +1,17 @@
+/*
+Power by lipeng
+ */
+@import "lib/rest.scss";
+@import "lib/mixin.scss";
+html,body{
+    height: 100%;
+    font-size:62.5%;
+    font-family:'Microsoft YaHei';
+}
+.main-cantainer{
+    max-width:750px;
+    height: 100%;
+    margin: 0 auto;
+    background: #eee;
+    font-size:1.6rem;
+}

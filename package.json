@@ -1,0 +1,26 @@
+{
+  "name": "mvvc",
+  "version": "1.0.0",
+  "description": "vue-test",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-compass": "^2.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-jshint": "^2.0.1",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-uglify": "^2.0.0",
+    "jquery": "^3.1.1",
+    "jshint": "^2.9.3",
+    "vue": "^2.0.3"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.17.5",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-livereload": "^3.8.1",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-notify": "^2.2.0",
+    "gulp-webserver": "^0.9.1"
+  }
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalabel=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>报名</title>
+    <link rel="stylesheet" href="../css/lib/amazeui/amazeui.min.css">
+    <link rel="stylesheet" href="../css/form.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/sign-up.css">
+</head>
+<body>
+    <section class="main-cantainer" id='sign-main'>
+        <h1 class='form-title'>会议报名</h1>
+        <div class='action1 form-box'>
+            <form id='action1'>
+                <input type="hidden" name='meeId' value='1'>
+                <p>
+                    <label for="userName">姓名：</label><input class='form-input' type="text" name="userName" id='userName'></p>
+                <p>
+                    <label for="province">性别：</label><select name="province" class='form-input' id="province">
+                <option value="0">男</option>
+                <option value="1">女</option></select></p>
+                <p>
+                    <label for="phone">手机号：</label><input class='form-input' type="text" name="phone" id="phone"></p>
+                <p>
+                    <label for="email">邮箱：</label><input class='form-input' type="mail" name="email" id='email'></p>
+                <p>
+                    <label for="unit">单位：</label><input class='form-input' type="text" name="unit" id='unit'></p>
+                <p>
+                    <label for="province">身份：</label><select name="province" class='form-input' id="province">
+                    <option value="0">校级正职</option>
+                    <option value="1">校级副职</option></select></p>
+                <p>
+                    <label for="province">职务：</label><select name="province" class='form-input' id="province">
+                    <option value="0">校长</option>
+                    <option value="1">老师</option></select></p>
+                <p>
+                    <label for="province">饮食：</label><select name="province" class='form-input' id="province">
+                    <option value="0">清真餐</option>
+                    <option value="1">非清真餐</option></select></p>
+                <p>
+                    <label>酒店：</label><input type="radio" value="0" name='roomType'>标间
+                    <input type="radio" name='roomType' value="1">双人间</p>
+                <p>
+                    <label>开票：</label><input type="radio" value="0" name='ticketType'>公司开具
+                    <input type="radio" name='ticketType' value="1">个人</p>
+                <p>
+                    <label>子会议：</label><input class='' type="checkbox" value='0' name="submeeIds">会议一&nbsp;<input class=''
+                        value='1' type="checkbox" name="submeeIds">会议二<input class='' value='2' type="checkbox" name="submeeIds">会议三</p>
+                <input type="hidden" name='meeId' value='1'>
+                <input type="hidden" id='' class='js_userId' name='userId' value=''>
+                <p class='btn-box'><button type="submit" class='form-btn'>提交报名</button></p>
+            </form>
+        </div>
+        </div>
+    </section>
+    <script src="../js/lib/jquery.js"></script>
+    <script src="../js/lib/vue-1.0.28.js"></script>
+    <script src="../js/plug/plug-form.js"></script>
+    <script src="../js/signUp.js"></script>
+</body>
+</html>
