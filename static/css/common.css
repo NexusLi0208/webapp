@@ -37,14 +37,18 @@ table {
 p {
   word-wrap: break-word; }
 
-html, body {
-  height: 100%;
-  font-size: 62.5%;
+* {
   font-family: 'Microsoft YaHei'; }
 
+html, body {
+  height: 100%;
+  font-size: 62.5%; }
+
 .main-cantainer {
+  position: relative;
   max-width: 750px;
+  min-width: 340px;
   height: 100%;
   margin: 0 auto;
-  background: #eee;
+  font-family: "Microsoft YaHei" !important;
   font-size: 1.6rem; }
