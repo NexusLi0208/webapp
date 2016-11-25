@@ -11,6 +11,12 @@ html,body{
     font-size:62.5%;
    
 }
+.floatl{
+    float:left;
+}
+.floatr{
+    float:right;
+}
 .main-cantainer{
     position: relative;
     max-width:750px;
@@ -19,5 +25,4 @@ html,body{
     margin: 0 auto;
     font-family:'Microsoft YaHei'!important;
     font-size:1.6rem;
-
 }

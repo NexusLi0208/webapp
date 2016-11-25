@@ -3,20 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalabel=no">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=1.0, user-scalable=no">
     <meta name="format-detection" content="telephone=no">
     <meta name="renderer" content="webkit">
     <meta http-equiv="Cache-Control" content="no-siteapp" />
-    <title>报名</title>
-    <link rel="stylesheet" href="../css/lib/amazeui/amazeui.min.css">
-    <link rel="stylesheet" href="../css/form.css">
+    <title>会议报名</title>
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/sign-up.css">
 </head>
 <body>
-    <section class="main-cantainer" id='sign-main'>
-        <h1 class='form-title'>会议报名</h1>
-        <div class='action1 form-box'>
+    <section class="main-cantainer">
+        <div class='form-main'>
+            <form action="">
+                <div class="form-group">
+                    <label for="userName" class="floatl">姓名:</label>
+                    <input type="text" class='form-input floatr' name="userName" id="userName" placeholder="请输入姓名">
+                </div>
+                <div class="form-group">
+                    <label for="province" class="floatl">姓别:</label>
+                    <span class="floatr"><img src="../css/img/list_arrow.png" alt=""></span>
+                    <select class='form-input floatr' name="province" id="province">
+                     <option value="男">男</option>
+                     <option value="女">女</option>
+                 </select>
+                </div>
+                <div class="form-group">
+                    <label for="phone" class="floatl">手机:</label>
+                    <input type="tel" class='form-input floatr' name="phone" id="phone" placeholder="请输入手机">
+                </div>
+                <div class="form-group">
+                    <label for="userName" class="floatl">邮箱:</label>
+                    <input type="email" class='form-input floatr' name="email" id="userName" placeholder="请输入邮箱">
+                </div>
+                <div class="form-group">
+                    <label for="unit" class="floatl">单位:</label>
+                    <span class="floatr"><img src="../css/img/list_arrow.png" alt=""></span>
+                    <select class='form-input floatr' name="unit" id="unit">
+                     <option value="0">单位一</option>
+                     <option value="1">单位二</option>
+                 </select>
+                </div>
+                <div class="form-group">
+                    <label for="dentity" class="floatl">身份:</label>
+                    <span class="floatr"><img src="../css/img/list_arrow.png" alt=""></span>
+                    <select class='form-input floatr' name="dentity" id="dentity">
+                     <option value="0">教师</option>
+                     <option value="1">校长</option>
+                 </select>
+                </div>
+                <div class="form-group">
+                    <label for="province" class="floatl">职务:</label>
+                    <span class="floatr"><img src="../css/img/list_arrow.png" alt=""></span>
+                    <select class='form-input floatr' name="province" id="province">
+                     <option value="0">校级正职</option>
+                     <option value="1">校级副职</option>
+                 </select>
+                </div>
+                <div class="form-group">
+                    <label for="province" class="floatl">饮食:</label>
+                    <span class="floatr"><img src="../css/img/list_arrow.png" alt=""></span>
+                    <select class='form-input floatr' name="food" id="food">
+                     <option value="0">清真</option>
+                     <option value="1">非清真</option>
+                 </select>
+                </div>
+                <hr class="form-hr">
+                <div class="form-group">
+                    <label for="province" class="floatl">酒店:</label>
+                    <span class="floatr"><img src="../css/img/list_arrow.png" alt=""></span>
+                    <select class='form-input floatr' name="food" id="food">
+                     <option value="0">上海假日</option>
+                     <option value="1">七天连锁</option>
+                 </select>
+                </div>
+                <div class="form-group">
+                    <label for="province" class="floatl">发票信息:</label>
+                    <span class="floatr"><img src="../css/img/list_arrow.png" alt=""></span>
+                    <span class='floatr form-text'>请选择</span>
+                </div>
+                   <div class="form-group">
+                    <label for="userName" class="floatl">发票抬头:</label>
+                    <input type="text" class='form-input floatr' name="userName" id="userName" placeholder="请输入姓名">
+                </div>
+                  <div class="form-group">
+                    <label for="userName" class="floatl">识别号:</label>
+                    <input type="text" class='form-input floatr' name="userName" id="userName" placeholder="请输入姓名">
+                </div>
+                  <div class="form-group">
+                    <label for="userName" class="floatl">开户地址:</label>
+                    <input type="text" class='form-input floatr' name="userName" id="userName" placeholder="请输入姓名">
+                </div>
+                  <div class="form-group">
+                    <label for="userName" class="floatl">开户行:</label>
+                    <input type="text" class='form-input floatr' name="userName" id="userName" placeholder="请输入姓名">
+                </div>
+                  <div class="form-group">
+                    <label for="userName" class="floatl">开户账号:</label>
+                    <input type="text" class='form-input floatr' name="userName" id="userName" placeholder="请输入姓名">
+                </div>
+                <hr class="form-hr">
+                <div class="form-group">
+                    <label for="province" class="floatl">分论坛选择：</label>
+                    <span class="floatr"><img src="../css/img/list_arrow.png" alt=""></span>
+                    <span class='floatr form-text'>请选择</span>
+                </div>
+                  <div class="form-group">
+                    <p class="submeet-name">"现代学徒试点(集团化办学)"分论坛</p>
+                   <p><span><img src="../css/img/clock.png" alt=""></span><time>8月12日</time></p>
+                </div>
+                <hr class="form-hr">
+                <div class="form-group">
+                    <label for="province" class="floatl">备注:</label>
+                    <span class="floatr"><img src="../css/img/list_arrow.png" alt=""></span>
+                    <span class='floatr form-text'>请输入</span>
+                </div>
+                <hr class="form-hr">
+                <hr class="form-hr">
+                <hr class="form-hr">
+                <button type='submit' class='sign-up-btn'>提交报名</button>
+            </form>
+        </div>
+        <!--<div class='action1 form-box'>
             <form id='action1'>
                 <input type="hidden" name='meeId' value='1'>
                 <p>
@@ -56,12 +163,12 @@
                 <input type="hidden" id='' class='js_userId' name='userId' value=''>
                 <p class='btn-box'><button type="submit" class='form-btn'>提交报名</button></p>
             </form>
-        </div>
+        </div>-->
         </div>
     </section>
     <script src="../js/lib/jquery.js"></script>
-    <script src="../js/lib/vue-1.0.28.js"></script>
     <script src="../js/plug/plug-form.js"></script>
     <script src="../js/signUp.js"></script>
 </body>
+
 </html>

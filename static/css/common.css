@@ -23,7 +23,7 @@ a:hover {
 em {
   font-style: normal; }
 
-li {
+ul, li {
   list-style: none; }
 
 img {
@@ -43,6 +43,12 @@ p {
 html, body {
   height: 100%;
   font-size: 62.5%; }
+
+.floatl {
+  float: left; }
+
+.floatr {
+  float: right; }
 
 .main-cantainer {
   position: relative;

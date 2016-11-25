@@ -91,7 +91,8 @@
 
 .index-meet-item .left {
   float: left;
-  width: 17rem;
+  width: 30%;
+  min-width: 17rem;
   height: auto; }
 
 .index-meet-item .left img {
@@ -99,7 +100,7 @@
   height: auto; }
 
 .index-meet-item .right {
-  width: 38rem;
+  width: 60%;
   padding-left: 1.5rem;
   float: left; }
 

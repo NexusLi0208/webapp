@@ -1,5 +1,5 @@
 @import "lib/mixin.scss";
- $blue:#00a0e9;
+@import "lib/color.scss";
 .index-header {
     width: 100%;
     height: auto;
@@ -99,7 +99,8 @@ border-bottom:1rem $blue solid;
 }
 .index-meet-item .left{
   float:left;
-  width: 17rem;
+  width: 30%;
+  min-width: 17rem;
   height: auto;
 }
 .index-meet-item .left img{
@@ -107,7 +108,7 @@ border-bottom:1rem $blue solid;
     height: auto;
 }
 .index-meet-item .right{
-    width:38rem;
+    width:60%;
     padding-left: 1.5rem;
     float:left;
 }
