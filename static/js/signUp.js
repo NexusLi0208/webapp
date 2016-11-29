@@ -1,10 +1,19 @@
- var urlIp = 'http://114.55.234.133:8070';
- var signUp = new Vue({
+ var urlIp = '';
+ new Vue({
  	el: '#sign-main',
  	data: {
- 		userId: '',
- 		item: {},
- 		items: []
+ 		formBox: {
+ 			basic: true,
+ 			tiket: false,
+ 			meetlist: false
+ 		},
+		 itemText:{
+			 tiketTxt:'请选择',
+			 meetTxt:'请选择',
+			 remarkTxt:'请填写'
+		 }
+
+
  	}
  	//	过滤器
 
@@ -13,12 +22,43 @@
  	//方法
  	,
  	methods: {
- 		signTep1: function (_this) {
+ 		selectTiket: function () {
+ 			this.formBox.tiket = true;
+ 			this.formBox.basic = false;
+ 			this.formBox.meetlist = false;
+ 		},
+		 go_basic:function(){
+           this.formBox.tiket = false;
+ 			this.formBox.basic = true;
+ 			this.formBox.meetlist = false;
+		 },
+ 		saveTiket: function () {
+			var _this=this,
+ 		    inputIndex = 0,
+ 			inputList = $('.js-tiket-info').find('input');
+ 			inputList.each(function () {
+ 				if (this.value!='') {
+ 					inputIndex++;
+ 				}
+ 			})
+ 			if (inputIndex > 0) {
+ 				_this.itemText.tiketTxt="已选择"
+ 			} else {
+ 				_this.itemText.tiketTxt="请选择"
+ 			}
+			 this.go_basic();
+ 		},
+ 		selectMeet: function () {
+ 			this.formBox.tiket = false;
+ 			this.formBox.basic = false;
+ 			this.formBox.meetlist = true;
+ 		},
+ 		formBox: function (_this) {
  			// 会议报名
  			var data = _this.serializeJson();
  			console.log(JSON.stringify(data));
  			$.ajax({
- 				url: urlIp + '/signUpOne/firstStep',
+ 				url: urlIp + '/formBoxOne/firstStep',
  				data: JSON.stringify(data),
  				type: "POST",
  				contentType: 'application/json',
@@ -35,71 +75,6 @@
  					alert('请求失败');
  				}
  			})
- 		},
- 		signTep2: function (_this) {
- 			// 会议报名
- 			var data = _this.serializeJson();
- 			console.log(JSON.stringify(data));
- 			$.ajax({
- 				url: urlIp + '/signup/two',
- 				data: JSON.stringify(data),
- 				type: "POST",
- 				contentType: 'application/json',
- 				async: true,
- 				success: function (data) {
- 					if (data.code == 0) {
- 						$('.action2').hide();
- 						$('.action3').show();
- 					}
- 				},
- 				error: function () {
- 					alert('请求失败');
- 				}
- 			})
- 		},
- 		signTep3: function (_this) {
- 			// 会议报名
- 			var data = _this.serializeJson();
- 			console.log(JSON.stringify(data));
- 			$.ajax({
- 				url: urlIp + '/save/info',
- 				data: JSON.stringify(data),
- 				type: "POST",
- 				contentType: 'application/json',
- 				async: true,
- 				success: function (data) {
- 					if (data.code == 200) {
- 						alert('报名成功');
- 					} else if (data.status == 400) {
- 						alert('报名失败');
- 					} else if (data.status == 500) {
- 						alert('服务器异常')
- 					}
- 				},
- 				error: function () {
- 					alert('请求失败');
- 				}
- 			})
  		}
  	}
  });
-
- $("#action1").submit(function (e) {
- 	e.preventDefault();
- 	var selectItem = $('input[name=submeeIds]:checked').length;
- 	if (selectItem < 2) {
- 		alert('请至少选择两个分会议');
- 	} else {
- 		signUp.signTep1($(this));
- 	}
-
- })
-
- $("#action2").submit(function (e) {
- 	e.preventDefault();
- 	signUp.signTep2($(this));
- })
- $("#action3").submit(function (e) {
- 	e.preventDefault();
- 	signUp.signTep3($(this));
- })

@@ -1,28 +1,80 @@
 /*
 Power by lipeng
  */
+
 @import "lib/rest.scss";
 @import "lib/mixin.scss";
-*{
- font-family:'Microsoft YaHei';
-}
-html,body{
+@import "lib/color.scss";
+html,
+body {
     height: 100%;
-    font-size:62.5%;
-   
+    font-size: 62.5%;
+    font-family: Arial, 'Microsoft YaHei';
 }
-.floatl{
-    float:left;
-}
-.floatr{
-    float:right;
-}
-.main-cantainer{
-    position: relative;
-    max-width:750px;
-    min-width: 340px;
-    height: 100%;
+
+body {
+    max-width: 640px;
+    min-width: 320px;
     margin: 0 auto;
-    font-family:'Microsoft YaHei'!important;
-    font-size:1.6rem;
+}
+
+input,
+select,
+button {
+    font-family: "Microsoft YaHei";
+}
+
+.floatl {
+    float: left;
+}
+
+.floatr {
+    float: right;
+}
+
+.main-cantainer {
+    width: 100%;
+    height: 100%;
+    background: 100%;
+    position: relative;
+    margin: 0 auto;
+    font-size: 1.6rem;
+}
+
+.form-btn {
+    width: 82%;
+    height: 4rem;
+    font-size: 1.7rem;
+    color: #fff;
+    border: none;
+    border-radius: .5rem;
+    outline: none;
+}
+
+.success-btn {
+    background: $blue;
+}
+
+.success-btn:active {
+    background: darken($blue, 10%);
+}
+
+.cancel-btn {
+    background: $red;
+}
+
+.cancel-btn:active {
+    background: $red_active;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+    clear: both;
 }

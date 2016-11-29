@@ -5,4 +5,5 @@ $(function(){
         autoplay : 2000,
         freeMode : false
     }); 
+    // $('.index-nav').css('width',$('body').css('width'));
 })

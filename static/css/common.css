@@ -9,7 +9,6 @@ body, ol, ul, h1, h2, h3, h4, h5, h6, p, th, td, dl, dd, form, fieldset, legend,
 
 body {
   font-size: 12px;
-  font-family: "微软雅黑","Arial Narrow",HELVETICA;
   background: #fff;
   -webkit-text-size-adjust: 100%; }
 
@@ -37,12 +36,21 @@ table {
 p {
   word-wrap: break-word; }
 
-* {
-  font-family: 'Microsoft YaHei'; }
-
-html, body {
+html,
+body {
   height: 100%;
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  font-family: Arial, 'Microsoft YaHei'; }
+
+body {
+  max-width: 640px;
+  min-width: 320px;
+  margin: 0 auto; }
+
+input,
+select,
+button {
+  font-family: "Microsoft YaHei"; }
 
 .floatl {
   float: left; }
@@ -51,10 +59,40 @@ html, body {
   float: right; }
 
 .main-cantainer {
-  position: relative;
-  max-width: 750px;
-  min-width: 340px;
+  width: 100%;
   height: 100%;
+  background: 100%;
+  position: relative;
   margin: 0 auto;
-  font-family: "Microsoft YaHei" !important;
   font-size: 1.6rem; }
+
+.form-btn {
+  width: 82%;
+  height: 4rem;
+  font-size: 1.7rem;
+  color: #fff;
+  border: none;
+  border-radius: .5rem;
+  outline: none; }
+
+.success-btn {
+  background: #00a0e9; }
+
+.success-btn:active {
+  background: #007db6; }
+
+.cancel-btn {
+  background: #f66; }
+
+.cancel-btn:active {
+  background: #eb5050; }
+
+.clearfix {
+  zoom: 1; }
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  visibility: hidden;
+  clear: both; }
