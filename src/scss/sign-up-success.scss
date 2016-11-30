@@ -1,0 +1,42 @@
+@import "lib/mixin.scss";
+@import "lib/color.scss";
+.successImg {
+    width: 11.2rem;
+    height: 11.2rem;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+
+.signUp-success-main {
+    width: 100%;
+    height: 100%;
+    padding-top: 12rem;
+    box-sizing: border-box;
+}
+
+.successImg img {
+    width: 100%;
+    height: auto;
+}
+
+.signUp-success-main {
+    text-align: center;
+}
+
+.signUp-success-main p {
+    font-size: 2.4rem;
+    color: #ff9e31;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.signUp-success-main button {
+    width: 15rem;
+    height: 4.4rem;
+    font-size: 1.5rem;
+    color: #fff;
+    border: none;
+    border-radius: .5rem;
+    outline: none;
+    margin: 0 auto;
+}

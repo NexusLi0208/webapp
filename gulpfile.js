@@ -13,7 +13,7 @@ var autoprefixer = require('gulp-autoprefixer');
 
 // 注册任务
 gulp.task('webserver', function () {
-    gulp.src('./static') // 服务器目录（./代表根目录）
+    gulp.src('./src') // 服务器目录（./代表根目录）
         .pipe(webserver({ // 运行gulp-webserver
             livereload: true, // 启用LiveReload
             open: true // 服务器启动时自动打开网页
@@ -21,14 +21,14 @@ gulp.task('webserver', function () {
 });
 // 检查脚本
 gulp.task('lint', function () {
-    gulp.src('./static/js/*.js')
+    gulp.src('./src/js/*.js')
         .pipe(jshint())
         .pipe(jshint.reporter('default'));
 });
 //压缩css
 gulp.task('cssmin', function () {
-    gulp.src('static/css/*.css')
-     .pipe(concat('style.css'))
+    gulp.src('src/css/**/*.css')
+        .pipe(concat('style.css'))
         .pipe(cssmin({
             advanced: false,//类型：Boolean 默认：true [是否开启高级优化（合并选择器等）]
             compatibility: 'ie8',//保留ie8及以下兼容写法 类型：String 默认：''or'*' [启用兼容模式； 'ie7'：IE7兼容模式，'ie8'：IE8兼容模式，'*'：IE9+兼容模式]
@@ -36,11 +36,11 @@ gulp.task('cssmin', function () {
             keepSpecialComments: '*'
             //保留所有特殊前缀 当你用autoprefixer生成的浏览器前缀，如果不加这个参数，有可能将会删除你的部分前缀
         }))
-        .pipe(gulp.dest('./static/dist/css'));
+        .pipe(gulp.dest('./dist/css'));
 });
 // 编译Sass
 gulp.task('sass', function () {
-    gulp.src('static/scss/*.scss')
+    gulp.src('src/scss/*.scss')
         .pipe(sass())
         // .pipe(concat('style.css'))
         .pipe(autoprefixer({
@@ -60,26 +60,42 @@ gulp.task('sass', function () {
             //        transform: rotate(45deg);
             remove: true //是否去掉不必要的前缀 默认：true 
         }))
-        .pipe(gulp.dest('static/css'));
+        .pipe(gulp.dest('src/css'));
 });
 
 // 合并，压缩文件
 gulp.task('scripts', function () {
-    gulp.src('./static/js/**/*.js')
-        .pipe(concat('all.js'))
+    gulp.src('./src/js/*.js')
         .pipe(gulp.dest('./dist/js'))
-        .pipe(rename('all.min.js'))
         .pipe(uglify())
-        .pipe(gulp.dest('./static/dist/js'));
+        .pipe(gulp.dest('./dist/js'));
+     gulp.src('./src/js/lib/*.js')
+        .pipe(concat('lib.js'))
+        .pipe(gulp.dest('./dist/js'))
+        .pipe(rename('lib.min.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('./dist/js'));
+    gulp.src('./src/js/plug/*.js')
+        .pipe(concat('plug.js'))
+        .pipe(gulp.dest('./dist/js'))
+        .pipe(rename('plug.min.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('./dist/js'));
+        
 });
+gulp.task('html',function(){
+    gulp.src('./src/**/*.html')
+    .pipe(gulp.dest('dist'))
+})
 
 
 // 默认任务
-gulp.task('default', ['webserver', 'sass', 'watch'])
+gulp.task('default', ['webserver', 'sass', 'watch','cssmin'])
 
 // 监听文件变化
 gulp.task('watch', function () {
-    gulp.watch('./static/scss/*.scss', ['sass']);
+    gulp.watch('./src/scss/*.scss', ['sass','cssmin']);
     gulp.watch('*.html', ['html']);
     // 监听根目录下所有.html文件
 })
+gulp.task('build',['cssmin','scripts','html'])

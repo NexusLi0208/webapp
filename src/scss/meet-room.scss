@@ -1,0 +1,42 @@
+@import "lib/mixin.scss";
+@import "lib/color.scss";
+.message-roll {
+    width: 100%;
+    box-sizing: border-box;
+    white-space: nowrap;
+    overflow: hidden;
+    height: 4rem;
+    line-height: 4rem;
+    color: $blue;
+    font-size: 1.3rem;
+    background: #fff;
+    padding-left: 2rem;
+}
+.message-icon {
+   float:left;
+   width:11%;
+}
+.message-roll img {
+     width: 3rem;
+    height: auto;
+}
+.message-roll p{
+     width:89%;
+    float:left;
+    overflow:hidden;
+}
+.marquee {
+    display: inline-block;
+    width: 100%;
+    animation: scrollText 10s infinite;
+}
+
+@keyframes scrollText {
+     0% {
+         -webkit-transform: translateX(0px);
+    }
+     100% {
+         -webkit-transform: translateX(-500px);
+    }
+    
+}

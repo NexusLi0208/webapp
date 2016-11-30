@@ -1,0 +1,43 @@
+.message-roll {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  white-space: nowrap;
+  overflow: hidden;
+  height: 4rem;
+  line-height: 4rem;
+  color: #00a0e9;
+  font-size: 1.3rem;
+  background: #fff;
+  padding-left: 2rem; }
+
+.message-icon {
+  float: left;
+  width: 11%; }
+
+.message-roll img {
+  width: 3rem;
+  height: auto; }
+
+.message-roll p {
+  width: 89%;
+  float: left;
+  overflow: hidden; }
+
+.marquee {
+  display: inline-block;
+  width: 100%;
+  -webkit-animation: scrollText 10s infinite;
+          animation: scrollText 10s infinite; }
+
+@-webkit-keyframes scrollText {
+  0% {
+    -webkit-transform: translateX(0px); }
+  100% {
+    -webkit-transform: translateX(-500px); } }
+
+@keyframes scrollText {
+  0% {
+    -webkit-transform: translateX(0px); }
+  100% {
+    -webkit-transform: translateX(-500px); } }
