@@ -1,1 +1,8 @@
 @import "lib/mixin.scss";
+@import "lib/color.scss";
+.fileUpload{
+    position: relative;
+}
+.fileUpload input[type='file']{
+    opacity: 1;
+}

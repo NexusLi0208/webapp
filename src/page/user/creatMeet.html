@@ -1,33 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="format-detection" content="telephone=no">
-	<meta name="renderer" content="webkit">
-	<meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
     <title>一键创建会议</title>
     <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/lib/normalize3.0.2.min.css" />
+    <link href="../../css/lib/mobiscroll.css" rel="stylesheet" />
+    <link href="../../css/lib/mobiscroll_date.css" rel="stylesheet" />
     <link rel="stylesheet" href="../../css/form.css">
     <link rel="stylesheet" href="../../css/creatMeet.css">
 </head>
+
 <body>
-   <section class="main-cantainer">
-       <h1 class="form-title">创建会议</h1>
-       <form id='CreatMeet-form' class="form-box">
-           <input type="hidden" name='meeId' value='1'>
-                <p><label for="meetHallName">会议厅名称：</label><input class='form-input' type="text" name="meetHallName" id='meetHallName'></p>
-                <p><label for="createUser">创建者姓名：</label><input class='form-input' type="text" name="createUser" id="createUser"></p>
-                <p><label for="remark">标签：</label><input class='form-input' type="text" name="remark" id="remark"></p>
-                <p><label for="createUserPhone">创建者电话：</label><input class='form-input' type="text" name="createUserPhone" id="createUserPhone"></p>
-                <p><label>会议厅类型：</label><input class=''  type="radio" value='个人' name="meetHallType">个人&nbsp;<input class='' value='组织' type="radio" name="meetHallType">组织</p>
-                <p class='btn-box'><button type="submit" class='form-btn'>创建</button></p>
-       </form>
-   </section>
-   <script src="js/lib/jquery.js"></script>
-   <script src="js/lib/vue-1.0.28.js"></script>
-   <script src="js/plug/plug-form.js"></script>
-   <script src="js/creatMeet.js"></script>
+    <section class="main-cantainer">
+        <div class="page-title text-m">
+            <span>创建会议</span>
+        </div>
+        <div class='form-main' id="creat-meet">
+            <div class="js-basic-info" v-show="formBox.basic">
+            <div class="form-group">
+                <label for="" class="floatl">会议名:</label>
+                <input type="tel" class='form-input floatr' name="" id="" placeholder="请输入">
+            </div>
+            <div class="form-group js-meetTime" @click="selectTime">
+                <label class="floatl">会议时间:</label>
+                <span class="floatr arrowImg"><img src="../../css/img/list_arrow.png" alt=""></span>
+                <span class='floatr form-text'>{{itemText.timeTxt}}</span>
+            </div>
+           
+            <div class="form-group">
+                <label for="" class="floatl">会议地点:</label>
+                <input type="tel" class='form-input floatr' name="" id="" placeholder="请输入">
+            </div>
+            <div class="form-group fileUpload">
+                <label for="userName" class="floatl">会议图片:</label>
+                <input type="file" class='form-input floatr' name="" id="">
+            </div>
+            <div class="form-group js-meetTime" @click="selectRemark">
+                <label class="floatl">会议简介:</label>
+                <span class="floatr arrowImg"><img src="../../css/img/list_arrow.png" alt=""></span>
+                <span class='floatr form-text'>{{itemText.remarkTxt}}</span>
+            </div>
+               <div class='btn-box'>
+                        <button type="button" class="form-btn cancel-btn" >下一步</button>
+                    </div>
+            </div>
+             <div class="js-meetTime-info" v-show="formBox.time">
+                <div class="form-title"><span @click="saveTime" class="backBasic-btn"><img src="../../css/img/title_arrow_back.png" alt=""></span>会议时间</div>
+                <div class="form-group">
+                    <label for="userName" class="floatl">开始时间:</label>
+                    <input type="data" class='form-input floatr begin-time' name="" id=""  placeholder="请选择">
+                </div>
+                <div class="form-group">
+                    <label for="userName" class="floatl">结束时间:</label>
+                    <input type="data" class='form-input floatr begin-time' name="userNme"  id="" placeholder="请选择">
+                </div>
+                   <div class='btn-box'>
+                        <button type="button" class="form-btn cancel-btn" @click='saveTime'>保存</button>
+                    </div>
+            </div>
+               <div class="js-remark-info" v-show="formBox.remark">
+                    <div class="form-title"><span @click="saveRemark" class="backBasic-btn"><img src="../../css/img/title_arrow_back.png" alt=""></span>备注</div>
+                    <div class="form-textarea">
+                        <textarea id='remarks_box' placeholder="你想说点什么" value="" maxlength="200" @input="remarkNum"></textarea>
+                        <div class="textarea_counter"><span id="text-num">0</span>/200</div>
+                    </div>
+                    <div class='btn-box'>
+                        <button type="button" class="form-btn cancel-btn" @click='saveRemark'>保存</button>
+                    </div>
+                </div>
+        </div>
+    </section>
+    <script src="../../js/lib/jquery.js"></script>
+    <script src="../../js/lib/mobiscroll_date.js" charset="gb2312"></script> 
+   <script src="../../js/lib/mobiscroll.js"></script> 
+    <script src="../../js/lib/vue-1.0.28.js"></script>
+    <script src="../../js/plug/plug-form.js"></script>
+    <script src="../../js/creatMeet.js"></script>
 </body>
+
 </html>

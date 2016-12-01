@@ -1,5 +1,9 @@
 @import "lib/mixin.scss";
 @import "lib/color.scss";
+.meetRoom-title{
+  
+}
+
 .message-roll {
     width: 100%;
     box-sizing: border-box;
@@ -10,33 +14,148 @@
     color: $blue;
     font-size: 1.3rem;
     background: #fff;
-    padding-left: 2rem;
-}
-.message-icon {
-   float:left;
-   width:11%;
-}
-.message-roll img {
-     width: 3rem;
-    height: auto;
-}
-.message-roll p{
-     width:89%;
-    float:left;
-    overflow:hidden;
-}
-.marquee {
-    display: inline-block;
-    width: 100%;
-    animation: scrollText 10s infinite;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-bottom: 1rem;
 }
 
-@keyframes scrollText {
-     0% {
-         -webkit-transform: translateX(0px);
-    }
-     100% {
-         -webkit-transform: translateX(-500px);
-    }
-    
+.message-icon {
+    float: left;
+    width: 11%;
+}
+
+.message-roll img {
+    width: 3rem;
+    height: auto;
+}
+
+.message-roll p {
+    width: 89%;
+    float: left;
+    overflow: hidden;
+}
+
+.meetRoom-userInfo {
+    width: 100%;
+    background: #fff;
+    box-sizing: border-box;
+    padding: 0 1rem;
+}
+
+.meetRoom-userInfo .user-info {
+    width: 100%;
+    height: 9rem;
+    padding-top: 1rem;
+    box-sizing: border-box;
+    border-bottom: 1px #eee solid;
+}
+
+.meetRoom-userInfo .user-info .user-img {
+    width: 6.5rem;
+    height: 6.5rem;
+    @include rounded(5px);
+    overflow: hidden;
+}
+
+.user-info .user-img img {
+    width: 100%;
+}
+
+.user-info .user-name {
+    height: 100%;
+    line-height: 6.5rem;
+    font-size: 1.5rem;
+    color: #333;
+    margin-left: 1.5rem;
+}
+
+.user-info .cutMeetroom {
+    width: 8.5rem;
+    height: 3rem;
+    margin-top: 1.7rem;
+    @include rounded(100px);
+    color: #fff;
+    border: none;
+    background: #3bd610;
+}
+
+.userData {
+    display: flex;
+}
+
+.userData .fans,
+.userData .visit {
+    flex: 1;
+    height: 6rem;
+    padding: 1rem;
+    text-align: center;
+    box-sizing: border-box;
+    font-size: 1.3rem;
+}
+
+.userData .fans {
+    border-right: 1px #eee solid;
+}
+
+.userData .data-num {
+    color: $blue;
+}
+
+.userData .data-title {
+    color: #949fa4;
+    height: 2.5rem;
+    line-height: 2.5rem;
+}
+
+.userData .data-title img {
+    width: 2.5rem;
+    height: auto;
+    margin-right: .5rem;
+}
+
+// 创建会议按钮
+.creatMeet-btn {
+    display: block;
+    width: 88%;
+    margin: 1rem auto;
+    background-color: $blue;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    border-radius: .5rem;
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+}
+
+// 会议功能菜单
+.meetRoom-menu {
+    width: 100%;
+    background-color: #fff;
+    overflow: hidden;
+    padding-bottom: 1rem;
+    margin-bottom: 7rem;
+}
+
+.meetRoom-menu a {
+    display: block;
+    width: 33%;
+    text-align: center;
+    color: #949fa4;
+    float: left;
+    margin: 1rem 0;
+    font-size: 1.3rem;
+    color: #848689;
+}
+
+.meetRoom-menu i {
+    margin: 0 auto;
+    width: 4.5rem;
+    height: 4.5rem;
+    display: block;
+    padding: .5rem;
+}
+
+.meetRoom-menu i img {
+    width: 100%;
+    height: 100%;
 }

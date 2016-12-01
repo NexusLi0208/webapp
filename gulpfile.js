@@ -10,6 +10,7 @@ var cssmin = require('gulp-minify-css');
 var livereload = require('gulp-livereload');
 var webserver = require('gulp-webserver');
 var autoprefixer = require('gulp-autoprefixer');
+var del = require('del');
 
 // 注册任务
 gulp.task('webserver', function () {
@@ -90,7 +91,7 @@ gulp.task('html',function(){
 
 
 // 默认任务
-gulp.task('default', ['webserver', 'sass', 'watch','cssmin'])
+gulp.task('default', ['webserver','sass', 'watch','cssmin'])
 
 // 监听文件变化
 gulp.task('watch', function () {
