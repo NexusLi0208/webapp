@@ -1,0 +1,40 @@
+@import "lib/mixin.scss";
+@import "lib/color.scss";
+.no-meetRoom {
+    padding-top: 8.5rem;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+}
+
+.no-meetRoom i {
+    display: block;
+    width: 11rem;
+    height: 11rem;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.no-meetRoom i img {
+    width: 100%;
+    height: 100%;
+}
+
+.no-meetRoom p {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #848689;
+    margin: 2rem 0 2.8rem;
+}
+
+.no-meetRoom .creatBtn {
+    display: block;
+    margin: 0 auto;
+    width: 16rem;
+    height: 4.5rem;
+    text-align: center;
+    @include rounded(5px);
+    line-height: 4.5rem;
+    background: $red;
+    color: #fff;
+}

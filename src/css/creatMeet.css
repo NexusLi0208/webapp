@@ -1,0 +1,5 @@
+.fileUpload {
+  position: relative; }
+
+.fileUpload input[type='file'] {
+  opacity: 1; }

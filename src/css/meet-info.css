@@ -3,7 +3,8 @@
   text-align: center;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  height: auto;
+  height: 100%;
+  background: #fff;
   padding: 1.5rem 6%; }
 
 .meet-info-main {
