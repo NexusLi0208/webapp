@@ -10,13 +10,15 @@ body {
     height:100%;
     font-size: 62.5%;
     font-family: Arial, 'Microsoft YaHei';
-    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 body {
     max-width: 640px;
     min-width: 320px;
     margin: 0 auto;
+    position: relative;
+    line-height: 1;
 }
 
 input,
@@ -25,7 +27,9 @@ button,
 textarea {
     font-family: "Microsoft YaHei";
 }
-
+[v-cloak] {
+   display: none;
+ }
 .floatl {
     float: left;
 }
@@ -50,11 +54,17 @@ textarea {
     width: 100%;
     height: 100%;
     background: #eee;
-    position: relative;
     margin: 0 auto;
     font-size: 1.6rem;
+    overflow:auto;
+    -webkit-overflow-scrolling: touch;
 }
-
+.main-cantainer:after{
+    content: '';
+    display: block;
+    height: 7rem;
+}
+   
 .form-btn {
     width: 82%;
     height: 4rem;
@@ -127,12 +137,14 @@ textarea {
     line-height: 4.4rem;
     color: #fff;
     background: $blue;
-     padding: 0 1.5rem;
-     box-sizing: border-box;
+    padding: 0 1.5rem;
+    box-sizing: border-box;
 }
-.add-icon{
+
+.add-icon {
     font-size: 2.5rem;
 }
+
 .page-title .top-btn {
     display: inline-block;
     width: 5rem;
@@ -193,6 +205,7 @@ textarea {
     font-size: 1.2rem;
     color: $blue;
 }
+
 // 滚动
 .marquee {
     display: inline-block;
@@ -201,10 +214,82 @@ textarea {
 }
 
 @keyframes scrollText {
-     0% {
-         -webkit-transform: translateX(0px);
+    0% {
+        -webkit-transform: translateX(0px);
     }
-     100% {
-         -webkit-transform: translateX(-500px);
+    100% {
+        -webkit-transform: translateX(-500px);
     }
+}
+
+//模态框
+.modal-bg {
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.8;
+    position: fixed;
+    z-index: 998;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.modal-main {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 998;
+    height: 100%;
+}
+
+.modal-contant {
+    max-width: 26rem;
+    width: 69%;
+    height: 15rem;
+    background: #fff;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 30%;
+    z-index: 999;
+    margin: auto;
+    @include rounded(10px);
+}
+
+.modal-body {
+    width: 100%;
+    height: 63%;
+    padding:1rem;
+    box-sizing: border-box;
+    border-bottom: 1px #eee solid;
+}
+.modal-body p.txt{
+    font-size: 1.5rem;
+    color:#333;
+        padding:3rem 0;
+}
+
+.modal-footer {
+    display: flex;
+    height:37%;
+}
+
+.modal-footer button {
+    flex: 1;
+    background: #fff;
+    height:100%;
+    border:none;
+    outline:none;
+    font-size: 1.5rem;
+}
+.modal-footer button.yes{
+    border-right:1px #eee solid;
+    color:$blue;
+    border-radius: 0 0 0 10px;
+}
+.modal-footer button.no{
+       color:#717171;
+        border-radius: 0 0 10px 0;
 }

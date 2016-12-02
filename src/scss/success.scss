@@ -7,10 +7,11 @@
     margin-bottom: 2rem;
 }
 
-.signUp-success-main {
+.success-main {
     width: 100%;
     height: 100%;
-    padding-top: 12rem;
+    background: #fff;
+    padding-top:20%;
     box-sizing: border-box;
 }
 
@@ -19,20 +20,23 @@
     height: auto;
 }
 
-.signUp-success-main {
+.success-main {
     text-align: center;
 }
 
-.signUp-success-main p {
+.success-main p {
     font-size: 2.4rem;
     color: #ff9e31;
     text-align: center;
     margin-bottom: 5rem;
 }
 
-.signUp-success-main button {
+.success-main button,.success-main a {
+    display:block;
     width: 15rem;
     height: 4.4rem;
+    line-height: 4.4rem;
+    text-align: center;
     font-size: 1.5rem;
     color: #fff;
     border: none;

@@ -10,7 +10,6 @@
     <meta http-equiv="Cache-Control" content="no-siteapp" />
     <title>一键创建会议</title>
     <link rel="stylesheet" href="../../css/common.css">
-    <link rel="stylesheet" href="../../css/lib/normalize3.0.2.min.css" />
     <link href="../../css/lib/mobiscroll.css" rel="stylesheet" />
     <link href="../../css/lib/mobiscroll_date.css" rel="stylesheet" />
     <link rel="stylesheet" href="../../css/form.css">
@@ -18,71 +17,84 @@
 </head>
 
 <body>
-    <section class="main-cantainer">
-        <div class="page-title text-m">
-            <span>创建会议</span>
-        </div>
-        <div class='form-main' id="creat-meet">
+    <section class="main-cantainer" id="creat-meet">
+        <div class='form-main' >
             <div class="js-basic-info" v-show="formBox.basic">
-            <div class="form-group">
-                <label for="" class="floatl">会议名:</label>
-                <input type="tel" class='form-input floatr' name="" id="" placeholder="请输入">
+                <div class="page-title text-m">
+                    <span>创建会议</span>
+                </div>
+                <div class="form-group">
+                    <label for="" class="floatl">会议名:</label>
+                    <input type="tel" class='form-input floatr' name="" id="" placeholder="请输入">
+                </div>
+                <div class="form-group js-meetTime" v-cloak @click="selectTime">
+                    <label class="floatl">会议时间:</label>
+                    <span class="floatr arrowImg"><img src="../../css/img/list_arrow.png" alt=""></span>
+                    <span class='floatr form-text'>{{itemText.timeTxt}}</span>
+                </div>
+                <div class="form-group">
+                    <label for="" class="floatl">会议地点:</label>
+                    <input type="text" class='form-input floatr' name="" id="" placeholder="请输入">
+                </div>
+                <!--<div class="form-group fileUpload">
+                    <label for="userName" class="floatl">会议图片:</label>
+                    <input type="file" id='file_upload' class='form-input floatr' name="" id="">
+                    <i><img id="js_uploadImg" hidden src="" alt=""></i>
+                </div>-->
+                <div class="form-group js-meetTime" v-cloak @click="selectRemark">
+                    <label class="floatl">会议简介:</label>
+                    <span class="floatr arrowImg"><img src="../../css/img/list_arrow.png" alt=""></span>
+                    <span class='floatr form-text'>{{itemText.remarkTxt}}</span>
+                </div>
+                <div class='btn-box'>
+                    <button type="button" v-cloak @click="modal=true" class="form-btn cancel-btn">下一步</button>
+                </div>
             </div>
-            <div class="form-group js-meetTime" @click="selectTime">
-                <label class="floatl">会议时间:</label>
-                <span class="floatr arrowImg"><img src="../../css/img/list_arrow.png" alt=""></span>
-                <span class='floatr form-text'>{{itemText.timeTxt}}</span>
-            </div>
-           
-            <div class="form-group">
-                <label for="" class="floatl">会议地点:</label>
-                <input type="tel" class='form-input floatr' name="" id="" placeholder="请输入">
-            </div>
-            <div class="form-group fileUpload">
-                <label for="userName" class="floatl">会议图片:</label>
-                <input type="file" class='form-input floatr' name="" id="">
-            </div>
-            <div class="form-group js-meetTime" @click="selectRemark">
-                <label class="floatl">会议简介:</label>
-                <span class="floatr arrowImg"><img src="../../css/img/list_arrow.png" alt=""></span>
-                <span class='floatr form-text'>{{itemText.remarkTxt}}</span>
-            </div>
-               <div class='btn-box'>
-                        <button type="button" class="form-btn cancel-btn" >下一步</button>
-                    </div>
-            </div>
-             <div class="js-meetTime-info" v-show="formBox.time">
+            <div class="js-meetTime-info" v-cloak v-show="formBox.time">
                 <div class="form-title"><span @click="saveTime" class="backBasic-btn"><img src="../../css/img/title_arrow_back.png" alt=""></span>会议时间</div>
                 <div class="form-group">
                     <label for="userName" class="floatl">开始时间:</label>
-                    <input type="data" class='form-input floatr begin-time' name="" id=""  placeholder="请选择">
+                    <input type="data" class='form-input floatr begin-time' name="" id="" placeholder="请选择">
                 </div>
                 <div class="form-group">
                     <label for="userName" class="floatl">结束时间:</label>
-                    <input type="data" class='form-input floatr begin-time' name="userNme"  id="" placeholder="请选择">
+                    <input type="data" class='form-input floatr begin-time' name="userNme" id="" placeholder="请选择">
                 </div>
-                   <div class='btn-box'>
-                        <button type="button" class="form-btn cancel-btn" @click='saveTime'>保存</button>
-                    </div>
+                <div class='btn-box'>
+                    <button type="button" class="form-btn cancel-btn" @click='saveTime'>保存</button>
+                </div>
             </div>
-               <div class="js-remark-info" v-show="formBox.remark">
-                    <div class="form-title"><span @click="saveRemark" class="backBasic-btn"><img src="../../css/img/title_arrow_back.png" alt=""></span>备注</div>
-                    <div class="form-textarea">
-                        <textarea id='remarks_box' placeholder="你想说点什么" value="" maxlength="200" @input="remarkNum"></textarea>
-                        <div class="textarea_counter"><span id="text-num">0</span>/200</div>
-                    </div>
-                    <div class='btn-box'>
-                        <button type="button" class="form-btn cancel-btn" @click='saveRemark'>保存</button>
-                    </div>
+            <div class="js-remark-info" v-cloak v-show="formBox.remark">
+                <div class="form-title"><span @click="saveRemark" class="backBasic-btn"><img src="../../css/img/title_arrow_back.png" alt=""></span>备注</div>
+                <div class="form-textarea">
+                    <textarea id='remarks_box' placeholder="你想说点什么" value="" maxlength="200" @input="remarkNum"></textarea>
+                    <div class="textarea_counter"><span id="text-num">0</span>/200</div>
                 </div>
+                <div class='btn-box'>
+                    <button type="button" class="form-btn cancel-btn" @click='saveRemark'>保存</button>
+                </div>
+            </div>
         </div>
+           <div class='modal-main' v-cloak v-show="modal" >
+        <div class="modal-bg"  @click='modal=false'></div>
+        <div class='modal-contant'>
+            <div class="modal-body">
+                <p class="txt text-m">是否创建子会议?</p>
+            </div>
+             <div class="modal-footer">
+              <button type="button" class="yes" @click="childtrue">是</button>
+              <button type="button" class="no" @click="childfalse">否</button>
+             </div>
+        </div>
+    </div>
     </section>
     <script src="../../js/lib/jquery.js"></script>
-    <script src="../../js/lib/mobiscroll_date.js" charset="gb2312"></script> 
-   <script src="../../js/lib/mobiscroll.js"></script> 
+    <script src="../../js/lib/mobiscroll_date.js" charset="gb2312"></script>
+    <script src="../../js/lib/mobiscroll.js"></script>
     <script src="../../js/lib/vue-1.0.28.js"></script>
     <script src="../../js/plug/plug-form.js"></script>
     <script src="../../js/creatMeet.js"></script>
+    <script src='../../js/common.js'></script>
 </body>
 
 </html>

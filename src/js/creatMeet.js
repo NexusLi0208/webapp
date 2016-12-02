@@ -1,22 +1,16 @@
 $(function () {
-	var currYear = (new Date()).getFullYear();	
-	var opt={};
-	opt.date = {preset : 'date'};
-	opt.datetime = {preset : 'datetime'};
-	opt.time = {preset : 'time'};
-	opt.default = {
-		theme: 'android-ics light', //皮肤样式
-		display: 'bottom', //显示方式 
-		mode: 'scroller', //日期选择模式
-		dateFormat: 'yyyy-mm-dd',
-		lang: 'zh',
-		showNow: true,
-		nowText: "今天",
-		startYear: currYear - 50, //开始年份
-		endYear: currYear + 10 //结束年份
-	};
 
-	$(".begin-time").mobiscroll($.extend(opt['datetime'], opt['default']));
+			$('.begin-time').mobiscroll().datetime({
+	        theme: "android-holo-light",     // Specify theme like: theme: 'ios' or omit setting to use default 
+	        mode: "scroller",       // Specify scroller mode like: mode: 'mixed' or omit setting to use default 
+	        display: "bottom", // Specify display mode like: display: 'bottom' or omit setting to use default 
+	        lang: "zh",       // Specify language like: lang: 'pl' or omit setting to use default
+	        minDate: new Date(),  // More info about minDate: http://docs.mobiscroll.com/2-16-1/datetime#!opt-minDate
+	        maxDate: new Date(new Date().setMonth(new Date().getMonth() + 6)),   // More info about maxDate: http://docs.mobiscroll.com/2-16-1/datetime#!opt-maxDate
+	        dateFormat:"yy-mm-dd",
+	        timeFormat:"HH:ii",
+	        stepMinute: 1  // More info about stepMinute: http://docs.mobiscroll.com/2-16-1/datetime#!opt-stepMinute
+	    });
 
 });
 
@@ -32,7 +26,8 @@ $(function () {
  		itemText: {
  			timeTxt: '请选择',
  			remarkTxt: '请填写'
- 		}
+ 		},
+		 modal:false
  	}
  	//	过滤器
  	,
@@ -67,7 +62,7 @@ $(function () {
  			}
  			this.go_basic();
  		},
-
+    //   备注
  		remarkNum: function () {
  			var markNum = document.getElementById('remarks_box').value.length;
  			document.getElementById("text-num").textContent = markNum;
@@ -86,28 +81,33 @@ $(function () {
  			}
  			this.go_basic();
  		},
- 		formBox: function (_this) {
- 			// 会议报名
- 			var data = _this.serializeJson();
- 			console.log(JSON.stringify(data));
- 			$.ajax({
- 				url: urlIp + '/formBoxOne/firstStep',
- 				data: JSON.stringify(data),
- 				type: "POST",
- 				contentType: 'application/json',
- 				async: true,
- 				success: function (data) {
- 					if (data.code == 200) {
- 						userId = data.userId;
- 						$('.js_userId').val(userId);
- 						$('.action1').hide();
- 						$('.action2').show();
- 					}
- 				},
- 				error: function () {
- 					alert('请求失败');
- 				}
- 			})
- 		}
+		//  不创建子会议
+		 childfalse:function(){
+			 window.location.href="creatmeet-success.html"
+		 },
+
+ 		// formBox: function (_this) {
+ 		// 	// 会议报名
+ 		// 	var data = _this.serializeJson();
+ 		// 	console.log(JSON.stringify(data));
+ 		// 	$.ajax({
+ 		// 		url: urlIp + '/formBoxOne/firstStep',
+ 		// 		data: JSON.stringify(data),
+ 		// 		type: "POST",
+ 		// 		contentType: 'application/json',
+ 		// 		async: true,
+ 		// 		success: function (data) {
+ 		// 			if (data.code == 200) {
+ 		// 				userId = data.userId;
+ 		// 				$('.js_userId').val(userId);
+ 		// 				$('.action1').hide();
+ 		// 				$('.action2').show();
+ 		// 			}
+ 		// 		},
+ 		// 		error: function () {
+ 		// 			alert('请求失败');
+ 		// 		}
+ 		// 	})
+ 		// }
  	}
  });
