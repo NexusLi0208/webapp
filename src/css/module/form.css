@@ -4,6 +4,7 @@
   background: #eee; }
 
 .form-group {
+  position: relative;
   width: 100%;
   height: 5.5rem;
   border-bottom: 1px #eee solid;
@@ -16,7 +17,6 @@
 .form-group label {
   position: relative;
   height: 100%;
-  line-height: 5.5rem;
   font-size: 1.5rem;
   color: #333; }
 
@@ -26,6 +26,7 @@
   font-size: 1.5rem;
   text-align: right;
   border: none;
+  background: #fff;
   outline: none;
   color: #00a0e9;
   position: relative;
@@ -81,7 +82,8 @@ select.form-input {
   height: 3rem;
   line-height: 3rem; }
 
-.time-item, .checkbox-item {
+.time-item,
+.checkbox-item {
   height: 100%;
   line-height: 100%; }
 

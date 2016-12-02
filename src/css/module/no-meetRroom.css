@@ -2,7 +2,9 @@
   padding-top: 8.5rem;
   width: 100%;
   height: 100%;
-  background: #fff; }
+  background: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
 
 .no-meetRoom i {
   display: block;

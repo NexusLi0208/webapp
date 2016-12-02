@@ -47,6 +47,14 @@ button,input,select,textarea{font-family:"Microsoft YaHei"}
 @keyframes scrollText{0%{-webkit-transform:translateX(0)}
 100%{-webkit-transform:translateX(-500px)}
 }
+.index-meet{-webkit-box-sizing:border-box;box-sizing:border-box;width:100%;padding:0 1.5rem;background:#fff}
+.index-meet-list{width:100%;height:auto;padding-bottom:1.5rem}
+.index-meet-list li{width:100%;height:6.5rem;border-bottom:1px #eee solid;padding:1.75rem 0}
+.index-meet-item .left{float:left;width:30%;min-width:8.5rem;height:100%;overflow:hidden}
+.index-meet-item .left img{width:auto;height:100%}
+.index-meet-item .right{width:60%;padding-left:.75rem;float:left}
+.index-meet-item .meet-name{height:5.25rem;font-size:1.5rem;color:#333}
+.index-meet-item .right time{font-size:12px;color:#848689}
 .modal-bg{width:100%;height:100%;background:#000;opacity:.8;position:fixed;z-index:998;left:0;right:0;top:0;bottom:0}
 .modal-main{position:absolute;top:0;width:100%;z-index:998;height:100%}
 .modal-contant{max-width:26rem;width:69%;height:15rem;background:#fff;position:fixed;left:0;right:0;top:30%;z-index:999;margin:auto;border-radius:10px}
@@ -94,7 +102,7 @@ select.form-input{-moz-appearance:none;appearance:none;position:relative;color:#
 .message-roll p{width:89%;float:left;overflow:hidden}
 .meetRoom-userInfo{width:100%;background:#fff;-webkit-box-sizing:border-box;box-sizing:border-box;padding:0 1rem}
 .meetRoom-userInfo .user-info{width:100%;padding:1rem 0;-webkit-box-sizing:border-box;box-sizing:border-box;border-bottom:1px #eee solid}
-.meetRoom-userInfo .user-info .user-img{width:6rem;height:6rem;border-radius:5px;overflow:hidden}
+.meetRoom-userInfo .user-info .user-img{width:6.5rem;height:6.5rem;border-radius:5px;overflow:hidden}
 .user-info .user-img img{width:100%}
 .user-info .user-name{width:35%;padding-top:2.5rem;height:100%;font-size:1.5rem;color:#333;margin-left:1.2rem;-webkit-box-sizing:border-box;box-sizing:border-box}
 .user-info .cutMeetroom{padding:0 1rem;height:3rem;margin-top:1.7rem;border-radius:100px;color:#fff;border:none;background:#3bd610}
@@ -116,14 +124,6 @@ select.form-input{-moz-appearance:none;appearance:none;position:relative;color:#
 .index-tab button:last-child{border-left:1px #eee solid}
 .index-tab button img{width:4rem;height:auto}
 .index-tab .active{border-bottom:.5rem #00a0e9 solid}
-.index-meet{-webkit-box-sizing:border-box;box-sizing:border-box;width:100%;padding:0 1.5rem;background:#fff}
-.index-meet-list{width:100%;height:auto;padding-bottom:1.5rem}
-.index-meet-list li{width:100%;height:6.5rem;border-bottom:1px #eee solid;padding:1.75rem 0}
-.index-meet-item .left{float:left;width:30%;min-width:8.5rem;height:100%;overflow:hidden}
-.index-meet-item .left img{width:auto;height:100%}
-.index-meet-item .right{width:60%;padding-left:.75rem;float:left}
-.index-meet-item .meet-name{height:5.25rem;font-size:1.5rem;color:#333}
-.index-meet-item .right time{font-size:12px;color:#848689}
 .no-meetRoom{padding-top:8.5rem;width:100%;height:100%;background:#fff}
 .no-meetRoom i{display:block;width:11rem;height:11rem;text-align:center;margin:0 auto}
 .no-meetRoom i img{width:100%;height:100%}
