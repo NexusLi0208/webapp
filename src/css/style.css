@@ -18,6 +18,7 @@ button,input,select,textarea{font-family:"Microsoft YaHei"}
 .text-r{text-align:right}
 .text-m{text-align:center}
 .pst-btm{position:absolute;bottom:0}
+.bl-bg{width:100%;height:calc(100% - 4.4rem);background-color:#1d6edd;background-image:-webkit-linear-gradient(top,#00a0e9,#1d6edd);padding-top:12%;-webkit-box-sizing:border-box;box-sizing:border-box}
 .main-cantainer{width:100%;height:100%;background:#eee;margin:0 auto;font-size:1.6rem;overflow:auto;-webkit-overflow-scrolling:touch}
 .navfixr:after{content:'';display:block;height:7rem}
 .form-btn{width:82%;height:4rem;font-size:1.7rem;color:#fff;border:none;border-radius:.5rem;outline:0}
@@ -65,14 +66,28 @@ button,input,select,textarea{font-family:"Microsoft YaHei"}
 .modal-footer button{-webkit-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1;background:#fff;height:100%;border:none;outline:0;font-size:1.5rem}
 .modal-footer button.yes{border-right:1px #eee solid;color:#00a0e9;border-radius:0 0 0 10px}
 .modal-footer button.no{color:#717171;border-radius:0 0 10px 0}
+body,dd,dl,fieldset,form,h1,h2,h3,h4,h5,h6,input,legend,ol,p,select,td,textarea,th,ul{margin:0;padding:0}
+body{font-size:12px;background:#fff;-webkit-text-size-adjust:100%}
+a{color:#2d374b;text-decoration:none}
+a:hover{text-decoration:none}
+em{font-style:normal}
+li,ul{list-style:none}
+img{border:0;vertical-align:middle}
+table{border-collapse:collapse;border-spacing:0}
+p{word-wrap:break-word}
+.meetRoom-type-btn{display:block;width:17.5rem;height:17.5rem;margin:0 auto;padding:1rem;color:#fff;font-size:2rem;padding-top:14%;-webkit-box-sizing:border-box;box-sizing:border-box;text-align:center;background:url(img/conference_hall_btn_normal.png) center center no-repeat;-webkit-background-size:cover;background-size:cover}
+.meetRoom-type-btn img{width:40%}
+.meetRoom-type-btn:active{background:url(img/conference_hall_btn_pressed.png) center center no-repeat;-webkit-background-size:cover;background-size:cover}
 .fileUpload{position:relative;height:8rem;line-height:8rem}
 .fileUpload input[type=file]{position:absolute;z-index:2;opacity:0}
 .fileUpload i{position:absolute;width:8.5rem;height:6.5rem;background-color:#e6f3f9;right:5%;top:9%;display:block;-webkit-box-sizing:border-box;box-sizing:border-box;overflow:hidden;background-image:url(img/upload.png);background-repeat:no-repeat;background-position:center center;z-index:1}
 .fileUpload i img{width:100%;height:auto}
 .form-main{width:100%;height:100%;background:#eee}
 .form-group{position:relative;width:100%;height:5.5rem;border-bottom:1px #eee solid;background:#fff;padding:0 2.2rem;-webkit-box-sizing:border-box;box-sizing:border-box;line-height:5.5rem}
+.form-group .input-icon{width:3rem;margin-right:.2rem}
+.form-group .input-icon img{width:100%}
 .form-group label{position:relative;height:100%;font-size:1.5rem;color:#333}
-.form-input{width:73%;height:100%;font-size:1.5rem;text-align:right;border:none;background:#fff;outline:0;color:#00a0e9;position:relative;-webkit-tap-highlight-color:transparent;padding-right:.5rem}
+.form-input{width:65%;height:100%;font-size:1.5rem;text-align:right;border:none;background:#fff;outline:0;color:#00a0e9;position:relative;-webkit-tap-highlight-color:transparent;padding-right:.5rem}
 select.form-input{-moz-appearance:none;appearance:none;position:relative;color:#00a0e9;-webkit-appearance:none;direction:rtl}
 .arrowImg{position:absolute;right:1rem}
 .arrowImg img{width:1.1rem}

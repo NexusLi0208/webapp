@@ -78,6 +78,17 @@ textarea {
   position: absolute;
   bottom: 0; }
 
+.bl-bg {
+  width: 100%;
+  height: calc(100% - 4.4rem);
+  /* Fallback for sad browsers */
+  background-color: #1d6edd;
+  /* WebKit (Safari 5.1+, Chrome 10+) */
+  background-image: -webkit-linear-gradient(top, #00a0e9, #1d6edd);
+  padding-top: 12%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
 .main-cantainer {
   width: 100%;
   height: 100%;

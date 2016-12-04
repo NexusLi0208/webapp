@@ -16,7 +16,13 @@
     box-sizing: border-box;
     line-height: 5.5rem;
 }
-
+.form-group .input-icon{
+    width:3rem;
+    margin-right:.2rem;
+}
+.form-group .input-icon img{
+    width:100%;
+}
 .form-group label {
     position: relative;
     height: 100%;
@@ -25,7 +31,7 @@
 }
 
 .form-input {
-    width: 73%;
+    width: 65%;
     height: 100%;
     font-size: 1.5rem;
     text-align: right;

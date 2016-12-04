@@ -1,0 +1,30 @@
+/*
+Power by lipeng
+ */
+
+@import "lib/rest.scss";
+@import "lib/mixin.scss";
+@import "lib/color.scss";
+.meetRoom-type-btn{
+    display: block;
+    width:17.5rem;
+    height:17.5rem;
+    margin:0 auto;
+    padding:1rem;
+    color:#fff;
+    font-size: 2rem;
+    padding-top:14%;
+    box-sizing: border-box;
+    text-align: center;
+    background: url(img/conference_hall_btn_normal.png) center center no-repeat;
+    background-size: cover;
+
+}
+.meetRoom-type-btn img{
+    width:40%;
+}
+.meetRoom-type-btn:active{
+    background: url(img/conference_hall_btn_pressed.png) center center no-repeat;
+    background-size: cover;
+
+}

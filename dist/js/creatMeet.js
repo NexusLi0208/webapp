@@ -1,1 +1,0 @@
-$(function(){var e=(new Date).getFullYear(),t={};t.date={preset:"date"},t.datetime={preset:"datetime"},t.time={preset:"time"},t.default={theme:"android-ics light",display:"bottom",mode:"scroller",dateFormat:"yyyy-mm-dd",lang:"zh",showNow:!0,nowText:"今天",startYear:e-50,endYear:e+10},$(".begin-time").mobiscroll($.extend(t.datetime,t.default))});

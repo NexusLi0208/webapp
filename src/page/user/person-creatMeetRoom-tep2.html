@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>创建会议厅</title>
+     <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+    <section class="main-cantainer" id="creat-meetroom">
+        <div class='form-main' >
+           <div class="js-remark-basic" v-cloak v-show="formBox.basic">
+             <div class="form-title"><a href="javascript:history.go(-1)"><span class="backBasic-btn"><img src="../../css/img/title_arrow_back.png" alt=""></span></a>创建会议厅</div>
+                <div class="form-group">
+                     <i class="floatl input-icon"><img src="../../css/img/gender.png" alt=""></i>
+                    <label for="" class="floatl">姓名:</label>
+                    <input type="text" class='form-input floatr' name="" id="" placeholder="请输入">
+                </div>
+                  <div class="form-group">
+                      <i class=" floatl input-icon"><img src="../../css/img/phone.png" alt=""></i>
+                    <label for="" class="floatl">电话:</label>
+                    <input type="tel" class='form-input floatr' name="" id="" placeholder="请输入">
+                </div>
+                  <div class="form-group">
+                       <i class="floatl input-icon"><img src="../../css/img/wechat.png" alt=""></i>
+                    <label for="" class="floatl">微信号:</label>
+                    <input type="tel" class='form-input floatr' name="" id="" placeholder="请输入">
+                </div>
+                <div class='btn-box'>
+                    <button type="button" @click="saveMeetroom" class="form-btn cancel-btn">完成</button>
+                </div>
+            </div>
+        </div>
+ 
+    </section>
+    <script src="../../js/lib/jquery.js"></script>
+    <script src="../../js/lib/vue-1.0.28.js"></script>
+    <script src="../../js/plug/plug-form.js"></script>
+    <script src="../../js/creatMeetroom.js"></script>
+</body>
+
+</html>
