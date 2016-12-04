@@ -74,6 +74,10 @@ textarea {
 .text-m {
   text-align: center; }
 
+.pst-btm {
+  position: absolute;
+  bottom: 0; }
+
 .main-cantainer {
   width: 100%;
   height: 100%;

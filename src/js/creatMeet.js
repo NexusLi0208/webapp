@@ -81,6 +81,14 @@ $(function () {
  			}
  			this.go_basic();
  		},
+		//  创建子会议
+		childtrue:function(){
+			window.location.href="ch-meet-list.html"
+		},
+		// 保存子会议
+		saveChildMeet:function(){
+             window.location.href="creatmeet-success.html"
+		},
 		//  不创建子会议
 		 childfalse:function(){
 			 window.location.href="creatmeet-success.html"
