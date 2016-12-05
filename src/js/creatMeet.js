@@ -87,7 +87,7 @@ var signup = new Vue({
 		},
 		// 保存子会议
 		saveChildMeet: function () {
-			window.location.href = "creatmeet-success.html"
+			window.location.href = "ch-meet-list.html"
 		},
 		//  不创建子会议
 		childfalse: function () {

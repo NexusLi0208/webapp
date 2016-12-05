@@ -13,47 +13,31 @@
 
 <body>
     <section class="main-cantainer navfixr"  id="chMeet-list">
-        <div class="page-title text-m">
-            <span>子会议</span>
-        </div>
+        <div class="page-title meetRoom-title">
+                <span class="floatl">子会议列表</span>
+                <a href="creat-chMeet.html"><span class="floatr add-icon">+</span></a>
+            </div>
         <section class="meet-list-main">
             <ul class="meet-list">
-                <li class="meet-item">
-                    <a href="meet-info.html">
+                <li class="meet-item" v-for="item in chmeetlist">
+                    <a href="#">
                         <div class="left"><img src="../../css/img/pic1@2x.png" alt="meetimg"></div>
                         <div class="right">
-                            <p class="meet-name">淄博职业学院：三项机制成就大学生圆梦</p>
-                            <time>2016-06-04</time>
+                            <p class="meet-name">{{item.meetTitle}}</p>
+                            <time>{{item.meetTime}}</time>
                         </div>
                     </a>
-                </li>
-                <li class="meet-item">
-                    <a href="meet-info.html">
-                        <div class="left"><img src="../../css/img/pic1@2x.png" alt="meetimg"></div>
-                        <div class="right">
-                            <p class="meet-name">淄博职业学院：三项机制成就大学生圆梦</p>
-                            <time>2016-06-04</time>
-                        </div>
-                    </a>
-                </li>
-                <li class="meet-item">
-                    <a href="meet-info.html">
-                        <div class="left"><img src="../../css/img/pic1@2x.png" alt="meetimg"></div>
-                        <div class="right">
-                            <p class="meet-name">淄博职业学院：三项机制成就大学生圆梦</p>
-                            <time>2016-06-04</time>
-                        </div>
-                    </a>
+                    <div class="deleteItem" @click="removeItem($index)">
+                        删除
+                    </div>
                 </li>
             </ul>
         </section>
-        <button type="submit" @click="creatChMeet" class="sign-up-btn pst-btm">创建子会议</button>
+        <button type="submit" @click="creatChMeet" class="sign-up-btn pst-btm">完成</button>
     </section>
     <script src="../../js/lib/jquery.js"></script>
      <script src="../../js/lib/vue-1.0.28.js"></script>
       <script src="../../js/ch-meet-list.js"></script>
     <script src="../../js/plug/plug-form.js"></script>
-
 </body>
-
 </html>

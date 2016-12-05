@@ -31,7 +31,7 @@
 }
 
 .form-input {
-    width: 65%;
+    width: 60%;
     height: 100%;
     font-size: 1.5rem;
     text-align: right;
@@ -43,7 +43,29 @@
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     padding-right: .5rem;
 }
-
+.form-btn {
+    width: 82%;
+    height: 4rem;
+    font-size: 1.7rem;
+    color: #fff;
+    border: none;
+    border-radius: .5rem;
+    outline: none;
+}
+.input-btn {
+    height: 3rem;
+    font-size: 1.7rem;
+    color: #fff;
+    border: none;
+    border-radius: .5rem;
+    outline: none;
+    font-size: 1.2rem;
+}
+.getCode{
+    position: absolute;
+    left: 25%;
+    top: 30%;
+}
 select.form-input {
     appearance: none;
     position: relative;

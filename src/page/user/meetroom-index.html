@@ -9,41 +9,30 @@
     <meta name="renderer" content="webkit">
     <meta http-equiv="Cache-Control" content="no-siteapp" />
     <title>会议</title>
-    <link rel="stylesheet" href="../../css/lib/swiper.min.css">
     <link rel="stylesheet" href="../../css/style.css">
 </head>
 
 <body>
-
-    <section class="main-cantainer navfixr">
-        <header class="index-header">
-            <div class="page-title">
-                <button class="top-btn" type="button">专题</button>
-                <ul class="index-type-list">
-                    <li><a href="">教育</a></li>
-                    <li><a href="">互联网</a></li>
-                    <li><a href="">亲子</a></li>
-                    <li><a href="">健康</a></li>
-                    <li><a href="">医疗</a></li>
-                </ul>
-            </div>
-            <section class="index-banner">
-                <!--swiper-->
-                <div class="swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="../../css/img/banner@2x.png" alt="banner"></div>
-                        <div class="swiper-slide"><img src="../../css/img/banner@2x.png" alt="banner"></div>
-                    </div>
-                    <!-- Add Pagination -->
-                    <div class="swiper-pagination"></div>
-                </div>
-                <!--swiper-->
-            </section>
+    <section class="main-cantainer">
+        <header class="header">
+            <div class="form-title"><a href="javascript:history.go(-1)"><span class="backBasic-btn"><img src="../../css/img/title_arrow_back.png" alt=""></span></a>会议厅主页</div>
         </header>
-        <section class="index-tab">
-            <button class="index-tab-btn active"><img src="../../css/img/icon_conference@2x.png" alt="tab-icon">会议</button>
-            <button class="index-tab-btn"><img src="../../css/img/icon_conferencehall@2x.png" alt="tab-icon">会议厅</button>
+        <section class="mtrm-idx-hd">
+            <div class="mtrm-idx-d1">
+                <div class="user-img floatl"><img src="../../css/img/user-img.jpeg" alt=""></div>
+                <div>
+                    <div class="user-info-box  floatl">
+                        <p class="user-name">李狗蛋的直播间</p>
+                        <p class="user-fans"><span><img src="../../css/img/conference_funs.png" alt=""></span>15616人关注</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mtrm-idx-d2">
+                <div class="mtrm-btn"><i><img src="../../css/img/check_code.png" alt=""></i><p>查看二维码</p></div>
+                <div class="mtrm-btn"><i><img src="../../css/img/setting.png" alt=""></i><p>设置会议厅</p></div>
+            </div>
         </section>
+        <a class="creatMeet-btn success-btn" href="creatMeet.html">创建会议</a>
         <section class="meet-list-main">
             <ul class="meet-list">
                 <a href="meet-info.html">
@@ -75,26 +64,7 @@
                 </a>
             </ul>
         </section>
-     
     </section>
-       <nav class="index-nav">
-            <ul>
-                <li>
-                    <a href="meet-index.html">
-                        <img src="../../css/img/home.png" alt="home">
-                        <p>会议</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="no-meetRoom.html"><img src="../../css/img/meet.png" alt="home">
-                        <p>会议厅</p>
-                    </a>
-                </li>
-                <li> <img src="../../css/img/user.png" alt="home">
-                    <p>我的</p>
-                </li>
-            </ul>
-        </nav>
     <script src="../../js/lib/jquery.js"></script>
     <script src="../../js/lib/swiper.min.js"></script>
     <script src="../../js/plug/plug-form.js"></script>

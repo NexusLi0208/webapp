@@ -1,0 +1,84 @@
+@import "lib/mixin.scss";
+@import "lib/color.scss";
+.mtrm-idx-d1 {
+    width: 100%;
+    height: 9rem;
+    padding: 1.25rem 2.3rem;
+    box-sizing: border-box;
+    @include linear-gradient(top, $blue, #1d6edd);
+}
+
+.mtrm-idx-hd {
+    color: #fff;
+}
+
+.user-info-box {
+    margin-left: 2rem;
+    padding: 1.25rem 0;
+    font-size: 1.5rem;
+}
+
+.user-info-box .user-name {
+    text-indent: .5rem;
+}
+
+.user-info-box .user-fans {
+    margin-top: .5rem;
+    font-size: 1.2rem;
+}
+
+.user-info-box .user-fans img {
+    width: 3rem;
+    height: 3rem;
+}
+
+.mtrm-idx-d1 .user-img {
+    width: 6.5rem;
+    height: 6.5rem;
+    @include rounded(5px);
+    border: .15rem #fff solid;
+    overflow: hidden;
+}
+
+.mtrm-idx-d1 .user-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.mtrm-idx-d2 {
+    display: flex;
+    width: 100%;
+    height: 6rem;
+    background: #fff;
+    padding: .5rem 0;
+    box-sizing: border-box;
+}
+
+.mtrm-idx-d2 .mtrm-btn {
+    flex: 1;
+}
+
+.mtrm-btn i {
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    overflow: hidden;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: .5rem;
+}
+
+.mtrm-btn i img {
+    width: 100%;
+  
+}
+
+.mtrm-btn p {
+    color: #949fa4;
+      font-size: 1.2rem;
+    text-align: center;
+}
+
+.mtrm-idx-d2 .mtrm-btn:nth-child(1) {
+    border-right: 1px #eee solid;
+}
