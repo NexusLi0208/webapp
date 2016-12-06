@@ -14,28 +14,76 @@
 
 <body>
     <section class="main-cantainer">
-        <form action="login.html">
-        <div class="form-group">
-            <label for="" class="floatl">用户名:</label>
-            <input type="text" class='form-input floatr' name="" id="" placeholder="请输入">
-        </div>
-        <div class="form-group">
-            <label for="" class="floatl">验证码:</label>
-            <input type="text" class='form-input floatr' name="" id="" placeholder="请输入">
-            <button type="button" class='getCode'>获取</button>
-        </div>
-        <div class="form-group">
-            <label for="" class="floatl">密码:</label>
-            <input type="password" class='form-input floatr' name="" id="" placeholder="请输入">
-        </div>
-        <div class='btn-box'>
-            <button type="submit"  required  class="form-btn cancel-btn">注册</button>
-        </div>
-               
+        <form action="" id="signIn-form">
+            <div class="form-group">
+                <label for="" class="floatl">手机号:</label>
+                <input type="text" class='form-input floatr' name="phone" id="phone" placeholder="请输入">
+            </div>
+            <div class="form-group">
+                <label for="" class="floatl">密码:</label>
+                <input type="password" class='form-input floatr' name="password" id="password" placeholder="请输入">
+            </div>
+            <div class="form-group">
+                <button type="button" class="input-btn success-btn" id="getCode_btn">获取验证码</button>
+                <input type="text" class='form-input floatr' name="msgCode" id="msgCode" placeholder="请输入验证码">
+            </div>
+            <div class='btn-box'>
+                <button type="button" id="signIn_btn" class="form-btn cancel-btn">注册</button>
+            </div>
         </form>
     </section>
-    <script src="../../js/lib/jquery.js"></script>
+    <script src="http://apps.bdimg.com/libs/zepto/1.1.4/zepto.min.js"></script>
     <script src="../../js/plug/plug-form.js"></script>
+    <script>
+     function userSignIn(){
+         var data = $("#signIn-form").serializeJson();
+         console.log(JSON.stringify(data));
+         $.ajax({
+				url: "http://10.1.0.18:8081/whoami/user/register",
+				data: JSON.stringify(data),
+				type: "POST",
+				contentType: 'application/json',
+				success: function (data) {
+					if (data.errcode == 6205) {
+						alert('验证码无效');
+					}
+                    else if(data.errcode == 0){
+                        alert('注册成功');
+                        window.location="login.html"
+                    }
+				},
+				error: function () {
+					alert('请求失败');
+				}
+			})
+      }
+      function getPhoneCode(){
+            var phoneNUM=$("#phone").val();
+             $.ajax({
+				url: "http://10.1.0.18:8081/whoami/weixin/sendMsg/"+phoneNUM,
+				type: "POST",
+				success: function (data) {
+				 if(data.errcode == 0){
+                        alert('获取成功');
+                    }
+                    else if(data.errcode == 6210)
+                      {alert('手机号存在')}
+				},
+				error: function () {
+					alert('验证码获取失败请重试');
+				}
+			})
+      }
+
+			$("#signIn_btn").on("click",function(){
+                userSignIn();
+            })
+            $("#getCode_btn").on("click",function(){
+                getCode(this);
+                getPhoneCode();
+             })
+			
+    </script>
 </body>
 
 </html>

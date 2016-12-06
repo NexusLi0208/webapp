@@ -89,6 +89,14 @@ textarea {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
 
+.bl-bg2 {
+  width: 100%;
+  height: calc(100% - 4.4rem);
+  background: #00a0e9;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-top: 12%; }
+
 .main-cantainer {
   width: 100%;
   height: 100%;
@@ -281,12 +289,13 @@ textarea {
 .meet-item .deleteItem {
   position: absolute;
   right: 0;
-  bottom: 1.5rem;
-  width: 3.5rem;
-  height: 1.8rem;
-  background: #f66;
+  bottom: 1rem;
+  width: 6rem;
+  height: 3rem;
+  border-radius: 50px;
+  background: #ffae2e;
   color: #fff;
-  line-height: 1.8rem;
+  line-height: 3rem;
   font-size: 1.2rem;
   text-align: center; }
 

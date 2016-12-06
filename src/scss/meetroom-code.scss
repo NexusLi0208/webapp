@@ -1,0 +1,36 @@
+@import "lib/mixin.scss";
+@import "lib/color.scss";
+.mtrmcod-main{
+    width: 88%;
+    height:auto;
+    background: #fff;
+    @include rounded(5px);
+    margin:0 auto;
+    padding:12% 0;
+  
+}
+.mtrmcod-main .code-body{
+    width:22.5rem;
+    height:auto;
+    margin:0 auto;
+}
+.codeBox{
+    display: block;
+    padding:1rem;
+    width:22.5rem;
+    height:22.5rem;
+    box-sizing: border-box;
+    background: url('img/check_code_decorationx.png') no-repeat;
+    background-size:cover;
+}
+.code-body p{
+    margin-top:2.5rem;
+    font-size:1.2rem;
+    line-height: 2.4rem;
+    color:#848689;
+    text-align: center;
+}
+.codeBox img{
+  width:100%;
+  height:auto;
+}

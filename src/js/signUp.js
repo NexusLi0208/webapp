@@ -1,4 +1,4 @@
- var urlIp = '';
+ var urlIp = 'http://10.1.0.26:8081/whoami/';
  var signup=new Vue({
  	el: '#sign-main',
  	data: {
@@ -57,7 +57,6 @@
  		saveMeet: function () {
  			var _this = this,
  				inputIndex = $('.js-meetlist-info').find('input:checked').size();
- 			console.log(inputIndex);
  			if (inputIndex > 0) {
  				_this.itemText.meetTxt = "已选择"
  			} else {
@@ -83,23 +82,20 @@
  			}
  			this.go_basic();
  		},
- 		formBox: function (_this) {
- 			// 会议报名
- 			var data = _this.serializeJson();
+// 会议报名
+ 		formSubmit: function () {
+			 //需要存为数组的表单name值
+			var arrname='submeetingId';
+ 			var data =  $("#sign_up_main").serializeJson(arrname);
  			console.log(JSON.stringify(data));
  			$.ajax({
- 				url: urlIp + '/formBoxOne/firstStep',
+ 				url: urlIp + 'signup/set',
  				data: JSON.stringify(data),
  				type: "POST",
  				contentType: 'application/json',
  				async: true,
  				success: function (data) {
- 					if (data.code == 200) {
- 						userId = data.userId;
- 						$('.js_userId').val(userId);
- 						$('.action1').hide();
- 						$('.action2').show();
- 					}
+ 				      alert(data.msg)
  				},
  				error: function () {
  					alert('请求失败');
