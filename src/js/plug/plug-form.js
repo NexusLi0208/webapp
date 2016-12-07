@@ -3,7 +3,6 @@
 	$.fn.serializeJson = function (arrlist) {
 		var serializeObj = {};
 		var array = this.serializeArray();
-		console.log(array);
 		$(array).each(function () {
 			// 是否存在键名
 			if (serializeObj[this.name]) {

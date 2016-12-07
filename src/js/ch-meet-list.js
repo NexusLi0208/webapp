@@ -22,7 +22,7 @@
  	,
  	methods: {
         creatChMeet:function(){
-            window.location.href="creatmeetroom-success.html"
+            window.location.href="creatmeet-success.html"
         },
 		 removeItem: function (index) {  
              this.chmeetlist.splice(index, 1);  

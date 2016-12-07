@@ -1,5 +1,5 @@
  var urlIp = 'http://10.1.0.26:8081/whoami/';
- var signup=new Vue({
+ var signup = new Vue({
  	el: '#sign-main',
  	data: {
  		formBox: {
@@ -12,11 +12,36 @@
  			tiketTxt: '请填写',
  			meetTxt: '请选择',
  			remarkTxt: '请填写'
+ 		},
+ 		userinfo: JSON.parse(localStorage.getItem('user'))
+ 	}
+
+ 	,
+ 	ready: function () {
+ 		$('input[type=text],input[type=tel],select').each(function () {
+ 			if (this.value != '' && this.value != 0) {
+ 				this.setAttribute("readonly", "readonly");
+ 			}
+ 		})
+
+ 	},
+ 	//	过滤器
+ 	filters: {
+ 		select: {
+ 			read: function (value) {
+ 				{
+ 					if (value == "") {
+ 						return 0;
+ 					}
+ 					return value;
+ 				}
+
+ 			},
+			write: function (value) {
+                return value;
+ 		}
  		}
  	}
- 	//	过滤器
- 	,
- 	filters: {}
  	//方法
  	,
  	methods: {
@@ -82,25 +107,44 @@
  			}
  			this.go_basic();
  		},
-// 会议报名
+ 		// 会议报名
  		formSubmit: function () {
-			 //需要存为数组的表单name值
-			var arrname='submeetingId';
- 			var data =  $("#sign_up_main").serializeJson(arrname);
- 			console.log(JSON.stringify(data));
+ 			//需要存为数组的表单name值
+ 			var arrname = 'submeetingId';
+ 			var data = $("#sign_up_main").serializeJson(arrname);
+ 			// console.log(JSON.stringify(data));
  			$.ajax({
  				url: urlIp + 'signup/set',
  				data: JSON.stringify(data),
  				type: "POST",
  				contentType: 'application/json',
- 				async: true,
  				success: function (data) {
- 				      alert(data.msg)
+ 					if (data.status == 0) {
+ 						alert('报名成功');
+ 						window.location.href = "sign-up-success.html"
+ 					} else if (data.status == 6400) {
+ 						alert('报名失败');
+ 					} else {
+ 						alert('服务器不可用');
+ 					}
  				},
  				error: function () {
  					alert('请求失败');
  				}
  			})
+ 		},
+ 		test: function () {
+ 			$.ajax({
+ 				url: 'http://10.1.0.25:8882/whoami-meeting/meetinghall/130',
+ 				type: "GET",
+ 				success: function (data) {
+ 					console.log(data);
+ 				},
+ 				error: function () {
+ 					console.log(1);
+ 				}
+ 			})
+
  		}
  	}
  });

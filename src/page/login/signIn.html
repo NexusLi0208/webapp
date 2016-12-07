@@ -14,6 +14,9 @@
 
 <body>
     <section class="main-cantainer">
+           <div class="page-title">
+                <span>注册</span>
+            </div>
         <form action="" id="signIn-form">
             <div class="form-group">
                 <label for="" class="floatl">手机号:</label>
@@ -27,8 +30,11 @@
                 <button type="button" class="input-btn success-btn" id="getCode_btn">获取验证码</button>
                 <input type="text" class='form-input floatr' name="msgCode" id="msgCode" placeholder="请输入验证码">
             </div>
-            <div class='btn-box'>
+            <div class='btn-box floatl' style="width:50%">
                 <button type="button" id="signIn_btn" class="form-btn cancel-btn">注册</button>
+            </div>
+                     <div class='btn-box floatr' style="width:50%">
+                <button type="button" id="login_btn" class="form-btn success-btn">登录</button>
             </div>
         </form>
     </section>
@@ -39,7 +45,7 @@
          var data = $("#signIn-form").serializeJson();
          console.log(JSON.stringify(data));
          $.ajax({
-				url: "http://10.1.0.18:8081/whoami/user/register",
+				url: "http://10.1.0.26:8081/whoami/user/register",
 				data: JSON.stringify(data),
 				type: "POST",
 				contentType: 'application/json',
@@ -49,7 +55,6 @@
 					}
                     else if(data.errcode == 0){
                         alert('注册成功');
-                        window.location="login.html"
                     }
 				},
 				error: function () {
@@ -60,7 +65,7 @@
       function getPhoneCode(){
             var phoneNUM=$("#phone").val();
              $.ajax({
-				url: "http://10.1.0.18:8081/whoami/weixin/sendMsg/"+phoneNUM,
+				url: "http://10.1.0.26:8081/whoami/weixin/sendMsg/"+phoneNUM,
 				type: "POST",
 				success: function (data) {
 				 if(data.errcode == 0){
@@ -77,6 +82,9 @@
 
 			$("#signIn_btn").on("click",function(){
                 userSignIn();
+            });
+            $("#login_btn").on("click",function(){
+                window.location.href="login.html";
             })
             $("#getCode_btn").on("click",function(){
                 getCode(this);

@@ -122,6 +122,8 @@ select.form-input{-moz-appearance:none;appearance:none;position:relative;color:#
 .mtrm-btn i img{width:100%}
 .mtrm-btn p{color:#949fa4;font-size:1.2rem;text-align:center}
 .mtrm-idx-d2 .mtrm-btn:nth-child(1){border-right:1px #eee solid}
+.focus-btn{position:absolute;right:0;bottom:1rem;width:6.5rem;height:2.5rem;border:1px #ff9e31 solid;border-radius:50px;background:0 0;color:#ff9e31;line-height:2.5rem;font-size:1.2rem;text-align:center}
+.disfocus-btn{position:absolute;right:0;bottom:1rem;width:6.5rem;height:2.5rem;border:1px #bfbfbf solid;border-radius:50px;background:0 0;color:#bfbfbf;line-height:2.5rem;font-size:1.2rem;text-align:center}
 .message-roll{width:100%;-webkit-box-sizing:border-box;box-sizing:border-box;white-space:nowrap;overflow:hidden;height:4rem;line-height:4rem;color:#00a0e9;font-size:1.3rem;background:#fff;padding-left:5%;padding-right:5%;margin-bottom:1rem}
 .message-icon{float:left;width:11%}
 .message-roll img{width:2.8rem;height:auto}
