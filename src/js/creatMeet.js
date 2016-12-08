@@ -14,8 +14,8 @@ $(function () {
 
 });
 
-var urlIp = '';
-var signup = new Vue({
+var urlIp = 'http://10.1.0.27:8882/whoami-meeting/meetingInfo/';
+new Vue({
 	el: '#creat-meet',
 	data: {
 		formBox: {
@@ -27,13 +27,19 @@ var signup = new Vue({
 			timeTxt: '请选择',
 			remarkTxt: '请填写'
 		},
-		modal: false
+		modal: false,
+		meeId:'',
+		hallId:'1516'
 	}
 	//	过滤器
 	,
 	filters: {}
 	//方法
 	,
+	ready:function(){
+		this.meeId=localStorage.getItem('userInfo');
+		//this.hallId=localStorage.getItem('hallId');
+	},
 	methods: {
 		//  回基本信息
 		go_basic: function () {
@@ -83,39 +89,74 @@ var signup = new Vue({
 		},
 		//  创建子会议
 		childtrue: function () {
+		       
 			window.location.href = "ch-meet-list.html"
+			//	
+		
+
 		},
 		// 保存子会议
 		saveChildMeet: function () {
-			window.location.href = "ch-meet-list.html"
+			
+				var data = $("#creatchmeet_form").serializeJson();
+	           console.log(JSON.stringify(data));
+				$.ajax({
+				url: urlIp + 'addSubMeeting',
+				data: JSON.stringify(data),
+				type: "PUT",
+				contentType: 'application/json',
+				success: function (data) {
+					console.log(data.msg);
+					if (data.code == 6310) {
+						alert("创建成功");
+					    window.location.href = "ch-meet-list.html"
+					}
+					else{
+						alert('保存会议失败');
+					}
+				},
+				error: function () {
+					alert('请求失败');
+				}
+			})
 		},
 		//  不创建子会议
 		childfalse: function () {
-			window.location.href = "creatmeet-success.html"
+		
+               	window.location.href = "creatmeet-success.html";
+		
+		
+			
 		},
-
-		// formBox: function (_this) {
-		// 	// 会议报名
-		// 	var data = _this.serializeJson();
-		// 	console.log(JSON.stringify(data));
-		// 	$.ajax({
-		// 		url: urlIp + '/formBoxOne/firstStep',
-		// 		data: JSON.stringify(data),
-		// 		type: "POST",
-		// 		contentType: 'application/json',
-		// 		async: true,
-		// 		success: function (data) {
-		// 			if (data.code == 200) {
-		// 				userId = data.userId;
-		// 				$('.js_userId').val(userId);
-		// 				$('.action1').hide();
-		// 				$('.action2').show();
-		// 			}
-		// 		},
-		// 		error: function () {
-		// 			alert('请求失败');
-		// 		}
-		// 	})
-		// }
+		setTime:function(e){
+			var obj=e.currentTarget;
+			var date=new Date(obj.value).getTime();
+            $(obj).next('input').val(date);
+		},
+		greatmeet: function (callback) {
+			var _this =this;
+			// 创建会议
+			var data = $("#creatmeet-form").serializeJson();
+			    console.log(JSON.stringify(data));
+			$.ajax({
+				url: urlIp + 'addMeeting',
+				data: JSON.stringify(data),
+				type: "PUT",
+				contentType: 'application/json',
+				success: function (data) {
+					console.log(data);
+					if (data.code == 6300) {
+					  localStorage.setItem('meeId',data.meetingInfo.meeId);
+					  _this.modal=true;
+					}
+					else{
+						alert('保存会议失败');
+					}
+				},
+				error: function () {
+					alert('请求失败');
+				}
+			})
+		}
 	}
 });

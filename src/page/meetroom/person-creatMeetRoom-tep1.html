@@ -11,15 +11,19 @@
     <title>创建会议厅</title>
      <link rel="stylesheet" href="../../css/style.css">
 </head>
-
 <body>
     <section class="main-cantainer" id="creat-meetroom">
-        <div class='form-main' >
+        <div class='form-main'>
+            <form id="creatmeetroom_form">
            <div class="js-remark-basic" v-cloak v-show="formBox.basic">
              <div class="form-title"><a href="javascript:history.go(-1)"><span class="backBasic-btn"><img src="../../css/img/title_arrow_back.png" alt=""></span></a>填写会议厅信息</div>
+                <!--会议厅类型-->
+                <input type="hidden" name="hallType" value=1>
+                <!--用户ID-->
+                 <input type="hidden" name="userId" v-model="userId">
                 <div class="form-group">
-                    <label for="" class="floatl">会议厅名称:</label>
-                    <input type="text" class='form-input floatr' name="" id="" placeholder="请输入">
+                    <label for="hallName" class="floatl">会议厅名称:</label>
+                    <input type="text" class='form-input floatr' name="hallName" id="hallName" placeholder="请输入">
                 </div>
                 <div class="form-group js-meetTime" v-cloak @click="selectRemark">
                     <label class="floatl">会议简介:</label>
@@ -27,20 +31,21 @@
                     <span class='floatr form-text'>{{itemText.remarkTxt}}</span>
                 </div>
                 <div class='btn-box'>
-                    <button type="button" @click="nextTep" class="form-btn cancel-btn">下一步</button>
+                    <button type="button" @click="saveMeetroom1" class="form-btn cancel-btn">下一步</button>
                 </div>
             </div>
            
             <div class="js-remark-info" v-cloak v-show="formBox.remark">
                 <div class="form-title"><span @click="saveRemark" class="backBasic-btn"><img src="../../css/img/title_arrow_back.png" alt=""></span>备注</div>
                 <div class="form-textarea">
-                    <textarea id='remarks_box' placeholder="你想说点什么" value="" maxlength="200" @input="remarkNum"></textarea>
+                    <textarea id='remarks_box' name="hallIntro" placeholder="你想说点什么" value="" maxlength="200" @input="remarkNum"></textarea>
                     <div class="textarea_counter"><span id="text-num">0</span>/200</div>
                 </div>
                 <div class='btn-box'>
                     <button type="button" class="form-btn cancel-btn" @click='saveRemark'>保存</button>
                 </div>
             </div>
+             </form>
         </div>
  
     </section>

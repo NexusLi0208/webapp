@@ -19,15 +19,15 @@
             </div>
         <section class="meet-list-main">
             <ul class="meet-list">
-                <li class="meet-item" v-for="item in chmeetlist">
+                <li class="meet-item" v-cloak v-for="item in chmeetlist" v-bind:data-chMeeId="item.meeId">
                     <a href="#">
                         <div class="left"><img src="../../css/img/pic1@2x.png" alt="meetimg"></div>
                         <div class="right">
-                            <p class="meet-name">{{item.meetTitle}}</p>
-                            <time>{{item.meetTime}}</time>
+                            <p class="meet-name">{{item.meeName}}</p>
+                            <time>{{item.meeStartTime|getTime}}</time>
                         </div>
                     </a>
-                    <div class="deleteItem" @click="removeItem($index)">
+                    <div class="deleteItem" @click="removeItem($index,$event)">
                         删除
                     </div>
                 </li>

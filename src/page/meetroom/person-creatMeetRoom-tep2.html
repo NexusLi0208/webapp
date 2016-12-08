@@ -15,32 +15,36 @@
 <body>
     <section class="main-cantainer" id="creat-meetroom">
         <div class='form-main'>
+            <form action="" id="creatmeetroom_form2">
             <div class="js-remark-basic" v-cloak v-show="formBox.basic">
                 <div class="form-title"><a href="javascript:history.go(-1)"><span class="backBasic-btn"><img src="../../css/img/title_arrow_back.png" alt=""></span></a>创建会议厅</div>
+                <!--用户ID-->
+                <input type="hidden" name="userId" v-model="userInfo.userId">
                 <div class="form-group">
                     <i class="floatl input-icon"><img src="../../css/img/gender.png" alt=""></i>
-                    <label for="" class="floatl">姓名:</label>
-                    <input type="text" class='form-input floatr' name="" id="" placeholder="请输入">
+                    <label for="realName" class="floatl">姓名:</label>
+                    <input type="text" class='form-input floatr' name="realName" id="realName" placeholder="请输入">
                 </div>
                  <div class="form-group">
                     <i class="floatl input-icon"><img src="../../css/img/wechat.png" alt=""></i>
-                    <label for="" class="floatl">微信号:</label>
-                    <input type="text" class='form-input floatr' name="" id="" placeholder="请输入">
+                    <label for="weixin" class="floatl">微信号:</label>
+                    <input type="text" class='form-input floatr' name="weixin" id="weixin" placeholder="请输入">
                 </div>
                 <div class="form-group">
                     <i class=" floatl input-icon"><img src="../../css/img/phone.png" alt=""></i>
-                    <label for="" class="floatl">电话:</label>
-                    <input type="tel" class='form-input floatr' value="12541254784" disabled name="" id="">
+                    <label for="phone" class="floatl">电话:</label>
+                    <input type="tel" class='form-input floatr' v-model="userInfo.phone"  name="phone" placeholder="请输入" id="phone">
                 </div>
                 <div class="form-group">
-                   <button class="input-btn success-btn" onclick="getCode(this)">获取验证码</button>
-                    <input type="text" class='form-input floatr'  name="" id="" placeholder="请输入验证码">
+                   <button class="input-btn success-btn" @click="getCodes" onclick="getCode(this)">获取验证码</button>
+                    <input type="text" class='form-input floatr'  name="msgCode" id="msgCode" placeholder="请输入验证码">
                 </div>
                
                 <div class='btn-box'>
-                    <button type="button" @click="saveMeetroom" class="form-btn cancel-btn">完成</button>
+                    <button type="button" @click="saveMeetroom2" class="form-btn cancel-btn">完成</button>
                 </div>
             </div>
+            </form>
         </div>
     </section>
      <script src="http://apps.bdimg.com/libs/zepto/1.1.4/zepto.min.js"></script>

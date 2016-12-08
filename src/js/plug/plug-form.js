@@ -12,7 +12,7 @@
 				} else {
 					serializeObj[this.name] = [serializeObj[this.name], this.value];
 				}
-			} else {
+			} else if(this.name!="") {
 
 					if (this.name == arrlist) {
 						serializeObj[this.name] = [this.value];

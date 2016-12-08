@@ -20,7 +20,7 @@
  	ready: function () {
  		$('input[type=text],input[type=tel],select').each(function () {
  			if (this.value != '' && this.value != 0) {
- 				this.setAttribute("readonly", "readonly");
+ 				this.setAttribute("disabled", "disabled");
  			}
  		})
 
@@ -111,7 +111,9 @@
  		formSubmit: function () {
  			//需要存为数组的表单name值
  			var arrname = 'submeetingId';
+
  			var data = $("#sign_up_main").serializeJson(arrname);
+			 			  console.log(JSON.stringify(data));
  			// console.log(JSON.stringify(data));
  			$.ajax({
  				url: urlIp + 'signup/set',
@@ -120,7 +122,6 @@
  				contentType: 'application/json',
  				success: function (data) {
  					if (data.status == 0) {
- 						alert('报名成功');
  						window.location.href = "sign-up-success.html"
  					} else if (data.status == 6400) {
  						alert('报名失败');
@@ -133,18 +134,5 @@
  				}
  			})
  		},
- 		test: function () {
- 			$.ajax({
- 				url: 'http://10.1.0.25:8882/whoami-meeting/meetinghall/130',
- 				type: "GET",
- 				success: function (data) {
- 					console.log(data);
- 				},
- 				error: function () {
- 					console.log(1);
- 				}
- 			})
-
- 		}
  	}
  });
