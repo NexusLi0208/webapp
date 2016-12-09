@@ -1,0 +1,46 @@
+
+
+@import "lib/rest.scss";
+@import "lib/mixin.scss";
+@import "lib/color.scss";
+.link-network-main{
+    width:100%;
+    height:100%;
+    padding-top:6rem;
+    box-sizing: border-box;
+    background: #fff;
+}
+.link-network-main .imgBox{
+  display:block;
+  width:13.5rem;
+  height: 13.5rem;
+  margin:0 auto;
+}
+.link-network-main .imgBox img{
+    width:100%;
+    height:auto;
+}
+.link-network-main .link{
+    color:$blue;
+    text-align: center;
+    line-height:2rem;
+    font-size: 1.5rem;
+    margin-top:3rem;
+
+}
+.link-network-main .info{
+    color:#6e6e6e;
+    margin: 3rem 0;
+    text-align: center;
+}
+.link-network-main .btn{
+    display: block;
+    width:16.5rem;
+    height:4.5rem;
+    margin:3rem auto;
+    background: $red;
+    color:#fff;
+    line-height: 4.5rem;
+    text-align: center;
+    border-radius: 5rem;
+}

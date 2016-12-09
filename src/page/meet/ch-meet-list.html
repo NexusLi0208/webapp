@@ -14,10 +14,10 @@
 
 <body>
     <section class="main-cantainer navfixr" id="chMeet-list">
-        <div class="page-title meetRoom-title">
+        <!--<div class="page-title meetRoom-title">
             <span class="floatl">子会议列表</span>
             <a href="creat-chMeet.html"><span class="floatr add-icon">+</span></a>
-        </div>
+        </div>-->
         <section class="meet-list-main">
             <ul class="meet-list">
                 <li class="meet-item" v-cloak v-for="item in chmeetlist" v-bind:data-chMeeId="item.meeId">
@@ -36,7 +36,14 @@
         </section>
         <button type="button" @click="creatChMeet" class="sign-up-btn pst-btm">完成</button>
     </section>
-    <script src="http://apps.bdimg.com/libs/zepto/1.1.4/zepto.min.js"></script>
+       <div class="float-btn-box">
+      <span class="float-btn"><img src="../../css/img/menu_more_btn_normal.png" alt=""></span>
+      <div class="float-menu-box animate fadeInUp" hidden>
+      <a class="float-menu" href="creat-chMeet.html">创建子会议</a>
+      </div>
+    </div>
+    <script src="../../js/lib/zepto.js"></script>
+    <script src="../../js/common.js"></script>
     <script src="../../js/lib/vue-1.0.28.js"></script>
     <script src="../../js/plug/httpPath.js"></script>
     <script src="../../js/ch-meet-list.js"></script>

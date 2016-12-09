@@ -55,9 +55,9 @@ textarea {
 }
 .bl-bg{
     width: 100%;
-    height:calc(100% - 4.4rem);
+    height:100%;
     @include linear-gradient(top,#00a0e9,#1d6edd);
-    padding-top:12%;
+    padding-top:20%;
     box-sizing: border-box;
 }
 .bl-bg2{
@@ -81,9 +81,6 @@ textarea {
     display: block;
     height: 7rem;
 }
-   
-
-
 .form-title {
     position: relative;
     width: 100%;
@@ -93,7 +90,7 @@ textarea {
     background: $blue;
     color: #fff;
 }
-
+// 返回按钮
 .backBasic-btn {
     position: absolute;
     left: 1rem;
@@ -101,6 +98,17 @@ textarea {
 }
 
 .backBasic-btn img {
+    width: 3rem;
+    height: 3rem;
+}
+// 更多按钮
+.top-more-btn {
+    position: absolute;
+    right: 1rem;
+    color: #fff;
+}
+
+.top-more-btn img {
     width: 3rem;
     height: 3rem;
 }
@@ -237,6 +245,7 @@ textarea {
 .meet-list-main {
     box-sizing: border-box;
     width: 100%;
+    min-height:100%;
     padding: 0 1.5rem;
     background: #fff;
 }
@@ -367,4 +376,43 @@ textarea {
 .modal-footer button.no{
        color:#717171;
         border-radius: 0 0 10px 0;
+}
+
+// 浮动菜单
+.float-btn-box{
+    position: relative;
+
+}
+.float-btn{
+    display: block;
+    position:fixed;
+    right:2.2rem;
+    bottom:6rem;
+    width:5rem;
+    height:5rem;
+    border-radius: 50px;
+    background:#ffa53a;
+    z-index:1;
+    
+}
+.float-btn img{
+    width:100%;
+}
+.float-menu-box{
+     position:absolute;
+     right:2.2rem;
+     bottom:11.5rem;
+}
+.float-menu{
+    display: block;
+    width:10.5rem;
+    font-size:1.2rem;
+    text-align: center;
+    line-height:3.5rem;
+    height:3.5rem;
+    background: #fdedd9;
+    color:#f87e17;
+    margin:.75rem 0;
+    border-radius: 5rem;
+   
 }

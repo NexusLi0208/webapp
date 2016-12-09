@@ -1,0 +1,32 @@
+.mine-header {
+  width: 100%;
+  height: 23rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* Fallback for sad browsers */
+  background-color: #28c9d7;
+  /* WebKit (Safari 5.1+, Chrome 10+) */
+  background-image: -webkit-linear-gradient(top, #00a0e9, #28c9d7);
+  padding-top: 4.4rem; }
+
+.mine-header .mine-icon {
+  width: 10.5rem;
+  height: 10.5rem;
+  margin: 0 auto;
+  border-radius: 0.5rem;
+  border: .5rem #fff solid;
+  overflow: hidden; }
+
+.mine-header .mine-icon img {
+  width: 100%;
+  height: auto; }
+
+.mine-header .mine-nickname {
+  font-size: 2rem;
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  margin-top: 2rem; }
+
+.mine-menu-list .input-icon {
+  margin-right: 2rem; }

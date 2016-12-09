@@ -131,7 +131,8 @@ new Vue({
 		},
 		setTime:function(e){
 			var obj=e.currentTarget;
-			var date=new Date(obj.value).getTime();
+            var obj_str=obj.value;
+			var date=new Date(obj_str.replace(/-/g,'/')).getTime();
             $(obj).next('input').val(date);
 		},
 			// 创建会议

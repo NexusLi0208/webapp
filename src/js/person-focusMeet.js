@@ -1,0 +1,10 @@
+$(function(){
+    $(".js_nostart_btn").on("click",function(){
+        $(this).addClass('active').siblings().removeClass('active');
+        $("#nostarted_list").show().siblings().hide();
+    })
+        $(".js_start_btn").on("click",function(){
+        $(this).addClass('active').siblings().removeClass('active');
+        $("#started_list").show().siblings().hide();
+    })
+})
