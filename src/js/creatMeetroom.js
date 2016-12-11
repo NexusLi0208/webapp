@@ -1,4 +1,3 @@
-var urlIp = 'http://10.1.0.25:8882/whoami-meeting/';
 new Vue({
 	el: '#creat-meetroom',
 	data: {
@@ -10,7 +9,7 @@ new Vue({
 			remarkTxt: '请填写'
 		},
 		modal: false,
-		userInfo:userInfo = JSON.parse(localStorage.getItem("user"))
+		userInfo:userInfo = JSON.parse(sessionStorage.getItem("user"))
 	}
 	//	过滤器
 	,
@@ -53,12 +52,13 @@ new Vue({
 		saveMeetroom1: function () {
 			var data = $("#creatmeetroom_form").serializeJson();
 			$.ajax({
-					url: urlIp + 'meetinghall',
+					url: meetingpath + '/meetinghall',
 					type: "POST",
 					data: JSON.stringify(data),
 					contentType: 'application/json',
 					success: function (data) {
-						localStorage.setItem('hallId',data.dataId);
+						console.log(data);
+						sessionStorage.setItem('hallId',data.dataId);
 						window.location.href = "person-creatMeetRoom-tep2.html"
 					},
 					error: function () {
@@ -70,7 +70,7 @@ new Vue({
 		getCodes:function(){
 			var phoneNum=$("#phone").val();
 			$.ajax({
-					url:'http://10.1.0.18:8081/whoami/weixin/sendMsgToHasReg/'+phoneNum,
+					url:userpath+'/weixin/sendMsgToHasReg/'+phoneNum,
 					type: "POST",
 					contentType: 'application/json',
 					success: function (data) {
@@ -93,13 +93,13 @@ new Vue({
 				}
 			})
 			$.ajax({
-					url:'http://10.1.0.18:8081/whoami/weixin/createHallStep2',
+					url:userpath+'/weixin/createHallStep2',
 					type: "POST",
 					data: JSON.stringify(data),
 					contentType: 'application/json',
 					success: function (data) {
 						console.log(data);
-						localStorage.setItem('hallId',data.dataId);
+						sessionStorage.setItem('hallId',data.dataId);
 						window.location.href = "creatmeetroom-success.html"
 					},
 					error: function () {

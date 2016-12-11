@@ -23,12 +23,12 @@
                 <div class="form-group">
                     <i class="floatl input-icon"><img src="../../css/img/gender.png" alt=""></i>
                     <label for="realName" class="floatl">姓名:</label>
-                    <input type="text" class='form-input floatr' name="realName" id="realName" placeholder="请输入">
+                    <input type="text" class='form-input floatr' v-model="userInfo.realName" name="realName" id="realName" placeholder="请输入">
                 </div>
                  <div class="form-group">
                     <i class="floatl input-icon"><img src="../../css/img/wechat.png" alt=""></i>
                     <label for="weixin" class="floatl">微信号:</label>
-                    <input type="text" class='form-input floatr' name="weixin" id="weixin" placeholder="请输入">
+                    <input type="text" class='form-input floatr' v-model="userInfo.weixin" name="weixin" id="weixin" placeholder="请输入">
                 </div>
                 <div class="form-group">
                     <i class=" floatl input-icon"><img src="../../css/img/phone.png" alt=""></i>
@@ -50,6 +50,7 @@
      <script src="http://apps.bdimg.com/libs/zepto/1.1.4/zepto.min.js"></script>
     <script src="../../js/lib/vue-1.0.28.js"></script>
     <script src="../../js/plug/plug-form.js"></script>
+    <script src="../../js/plug/httpPath.js"></script>
     <script src="../../js/creatMeetroom.js"></script>
 </body>
 

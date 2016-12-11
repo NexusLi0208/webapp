@@ -1,17 +1,18 @@
-var urlIp = 'http://10.1.0.27:8882/whoami-meeting/meetingInfo';
+
 var signup = new Vue({
 	el: '#chMeet-list',
 	data: {
-		chmeetlist: {}
-
+		chmeetlist: {},
+        meetInfo:''
 	},
+
 	ready: function () {
-			var meeId = localStorage.getItem("meeId");
+			this.meetInfo=JSON.parse(sessionStorage.getItem('meetInfo'));
 			var _this = this;
 			$.ajax({
-				url: urlIp + '/selectSubMeeByParentId',
+				url: meetingpath + '/meetingInfo/selectSubMeeByParentId',
 				data: JSON.stringify({
-					"meeParentId": meeId
+					"meeParentId": _this.meetInfo.meeId
 				}),
 				type: "POST",
 				contentType: 'application/json',
@@ -54,7 +55,7 @@ var signup = new Vue({
 			var deletBtn = e.currentTarget;
 			var chMeeId = $(deletBtn).parents('.meet-item').attr('data-chMeeId');
 			$.ajax({
-				url: urlIp + '/deleteSub',
+				url: meetingpath + '/meetingInfo/deleteSub',
 				data: JSON.stringify({
 					"meeId": chMeeId
 				}),

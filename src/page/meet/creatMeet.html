@@ -22,7 +22,7 @@
                     <span>创建会议</span>
                 </div>
                 <form id="creatmeet-form">
-                    <input type="hidden" id="hallId" name="hallId" v-model='hallId'>
+                    <input type="hidden" id="hallId" name="hallId" v-model='hallInfo.hallId'>
                     <div class="form-group">
                         <label for="meeName" class="floatl">会议名:</label>
                         <input type="text" class='form-input floatr' name="meeName" id="meeName" placeholder="请输入">
@@ -96,6 +96,7 @@
     <script src="../../js/lib/mobiscroll.js"></script>
     <script src="../../js/lib/vue-1.0.28.js"></script>
     <script src="../../js/plug/plug-form.js"></script>
+    <script src="../../js/plug/httpPath.js"></script>
     <script src="../../js/creatMeet.js"></script>
 </body>
 

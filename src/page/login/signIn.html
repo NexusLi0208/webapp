@@ -39,13 +39,14 @@
         </form>
     </section>
     <script src="http://apps.bdimg.com/libs/zepto/1.1.4/zepto.min.js"></script>
+     <script src="../../js/plug/httpPath.js.js"></script>
     <script src="../../js/plug/plug-form.js"></script>
     <script>
      function userSignIn(){
          var data = $("#signIn-form").serializeJson();
          console.log(JSON.stringify(data));
          $.ajax({
-				url: "http://10.1.0.26:8081/whoami/user/register",
+				url: userpath+"/user/register",
 				data: JSON.stringify(data),
 				type: "POST",
 				contentType: 'application/json',
@@ -65,7 +66,7 @@
       function getPhoneCode(){
             var phoneNUM=$("#phone").val();
              $.ajax({
-				url: "http://10.1.0.26:8081/whoami/weixin/sendMsg/"+phoneNUM,
+				url: userpath+"/weixin/sendMsg/"+phoneNUM,
 				type: "POST",
 				success: function (data) {
 				 if(data.errcode == 0){

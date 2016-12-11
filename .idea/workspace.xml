@@ -3,10 +3,26 @@
   <component name="ChangeListManager">
     <list default="true" id="62d633a2-9682-4774-bdb6-377f777b647c" name="Default" comment="Default">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/plug/plug-form.js" afterPath="$PROJECT_DIR$/src/js/plug/plug-form.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/ch-meet-list.js" afterPath="$PROJECT_DIR$/src/js/ch-meet-list.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/creatMeet.js" afterPath="$PROJECT_DIR$/src/js/creatMeet.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/creatMeetroom.js" afterPath="$PROJECT_DIR$/src/js/creatMeetroom.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/meet-room.js" afterPath="$PROJECT_DIR$/src/js/meet-room.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/meetIndex.js" afterPath="$PROJECT_DIR$/src/js/meetIndex.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/mtrm-meetinfo.js" afterPath="$PROJECT_DIR$/src/js/mtrm-meetinfo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/plug/httpPath.js" afterPath="$PROJECT_DIR$/src/js/plug/httpPath.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/signUp.js" afterPath="$PROJECT_DIR$/src/js/signUp.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/page/user/login.html" afterPath="$PROJECT_DIR$/src/page/user/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/page/user/sign-up.html" afterPath="$PROJECT_DIR$/src/page/user/sign-up.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/page/login/login.html" afterPath="$PROJECT_DIR$/src/page/login/login.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/page/login/signIn.html" afterPath="$PROJECT_DIR$/src/page/login/signIn.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/page/meet/ch-meet-list.html" afterPath="$PROJECT_DIR$/src/page/meet/ch-meet-list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/page/meet/creat-chMeet.html" afterPath="$PROJECT_DIR$/src/page/meet/creat-chMeet.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/page/meet/creatMeet.html" afterPath="$PROJECT_DIR$/src/page/meet/creatMeet.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/page/meet/creatmeet-success.html" afterPath="$PROJECT_DIR$/src/page/meet/creatmeet-success.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/page/meet/meet-index.html" afterPath="$PROJECT_DIR$/src/page/meet/meet-index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/page/meetroom/meet-room.html" afterPath="$PROJECT_DIR$/src/page/meetroom/meet-room.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/page/meetroom/meetroom-index.html" afterPath="$PROJECT_DIR$/src/page/meetroom/meetroom-index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/page/meetroom/person-creatMeetRoom-tep1.html" afterPath="$PROJECT_DIR$/src/page/meetroom/person-creatMeetRoom-tep1.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/page/meetroom/person-creatMeetRoom-tep2.html" afterPath="$PROJECT_DIR$/src/page/meetroom/person-creatMeetRoom-tep2.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/page/sign-up/sign-up.html" afterPath="$PROJECT_DIR$/src/page/sign-up/sign-up.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -26,7 +42,18 @@
     <favorites_list name="we-app" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="debug.log" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/debug.log">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
@@ -102,8 +129,8 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="260" />
-    <option name="y" value="74" />
+    <option name="x" value="252" />
+    <option name="y" value="201" />
     <option name="width" value="1400" />
     <option name="height" value="898" />
   </component>
@@ -122,7 +149,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -150,48 +176,9 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="we-app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="we-app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="page" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="user" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="we-app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="we-app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="page" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -204,7 +191,7 @@
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
     <property name="js.buildTools.gulp.gulp_package_dir" value="G:\we-app\node_modules\gulp" />
   </component>
-  <component name="RunManager" selected="Gulp.js.default">
+  <component name="RunManager" selected="JavaScript Debug.meet-room.html">
     <configuration default="false" name="sass" type="js.build_tools.gulp" factoryName="Gulp.js" temporary="true">
       <node-interpreter>project</node-interpreter>
       <node-options />
@@ -320,11 +307,12 @@
       <workItem from="1480906447814" duration="570000" />
       <workItem from="1481072811705" duration="347000" />
       <workItem from="1481075013108" duration="1591000" />
+      <workItem from="1481260933517" duration="54000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3850000" />
+    <option name="totallyTimeSpent" value="3904000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -336,19 +324,19 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="260" y="74" width="1400" height="898" extended-state="0" />
-    <editor active="false" />
+    <frame x="252" y="201" width="1400" height="898" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18248945" sideWeight="0.5170807" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25441176" sideWeight="0.4848485" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25441176" sideWeight="0.5204216" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25441176" sideWeight="0.4795784" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293348" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="调试" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24863686" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2977099" sideWeight="0.5031645" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293348" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="运行" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35968378" sideWeight="0.49683544" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25441176" sideWeight="0.5151515" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="运行" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4334651" sideWeight="0.49683544" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18248945" sideWeight="0.519084" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="检验" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32943678" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -473,7 +461,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-4153">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -481,7 +468,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="437">
           <caret line="19" column="103" lean-forward="true" selection-start-line="19" selection-start-column="103" selection-end-line="19" selection-end-column="103" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -489,6 +475,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="397">
           <caret line="62" column="66" lean-forward="true" selection-start-line="62" selection-start-column="22" selection-end-line="62" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/debug.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>

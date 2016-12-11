@@ -17,22 +17,22 @@
         <div class='form-main' id='sign-main'>
             <form action="sign-up-success.html" id="sign_up_main">
                 <!--会议厅ID-->
-                <input type="hidden" name='meethallId' value="11">
+                <input type="hidden" name='meethallId' v-model="meetroomInfo.hallId">
                 <!--主会议ID-->
-                <input type="hidden" name='meetingId' value="11">
+                <input type="hidden" name='meetingId'  v-model="selcetmeeInfo.meeId">
                 <!--用户ID-->
-                <input type="hidden" name='userId' v-model='userinfo.userId'>
+                <input type="hidden" name='userId' v-model='userInfo.userId'>
                 <div class='basic-info' v-show="formBox.basic">
                     <div class="form-title">
                         </span>会议报名</div>
                     <div class="form-group">
                         <label for="realName" class="floatl">姓名:</label>
-                        <input type="text" class='form-input floatr' v-model="userinfo.realName" name="realName" id="realName" placeholder="请输入姓名">
+                        <input type="text" class='form-input floatr' v-model="userInfo.realName" name="realName" id="realName" placeholder="请输入姓名">
                     </div>
                     <div class="form-group">
                         <label for="sex" class="floatl">姓别:</label>
                         <span class="floatr arrowImg"><img src="../../css/img/list_arrow.png" alt=""></span>
-                        <select class='form-input floatr' v-model="userinfo.sex | select" name="sex" id="sex">
+                        <select class='form-input floatr' v-model="userInfo.sex | select" name="sex" id="sex">
                             <option value="0">请选择</option>
                             <option value="1">男</option>
                             <option value="2">女</option>
@@ -40,7 +40,7 @@
                     </div>
                     <div class="form-group">
                         <label for="phone" class="floatl">手机:</label>
-                        <input type="tel" class='form-input floatr' id="phone" v-model="userinfo.phone" placeholder="请输入手机">
+                        <input type="tel" class='form-input floatr' id="phone" v-model="userInfo.phone" placeholder="请输入手机">
                     </div>
                     <div class="form-group">
                         <label for="userName" class="floatl">邮箱:</label>
@@ -98,7 +98,7 @@
                         <span class='floatr form-text'>{{itemText.tiketTxt}}</span>
                     </div>-->
                     <!--<hr class="form-hr">-->
-                    <div class="form-group" @click="selectMeet">
+                    <div class="form-group" v-if="chmeetBtn" @click="selectMeet">
                         <label class="floatl">分论坛选择：</label>
                         <span class="floatr arrowImg"><img src="../../css/img/list_arrow.png" alt=""></span>
                         <span class='floatr form-text'>{{itemText.meetTxt}}</span>
@@ -142,42 +142,19 @@
                 </div>-->
                 <div class="js-meetlist-info" v-show="formBox.meetlist">
                     <div class="form-title"><span @click="saveMeet" class="backBasic-btn"><img src="../../css/img/title_arrow_back.png" alt=""></span>分论坛选择</div>
-                    <div class="form-group meet-group ">
-                        <p class="submeet-name">"现代学徒试点(集团化办学)"分论坛</p>
+                    <div class="form-group meet-group " v-for="item in meetInfo.list">
+                        <p class="submeet-name">{{item.meeName}}</p>
                         <div class="submeet-info">
                             <div class="time-item floatl">
                                 <span><img src="../../css/img/clock.png" alt=""></span>
-                                <time>8月12日</time>
+                                <time>{{item.meeTime}}</time>
                             </div>
                             <div class='checkbox-item floatr'>
-                                参加<input type="checkbox" name="submeetingId" value="0">
+                                参加<input type="checkbox" name="submeetingId" v-bind:value="item.meeId">
                             </div>
                         </div>
                     </div>
-                    <div class="form-group meet-group ">
-                        <p class="submeet-name">"现代学徒试点(集团化办学)"分论坛</p>
-                        <div class="submeet-info">
-                            <div class="time-item floatl">
-                                <span><img src="../../css/img/clock.png" alt=""></span>
-                                <time>8月12日</time>
-                            </div>
-                            <div class='checkbox-item floatr'>
-                                参加<input type="checkbox" name="submeetingId" value="1">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group meet-group ">
-                        <p class="submeet-name">"现代学徒试点(集团化办学)"分论坛</p>
-                        <div class="submeet-info">
-                            <div class="time-item floatl">
-                                <span><img src="../../css/img/clock.png" alt=""></span>
-                                <time>8月12日</time>
-                            </div>
-                            <div class='checkbox-item floatr'>
-                                参加<input type="checkbox" name="submeetingId" value="2">
-                            </div>
-                        </div>
-                    </div>
+                    
                     <div class='btn-box'>
                         <button type="button" class="form-btn cancel-btn" @click='saveMeet'>保存</button>
                     </div>
@@ -198,6 +175,7 @@
     </section>
     <script src="http://apps.bdimg.com/libs/zepto/1.1.4/zepto.min.js"></script>
     <script src="../../js/plug/plug-form.js"></script>
+    <script src="../../js/plug/httpPath.js"></script>
     <script src="../../js/lib/vue-1.0.28.js"></script>
     <script src="../../js/signUp.js"></script>
 </body>

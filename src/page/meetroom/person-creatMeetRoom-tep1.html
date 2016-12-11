@@ -20,7 +20,7 @@
                 <!--会议厅类型-->
                 <input type="hidden" name="hallType" value=1>
                 <!--用户ID-->
-                 <input type="hidden" name="userId" v-model="userId">
+                 <input type="text" name="userId" v-model="userInfo.userId">
                 <div class="form-group">
                     <label for="hallName" class="floatl">会议厅名称:</label>
                     <input type="text" class='form-input floatr' name="hallName" id="hallName" placeholder="请输入">
@@ -52,6 +52,7 @@
      <script src="http://apps.bdimg.com/libs/zepto/1.1.4/zepto.min.js"></script>
     <script src="../../js/lib/vue-1.0.28.js"></script>
     <script src="../../js/plug/plug-form.js"></script>
+    <script src="../../js/plug/httpPath.js"></script>
     <script src="../../js/creatMeetroom.js"></script>
 </body>
 

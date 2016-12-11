@@ -14,7 +14,6 @@ $(function () {
 
 });
 
-var urlIp = 'http://10.1.0.27:8882/whoami-meeting/meetingInfo/';
 new Vue({
 	el: '#creat-meet',
 	data: {
@@ -28,8 +27,9 @@ new Vue({
 			remarkTxt: '请填写'
 		},
 		modal: false,
-		meeId:'',
-		hallId:'1516'
+		userInfo:'',
+		hallInfo:'',
+		meetInfo:''
 	}
 	//	过滤器
 	,
@@ -37,8 +37,10 @@ new Vue({
 	//方法
 	,
 	ready:function(){
-		this.meeId=localStorage.getItem('userInfo');
-		//this.hallId=localStorage.getItem('hallId');
+		this.userInfo=JSON.parse(sessionStorage.getItem('userInfo'));
+		this.hallInfo=JSON.parse(sessionStorage.getItem('existMeeHall'));
+		this.meetInfo=JSON.parse(sessionStorage.getItem('meetInfo'));
+		console.log(this.hallInfo);
 	},
 	methods: {
 		//  回基本信息
@@ -97,11 +99,10 @@ new Vue({
 		},
 		// 保存子会议
 		saveChildMeet: function () {
-			
 				var data = $("#creatchmeet_form").serializeJson();
-	           console.log(JSON.stringify(data));
+				console.log(data);
 				$.ajax({
-				url: urlIp + 'addSubMeeting',
+				url: meetingpath + '/meetingInfo/addSubMeeting',
 				data: JSON.stringify(data),
 				type: "PUT",
 				contentType: 'application/json',
@@ -133,20 +134,21 @@ new Vue({
 			var date=new Date(obj.value).getTime();
             $(obj).next('input').val(date);
 		},
+			// 创建会议
 		greatmeet: function (callback) {
 			var _this =this;
-			// 创建会议
+		
 			var data = $("#creatmeet-form").serializeJson();
 			    console.log(JSON.stringify(data));
 			$.ajax({
-				url: urlIp + 'addMeeting',
+				url:  meetingpath+'/meetingInfo/addMeeting',
 				data: JSON.stringify(data),
 				type: "PUT",
 				contentType: 'application/json',
 				success: function (data) {
 					console.log(data);
 					if (data.code == 6300) {
-					  localStorage.setItem('meeId',data.meetingInfo.meeId);
+					  sessionStorage.setItem('meetInfo',JSON.stringify(data.meetingInfo));
 					  _this.modal=true;
 					}
 					else{

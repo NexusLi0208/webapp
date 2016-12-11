@@ -12,16 +12,16 @@
     <link rel="stylesheet" href="../../css/style.css">
 </head>
 <body>
-    <section class="main-cantainer">
+    <section class="main-cantainer" id="vue_main">
         <header class="header">
-            <div class="form-title"><a href="javascript:history.go(-1)"><span class="backBasic-btn"><img src="../../css/img/title_arrow_back.png" alt=""></span></a>会议厅主页</div>
+            <div class="form-title"><a href="meet-room.html"><span class="backBasic-btn"><img src="../../css/img/title_arrow_back.png" alt=""></span></a>会议厅主页</div>
         </header>
         <section class="mtrm-idx-hd">
             <div class="mtrm-idx-d1">
                 <div class="user-img floatl"><img src="../../css/img/user-img.jpeg" alt=""></div>
                 <div>
                     <div class="user-info-box  floatl">
-                        <p class="user-name">李狗蛋的直播间</p>
+                        <p class="user-name">{{hallInfo.hallName}}</p>
                         <p class="user-fans"><span><img src="../../css/img/conference_funs.png" alt=""></span>15616人关注</p>
                     </div>
                 </div>
@@ -40,32 +40,12 @@
         <a class="creatMeet-btn success-btn" href="../meet/creatMeet.html">创建会议</a>
         <section class="meet-list-main">
             <ul class="meet-list">
-                <li class="meet-item">
-                    <a href="meetroom-meetinfo.html">
+                <li class="meet-item" v-cloak v-for="item in meeList" v-bind:data-meeId="item.meeId" @click="selectMeet($event)">
+                    <a href="javascript:;">
                         <div class="left"><img src="../../css/img/pic1@2x.png" alt="meetimg"></div>
                         <div class="right">
-                            <p class="meet-name">淄博职业学院：三项机制成就大学生圆梦</p>
-                            <time>2016-06-04</time>
-                            <button class="disfocus-btn">已关注</button>
-                        </div>
-                    </a>
-                </li>
-                <li class="meet-item">
-                    <a href="meetroom-meetinfo.html">
-                        <div class="left"><img src="../../css/img/pic1@2x.png" alt="meetimg"></div>
-                        <div class="right">
-                            <p class="meet-name">淄博职业学院：三项机制成就大学生圆梦</p>
-                            <time>2016-06-04</time>
-                            <button class="focus-btn">关注</button>
-                        </div>
-                    </a>
-                </li>
-                <li class="meet-item">
-                    <a href="meetroom-meetinfo.html">
-                        <div class="left"><img src="../../css/img/pic1@2x.png" alt="meetimg"></div>
-                        <div class="right">
-                            <p class="meet-name">淄博职业学院：三项机制成就大学生圆梦</p>
-                            <time>2016-06-04</time>
+                            <p class="meet-name">{{item.meeName}}</p>
+                            <time>{{item.meeStartTime|getTime}}</time>
                             <button class="focus-btn">关注</button>
                         </div>
                     </a>
@@ -74,7 +54,9 @@
         </section>
     </section>
     <script src="http://apps.bdimg.com/libs/zepto/1.1.4/zepto.min.js"></script>
-
+    <script src="../../js/plug/httpPath.js"></script>
+    <script src="../../js/lib/vue-1.0.28.js"></script>
+    <script src="../../js/meetromm-index.js"></script>
 </body>
 
 </html>

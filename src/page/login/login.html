@@ -34,13 +34,14 @@
         </form>
     </section>
      <script src="http://apps.bdimg.com/libs/zepto/1.1.4/zepto.min.js"></script>
+     <script src="../../js/plug/httpPath.js"></script>
     <script src="../../js/plug/plug-form.js"></script>
      <script>
          function userLogin(){
              var data = $("#login_form").serializeJson();
              console.log(JSON.stringify(data));
              $.ajax({
-                 url: "http://10.1.0.26:8081/whoami/user/loginByPwd",
+                 url: userpath+"/user/loginByPwd",
                  data: JSON.stringify(data),
                  type: "POST",
                  contentType: 'application/json',
@@ -48,7 +49,7 @@
                      console.log(data);
                      if(data.errcode == 0){
                          var userInfo=JSON.stringify(data.user)
-                         localStorage.setItem("user",userInfo);
+                         sessionStorage.setItem("user",userInfo);
                          window.location="../meet/meet-index.html";
                      }
                      else if(data.errcode==6209){

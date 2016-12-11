@@ -13,7 +13,10 @@
 </head>
 
 <body>
-    <section class="main-cantainer">
+    <section class="main-cantainer" id="vue_main">
+        <header class="header">
+            <div class="form-title"><a href="javascript:history.go(-1)"><span class="backBasic-btn"><img src="../../css/img/title_arrow_back.png" alt=""></span></a>{{selectmeeinfo.meeName}}</div>
+        </header>
         <div class="meet-info-list  clearfix">
             <div class="item">
                 <a href="../sign-up/sign-up.html">
@@ -60,5 +63,7 @@
         </div>
     </section>
 </body>
-
+<script src="../../js/lib/vue-1.0.28.js"></script>
+    <script src="../../js/plug/httpPath.js"></script>
+    <script src="../../js/meet-func-list.js"></script>
 </html>

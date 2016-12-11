@@ -2,7 +2,7 @@
 //获取用户信息保存至sessionStrong
 var userInfoUrl='http://10.1.0.26:8081/whoami/'
 function getUserInfo(){
-    var userinfo= JSON.parse(localStorage.getItem('userInfo'));
+    var userinfo= JSON.parse(sessionStorage.getItem('userInfo'));
     var userId=userinfo.userId;
     $.ajax({
  				url: userInfoUrl + 'signup/select',
@@ -12,7 +12,7 @@ function getUserInfo(){
  				success: function (data) {
  					if (data.status == 0) {
                          console.log('ok');
-                         localStorage.setItem('userInfo',data.userinfo)
+                         sessionStorage.setItem('userInfo',data.userinfo)
  					} else if (data.status == 6403) {
  						console.log('没有此用户信息');
  					} else {

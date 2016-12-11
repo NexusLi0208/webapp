@@ -21,9 +21,9 @@
              <div class="form-title"><a href="javascript:history.go(-1)"><span class="backBasic-btn"><img src="../../css/img/title_arrow_back.png" alt=""></span></a>创建子会议</div>
                 <form id="creatchmeet_form">
                     <!--主会议ID-->
-                    <input type="hidden" name="meeParentId" v-model='meeId'>
+                    <input type="hidden" name="meeParentId" v-model='meetInfo.meeId'>
                     <!--会议厅ID-->
-                    <input type="hidden" name="hallId" v-model='hallId'>
+                    <input type="hidden" name="hallId" v-model='hallInfo.hallId'>
                 <div class="form-group">
                     <label for="meeName" class="floatl">会议名:</label>
                     <input type="text" class='form-input floatr' name="meeName" id="meeName" placeholder="请输入">
@@ -86,8 +86,8 @@
     <script src="../../js/lib/mobiscroll.js"></script>
     <script src="../../js/lib/vue-1.0.28.js"></script>
     <script src="../../js/plug/plug-form.js"></script>
+     <script src="../../js/plug/httpPath.js"></script>
     <script src="../../js/creatMeet.js"></script>
-    <script src='../../js/common.js'></script>
 </body>
 
 </html>
