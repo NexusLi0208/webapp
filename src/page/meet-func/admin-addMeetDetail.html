@@ -14,49 +14,47 @@
 
 <body>
     <section class="main-cantainer">
-        <div class="form-title"><span onclick="javascript:history.back(-1)" class="backBasic-btn"><img src="../../css/img/title_arrow_back.png" alt=""></span>编辑会议动态</div>
-        <div class="form-group">
-            <label for="realName" class="floatl">会议标题:</label>
-            <input type="text" class='form-input floatr'  name="" id="" placeholder="4-25个字">
-        </div>
-        <div class="form-group">
-            <label for="realName" class="floatl">作者:</label>
-            <input type="text" class='form-input floatr'  name="" id="" placeholder="请输入">
-        </div>
-        <div class="editormain">
-            <div class="editor-btnBox"> <input type="file" id="imageUpload"></div>
-            <div class="article-content" id="content">asdadasd </div>
-        </div>
-         <button type="button" class="sign-up-btn pst-btm">完成</button>
-        <!--<div class="article-content" id="content">
-        </div>-->
-        <div>
-        </div>
+        <form>
+            <div class="form-group">
+                <label for="realName" class="floatl">会议标题:</label>
+                <input type="text" class='form-input floatr' name="" id="" placeholder="4-25个字">
+            </div>
+            <div class="form-group">
+                <label for="realName" class="floatl">作者:</label>
+                <input type="text" class='form-input floatr' name="" id="" placeholder="请输入">
+            </div>
+            <div class="editormain">
+                <div class="editor-btnBox">
+                    <span><img src="../../css/img/picture_normal.png" alt=""><input class="filebtn" type="file" id="imageUpload" ></span>
+                </div>
+                <div id="content" class="editor-body"></div>
+            </div>
+            <button type="button" class="sign-up-btn">完成</button>
+            <div>
+            </div>
     </section>
-    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="../../js/lib/jquery.js"></script>
     <script src="../../js/lib/artEditor.min.js"></script>
     <script>
-      $('#content').artEditor({
-    imgTar: '#imageUpload',
-    limitSize: 5,   // 兆
-    showServer: false,
-    uploadUrl: '',
-    data: {},
-    uploadField: 'image',
-    placeholader: '<p>添加内容</p>',
-    validHtml: ["br"],
-    uploadSuccess: function(res) {
-         console.log(res);
+        $('#content').artEditor({
+        imgTar: '#imageUpload',
+        limitSize: 5,   // 兆
+        showServer: false,
+        uploadUrl: '',
+        data: {},
+        uploadField: 'image',
+        placeholader: '<p>请输入文章正文内容</p>',
+        validHtml: ["br"],
+        uploadSuccess: function(res) {
         // return img url
         return res.path;
-         
     },
     uploadError: function(res) {
         // something error
         console.log(res);
     }
 });
-      </script>
+    </script>
 </body>
 
 </html>

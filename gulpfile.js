@@ -95,6 +95,8 @@ gulp.task('scripts', function () {
         .pipe(gulp.dest('./dist/js'));
 
 });
+
+
 gulp.task('html', function () {
     gulp.src('./src/**/*.html')
         .pipe(gulp.dest('dist'))
@@ -111,3 +113,10 @@ gulp.task('watch', function () {
     // 监听根目录下所有.html文件
 })
 gulp.task('build', ['cssmin', 'scripts', 'html'])
+// 临时压缩任务
+gulp.task('yasuo',function(){
+    gulp.src('./src/js/test/*.js')
+    .pipe(uglify())
+       .pipe(rename('pdf2htmlEX.min.js'))
+     .pipe(gulp.dest('./yasuo'));
+})
