@@ -4,6 +4,7 @@
     width: 100%;
     height: 100%;
     background: #eee;
+    user-select: none;
 }
 
 .form-group {
@@ -90,6 +91,16 @@ select.form-input {
     width: 1.1rem;
 }
 
+.deletImg {
+    position: absolute;
+    width: 3rem;
+    right: 1rem;
+}
+
+.deletImg img {
+    width: 100%;
+}
+
 .form-hr {
     width: 100%;
     height: 1rem;
@@ -121,6 +132,9 @@ select.form-input {
     border: none;
 }
 
+.sign-up-btn:active {
+    background: #dc3239;
+}
 
 .submeet-name {
     font-size: 1.5rem;
@@ -200,7 +214,7 @@ select.form-input {
 
 .fileUpload input[type='file'] {
     position: absolute;
-    right:0;
+    right: 0;
     z-index: 2;
     opacity: 0;
 }
@@ -245,8 +259,8 @@ select.form-input {
 
 .editor-btnBox span {
     position: relative;
-    display:block;
-    height:100%;
+    display: block;
+    height: 100%;
     width: 3rem;
     overflow: hidden;
 }
@@ -254,20 +268,23 @@ select.form-input {
 .editor-btnBox span img {
     width: 100%;
 }
-.editor-body{
-    width:100%;
-    font-size: 1.5rem;
-    padding:1rem 0;
-    line-height:2rem;
-    min-height:20rem;
+
+.editor-body {
+    width: 100%;
+    font-size: 1.5rem!important;
+    padding: 1rem 0;
+    line-height: 2rem;
+    min-height: 20rem;
 }
-.filebtn{
-    height:5.5rem;
+
+.filebtn {
+    height: 5.5rem;
     opacity: 0;
     position: absolute;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
 }
+
 .form-txtarea {
     width: 100%;
     box-sizing: border-box;
@@ -279,6 +296,11 @@ select.form-input {
     box-shadow: none;
     outline: none;
 }
+
+.disable {
+    color: #848689;
+}
+
 // 文件上传
 .bottomimg-btn {
     width: 100%;
@@ -287,9 +309,10 @@ select.form-input {
     font-size: 1.7rem;
     outline: none;
     border: none;
-    color:#606060;
+    color: #606060;
 }
-.bottomimg-btn img{
-    width:3.5rem;
-    height:3.5rem;
+
+.bottomimg-btn img {
+    width: 3.5rem;
+    height: 3.5rem;
 }

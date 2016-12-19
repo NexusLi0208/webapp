@@ -7,7 +7,7 @@ Power by lipeng
 @import "lib/color.scss";
 html,
 body {
-    height:100%;
+    height: 100%;
     font-size: 62.5%;
     font-family: Arial, 'Microsoft YaHei';
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -25,11 +25,14 @@ input,
 select,
 button,
 textarea {
-    font-family: "arial","Microsoft YaHei";
+    font-family: "arial", "Microsoft YaHei";
+    -webkit-appearance: none;
 }
+
 [v-cloak] {
-   display: none;
- }
+    display: none;
+}
+
 .floatl {
     float: left;
 }
@@ -49,38 +52,45 @@ textarea {
 .text-m {
     text-align: center
 }
-.pst-btm{
-    position:absolute;
+
+.pst-btm {
+    position: absolute;
     bottom: 0;
 }
-.bl-bg{
+
+.bl-bg {
     width: 100%;
-    height:100%;
-    @include linear-gradient(top,#00a0e9,#1d6edd);
-    padding-top:20%;
+    height: 100%;
+    @include linear-gradient(top, #00a0e9, #1d6edd);
+    padding-top: 20%;
     box-sizing: border-box;
 }
-.bl-bg2{
+
+.bl-bg2 {
     width: 100%;
-    height:calc(100% - 4.4rem);
+    height: calc(100% - 4.4rem);
     background: #00a0e9;
     box-sizing: border-box;
-    padding-top:12%;
+    padding-top: 12%;
 }
+
 .main-cantainer {
     width: 100%;
     height: 100%;
     background: #eee;
     margin: 0 auto;
     font-size: 1.6rem;
-    overflow:auto;
+    overflow: auto;
+    position: relative;
     -webkit-overflow-scrolling: touch;
 }
-.navfixr:after{
+
+.navfixr:after {
     content: '';
     display: block;
     height: 7rem;
 }
+
 .form-title {
     position: relative;
     width: 100%;
@@ -90,6 +100,7 @@ textarea {
     background: $blue;
     color: #fff;
 }
+
 // 返回按钮
 .backBasic-btn {
     position: absolute;
@@ -101,6 +112,7 @@ textarea {
     width: 3rem;
     height: 3rem;
 }
+
 // 更多按钮
 .top-more-btn {
     position: absolute;
@@ -115,6 +127,7 @@ textarea {
 
 .success-btn {
     background: $blue;
+    user-select: none;
 }
 
 .success-btn:active {
@@ -122,6 +135,7 @@ textarea {
 }
 
 .cancel-btn {
+    user-select: none;
     background: $red;
 }
 
@@ -146,9 +160,11 @@ textarea {
     width: 100%;
     height: auto;
 }
-#vue_main{
-    height:100%;
+
+#vue_main {
+    height: 100%;
 }
+
 .page-title {
     position: relative;
     width: 100%;
@@ -161,7 +177,7 @@ textarea {
 }
 
 .add-icon {
-    color:#fff;
+    color: #fff;
     font-size: 2.5rem;
 }
 
@@ -241,11 +257,12 @@ textarea {
         -webkit-transform: translateX(-500px);
     }
 }
+
 // 会议列表
 .meet-list-main {
     box-sizing: border-box;
     width: 100%;
-    min-height:100%;
+    min-height: 20%;
     padding: 0 1.5rem;
     background: #fff;
 }
@@ -262,9 +279,11 @@ textarea {
     border-bottom: 1px #eee solid;
     padding: 1.75rem 0;
 }
-.meet-item{
+
+.meet-item {
     position: relative;
 }
+
 .meet-item .left {
     float: left;
     width: 30%;
@@ -294,125 +313,59 @@ textarea {
     font-size: 12px;
     color: #848689;
 }
- .meet-item .deleteItem {
-    position:absolute;
-    right:0;
-    bottom:1rem;
-    width:6rem;
-    height:3rem;
+
+.meet-item .deleteItem {
+    position: absolute;
+    right: 0;
+    bottom: 1rem;
+    width: 6rem;
+    height: 3rem;
     border-radius: 50px;
-    background:#ffae2e;
-    color:#fff;
-    line-height:3rem;
+    background: #ffae2e;
+    color: #fff;
+    line-height: 3rem;
     font-size: 1.2rem;
     text-align: center;
 }
-//模态框
-.modal-bg {
-    width: 100%;
-    height: 100%;
-    background: #000;
-    opacity: 0.8;
-    position: fixed;
-    z-index: 998;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-}
 
-.modal-main {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: 998;
-    height: 100%;
-}
 
-.modal-contant {
-    max-width: 26rem;
-    width: 69%;
-    height: 25%;
-    background: #fff;
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 35%;
-    z-index: 999;
-    margin: auto;
-    @include rounded(10px);
-}
-
-.modal-body {
-    width: 100%;
-    height: 63%;
-    box-sizing: border-box;
-    border-bottom: 1px #eee solid;
-}
-.modal-body p.txt{
-    font-size: 1.5rem;
-    color:#333;
-        padding:3rem 0;
-}
-
-.modal-footer {
-    display: flex;
-    height:37%;
-}
-
-.modal-footer button {
-    flex: 1;
-    background: #fff;
-    height:100%;
-    border:none;
-    outline:none;
-    font-size: 1.5rem;
-}
-.modal-footer button.yes{
-    border-right:1px #eee solid;
-    color:$blue;
-    border-radius: 0 0 0 10px;
-}
-.modal-footer button.no{
-       color:#717171;
-        border-radius: 0 0 10px 0;
-}
 
 // 浮动菜单
-.float-btn-box{
+.float-btn-box {
     position: relative;
+}
 
-}
-.float-btn{
+.float-btn {
     display: block;
-    position:fixed;
-    right:2.2rem;
-    bottom:6rem;
-    width:5rem;
-    height:5rem;
+    position: fixed;
+    right: 2.2rem;
+    bottom: 6rem;
+    width: 5rem;
+    height: 5rem;
     border-radius: 50px;
-    background:#ffa53a;
-    z-index:1;
-    
+    background: #ffa53a;
+    z-index: 1;
 }
-.float-btn img{
-    width:100%;
+
+.float-btn img {
+    width: 100%;
 }
-.float-menu-box{
-     position:absolute;
-     right:2.2rem;
-     bottom:11.5rem;
+
+.float-menu-box {
+    position: absolute;
+    right: 2.2rem;
+    bottom: 11.5rem;
 }
-.float-menu{
+
+.float-menu {
     display: block;
-    width:10.5rem;
-    font-size:1.2rem;
+    width: 10.5rem;
+    font-size: 1.2rem;
     text-align: center;
-    line-height:3.5rem;
-    height:3.5rem;
+    line-height: 3.5rem;
+    height: 3.5rem;
     background: #fdedd9;
-    color:#f87e17;
-    margin:.75rem 0;
+    color: #f87e17;
+    margin: .75rem 0;
     border-radius: 5rem;
-   
 }

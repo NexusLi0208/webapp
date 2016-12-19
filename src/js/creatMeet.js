@@ -40,7 +40,6 @@ new Vue({
 		this.userInfo=JSON.parse(sessionStorage.getItem('userInfo'));
 		this.hallInfo=JSON.parse(sessionStorage.getItem('existMeeHall'));
 		this.meetInfo=JSON.parse(sessionStorage.getItem('meetInfo'));
-		console.log(this.hallInfo);
 	},
 	methods: {
 		//  回基本信息

@@ -33,6 +33,10 @@ new Vue({
                     // 查询失败
                 }
             })
+        },
+        creatMeet:function(){
+            sessionStorage.setItem('backMark',0);
+            window.location.href="../meet/creatMeet.html"
         }
     }
 });

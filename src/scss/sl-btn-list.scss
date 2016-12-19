@@ -1,0 +1,37 @@
+@import "lib/mixin.scss";
+@import "lib/color.scss";
+.sl-btn-list {
+    margin-top:5rem;
+}
+
+.sl-btn-list a {
+    display: block;
+    margin: 0 auto;
+    width: 25rem;
+    height: 7rem;
+    border-radius: 5rem;
+    line-height: 7rem;
+    margin-bottom: 3.5rem;
+    font-size: 1.8rem;
+}
+
+.sl-btn-list a.wt-btn {
+    background: #fff;
+    color: $blue;
+}
+
+.sl-btn-list a.ts-btn{
+    background:rgba(255,255,255,.2);
+    color:#fff;
+}
+ .sl-btn-list a span {
+    display: inline-block;
+    width: 4rem;
+    height: 4rem;
+    margin: 0 1.7rem 0 2.5rem;
+}
+
+.sl-btn-list a span img {
+    width: 100%;
+    height: auto;
+}

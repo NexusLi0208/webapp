@@ -54,7 +54,8 @@ input,
 select,
 button,
 textarea {
-  font-family: "arial","Microsoft YaHei"; }
+  font-family: "arial", "Microsoft YaHei";
+  -webkit-appearance: none; }
 
 [v-cloak] {
   display: none; }
@@ -104,6 +105,7 @@ textarea {
   margin: 0 auto;
   font-size: 1.6rem;
   overflow: auto;
+  position: relative;
   -webkit-overflow-scrolling: touch; }
 
 .navfixr:after {
@@ -139,12 +141,20 @@ textarea {
   height: 3rem; }
 
 .success-btn {
-  background: #00a0e9; }
+  background: #00a0e9;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
 
 .success-btn:active {
   background: #007db6; }
 
 .cancel-btn {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   background: #f66; }
 
 .cancel-btn:active {
@@ -256,7 +266,7 @@ textarea {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 100%;
-  min-height: 100%;
+  min-height: 20%;
   padding: 0 1.5rem;
   background: #fff; }
 
@@ -311,77 +321,6 @@ textarea {
   line-height: 3rem;
   font-size: 1.2rem;
   text-align: center; }
-
-.modal-bg {
-  width: 100%;
-  height: 100%;
-  background: #000;
-  opacity: 0.8;
-  position: fixed;
-  z-index: 998;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0; }
-
-.modal-main {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: 998;
-  height: 100%; }
-
-.modal-contant {
-  max-width: 26rem;
-  width: 69%;
-  height: 25%;
-  background: #fff;
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 35%;
-  z-index: 999;
-  margin: auto;
-  border-radius: 10px; }
-
-.modal-body {
-  width: 100%;
-  height: 63%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border-bottom: 1px #eee solid; }
-
-.modal-body p.txt {
-  font-size: 1.5rem;
-  color: #333;
-  padding: 3rem 0; }
-
-.modal-footer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 37%; }
-
-.modal-footer button {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  background: #fff;
-  height: 100%;
-  border: none;
-  outline: none;
-  font-size: 1.5rem; }
-
-.modal-footer button.yes {
-  border-right: 1px #eee solid;
-  color: #00a0e9;
-  border-radius: 0 0 0 10px; }
-
-.modal-footer button.no {
-  color: #717171;
-  border-radius: 0 0 10px 0; }
 
 .float-btn-box {
   position: relative; }

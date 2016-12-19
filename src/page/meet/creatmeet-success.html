@@ -9,7 +9,7 @@
     <meta name="renderer" content="webkit">
     <meta http-equiv="Cache-Control" content="no-siteapp" />
     <title>会议报名</title>
- <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/style.css">
 </head>
 
 <body>
@@ -19,9 +19,25 @@
                 <img src="../../css/img/success@2x.png" alt="">
             </div>
             <p>会议创建成功!</p>
-            <a href="../meetroom/meetroom-index.html" type="button" class="cancel-btn ">返回会议厅查看</a>
+            <a href="javascript:;" onclick="mark()" class="cancel-btn ">返回会议厅查看</a>
         </div>
         </div>
     </section>
+    <script>
+        function mark(){
+             sessionStorage.setItem('backMark',1);
+            window.location.href="../meetroom/meetroom-index.html";
+        }
+        window.onload=function(){
+              var backMark=sessionStorage.getItem('backMark');
+              if(backMark==0){
+                 return ;
+                 }
+        else{
+            window.location.href="../meetroom/meetroom-index.html";
+             }
+        }
+    </script>
 </body>
+
 </html>

@@ -11,9 +11,6 @@ $(".float-btn").on("tap", function () {
 		}
 	})
 	// 模态框
-$(".js-modal-btn").on("tap", function () {
-	$(".modal-main").show();
-})
 $(".modal-bg").on("tap", function () {
 	$(".modal-main").hide();
 })
@@ -36,3 +33,7 @@ function getFileName(path) {
 	else
 		return path.substring(pos + 1);
 }
+// 搜索框
+$("#search-delete").on("tap",function(){
+	$(this).siblings("input").val("");
+})

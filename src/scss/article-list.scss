@@ -15,6 +15,7 @@
 }
 
 .article-item {
+    position: relative;
     height: 10rem;
     padding: 2rem 0;
     box-sizing: border-box;
@@ -24,26 +25,30 @@
 .article-item .list-icon {
     display: block;
     float: left;
-    margin-right:.5rem;
+    margin-right: .5rem;
     width: .5rem;
     height: 1.7rem;
     background: $red;
 }
-.article-item .data-icon{
+
+.article-item .data-icon {
     display: block;
-    margin-right:.5rem;
-    float:left;
-   width:2rem;
-   height:2rem;
+    margin-right: .5rem;
+    float: left;
+    width: 2rem;
+    height: 2rem;
 }
-.article-item .data-icon img{
-   width:100%;
-   height:100%;
+
+.article-item .data-icon img {
+    width: 100%;
+    height: 100%;
 }
-.title-box{
-    width:90%;
-    float:right;
+
+.title-box {
+    width: 90%;
+    float: right;
 }
+
 .article-list-title {
     height: 4.5rem;
     font-size: 1.5rem;
@@ -59,66 +64,91 @@
     font-size: 1.2rem;
 }
 
+.article-item .delete-btn {
+    position: absolute;
+    right: 0;
+    bottom: .5rem;
+    width: 6.5rem;
+    height: 2.5rem;
+    border: 1px #ff9e31 solid;
+    border-radius: 50px;
+    background: 0 0;
+    color: #ff9e31;
+    line-height: 2.5rem;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
 // 文章详情页
 .article-main {
     width: 100%;
     min-height: 100%;
-    padding:1.7rem 2.2rem;
+    padding: 1.7rem 2.2rem;
     background: #fff;
     box-sizing: border-box;
 }
-.article-title{
-   text-align: center;
-   font-size: 2rem;
-   color:#333;
-   line-height: 3rem;
-   font-weight: normal;
-   margin-bottom: .5rem;
-}
-.article-info{
-    color:#848689;
+
+.article-title {
     text-align: center;
-    font-size:1.2rem;
+    font-size: 2rem;
+    color: #333;
+    line-height: 3rem;
+    font-weight: normal;
+    margin-bottom: .5rem;
 }
-.article-info time{
+
+.article-info {
+    color: #848689;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.article-info time {
     margin-right: 2rem;
 }
-.article-text{
-    margin-top:1.7rem;
+
+.article-text {
+    margin-top: 1.7rem;
 }
-.article-imgbox{
-    width:100%;
-    height:auto;
-    margin-top:.5rem;
-    overflow:hidden;
+
+.article-imgbox {
+    width: 100%;
+    height: auto;
+    margin-top: .5rem;
+    overflow: hidden;
 }
-.article-imgbox img{
-    width:100%;
+
+.article-imgbox img {
+    width: 100%;
 }
-.article-text h2{
-    width:100%;
+
+.article-text h2 {
+    width: 100%;
     box-sizing: border-box;
-    margin-bottom:1rem;
+    margin-bottom: 1rem;
     padding-left: 1.7rem;
-    color:$blue;
-    border-left:.7rem $red solid;
-    line-height: 1.5rem;;
+    color: $blue;
+    border-left: .7rem $red solid;
+    line-height: 1.5rem;
+    ;
     font-weight: normal;
-    font-size:1.5rem;
-    text-overflow:ellipsis;
+    font-size: 1.5rem;
+    text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
 }
-.article-text h3{
-    color:#848689;
+
+.article-text h3 {
+    color: #848689;
     font-weight: normal;
-    font-size:1.2rem;
+    font-size: 1.2rem;
     text-indent: 2.5rem;
     margin-bottom: .5rem;
 }
-.article-text p{
-    color:#333;
+
+.article-text p {
+    color: #333;
     font-size: 1.5rem;
-    text-indent:2em;
+    text-indent: 2em;
     line-height: 2.5rem;
 }

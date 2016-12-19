@@ -9,16 +9,16 @@ new Vue({
 			remarkTxt: '请填写'
 		},
 		modal: false,
-		userInfo:userInfo = JSON.parse(sessionStorage.getItem("user"))
+		userInfo: userInfo = JSON.parse(sessionStorage.getItem("user"))
 	}
 	//	过滤器
 	,
 	ready: function () {
 		$('input[type=text],input[type=tel],select').each(function () {
- 			if (this.value != '' && this.value != 0) {
- 				this.setAttribute("readonly", "readonly");
- 			}
- 		})
+			if (this.value != '' && this.value != 0) {
+				this.setAttribute("readonly", "readonly");
+			}
+		})
 	},
 	filters: {}
 	//方法
@@ -58,7 +58,7 @@ new Vue({
 					contentType: 'application/json',
 					success: function (data) {
 						console.log(data);
-						sessionStorage.setItem('hallId',data.dataId);
+						sessionStorage.setItem('hallId', data.dataId);
 						window.location.href = "person-creatMeetRoom-tep2.html"
 					},
 					error: function () {
@@ -67,39 +67,39 @@ new Vue({
 				})
 				// window.location.href="creatmeetroom-success.html"
 		},
-		getCodes:function(){
-			var phoneNum=$("#phone").val();
+		getCodes: function () {
+			var phoneNum = $("#phone").val();
 			$.ajax({
-					url:userpath+'/weixin/sendMsgToHasReg/'+phoneNum,
-					type: "POST",
-					contentType: 'application/json',
-					success: function (data) {
-					    if(data.errcode==0){
-							alert("已发送验证码")
-						}
-					},
-					error: function () {
-					      alert("获取验证码失败")
+				url: userpath + '/weixin/sendMsgToHasReg/' + phoneNum,
+				type: "POST",
+				contentType: 'application/json',
+				success: function (data) {
+					if (data.errcode == 0) {
+						alert("已发送验证码")
 					}
-				})
-		}
-,		saveMeetroom2: function () {
+				},
+				error: function () {
+					alert("获取验证码失败")
+				}
+			})
+		},
+		saveMeetroom2: function () {
 			var data = $("#creatmeetroom_form2").serializeJson();
 			console.log(JSON.stringify(data))
-			$('input').each(function(){
-				if($(this).val()==''){
+			$('input').each(function () {
+				if ($(this).val() == '') {
 					alert('请补全信息')
 					return false;
 				}
 			})
 			$.ajax({
-					url:userpath+'/weixin/createHallStep2',
+					url: userpath + '/weixin/createHallStep2',
 					type: "POST",
 					data: JSON.stringify(data),
 					contentType: 'application/json',
 					success: function (data) {
 						console.log(data);
-						sessionStorage.setItem('hallId',data.dataId);
+						sessionStorage.setItem('hallId', data.dataId);
 						window.location.href = "creatmeetroom-success.html"
 					},
 					error: function () {

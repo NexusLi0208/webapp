@@ -27,7 +27,7 @@
                 <div class="editor-btnBox">
                     <span><img src="../../css/img/picture_normal.png" alt=""><input class="filebtn" type="file" id="imageUpload" ></span>
                 </div>
-                <div id="content" class="editor-body"></div>
+                <div id="content" oninput="textLimit.txt(this)" class="editor-body"></div>
             </div>
             <button type="button" class="sign-up-btn">完成</button>
             <div>
@@ -39,8 +39,8 @@
         $('#content').artEditor({
         imgTar: '#imageUpload',
         limitSize: 5,   // 兆
-        showServer: false,
-        uploadUrl: '',
+        showServer: true,
+        uploadUrl: 'http://10.1.0.26:8081/whoami/meetingDynamic/upload',
         data: {},
         uploadField: 'image',
         placeholader: '<p>请输入文章正文内容</p>',
@@ -53,7 +53,20 @@
         // something error
         console.log(res);
     }
-});
+})
+var textLimit={
+    nowHtml:'',
+    txt:function(_this){
+        var textLength=$(_this).text();
+    if (textLength.length>700){
+        alert('超出最大字符数');
+        $("#content").html(this.nowHtml);
+    }
+    else{
+        this.nowHtml=$("#content").html();
+    }
+    }
+}
     </script>
 </body>
 

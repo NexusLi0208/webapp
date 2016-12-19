@@ -1,0 +1,111 @@
+.search-bar {
+  position: relative;
+  width: 100%;
+  height: 7rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+.search-body {
+  width: 100%;
+  text-align: center;
+  height: 3.5rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto; }
+
+.searchBox {
+  position: relative;
+  float: left;
+  width: 70%;
+  height: 3.5rem;
+  background: #fff;
+  border-radius: .5rem;
+  margin: 0 1rem 0 2rem; }
+
+.searchBox i {
+  display: block;
+  position: absolute;
+  top: .8rem;
+  width: 2rem;
+  height: 2rem; }
+
+.searchBox i.search {
+  left: .8rem; }
+
+.searchBox i.delete {
+  right: .8rem; }
+
+.searchBox i img {
+  width: 100%;
+  height: 100%; }
+
+.search-input {
+  background: #fff;
+  border-radius: .5rem;
+  outline: none;
+  font-size: 1.2rem;
+  text-indent: 3rem;
+  width: 100%;
+  height: 100%;
+  border: none;
+  margin: 0;
+  padding: 0; }
+
+.search-btn {
+  width: 5.5rem;
+  height: 3.5rem;
+  float: left;
+  border-radius: .5rem;
+  outline: none;
+  border: none;
+  font-size: 1.3rem;
+  color: #fff; }
+
+.user-list {
+  background: #fff;
+  min-height: 10rem;
+  padding: 0 2.2rem 2rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
+
+.user-list .userinfo-box {
+  width: 80%; }
+
+.user-list .user-item {
+  position: relative;
+  height: 7rem;
+  border-bottom: 1px #eee solid; }
+
+.user-item .arrowImg {
+  right: 0; }
+
+.user-item {
+  padding: 1.5rem 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+.user-item .user-name {
+  font-size: 1.5rem;
+  color: #333;
+  padding-left: .3rem;
+  margin-bottom: 1.1rem; }
+
+.user-item .user-info {
+  font-size: 1.2rem; }
+
+.user-item .user-info i {
+  display: inline-block;
+  width: 2rem;
+  margin: 0 .5rem;
+  height: 2rem; }
+
+.user-item .user-info i img {
+  width: 100%; }
+
+.user-item .arrowImg {
+  top: 3rem; }

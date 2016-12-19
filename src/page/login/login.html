@@ -35,13 +35,12 @@
     <script src="../../js/plug/plug-form.js"></script>
      <script>
          function userLogin(){
-             var data = $("#login_form").serializeJson();
-             console.log(JSON.stringify(data));
+             var data = $("#login_form").serializeArray();
+             console.log(data);
              $.ajax({
                  url: userpath+"/user/loginByPwd_app",
-                 data: JSON.stringify(data),
+                 data: data,
                  type: "POST",
-                 contentType: 'application/json',
                  success: function (data) {
                      console.log(data);
                      if(data.errcode == 0){

@@ -1,13 +1,14 @@
 @charset "UTF-8";
 .article-list-main{width:100%;min-height:100%;background:#fff}
 .article-list-body{width:100%;height:100%;-webkit-box-sizing:border-box;box-sizing:border-box;padding:0 2.2rem}
-.article-item{height:10rem;padding:2rem 0;-webkit-box-sizing:border-box;box-sizing:border-box;border-bottom:1px #eee solid}
+.article-item{position:relative;height:10rem;padding:2rem 0;-webkit-box-sizing:border-box;box-sizing:border-box;border-bottom:1px #eee solid}
 .article-item .list-icon{display:block;float:left;margin-right:.5rem;width:.5rem;height:1.7rem;background:#f66}
 .article-item .data-icon{display:block;margin-right:.5rem;float:left;width:2rem;height:2rem}
 .article-item .data-icon img{width:100%;height:100%}
 .title-box{width:90%;float:right}
 .article-list-title{height:4.5rem;font-size:1.5rem;line-height:2.5rem;color:#333;overflow:hidden;margin-top:-.25rem;margin-bottom:1rem}
 .article-item time{color:#848689;font-size:1.2rem}
+.article-item .delete-btn{position:absolute;right:0;bottom:.5rem;width:6.5rem;height:2.5rem;border:1px #ff9e31 solid;border-radius:50px;background:0 0;color:#ff9e31;line-height:2.5rem;font-size:1.2rem;text-align:center}
 .article-main{width:100%;min-height:100%;padding:1.7rem 2.2rem;background:#fff;-webkit-box-sizing:border-box;box-sizing:border-box}
 .article-title{text-align:center;font-size:2rem;color:#333;line-height:3rem;font-weight:400;margin-bottom:.5rem}
 .article-info{color:#848689;text-align:center;font-size:1.2rem}
@@ -29,7 +30,7 @@ table{border-collapse:collapse;border-spacing:0}
 p{word-wrap:break-word}
 body,html{height:100%;font-size:62.5%;font-family:Arial,'Microsoft YaHei';-webkit-tap-highlight-color:transparent}
 body{max-width:640px;min-width:320px;margin:0 auto;position:relative;line-height:1}
-button,input,select,textarea{font-family:arial,"Microsoft YaHei"}
+button,input,select,textarea{font-family:arial,"Microsoft YaHei";-webkit-appearance:none}
 [v-cloak]{display:none}
 .floatl{float:left}
 .floatr{float:right}
@@ -39,16 +40,16 @@ button,input,select,textarea{font-family:arial,"Microsoft YaHei"}
 .pst-btm{position:absolute;bottom:0}
 .bl-bg{width:100%;height:100%;background-color:#1d6edd;background-image:-webkit-linear-gradient(top,#00a0e9,#1d6edd);padding-top:20%;-webkit-box-sizing:border-box;box-sizing:border-box}
 .bl-bg2{width:100%;height:calc(100% - 4.4rem);background:#00a0e9;-webkit-box-sizing:border-box;box-sizing:border-box;padding-top:12%}
-.main-cantainer{width:100%;height:100%;background:#eee;margin:0 auto;font-size:1.6rem;overflow:auto;-webkit-overflow-scrolling:touch}
+.main-cantainer{width:100%;height:100%;background:#eee;margin:0 auto;font-size:1.6rem;overflow:auto;position:relative;-webkit-overflow-scrolling:touch}
 .navfixr:after{content:'';display:block;height:7rem}
 .form-title{position:relative;width:100%;height:4.4rem;line-height:4.4rem;text-align:center;background:#00a0e9;color:#fff}
 .backBasic-btn{position:absolute;left:1rem;color:#fff}
 .backBasic-btn img{width:3rem;height:3rem}
 .top-more-btn{position:absolute;right:1rem;color:#fff}
 .top-more-btn img{width:3rem;height:3rem}
-.success-btn{background:#00a0e9}
+.success-btn{background:#00a0e9;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
 .success-btn:active{background:#007db6}
-.cancel-btn{background:#f66}
+.cancel-btn{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;background:#f66}
 .cancel-btn:active{background:#eb5050}
 .clearfix{zoom:1}
 .clearfix:after{content:".";display:block;height:0;visibility:hidden;clear:both}
@@ -71,7 +72,7 @@ button,input,select,textarea{font-family:arial,"Microsoft YaHei"}
 @keyframes scrollText{0%{-webkit-transform:translateX(0)}
 100%{-webkit-transform:translateX(-500px)}
 }
-.meet-list-main{-webkit-box-sizing:border-box;box-sizing:border-box;width:100%;min-height:100%;padding:0 1.5rem;background:#fff}
+.meet-list-main{-webkit-box-sizing:border-box;box-sizing:border-box;width:100%;min-height:20%;padding:0 1.5rem;background:#fff}
 .meet-list{width:100%;height:auto;padding-bottom:1.5rem}
 .meet-list li{width:100%;height:6.5rem;border-bottom:1px #eee solid;padding:1.75rem 0}
 .meet-item{position:relative}
@@ -81,15 +82,6 @@ button,input,select,textarea{font-family:arial,"Microsoft YaHei"}
 .meet-item .meet-name{height:5.25rem;font-size:1.5rem;color:#333}
 .meet-item .right time{font-size:12px;color:#848689}
 .meet-item .deleteItem{position:absolute;right:0;bottom:1rem;width:6rem;height:3rem;border-radius:50px;background:#ffae2e;color:#fff;line-height:3rem;font-size:1.2rem;text-align:center}
-.modal-bg{width:100%;height:100%;background:#000;opacity:.8;position:fixed;z-index:998;left:0;right:0;top:0;bottom:0}
-.modal-main{position:absolute;top:0;width:100%;z-index:998;height:100%}
-.modal-contant{max-width:26rem;width:69%;height:25%;background:#fff;position:fixed;left:0;right:0;top:35%;z-index:999;margin:auto;border-radius:10px}
-.modal-body{width:100%;height:63%;-webkit-box-sizing:border-box;box-sizing:border-box;border-bottom:1px #eee solid}
-.modal-body p.txt{font-size:1.5rem;color:#333;padding:3rem 0}
-.modal-footer{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;height:37%}
-.modal-footer button{-webkit-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1;background:#fff;height:100%;border:none;outline:0;font-size:1.5rem}
-.modal-footer button.yes{border-right:1px #eee solid;color:#00a0e9;border-radius:0 0 0 10px}
-.modal-footer button.no{color:#717171;border-radius:0 0 10px 0}
 .float-btn-box{position:relative}
 .float-btn{display:block;position:fixed;right:2.2rem;bottom:6rem;width:5rem;height:5rem;border-radius:50px;background:#ffa53a;z-index:1}
 .float-btn img{width:100%}
@@ -98,7 +90,7 @@ button,input,select,textarea{font-family:arial,"Microsoft YaHei"}
 .meetRoom-type-btn{display:block;width:17.5rem;height:17.5rem;margin:0 auto;padding:1rem;color:#fff;font-size:2rem;padding-top:14%;-webkit-box-sizing:border-box;box-sizing:border-box;text-align:center;background:url(img/conference_hall_btn_normal.png) center center no-repeat;-webkit-background-size:cover;background-size:cover}
 .meetRoom-type-btn img{width:40%}
 .meetRoom-type-btn:active{background:url(img/conference_hall_btn_pressed.png) center center no-repeat;-webkit-background-size:cover;background-size:cover}
-.form-main{width:100%;height:100%;background:#eee}
+.form-main{width:100%;height:100%;background:#eee;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
 .form-group{position:relative;width:100%;height:5.5rem;border-bottom:1px #eee solid;background:#fff;padding:0 2.2rem;-webkit-box-sizing:border-box;box-sizing:border-box;line-height:5.5rem}
 .form-group .input-icon{width:3rem;margin-right:.2rem}
 .form-group .input-icon img{width:100%}
@@ -110,10 +102,13 @@ button,input,select,textarea{font-family:arial,"Microsoft YaHei"}
 select.form-input{-moz-appearance:none;appearance:none;position:relative;color:#00a0e9;-webkit-appearance:none;direction:rtl}
 .arrowImg{position:absolute;right:1rem}
 .arrowImg img{width:1.1rem}
+.deletImg{position:absolute;width:3rem;right:1rem}
+.deletImg img{width:100%}
 .form-hr{width:100%;height:1rem;background:#eee;border:none;margin:0;padding:0}
 .form-text{font-size:1.5rem;color:#00a0e9;padding-right:.5rem}
 .meet-group{height:auto;padding:1rem 2.2rem;line-height:normal}
 .sign-up-btn{width:100%;height:5.5rem;background:#f66;font-size:1.7rem;color:#fff;border:none}
+.sign-up-btn:active{background:#dc3239}
 .submeet-name{font-size:1.5rem;margin-bottom:2rem}
 .submeet-info{height:3rem;line-height:3rem}
 .checkbox-item,.time-item{height:100%;line-height:100%}
@@ -133,12 +128,15 @@ select.form-input{-moz-appearance:none;appearance:none;position:relative;color:#
 .editor-btnBox{width:100%;height:5.5rem;line-height:5.5rem;border-bottom:1px #eee solid}
 .editor-btnBox span{position:relative;display:block;height:100%;width:3rem;overflow:hidden}
 .editor-btnBox span img{width:100%}
-.editor-body{width:100%;font-size:1.5rem;padding:1rem 0;line-height:2rem;min-height:20rem}
+.editor-body{width:100%;font-size:1.5rem!important;padding:1rem 0;line-height:2rem;min-height:20rem}
 .filebtn{height:5.5rem;opacity:0;position:absolute;top:0;left:0}
 .form-txtarea{width:100%;-webkit-box-sizing:border-box;box-sizing:border-box;min-height:20rem;border:none;font-size:1.5rem;padding:1rem 0;resize:none;-webkit-box-shadow:none;box-shadow:none;outline:0}
+.disable{color:#848689}
 .bottomimg-btn{width:100%;height:5.5rem;background:#fff;font-size:1.7rem;outline:0;border:none;color:#606060}
 .bottomimg-btn img{width:3.5rem;height:3.5rem}
 .link-network-main{width:100%;height:100%;padding-top:6rem;-webkit-box-sizing:border-box;box-sizing:border-box;background:#fff}
+.link-input{width:55%;height:3.5rem;padding:0 1rem;border:1px #eee solid;border-radius:10rem;outline:0;-webkit-box-shadow:none;box-shadow:none;-webkit-box-sizing:border-box;box-sizing:border-box;font-size:1.4rem}
+.link-btn{height:3.5rem;border:none;-webkit-box-shadow:none;box-shadow:none;border-radius:10rem;padding:0 2rem;margin-left:.5rem;background:#00a0e9;color:#fff;font-size:1.4rem}
 .link-network-main .imgBox{display:block;width:13.5rem;height:13.5rem;margin:0 auto}
 .link-network-main .imgBox img{width:100%;height:auto}
 .link-network-main .link{color:#00a0e9;text-align:center;line-height:2rem;font-size:1.5rem;margin-top:3rem}
@@ -211,15 +209,59 @@ select.form-input{-moz-appearance:none;appearance:none;position:relative;color:#
 .mine-header .mine-icon img{width:100%;height:auto}
 .mine-header .mine-nickname{font-size:2rem;color:#fff;width:100%;text-align:center;margin-top:2rem}
 .mine-menu-list .input-icon{margin-right:2rem}
+.modal-bg{width:100%;height:100%;background:#000;opacity:.8;position:fixed;z-index:998;left:0;right:0;top:0;bottom:0}
+.modal-main{position:absolute;top:0;width:100%;z-index:998;height:100%}
+.modal-dialog{width:100%;height:100%;position:relative}
+.modal-contant{max-width:26rem;width:69%;background:#fff;position:fixed;left:0;right:0;top:20%;z-index:999;margin:auto;border-radius:10px}
+.modal-header{background:#00a0e9;height:5rem;line-height:5rem;font-size:1.5rem;text-align:center;color:#fff;border-radius:10px 10px 0 0}
+.modal-body{width:100%;-webkit-box-sizing:border-box;box-sizing:border-box;padding:1rem;max-height:18rem;overflow:auto;border-bottom:1px #eee solid}
+.modal-body p.txt{font-size:1.5rem;color:#333;padding:3rem 0}
+.modal-body p.info{font-size:1.2rem;line-height:2rem;color:#00a0e9}
+.modal-body p.section{margin:1rem 0;font-size:1.2rem;line-height:2rem;color:#333}
+.modal-body p.info .title{color:#333;margin-right:.2rem}
+.modal-body .item{width:100%;height:3.5rem;padding:.5rem 0;font-size:1.2rem;overflow:hidden;border-bottom:1px #eee solid}
+.modal-body .item .title{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.modal-body .time{display:block;width:100%;color:#00a0e9;height:2rem;margin-top:.5rem}
+.modal-body .time i{display:inline-block;width:auto;height:100%}
+.modal-body .time i img{height:100%}
+.modal-footer{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;height:5rem}
+.modal-footer button{-webkit-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1;background:#fff;height:100%;border:none;outline:0;font-size:1.5rem}
+.modal-footer button.yes{border-right:1px #eee solid;color:#00a0e9;border-radius:0 0 0 10px}
+.modal-footer button.no{color:#717171;border-radius:0 0 10px 0}
 .no-meetRoom{padding-top:8.5rem;width:100%;height:100%;background:#fff;-webkit-box-sizing:border-box;box-sizing:border-box}
 .no-meetRoom i{display:block;width:11rem;height:11rem;text-align:center;margin:0 auto}
 .no-meetRoom i img{width:100%;height:100%}
 .no-meetRoom p{text-align:center;font-size:1.5rem;color:#848689;margin:2rem 0 2.8rem}
 .no-meetRoom .creatBtn{display:block;margin:0 auto;width:16rem;height:4.5rem;text-align:center;border-radius:5px;line-height:4.5rem;background:#f66;color:#fff}
 .details-mian{width:100%;height:100%}
+.sl-btn-list{margin-top:5rem}
+.sl-btn-list a{display:block;margin:0 auto;width:25rem;height:7rem;border-radius:5rem;line-height:7rem;margin-bottom:3.5rem;font-size:1.8rem}
+.sl-btn-list a.wt-btn{background:#fff;color:#00a0e9}
+.sl-btn-list a.ts-btn{background:rgba(255,255,255,.2);color:#fff}
+.sl-btn-list a span{display:inline-block;width:4rem;height:4rem;margin:0 1.7rem 0 2.5rem}
+.sl-btn-list a span img{width:100%;height:auto}
 .successImg{width:11.2rem;height:11.2rem;margin:0 auto;margin-bottom:2rem}
 .success-main{width:100%;height:100%;background:#fff;padding-top:20%;-webkit-box-sizing:border-box;box-sizing:border-box}
 .successImg img{width:100%;height:auto}
 .success-main{text-align:center}
 .success-main p{font-size:2.4rem;color:#ff9e31;text-align:center;margin-bottom:5rem}
 .success-main a,.success-main button{display:block;width:15rem;height:4.4rem;line-height:4.4rem;text-align:center;font-size:1.5rem;color:#fff;border:none;border-radius:.5rem;outline:0;margin:0 auto}
+.search-bar{position:relative;width:100%;height:7rem;-webkit-box-sizing:border-box;box-sizing:border-box}
+.search-body{width:100%;text-align:center;height:3.5rem;position:absolute;top:0;right:0;bottom:0;left:0;margin:auto}
+.searchBox{position:relative;float:left;width:70%;height:3.5rem;background:#fff;border-radius:.5rem;margin:0 1rem 0 2rem}
+.searchBox i{display:block;position:absolute;top:.8rem;width:2rem;height:2rem}
+.searchBox i.search{left:.8rem}
+.searchBox i.delete{right:.8rem}
+.searchBox i img{width:100%;height:100%}
+.search-input{background:#fff;border-radius:.5rem;outline:0;font-size:1.2rem;text-indent:3rem;width:100%;height:100%;border:none;margin:0;padding:0}
+.search-btn{width:5.5rem;height:3.5rem;float:left;border-radius:.5rem;outline:0;border:none;font-size:1.3rem;color:#fff}
+.user-list{background:#fff;min-height:10rem;padding:0 2.2rem 2rem;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
+.user-list .userinfo-box{width:80%}
+.user-list .user-item{position:relative;height:7rem;border-bottom:1px #eee solid}
+.user-item .arrowImg{right:0}
+.user-item{padding:1.5rem 0;-webkit-box-sizing:border-box;box-sizing:border-box}
+.user-item .user-name{font-size:1.5rem;color:#333;padding-left:.3rem;margin-bottom:1.1rem}
+.user-item .user-info{font-size:1.2rem}
+.user-item .user-info i{display:inline-block;width:2rem;margin:0 .5rem;height:2rem}
+.user-item .user-info i img{width:100%}
+.user-item .arrowImg{top:3rem}
