@@ -118,7 +118,8 @@
 .meetRoom-menu {
   width: 100%;
   background-color: #fff;
-  overflow: hidden; }
+  overflow: hidden;
+  padding-bottom: 1rem; }
 
 .meetRoom-menu a {
   display: block;

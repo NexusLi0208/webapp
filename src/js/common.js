@@ -15,10 +15,10 @@ $(".modal-bg").on("tap", function () {
 	$(".modal-main").hide();
 })
 $(".modal-main .no").on("tap", function () {
-		$(".modal-main").hide();
-	})
-	
-	// 获取文件上传路径
+	$(".modal-main").hide();
+})
+
+// 获取文件上传路径
 $("#data_upload").on("change", function () {
 	var fileName = getFileName(this.value);
 	$(this).siblings('.form-text').text(fileName);
@@ -34,6 +34,26 @@ function getFileName(path) {
 		return path.substring(pos + 1);
 }
 // 搜索框
-$("#search-delete").on("tap",function(){
-	$(this).siblings("input").val("");
+$("#search-delete").on("tap", function () {
+		$(this).siblings("input").val("");
+	})
+	// 文本域字数限定
+$(function () {
+	$("#remarks_box").on("input", function () {
+		var markNum = document.getElementById('remarks_box').value.length;
+		document.getElementById("text-num").textContent = markNum;
+	})
 })
+
+// 读取图片并回显
+function showPreview(source) {
+	var file = source.files[0];
+	if (window.FileReader) {
+		var fr = new FileReader();
+		fr.readAsDataURL(file);
+		fr.onloadend = function (e) {
+			document.getElementById("js_uploadImg").src = e.target.result;
+		};
+		
+	}
+}

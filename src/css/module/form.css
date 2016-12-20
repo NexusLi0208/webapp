@@ -1,11 +1,11 @@
 .form-main {
   width: 100%;
-  height: 100%;
   background: #eee;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
-          user-select: none; }
+          user-select: none;
+  padding-bottom: 3rem; }
 
 .form-group {
   position: relative;
@@ -182,7 +182,9 @@ select.form-input {
   right: .5rem; }
 
 .fileUpload {
-  position: relative; }
+  position: relative;
+  height: 9rem;
+  line-height: 9rem; }
 
 .fileUpload input[type='file'] {
   position: absolute;
@@ -190,25 +192,18 @@ select.form-input {
   z-index: 2;
   opacity: 0; }
 
-.fileUpload i {
+.fileUpload img {
   position: absolute;
-  width: 8.5rem;
+  width: 6.5rem;
   height: 6.5rem;
-  background-color: #e6f3f9;
-  right: 5%;
-  top: 9%;
+  border-radius: .5rem;
+  right: 2.2rem;
+  top: 1.2rem;
   display: block;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   overflow: hidden;
-  background-image: url(img/upload.png);
-  background-repeat: no-repeat;
-  background-position: center center;
   z-index: 1; }
-
-.fileUpload i img {
-  width: 100%;
-  height: auto; }
 
 .editormain {
   width: 100%;

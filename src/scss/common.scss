@@ -82,6 +82,7 @@ textarea {
     font-size: 1.6rem;
     overflow: auto;
     position: relative;
+    -webkit-user-select: none;
     -webkit-overflow-scrolling: touch;
 }
 
@@ -146,7 +147,12 @@ textarea {
 .clearfix {
     zoom: 1;
 }
-
+.no-pd{
+ padding:0!important;
+}
+.r0{
+    right:0!important;
+}
 .clearfix:after {
     content: ".";
     display: block;
