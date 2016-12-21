@@ -92,3 +92,17 @@
 
 .remove-btn img {
   width: 100%; }
+
+.creat-role-btn {
+  height: 3rem;
+  line-height: 3rem;
+  text-align: center;
+  margin: 1.1rem 0;
+  margin-right: 1.5rem;
+  font-size: 1.2rem;
+  font-style: normal;
+  color: #ff9e31;
+  padding: 0 1rem;
+  border-radius: 5rem;
+  border: 1px #ff9e31 solid;
+  background: #fff; }

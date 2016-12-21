@@ -17,40 +17,52 @@
     <section class="main-cantainer">
         <section class="mtrm-list-main">
             <div class="mtrm-list-hd">
-                <i class="floatl"><img src="../../css/img/bl-title-icon.png" alt=""></i>
                 <p class="floatl">管理者角色</p>
                 <i class="floatr arrowicon rotate1"><img src="../../css/img/arrow_up.png" alt=""></i>
+                <a href="creat-Role.html" class="creat-role-btn floatr">创建角色</a>
             </div>
-            <div class="mtrm-list js-mtrm-creat">
-                <div class="form-group no-pd" data-field-id='0'>
-                        <label class="floatl">教师:</label>
-                        <span class="floatr deletImg r0"><img src="../../css/img/edit_icon_delete.png" alt=""></span>
-                    </div>
-                    <div class="form-group no-pd" data-field-id='1'>
-                        <label class="floatl">研究人员:</label>
-                        <span class="floatr deletImg r0"><img src="../../css/img/edit_icon_delete.png" alt=""></span>
-                    </div>
+            <div class="mtrm-list js-role-admin">
+                <div class="form-group no-pd" data-role-id='0'>
+                    <label class="floatl">教师:</label>
+                    <span class="floatr deletImg js-delete-role r0"><img src="../../css/img/edit_icon_delete.png" alt=""></span>
+                </div>
+                <div class="form-group no-pd" data-role-id='1'>
+                    <label class="floatl">研究人员:</label>
+                    <span class="floatr deletImg js-delete-role r0"><img src="../../css/img/edit_icon_delete.png" alt=""></span>
+                </div>
             </div>
             <div class="mtrm-list-hd">
-                <i class="floatl"><img src="../../css/img/bl-title-icon.png" alt=""></i>
                 <p class="floatl">参会者角色</p>
                 <i class="floatr arrowicon1 rotate1"><img src="../../css/img/arrow_up.png" alt=""></i>
+                <a href="creat-Role.html" class="creat-role-btn floatr">创建角色</a>
             </div>
-            <div class="mtrm-list js-mtrm-admin">
-                     <div class="form-group no-pd" data-field-id='0'>
-                        <label class="floatl">教师:</label>
-                        <span class="floatr deletImg r0"><img src="../../css/img/edit_icon_delete.png" alt=""></span>
-                    </div>
-                    <div class="form-group no-pd" data-field-id='1'>
-                        <label class="floatl">研究人员:</label>
-                        <span class="floatr deletImg r0"><img src="../../css/img/edit_icon_delete.png" alt=""></span>
-                    </div>
+            <div class="mtrm-list js-role-user">
+                <div class="form-group no-pd" data-role-id='2'>
+                    <label class="floatl">教师:</label>
+                    <span class="floatr deletImg js-delete-role r0"><img src="../../css/img/edit_icon_delete.png" alt=""></span>
+                </div>
+                <div class="form-group no-pd" data-role-id='3'>
+                    <label class="floatl">研究人员:</label>
+                    <span class="floatr deletImg js-delete-role r0"><img src="../../css/img/edit_icon_delete.png" alt=""></span>
+                </div>
             </div>
         </section>
     </section>
+        <div class='modal-main' id="delete-modal" hidden>
+        <div class="modal-bg"></div>
+        <div class='modal-contant'>
+            <div class="modal-body">
+                <p class="txt text-m">是否要删除该角色?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="yes">是</button>
+                <button type="button" class="no">否</button>
+            </div>
+        </div>
+    </div>
     <script src="../../js/lib/zepto.js"></script>
-    <script src="../../js/plug/plug-form.js"></script>
-    <script src="../../js/cut-meetroom.js"></script>
+    <script src="../../js/common.js"></script>
+    <script src="../../js/creatRole.js"></script>
 </body>
 
 </html>

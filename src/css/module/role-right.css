@@ -1,0 +1,66 @@
+/*
+Power by lipeng
+ */
+.right-title {
+  height: 6.5rem;
+  font-size: 1.5rem;
+  padding: 1.75rem 2rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+.right-title span {
+  display: block;
+  height: 3rem;
+  line-height: 3rem;
+  color: #68a5c1; }
+
+.right-edit-btn {
+  height: 3rem;
+  padding: 0 1.5rem;
+  background: #00a0e9;
+  border-radius: 5rem;
+  border: none;
+  outline: none;
+  color: #fff; }
+
+.type_tab {
+  width: 100%;
+  padding: .5rem 1rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+.type_tab li {
+  width: 25%;
+  height: 3rem;
+  float: left;
+  padding: .6rem .2rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 0.5rem;
+  border: 1px solid #00a0e9;
+  background-color: #fff;
+  color: #333;
+  margin: .5rem 4.1% .8rem;
+  text-align: center;
+  line-height: 1.7rem;
+  position: relative; }
+
+.type_tab li i {
+  font-size: 1.4rem;
+  color: #00a0e9;
+  font-style: normal; }
+
+.type_tab li .delBtn {
+  position: absolute;
+  right: -.75rem;
+  top: -.75rem;
+  width: 2rem;
+  height: 2rem;
+  overflow: hidden;
+  background: url(img/module_delete.png) no-repeat;
+  -webkit-background-size: cover;
+          background-size: cover; }
+
+.type_tab li .delBtn img {
+  width: 100%;
+  height: auto; }
