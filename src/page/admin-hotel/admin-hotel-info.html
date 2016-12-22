@@ -15,8 +15,8 @@
 <body>
     <section class="main-cantainer">
         <div class="hotel-list-main">
-            <ul class="hotel-list">
-                <li class="hotel-item">
+            <ul class="hotel-info-list">
+                <li class="hotel-info-item">
                     <div class="hotel-info">
                         <p class="hotel-name">香格里拉大酒店</p>
                         <p class="room-num">房间总数：3间 <span class="room-type-num floatr">1/单人间</span><span class="room-type-num floatr">1/双人间</span></p>
@@ -25,12 +25,12 @@
                             <span class="text floatl">16241244</span>
                         </p>
                     </div>
-                    <div class="hotel-operate">
-                        <span class="floatr"><img src="../../css/img/delete_pressed.png" alt="删除"></span>
-                        <span class="floatr"><img src="../../css/img/edit_pressed.png" alt="修改"></span>
+                    <div class="hotel-operate clearfix">
+                        <span class="floatr"><a href="javascript:;" class="js-delHotel"><img src="../../css/img/delete_pressed.png" alt="删除"></a></span>
+                        <span class="floatr"><a href="admin-hotel-edit.html"><img src="../../css/img/edit_pressed.png" alt="修改"></a></span>
                     </div>
                 </li>
-                      <li class="hotel-item">
+                <li class="hotel-info-item ">
                     <div class="hotel-info">
                         <p class="hotel-name">香格里拉大酒店</p>
                         <p class="room-num">房间总数：3间 <span class="room-type-num floatr">1/单人间</span><span class="room-type-num floatr">1/双人间</span></p>
@@ -39,12 +39,12 @@
                             <span class="text floatl">16241244</span>
                         </p>
                     </div>
-                    <div class="hotel-operate">
-                        <span class="floatr"><img src="../../css/img/delete_pressed.png" alt="删除"></span>
-                        <span class="floatr"><img src="../../css/img/edit_pressed.png" alt="修改"></span>
+                    <div class="hotel-operate clearfix">
+                        <span class="floatr"><a href="javascript:;" class="js-delHotel"><img src="../../css/img/delete_pressed.png" alt="删除"></a></span>
+                        <span class="floatr"><a href="admin-hotel-edit.html"><img src="../../css/img/edit_pressed.png" alt="修改"></a></span>
                     </div>
                 </li>
-                      <li class="hotel-item">
+                <li class="hotel-info-item">
                     <div class="hotel-info">
                         <p class="hotel-name">香格里拉大酒店</p>
                         <p class="room-num">房间总数：3间 <span class="room-type-num floatr">1/单人间</span><span class="room-type-num floatr">1/双人间</span></p>
@@ -53,15 +53,36 @@
                             <span class="text floatl">16241244</span>
                         </p>
                     </div>
-                    <div class="hotel-operate">
-                        <span class="floatr"><img src="../../css/img/delete_pressed.png" alt="删除"></span>
-                        <span class="floatr"><img src="../../css/img/edit_pressed.png" alt="修改"></span>
+                    <div class="hotel-operate clearfix">
+                        <span class="floatr"><a href="javascript:;" class="js-delHotel"><img src="../../css/img/delete_pressed.png" alt="删除"></a></span>
+                        <span class="floatr"><a href="admin-hotel-edit.html"><img src="../../css/img/edit_pressed.png" alt="修改"></a></span>
                     </div>
                 </li>
             </ul>
+           
         </div>
     </section>
+    <div class="float-btn-box">
+        <span class="float-btn"><img src="../../css/img/menu_more_btn_normal.png" alt=""></span>
+        <div class="float-menu-box animate fadeInUp" hidden>
+            <a class="float-menu" href="admin-hotel-add.html">添加酒店信息</a>
+        </div>
+    </div>
+    <div class='modal-main' id="del-hotelInfo" hidden>
+        <div class="modal-bg"></div>
+        <div class='modal-contant'>
+            <div class="modal-body">
+                <p class="txt text-m">是否要删除该酒店信息?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="yes">是</button>
+                <button type="button" class="no">否</button>
+            </div>
+        </div>
+    </div>
     <script src="../../js/lib/zepto.js"></script>
+    <script src="../../js/common.js"></script>
+    <script src="../../js/admin-hotel.js"></script>
 </body>
 
 </html>

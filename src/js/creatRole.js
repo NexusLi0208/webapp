@@ -14,7 +14,7 @@ $(function () {
         },
         // 管理员角色下拉
         adminBack: function () {
-            $(".arrowicon").tap(function () {
+            $(".arrowicon").click(function () {
                 if ($(this).hasClass("rotate")) {
                     $(this).removeClass("rotate").addClass("rotate1");
                     $('.js-role-admin').show();
@@ -30,7 +30,7 @@ $(function () {
         deleteRole: function () {
             var _this = this;
 
-            $(".js-delete-role").on("tap", function () {
+            $(".js-delete-role").on("click", function () {
                 _this.deleteItem = this;
                 _this.deleteRoleID = $(this).parents(".form-group").data("role-id");
                 $("#delete-modal").show();
@@ -39,7 +39,7 @@ $(function () {
         // 确认删除
         deleteTrue: function () {
             var _this = this;
-            $("#delete-modal .yes").on("tap", function () {
+            $("#delete-modal .yes").on("click", function () {
                 //   点击的角色ID为  _this.deleteRoleID
                 //ajax 删除请求
                 /********************************** */
@@ -50,21 +50,21 @@ $(function () {
         },
         // 切换页面一
         cutPage1: function () {
-            $(".js-saveRight").tap(function () {
+            $(".js-saveRight").click(function () {
                 $(".js-right-page1").show();
                 $(".js-right-page2").hide();
             })
         },
         // 切换页面二
         cutPage2: function () {
-            $(".js-set-right").tap(function () {
+            $(".js-set-right").click(function () {
                 $(".js-right-page1").hide();
                 $(".js-right-page2").show();
             })
         },
         // 用户角色下拉
         userBack: function () {
-            $(".arrowicon1").tap(function () {
+            $(".arrowicon1").click(function () {
                 if ($(this).hasClass("rotate")) {
                     $(this).removeClass("rotate").addClass("rotate1");
                     $('.js-role-user').show();
@@ -79,7 +79,7 @@ $(function () {
         // 添加权限
         addRight: function () {
             var _this = this;
-            $(".choose li i").tap(function () {
+            $(".choose li i").click(function () {
                 _this.id = $(this).parents("li").data("right-id");
                 $(".choosed ul").append($(this).parents("li"));
                 $(".choosed ul li[data-right-id='" + _this.id + "']").append("<span class='delBtn'></span>")
@@ -87,7 +87,7 @@ $(function () {
         },
         removeRight: function () {
             var _this = this;
-            $(document).on("tap", ".choosed .delBtn", function () {
+            $(document).on("click", ".choosed .delBtn", function () {
                 _this.id = $(this).parents("li").data("right-id");
                 console.log(_this.id);
                 $(".choose ul").append($(this).parents("li"));

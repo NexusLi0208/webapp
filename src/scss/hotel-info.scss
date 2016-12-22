@@ -1,12 +1,11 @@
-.hotel-list {
+.hotel-info-list {
     width: 100%;
     height: auto;
     box-sizing: border-box;
 }
 
-.hotel-item {
+.hotel-info-item{
     width: 100%;
-    height: 18rem;
     padding: 0 2.2rem;
     box-sizing: border-box;
     background: #fff;
@@ -20,10 +19,15 @@
     margin-bottom: 1.5rem
 }
 
+.hotel-name .company {
+    margin-left: 2rem;
+}
+
 .room-num,
 .hotel-address,
-.hotel-person {
-    height:2rem;
+.hotel-person,
+.room-type {
+    height: 2rem;
     line-height: 2rem;
     margin-bottom: 1rem;
     color: #848689;
@@ -38,31 +42,73 @@
     color: #f66;
     margin: 0 1rem;
 }
+
+.room-type {
+    color: #848689;
+}
+
+.room-type span {
+    color: #f66;
+    margin: 0 1rem;
+}
+
 .hotel-info {
-    border-bottom:1px #eee solid;
+    border-bottom: 1px #eee solid;
 }
-.hotel-info .icon{
-   display:inline-block;
-   width:2rem;
-   height:2rem;
-   overflow: hidden;
-}
-.hotel-info .icon img{
-    width:100%;
-}
-.hotel-info .text{
+
+.hotel-info .icon {
     display: inline-block;
-    height:2rem;
+    width: 2rem;
+    height: 2rem;
+    overflow: hidden;
+}
+
+.hotel-info .icon img {
+    width: 100%;
+}
+
+.hotel-info .text {
+    display: inline-block;
+    height: 2rem;
     line-height: 2rem;
-    margin:0 .3rem;
+    margin: 0 .3rem;
 }
-.hotel-operate span{
+
+.hotel-operate span {
     display: inline-block;
-    width:3rem;
-    height:3rem;
-    margin-top:.5rem;
+    width: 3rem;
+    height: 3rem;
+    margin: .5rem 0;
     margin-left: 6rem;
 }
-.hotel-operate span img{
-    width:100%;
+
+.hotel-operate span img {
+    width: 100%;
+}
+
+// 酒店列表
+.hotel-list {
+    width: 100%;
+    background: #fff;
+    padding: 0 2rem;
+    box-sizing: border-box;
+    padding-bottom:1rem;
+}
+.hotel-list li{
+    padding:1.75rem 0;
+    border-bottom:1px #eee solid;
+
+}
+.hotel-list .name{
+    color:#333;
+    font-size: 1.5rem;
+    margin-bottom: 1.8rem;
+}
+.hotel-list .info{
+    font-size:1.2rem;
+    color:#848689;
+}
+.hotel-list .info span{
+    color:#f66;
+    margin:0 1rem;
 }

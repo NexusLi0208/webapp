@@ -34,3 +34,19 @@
 
 .index-tab .active {
   border-bottom: 0.5rem #00a0e9 solid; }
+
+.loading {
+  text-align: center;
+  width: 100%;
+  height: 4rem;
+  line-height: 4rem;
+  padding-bottom: 1rem; }
+
+.loading i {
+  display: inline-block;
+  margin-right: .5rem;
+  width: 4rem;
+  height: 4rem; }
+
+.loading i img {
+  width: 100%; }

@@ -1,5 +1,5 @@
 // 浮动按钮交互
-$(".float-btn").on("tap", function () {
+$(".float-btn").on("click", function () {
 		var _this = $(this);
 		var $menu = $(this).siblings(".float-menu-box");
 		if ($menu.is(':hidden')) {
@@ -11,10 +11,10 @@ $(".float-btn").on("tap", function () {
 		}
 	})
 	// 模态框
-$(".modal-bg").on("tap", function () {
+$(".modal-bg").on("click", function () {
 	$(".modal-main").hide();
 })
-$(".modal-main .no").on("tap", function () {
+$(".modal-main .no").on("click", function () {
 	$(".modal-main").hide();
 })
 
@@ -34,7 +34,7 @@ function getFileName(path) {
 		return path.substring(pos + 1);
 }
 // 搜索框
-$("#search-delete").on("tap", function () {
+$("#search-delete").on("click", function () {
 		$(this).siblings("input").val("");
 	})
 	// 文本域字数限定
