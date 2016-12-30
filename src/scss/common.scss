@@ -42,7 +42,7 @@ textarea {
 }
 
 .text-l {
-    text-align: left
+    text-align: left!important;
 }
 
 .text-r {
@@ -57,16 +57,30 @@ textarea {
     position: absolute;
     bottom: 0;
 }
- .wt-bg{
-     width: 100%;
+.fix-btm{
+     position:fixed;
+      min-width: 320px;
+    max-width: 640px;
+    bottom: 0;
+}
+.wt-bg {
+    width: 100%;
     height: 100%;
     background: #fff;
- }
+}
+
 .bl-bg {
     width: 100%;
     height: 100%;
     @include linear-gradient(top, #00a0e9, #1d6edd);
     padding-top: 20%;
+    box-sizing: border-box;
+}
+
+.bl-bg1 {
+    width: 100%;
+    height: 100%;
+    @include radial-gradient(#00a0e9, #1d6edd);
     box-sizing: border-box;
 }
 
@@ -76,6 +90,12 @@ textarea {
     background: #00a0e9;
     box-sizing: border-box;
     padding-top: 12%;
+}
+
+.bl-bg3 {
+    width: 100%;
+    height: 100%;
+    background: $blue;
 }
 
 .main-cantainer {
@@ -151,12 +171,18 @@ textarea {
 .clearfix {
     zoom: 1;
 }
-.no-pd{
- padding:0!important;
+
+.no-pd {
+    padding: 0!important;
 }
-.r0{
-    right:0!important;
+
+.r0 {
+    right: 0!important;
 }
+.mgl2{
+    margin-left: 2rem;
+}
+
 .clearfix:after {
     content: ".";
     display: block;
@@ -280,7 +306,6 @@ textarea {
 .meet-list {
     width: 100%;
     height: auto;
-    padding-bottom: 1.5rem;
 }
 
 .meet-list li {
@@ -288,6 +313,9 @@ textarea {
     height: 6.5rem;
     border-bottom: 1px #eee solid;
     padding: 1.75rem 0;
+}
+.meet-list li:last-of-type{
+    border:none;
 }
 
 .meet-item {
@@ -338,8 +366,6 @@ textarea {
     text-align: center;
 }
 
-
-
 // 浮动菜单
 .float-btn-box {
     position: relative;
@@ -347,7 +373,7 @@ textarea {
 
 .float-btn {
     display: block;
-    position: fixed;
+    position:absolute;
     right: 2.2rem;
     bottom: 6rem;
     width: 5rem;
@@ -378,4 +404,46 @@ textarea {
     color: #f87e17;
     margin: .75rem 0;
     border-radius: 5rem;
+}
+
+// 无数据
+.noinfo {
+    text-align: center;
+    width: 100%;
+    height: 4rem;
+    color: #bfbfbf;
+    line-height: 4rem;
+    padding: 1rem 0;
+}
+
+.noinfo i {
+    display: inline-block;
+    margin-right: .5rem;
+    width: 4rem;
+    height: 4rem;
+}
+
+.noinfo i img {
+    width: 100%;
+}
+
+// 加载更多
+.loading {
+    text-align: center;
+    width: 100%;
+    color: #bfbfbf;
+    height: 4rem;
+    line-height: 4rem;
+    padding-bottom: 1rem;
+}
+
+.loading i {
+    display: inline-block;
+    margin-right: .5rem;
+    width: 4rem;
+    height: 4rem;
+}
+
+.loading i img {
+    width: 100%;
 }

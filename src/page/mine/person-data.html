@@ -14,20 +14,21 @@
 
 <body>
     <section class="main-cantainer navfixr">
-      <div class="form-title"><span onclick="javascript:history.back(-1)" class="backBasic-btn"><img src="../../css/img/title_arrow_back.png" alt=""></span>基本资料</div>
-              <div class="form-group fileUpload">
-                    <label for="userName" class="floatl">头像:</label>
-                    <input type="file" id='file_upload' class='form-input floatr' name="" id="">
-                    <i><img id="js_uploadImg" hidden src="" alt=""></i>
-                    </div>
-                       <div class="form-group js-meetTime">
-                        <label class="floatl">昵称:</label>
-                        <span class="floatr arrowImg"><img src="../../css/img/list_arrow.png" alt=""></span>
-                        <span class='floatr form-text'>Jesse McCartney</span>
-                    </div>
+        <div class="form-group fileUpload">
+            <label for="userName" class="floatl">头像:</label>
+            <input type="file" id='file_upload' onchange="showPreview(this)" class='form-input floatr' name="" id="">
+            <i class="img-box"><img id="js_uploadImg" src="../../css/img/user-img.jpeg" alt=""></i>
+        </div>
+        <div class="form-group js-meetTime">
+            <label class="floatl">昵称:</label>
+            <input type="text" class='form-input floatr' value="jessmcatne" placeholder="请输入姓名">
+        </div>
+        <div class='btn-box'>
+            <button type="button" class="form-btn cancel-btn">保存</button>
+        </div>
     </section>
-    
-    <script src="../../js/lib/zepto.js"></script>
+    <script src="../../js/lib/jquery.js"></script>
+    <script src="../../js/common.js"></script>
 </body>
 
 </html>

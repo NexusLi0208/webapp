@@ -1,0 +1,91 @@
+.setpsd-main {
+  padding-top: 6rem; }
+
+.setpsd-main .phoneTitle {
+  color: #a0e4f9;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 2rem; }
+
+.setpsd-main .phoneNum {
+  text-align: center;
+  font-size: 2.4rem;
+  color: #00e4d3;
+  margin-bottom: 4rem; }
+
+.setpsd-form {
+  position: relative;
+  width: 75%;
+  height: 4.5rem;
+  border-radius: 5rem;
+  margin: 0 auto 1.8rem;
+  background: #3dbaef; }
+
+.setpsd-form .setpsd-input {
+  width: 100%;
+  height: 100%;
+  font-size: 1.3rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #fff;
+  padding: 0 5rem;
+  background: none;
+  border: none; }
+
+.setpsd-form .code-input {
+  width: 60%;
+  height: 100%;
+  font-size: 1.3rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #fff;
+  padding-left: 5rem;
+  background: none;
+  border: none; }
+
+.setpsd-form .code-button {
+  width: 40%;
+  height: 100%;
+  background: none;
+  font-size: 1.3rem;
+  color: #fff;
+  border: none;
+  outline: none;
+  border-left: 1px #90def8 solid;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+.setpsd-form ::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #97e3f9; }
+
+.setpsd-form .input-icon {
+  position: absolute;
+  top: .4rem;
+  left: 1rem;
+  z-index: 1;
+  display: block;
+  width: 3.5rem;
+  height: 3.5rem; }
+
+.setpsd-form .input-icon img {
+  width: 100%; }
+
+.setpsd-main .setpsd-tag {
+  font-size: 1.2rem;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 1.8rem; }
+
+.setpsd-main .setpsd-btn-box {
+  width: 100%;
+  text-align: center; }
+
+.setpsd-main .setpsd-btn {
+  width: 75%;
+  height: 4.5rem;
+  border-radius: 5rem;
+  color: #00a0e9;
+  background: #fff;
+  font-size: 1.6rem;
+  border: none; }

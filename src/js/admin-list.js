@@ -11,7 +11,7 @@ $(function () {
         // 点击删除执行
         deleteAdmin: function () {
             var _this = this;
-            $(".js-remove-admin").on("tap", function () {
+            $(".js-remove-admin").on("click", function () {
                 _item=$(this).parents('.admin')
                 _this.adminId=$(this).data('admin-id');
                 $("#delete-modal").show();
@@ -20,7 +20,7 @@ $(function () {
         // 点击确认删除执行
         deleteTrue: function () {
             var _this = this;
-            $(".modal-main .yes").on("tap", function () {
+            $(".modal-main .yes").on("click", function () {
                 // ajax请求
                 // 成功后执行
                 $("#delete-modal").hide();

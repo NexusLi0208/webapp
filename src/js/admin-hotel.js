@@ -5,8 +5,14 @@ $(function () {
             this.deleteHotel_true();
             this.delUserHotelInfo();
             this.delUserHotelInfo_true();
+            this.cutSelectHotel();
         },
-        // 点击删除酒店信息
+        // 切换选择酒店
+        cutSelectHotel:function () {
+            $(".js-selectHotel").on("click",function(){
+                $(".page2").show().siblings().hide();
+            })
+        }, // 点击删除酒店信息
         deleteHotel: function () {
             $(".js-delHotel").on("click", function () {
                 $("#del-hotelInfo").show();

@@ -4,8 +4,7 @@
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
-          user-select: none;
-  padding-bottom: 3rem; }
+          user-select: none; }
 
 .form-group {
   position: relative;
@@ -29,7 +28,8 @@
   position: relative;
   height: 100%;
   font-size: 1.5rem;
-  color: #333; }
+  color: #333;
+  margin-right: 1rem; }
 
 .form-input {
   width: 60%;
@@ -43,6 +43,20 @@
   position: relative;
   -webkit-tap-highlight-color: transparent;
   padding-right: .5rem; }
+
+.code-input {
+  width: 40%; }
+
+.code-btn {
+  padding: .5rem 1rem;
+  background: #fff;
+  color: #00a0e9;
+  border-radius: 5rem;
+  outline: none;
+  border: 1px #00a0e9 solid; }
+
+.code-btn:active {
+  background: #c5edff; }
 
 .form-btn {
   width: 82%;
@@ -114,6 +128,10 @@ select.form-input {
   background: #f66;
   font-size: 1.7rem;
   color: #fff;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   border: none; }
 
 .sign-up-btn:active {
@@ -150,7 +168,7 @@ select.form-input {
 .btn-box {
   width: 100%;
   text-align: center;
-  margin-top: 3rem; }
+  padding: 3rem 0; }
 
 .form-textarea {
   position: relative;
@@ -184,15 +202,16 @@ select.form-input {
 .fileUpload {
   position: relative;
   height: 9rem;
-  line-height: 9rem; }
+  padding: 1.25rem 2.2rem; }
 
 .fileUpload input[type='file'] {
   position: absolute;
+  height: 6.5rem;
   right: 0;
   z-index: 2;
   opacity: 0; }
 
-.fileUpload img {
+.fileUpload .img-box {
   position: absolute;
   width: 6.5rem;
   height: 6.5rem;
@@ -204,6 +223,25 @@ select.form-input {
           box-sizing: border-box;
   overflow: hidden;
   z-index: 1; }
+
+.fileUpload .img-box1 {
+  position: absolute;
+  width: 8.5rem;
+  height: 6.5rem;
+  right: 2.2rem;
+  top: 1.2rem;
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+  z-index: 1; }
+
+.fileUpload i img {
+  width: 100%; }
+
+.ht-t1 {
+  height: 5.5rem;
+  line-height: 5.5rem; }
 
 .editormain {
   width: 100%;

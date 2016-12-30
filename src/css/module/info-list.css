@@ -1,0 +1,101 @@
+.info-item {
+  width: 100%;
+  padding: 0 2.2rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #fff;
+  margin-bottom: 1rem; }
+
+.info-body .t1 {
+  color: #333;
+  font-size: 1.5rem;
+  padding-top: 2rem;
+  margin-bottom: 1.5rem; }
+
+.info-body .t1 .small {
+  font-size: 1.2rem;
+  color: #848689; }
+
+.info-body .t2,
+.info-body .t3,
+.info-body .t4 {
+  height: 2rem;
+  line-height: 2rem;
+  margin-bottom: 1rem;
+  color: #848689;
+  font-size: 1.2rem; }
+
+.room-num {
+  color: #848689; }
+
+.room-num span {
+  color: #f66;
+  margin: 0 1rem; }
+
+.info-body .t3 {
+  color: #848689; }
+
+.info-body .t3 span {
+  color: #f66;
+  margin: 0 1rem; }
+
+.info-body {
+  border-bottom: 1px #eee solid; }
+
+.info-body .t2 .icon {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  overflow: hidden; }
+
+.info-body .t2 .icon img {
+  width: 100%; }
+
+.info-body .t2 .text {
+  display: inline-block;
+  height: 2rem;
+  line-height: 2rem;
+  margin: 0 .3rem; }
+
+.info-body .t4 .icon {
+  width: 2.2rem;
+  height: 2.2rem;
+  margin-right: .2rem; }
+
+.info-body .t4 .icon img {
+  width: 100%; }
+
+.item-operate span {
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  margin: .5rem 0;
+  margin-left: 6rem; }
+
+.item-operate span img {
+  width: 100%; }
+
+.hotel-list {
+  width: 100%;
+  background: #fff;
+  padding: 0 2rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-bottom: 1rem; }
+
+.hotel-list li {
+  padding: 1.75rem 0;
+  border-bottom: 1px #eee solid; }
+
+.hotel-list .name {
+  color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 1.8rem; }
+
+.hotel-list .info {
+  font-size: 1.2rem;
+  color: #848689; }
+
+.hotel-list .info span {
+  color: #f66;
+  margin: 0 1rem; }

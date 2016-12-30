@@ -1,4 +1,6 @@
-// 浮动按钮交互
+//IOS激活伪类
+$('body').on("touchstart", function () {})
+	// 浮动按钮交互
 $(".float-btn").on("click", function () {
 		var _this = $(this);
 		var $menu = $(this).siblings(".float-menu-box");
@@ -13,9 +15,12 @@ $(".float-btn").on("click", function () {
 	// 模态框
 $(".modal-bg").on("click", function () {
 	$(".modal-main").hide();
-})
-$(".modal-main .no").on("click", function () {
+});
+$(document).on("click", ".modal-main .no", function () {
 	$(".modal-main").hide();
+});
+$(document).on("click", ".modal-main .know", function () {
+	$("#alert-modal").remove();
 })
 
 // 获取文件上传路径
@@ -54,6 +59,54 @@ function showPreview(source) {
 		fr.onloadend = function (e) {
 			document.getElementById("js_uploadImg").src = e.target.result;
 		};
-		
+
 	}
 }
+// 确认框
+(function ($) {
+	$.extend({
+		// 确认框
+		affirm: function (option, callback) {
+
+			var _this = this;
+			var modal = "<div class='modal-main'>" +
+				"<div class='modal-bg'></div>" +
+				"<div class='modal-contant'>" +
+				"<div class='modal-body'>" +
+				"<p class='txt text-m'>" + option + "</p>" +
+				"</div>" +
+				"<div class='modal-footer'>" +
+				" <button type='button' class='yes'>是</button>" +
+				"<button type='button' class='no'>否</button>" +
+				"</div>" +
+				"</div>" +
+				"</div>";
+			$('body').append(modal);
+			$(document).on("click", ".modal-main .yes", function () {
+				if (callback) {
+					callback();
+				}
+				$(".modal-main").remove();
+				$(document).off("click", ".modal-main .yes");
+			})
+			$(document).on("click", "modal-main .no", function () {
+				$(".modal-main").remove();
+			})
+		},
+		// 弹出框
+		alert: function (option) {
+			var modal = "<div class='modal-main' id='alert-modal'>" +
+				"<div class='modal-bg'></div>" +
+				"<div class='modal-contant'>" +
+				"<div class='modal-body'>" +
+				"<p class='txt text-m'>" + option + "</p>" +
+				"</div>" +
+				"<div class='modal-footer'>" +
+				"<button type='button' class='know'>知道了</button>" +
+				"</div>" +
+				"</div>" +
+				"</div>";
+			$('body').append(modal);
+		}
+	})
+}(jQuery));

@@ -36,7 +36,6 @@
     width: 100%;
     padding: 0 2rem;
     background: #fff;
-    padding-bottom: 1rem;
     box-sizing: border-box;
     margin-bottom: 1rem;
 }
@@ -47,6 +46,14 @@
     box-sizing: border-box;
     border-bottom: 1px #eee solid;
     overflow: hidden;
+}
+
+.mtrm-list .mtrm-item:last-of-type {
+    border: none;
+}
+
+.mtrm-list .form-group:last-of-type {
+    border: none;
 }
 
 .mtrm-list .floatl {
@@ -71,10 +78,10 @@
     margin-top: 1rem;
     margin-bottom: 1.7rem;
 }
-.mtrm-list .mtrm-name .tag{
-    color:$red;
-    font-size: 1.2rem;
 
+.mtrm-list .mtrm-name .tag {
+    color: $red;
+    font-size: 1.2rem;
 }
 
 .mtrm-list .mtrm-time {

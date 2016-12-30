@@ -17,10 +17,10 @@ $(function () {
             $(".arrowicon").click(function () {
                 if ($(this).hasClass("rotate")) {
                     $(this).removeClass("rotate").addClass("rotate1");
-                    $('.js-role-admin').show();
+                    $('.js-role-admin').slideDown(200);
                 } else {
                     $(this).removeClass("rotate1").addClass("rotate");
-                    $('.js-role-admin').hide();
+                    $('.js-role-admin').slideUp(200);
                 }
 
             })
@@ -67,10 +67,10 @@ $(function () {
             $(".arrowicon1").click(function () {
                 if ($(this).hasClass("rotate")) {
                     $(this).removeClass("rotate").addClass("rotate1");
-                    $('.js-role-user').show();
+                    $('.js-role-user').slideDown(200);
                 } else {
                     $(this).removeClass("rotate1").addClass("rotate");
-                    $('.js-role-user').hide();
+                    $('.js-role-user').slideUp(200);
                 }
 
             })

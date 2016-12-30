@@ -31,7 +31,6 @@
   width: 100%;
   padding: 0 2rem;
   background: #fff;
-  padding-bottom: 1rem;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin-bottom: 1rem; }
@@ -43,6 +42,12 @@
           box-sizing: border-box;
   border-bottom: 1px #eee solid;
   overflow: hidden; }
+
+.mtrm-list .mtrm-item:last-of-type {
+  border: none; }
+
+.mtrm-list .form-group:last-of-type {
+  border: none; }
 
 .mtrm-list .floatl {
   margin-right: 2rem; }

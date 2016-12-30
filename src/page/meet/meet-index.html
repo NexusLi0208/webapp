@@ -69,7 +69,7 @@
                             <div class="left"><img src="../../css/img/pic1@2x.png" alt="meetimg"></div>
                             <div class="right">
                                 <p class="meet-name">淄博职业学院：三项机制成就大学生圆梦</p>
-                                <time>2016-06-04</time>
+                                <time>2016-06-04</time> 
                             </div>
                         </li>
                     </a>
@@ -99,13 +99,29 @@
             </ul>
         </nav>
     </div>
-    <script src="../../js/lib/zepto.js"></script>
+    <script src="../../js/lib/jquery.js"></script>
     <script src="../../js/lib/swiper.min.js"></script>
     <script src="../../js/lib/vue-1.0.28.js"></script>
     <script src="../../js/plug/httpPath.js"></script>
     <script src="../../js/plug/plug-form.js"></script>
     <script src="../../js/lib/weui.min.js"></script>
     <script src="../../js/meetIndex.js"></script>
+    <script>
+        var loading = false; //状态标记
+        $(".main-cantainer").infinite().on("infinite", function () {
+            if (loading) return;
+            loading = true;
+            setTimeout(function () {
+                for (var i = 0; i < 10; i++) {
+                    $(".meet-list").append(
+                        "<a href='meet-func-list.html'><li class='meet-item'><div class='left'><img src='../../css/img/pic1@2x.png' alt='meetimg'></div><div class='right'><p class='meet-name'>淄博职业学院：三项机制成就大学生圆梦</p><time>2016-06-04</time></div></li></a>"
+                    );
+                }
+
+                loading = false;
+            }, 500); //模拟延迟
+        });
+    </script>
 </body>
 
 </html>

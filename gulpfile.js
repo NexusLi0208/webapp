@@ -74,7 +74,6 @@ gulp.task('sass', function () {
         }))
         .pipe(gulp.dest('./src/css'));
 });
-
 // 合并，压缩文件
 gulp.task('scripts', function () {
     gulp.src('./src/js/*.js')
@@ -112,7 +111,6 @@ gulp.task('watch', function () {
     gulp.watch('*.html', ['html']);
     // 监听根目录下所有.html文件
 })
-gulp.task('build', ['cssmin', 'scripts', 'html'])
 // 临时压缩任务
 gulp.task('yasuo',function(){
     gulp.src('./src/js/test/*.js')

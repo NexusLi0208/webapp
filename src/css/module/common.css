@@ -67,7 +67,7 @@ textarea {
   float: right; }
 
 .text-l {
-  text-align: left; }
+  text-align: left !important; }
 
 .text-r {
   text-align: right; }
@@ -77,6 +77,12 @@ textarea {
 
 .pst-btm {
   position: absolute;
+  bottom: 0; }
+
+.fix-btm {
+  position: fixed;
+  min-width: 320px;
+  max-width: 640px;
   bottom: 0; }
 
 .wt-bg {
@@ -95,6 +101,16 @@ textarea {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
 
+.bl-bg1 {
+  width: 100%;
+  height: 100%;
+  /* Fallback for sad browsers */
+  background-color: #1d6edd;
+  /* WebKit (Safari 5.1+, Chrome 10+) */
+  background-image: -webkit-radial-gradient(#00a0e9, #1d6edd);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
 .bl-bg2 {
   width: 100%;
   height: calc(100% - 4.4rem);
@@ -102,6 +118,11 @@ textarea {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding-top: 12%; }
+
+.bl-bg3 {
+  width: 100%;
+  height: 100%;
+  background: #00a0e9; }
 
 .main-cantainer {
   width: 100%;
@@ -174,6 +195,9 @@ textarea {
 
 .r0 {
   right: 0 !important; }
+
+.mgl2 {
+  margin-left: 2rem; }
 
 .clearfix:after {
   content: ".";
@@ -284,14 +308,16 @@ textarea {
 
 .meet-list {
   width: 100%;
-  height: auto;
-  padding-bottom: 1.5rem; }
+  height: auto; }
 
 .meet-list li {
   width: 100%;
   height: 6.5rem;
   border-bottom: 1px #eee solid;
   padding: 1.75rem 0; }
+
+.meet-list li:last-of-type {
+  border: none; }
 
 .meet-item {
   position: relative; }
@@ -339,7 +365,7 @@ textarea {
 
 .float-btn {
   display: block;
-  position: fixed;
+  position: absolute;
   right: 2.2rem;
   bottom: 6rem;
   width: 5rem;
@@ -367,3 +393,37 @@ textarea {
   color: #f87e17;
   margin: .75rem 0;
   border-radius: 5rem; }
+
+.noinfo {
+  text-align: center;
+  width: 100%;
+  height: 4rem;
+  color: #bfbfbf;
+  line-height: 4rem;
+  padding: 1rem 0; }
+
+.noinfo i {
+  display: inline-block;
+  margin-right: .5rem;
+  width: 4rem;
+  height: 4rem; }
+
+.noinfo i img {
+  width: 100%; }
+
+.loading {
+  text-align: center;
+  width: 100%;
+  color: #bfbfbf;
+  height: 4rem;
+  line-height: 4rem;
+  padding-bottom: 1rem; }
+
+.loading i {
+  display: inline-block;
+  margin-right: .5rem;
+  width: 4rem;
+  height: 4rem; }
+
+.loading i img {
+  width: 100%; }

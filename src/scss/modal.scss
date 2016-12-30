@@ -118,6 +118,8 @@
 .modal-footer {
     display: flex;
     height: 5rem;
+    border-radius: 0 0 10px 10px;
+    overflow: hidden;
 }
 
 .modal-footer button {

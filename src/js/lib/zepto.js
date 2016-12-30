@@ -1,6 +1,6 @@
-//     Zepto.js
+//     jquery.js
 //     (c) 2010-2016 Thomas Fuchs
-//     Zepto.js may be freely distributed under the MIT license.
+//     jquery.js may be freely distributed under the MIT license.
 
 var Zepto = (function() {
   var undefined, key, $, classList, emptyArray = [], concat = emptyArray.concat, filter = emptyArray.filter, slice = emptyArray.slice,
@@ -946,9 +946,9 @@ var Zepto = (function() {
 // If `$` is not yet defined, point it to `Zepto`
 window.Zepto = Zepto
 window.$ === undefined && (window.$ = Zepto)
-//     Zepto.js
+//     jquery.js
 //     (c) 2010-2016 Thomas Fuchs
-//     Zepto.js may be freely distributed under the MIT license.
+//     jquery.js may be freely distributed under the MIT license.
 
 ;(function($){
   var jsonpID = +new Date(),
@@ -1329,9 +1329,9 @@ window.$ === undefined && (window.$ = Zepto)
     return params.join('&').replace(/%20/g, '+')
   }
 })(Zepto)
-//     Zepto.js
+//     jquery.js
 //     (c) 2010-2016 Thomas Fuchs
-//     Zepto.js may be freely distributed under the MIT license.
+//     jquery.js may be freely distributed under the MIT license.
 
 ;(function($){
   var _zid = 1, undefined,
@@ -1606,9 +1606,9 @@ window.$ === undefined && (window.$ = Zepto)
   }
 
 })(Zepto)
-//     Zepto.js
+//     jquery.js
 //     (c) 2010-2016 Thomas Fuchs
-//     Zepto.js may be freely distributed under the MIT license.
+//     jquery.js may be freely distributed under the MIT license.
 
 ;(function($){
   $.fn.serializeArray = function() {
@@ -1646,9 +1646,9 @@ window.$ === undefined && (window.$ = Zepto)
   }
 
 })(Zepto)
-//     Zepto.js
+//     jquery.js
 //     (c) 2010-2016 Thomas Fuchs
-//     Zepto.js may be freely distributed under the MIT license.
+//     jquery.js may be freely distributed under the MIT license.
 
 ;(function($, undefined){
   var prefix = '', eventPrefix,
@@ -1769,9 +1769,9 @@ window.$ === undefined && (window.$ = Zepto)
 
   testEl = null
 })(Zepto)
-//     Zepto.js
+//     jquery.js
 //     (c) 2010-2016 Thomas Fuchs
-//     Zepto.js may be freely distributed under the MIT license.
+//     jquery.js may be freely distributed under the MIT license.
 
 ;(function($, undefined){
   var document = window.document, docElem = document.documentElement,
@@ -1840,9 +1840,9 @@ window.$ === undefined && (window.$ = Zepto)
   }
 
 })(Zepto)
-//     Zepto.js
+//     jquery.js
 //     (c) 2010-2016 Thomas Fuchs
-//     Zepto.js may be freely distributed under the MIT license.
+//     jquery.js may be freely distributed under the MIT license.
 
 ;(function(){
   // getComputedStyle shouldn't freak out when called
@@ -1861,9 +1861,9 @@ window.$ === undefined && (window.$ = Zepto)
   }
 })()
 
-//     Zepto.js
+//     jquery.js
 //     (c) 2010-2016 Thomas Fuchs
-//     Zepto.js may be freely distributed under the MIT license.
+//     jquery.js may be freely distributed under the MIT license.
 
 ;(function($){
   var zepto = $.zepto, oldQsa = zepto.qsa, oldMatches = zepto.matches
@@ -1946,9 +1946,9 @@ window.$ === undefined && (window.$ = Zepto)
     })
   }
 })(Zepto)
-//     Zepto.js
+//     jquery.js
 //     (c) 2010-2016 Thomas Fuchs
-//     Zepto.js may be freely distributed under the MIT license.
+//     jquery.js may be freely distributed under the MIT license.
 
 ;(function($){
   var touch = {},

@@ -65,7 +65,7 @@ new Vue({
 						// 查询失败
 					}
 				})
-				// window.location.href="creatmeetroom-success.html"
+			
 		},
 		getCodes: function () {
 			var phoneNum = $("#phone").val();

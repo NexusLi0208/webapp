@@ -1,0 +1,93 @@
+/*
+Power by lipeng
+ */
+.idCard-main {
+  padding-top: 2rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+.idCard-box {
+  position: relative;
+  width: 26rem;
+  height: 16rem;
+  padding: .5rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0 auto 2.5rem;
+  background: url(img/dotted_border.png) no-repeat;
+  -webkit-background-size: cover;
+          background-size: cover; }
+
+.idCard-title {
+  color: #fff;
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 1.7rem; }
+
+.idCard-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: .5rem;
+  overflow: hidden;
+  margin: 0 auto;
+  overflow: hidden; }
+
+.idCard-img img {
+  width: 100%; }
+
+.idCard-btnBox {
+  width: 100%;
+  text-align: center; }
+
+.idCard-btnBox button {
+  width: 26rem;
+  height: 4rem;
+  color: #fff;
+  font-size: 1.5rem;
+  border-radius: .5rem;
+  border: none; }
+
+.img-upload {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 6rem;
+  height: 6rem;
+  background: url(img/add.png);
+  -webkit-background-size: cover;
+          background-size: cover; }
+
+.img-upload input {
+  width: 100%;
+  height: 100%;
+  opacity: 0; }
+
+.btm-btnBox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  background: #fff;
+  height: 6rem;
+  line-height: 6rem; }
+
+.btm-btnBox div.btn {
+  border: none;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center; }
+
+.btm-btnBox div.btn:last-child {
+  border-left: 1px #eee solid; }
+
+.btm-btnBox div.btn img {
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-right: .3rem; }

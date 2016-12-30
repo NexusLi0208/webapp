@@ -1,4 +1,12 @@
 @charset "UTF-8";
+.info-title{width:100%;height:5.5rem;background:#fff;padding:2rem 2rem;-webkit-box-sizing:border-box;box-sizing:border-box;border-bottom:1px #eee solid}
+.info-title p{height:1.5rem;line-height:1.5rem;color:#848689;font-size:1.5rem;padding-left:1.5rem;border-left:.5rem #f66 solid}
+.info-list{width:100%;padding:0 2rem;background:#fff;-webkit-box-sizing:border-box;box-sizing:border-box;margin-bottom:1rem}
+.info-list .info-item{height:5.5rem;line-height:5.5rem;font-size:1.5rem;color:#333;border-bottom:1px #eee solid;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.info-list .info-item:last-of-type{border:none}
+.info-list .info-item p{height:100%;line-height:5.5rem}
+.info-list .info-item span{color:#848689}
+.info-txt-box{width:100%;-webkit-box-sizing:border-box;box-sizing:border-box;border:none;background:#fff;min-height:5rem;padding:2rem;font-size:1.5rem;color:#333;line-height:2.5rem}
 .creater{width:100%;height:7rem;padding:1.25rem 2rem;-webkit-box-sizing:border-box;box-sizing:border-box;background:#fff;margin-bottom:1rem}
 .creater .icon{width:4.5rem;height:4.5rem;border-radius:.5rem;overflow:hidden}
 .creater .name{font-size:1.5rem;line-height:4.5rem;color:#333;margin-left:2rem}
@@ -52,13 +60,16 @@ button,input,select,textarea{font-family:arial,"Microsoft YaHei";-webkit-appeara
 [v-cloak]{display:none}
 .floatl{float:left}
 .floatr{float:right}
-.text-l{text-align:left}
+.text-l{text-align:left!important}
 .text-r{text-align:right}
 .text-m{text-align:center}
 .pst-btm{position:absolute;bottom:0}
+.fix-btm{position:fixed;min-width:320px;max-width:640px;bottom:0}
 .wt-bg{width:100%;height:100%;background:#fff}
 .bl-bg{width:100%;height:100%;background-color:#1d6edd;background-image:-webkit-linear-gradient(top,#00a0e9,#1d6edd);padding-top:20%;-webkit-box-sizing:border-box;box-sizing:border-box}
+.bl-bg1{width:100%;height:100%;background-color:#1d6edd;background-image:-webkit-radial-gradient(#00a0e9,#1d6edd);-webkit-box-sizing:border-box;box-sizing:border-box}
 .bl-bg2{width:100%;height:calc(100% - 4.4rem);background:#00a0e9;-webkit-box-sizing:border-box;box-sizing:border-box;padding-top:12%}
+.bl-bg3{width:100%;height:100%;background:#00a0e9}
 .main-cantainer{width:100%;height:100%;background:#eee;margin:0 auto;font-size:1.6rem;overflow:auto;position:relative;-webkit-user-select:none;-webkit-overflow-scrolling:touch}
 .navfixr:after{content:'';display:block;height:7rem}
 .form-title{position:relative;width:100%;height:4.4rem;line-height:4.4rem;text-align:center;background:#00a0e9;color:#fff}
@@ -73,6 +84,7 @@ button,input,select,textarea{font-family:arial,"Microsoft YaHei";-webkit-appeara
 .clearfix{zoom:1}
 .no-pd{padding:0!important}
 .r0{right:0!important}
+.mgl2{margin-left:2rem}
 .clearfix:after{content:".";display:block;height:0;visibility:hidden;clear:both}
 .index-header{width:100%;height:auto}
 #vue_main{height:100%}
@@ -94,8 +106,9 @@ button,input,select,textarea{font-family:arial,"Microsoft YaHei";-webkit-appeara
 100%{-webkit-transform:translateX(-500px)}
 }
 .meet-list-main{-webkit-box-sizing:border-box;box-sizing:border-box;width:100%;min-height:20%;padding:0 1.5rem;background:#fff}
-.meet-list{width:100%;height:auto;padding-bottom:1.5rem}
+.meet-list{width:100%;height:auto}
 .meet-list li{width:100%;height:6.5rem;border-bottom:1px #eee solid;padding:1.75rem 0}
+.meet-list li:last-of-type{border:none}
 .meet-item{position:relative}
 .meet-item .left{float:left;width:30%;min-width:8.5rem;height:100%;overflow:hidden}
 .meet-item .left img{width:auto;height:100%}
@@ -104,31 +117,55 @@ button,input,select,textarea{font-family:arial,"Microsoft YaHei";-webkit-appeara
 .meet-item .right time{font-size:12px;color:#848689}
 .meet-item .deleteItem{position:absolute;right:0;bottom:1rem;width:6rem;height:3rem;border-radius:50px;background:#ffae2e;color:#fff;line-height:3rem;font-size:1.2rem;text-align:center}
 .float-btn-box{position:relative}
-.float-btn{display:block;position:fixed;right:2.2rem;bottom:6rem;width:5rem;height:5rem;border-radius:50px;background:#ffa53a;z-index:1}
+.float-btn{display:block;position:absolute;right:2.2rem;bottom:6rem;width:5rem;height:5rem;border-radius:50px;background:#ffa53a;z-index:1}
 .float-btn img{width:100%}
 .float-menu-box{position:absolute;right:2.2rem;bottom:11.5rem}
 .float-menu{display:block;width:10.5rem;font-size:1.2rem;text-align:center;line-height:3.5rem;height:3.5rem;background:#fdedd9;color:#f87e17;margin:.75rem 0;border-radius:5rem}
-.meetRoom-type-btn{display:block;width:17.5rem;height:17.5rem;margin:0 auto;padding:1rem;color:#fff;font-size:2rem;padding-top:14%;-webkit-box-sizing:border-box;box-sizing:border-box;text-align:center;background:url(img/conference_hall_btn_normal.png) center center no-repeat;-webkit-background-size:cover;background-size:cover}
+.noinfo{text-align:center;width:100%;height:4rem;color:#bfbfbf;line-height:4rem;padding:1rem 0}
+.noinfo i{display:inline-block;margin-right:.5rem;width:4rem;height:4rem}
+.noinfo i img{width:100%}
+.loading{text-align:center;width:100%;color:#bfbfbf;height:4rem;line-height:4rem;padding-bottom:1rem}
+.loading i{display:inline-block;margin-right:.5rem;width:4rem;height:4rem}
+.loading i img{width:100%}
+.idCard-main{padding-top:2rem;-webkit-box-sizing:border-box;box-sizing:border-box}
+.idCard-box{position:relative;width:26rem;height:16rem;padding:.5rem;-webkit-box-sizing:border-box;box-sizing:border-box;margin:0 auto 2.5rem;background:url(img/dotted_border.png) no-repeat;-webkit-background-size:cover;background-size:cover}
+.idCard-title{color:#fff;text-align:center;font-size:1.5rem;margin-bottom:1.7rem}
+.idCard-img{display:block;width:100%;height:100%;border-radius:.5rem;overflow:hidden;margin:0 auto;overflow:hidden}
+.idCard-img img{width:100%}
+.idCard-btnBox{width:100%;text-align:center}
+.idCard-btnBox button{width:26rem;height:4rem;color:#fff;font-size:1.5rem;border-radius:.5rem;border:none}
+.img-upload{position:absolute;top:0;right:0;bottom:0;left:0;margin:auto;width:6rem;height:6rem;background:url(img/add.png);-webkit-background-size:cover;background-size:cover}
+.img-upload input{width:100%;height:100%;opacity:0}
+.btm-btnBox{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;width:100%;background:#fff;height:6rem;line-height:6rem}
+.btm-btnBox div.btn{border:none;-webkit-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1;text-align:center}
+.btm-btnBox div.btn:last-child{border-left:1px #eee solid}
+.btm-btnBox div.btn img{width:3.5rem;height:3.5rem;margin-right:.3rem}
+.meetRoom-type-btn{display:block;width:17.5rem;height:17.5rem;margin:0 auto;padding:1rem;color:#fff;font-size:2rem;padding-top:5rem;-webkit-box-sizing:border-box;box-sizing:border-box;text-align:center;background:url(img/conference_hall_btn_normal.png) center center no-repeat;-webkit-background-size:cover;background-size:cover}
 .meetRoom-type-btn img{width:40%}
 .meetRoom-type-btn:active{background:url(img/conference_hall_btn_pressed.png) center center no-repeat;-webkit-background-size:cover;background-size:cover}
 .mtrm-list-hd{width:100%;background:#fff;padding:0 1rem 0 2rem;-webkit-box-sizing:border-box;box-sizing:border-box;height:5.5rem;border-bottom:1px #eee solid}
 .mtrm-list-hd i{display:block;width:3rem;height:3rem;padding:1.25rem 0;margin-right:1.2rem}
 .mtrm-list-hd p{display:block;height:3rem;line-height:3rem;font-size:1.5rem;color:#848689;padding:1.25rem 0;margin-right:1.2rem}
 .mtrm-list-hd i img{width:100%;height:100%}
-.mtrm-list{width:100%;padding:0 2rem;background:#fff;padding-bottom:1rem;-webkit-box-sizing:border-box;box-sizing:border-box;margin-bottom:1rem}
+.mtrm-list{width:100%;padding:0 2rem;background:#fff;-webkit-box-sizing:border-box;box-sizing:border-box;margin-bottom:1rem}
 .mtrm-list .mtrm-item{height:9rem;padding:1rem 0;-webkit-box-sizing:border-box;box-sizing:border-box;border-bottom:1px #eee solid;overflow:hidden}
+.mtrm-list .mtrm-item:last-of-type{border:none}
+.mtrm-list .form-group:last-of-type{border:none}
 .mtrm-list .floatl{margin-right:2rem}
 .mtrm-list .mtrm-img{display:block;width:6.5rem;height:6.5rem;border-radius:.5rem;overflow:hidden}
 .mtrm-list .mtrm-img img{width:100%}
 .mtrm-list .mtrm-name{font-size:1.5rem;color:#333;margin-top:1rem;margin-bottom:1.7rem}
 .mtrm-list .mtrm-name .tag{color:#f66;font-size:1.2rem}
 .mtrm-list .mtrm-time{font-size:1.2rem;color:#848689}
-.form-main{width:100%;background:#eee;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;padding-bottom:3rem}
+.form-main{width:100%;background:#eee;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
 .form-group{position:relative;width:100%;height:5.5rem;border-bottom:1px #eee solid;background:#fff;padding:0 2.2rem;-webkit-box-sizing:border-box;box-sizing:border-box;line-height:5.5rem}
 .form-group .input-icon{width:3rem;margin-right:.2rem}
 .form-group .input-icon img{width:100%}
-.form-group label{position:relative;height:100%;font-size:1.5rem;color:#333}
+.form-group label{position:relative;height:100%;font-size:1.5rem;color:#333;margin-right:1rem}
 .form-input{width:60%;height:100%;font-size:1.5rem;text-align:right;border:none;background:#fff;outline:0;color:#00a0e9;position:relative;-webkit-tap-highlight-color:transparent;padding-right:.5rem}
+.code-input{width:40%}
+.code-btn{padding:.5rem 1rem;background:#fff;color:#00a0e9;border-radius:5rem;outline:0;border:1px #00a0e9 solid}
+.code-btn:active{background:#c5edff}
 .form-btn{width:82%;height:4rem;font-size:1.7rem;color:#fff;border:none;border-radius:.5rem;outline:0}
 .input-btn{height:3rem;font-size:1.7rem;color:#fff;border:none;border-radius:.5rem;outline:0;font-size:1.2rem}
 .getCode{position:absolute;left:25%;top:30%}
@@ -140,7 +177,7 @@ select.form-input{-moz-appearance:none;appearance:none;position:relative;color:#
 .form-hr{width:100%;height:1rem;background:#eee;border:none;margin:0;padding:0}
 .form-text{font-size:1.5rem;color:#00a0e9;padding-right:.5rem}
 .meet-group{height:auto;padding:1rem 2.2rem;line-height:normal}
-.sign-up-btn{width:100%;height:5.5rem;background:#f66;font-size:1.7rem;color:#fff;border:none}
+.sign-up-btn{width:100%;height:5.5rem;background:#f66;font-size:1.7rem;color:#fff;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;border:none}
 .sign-up-btn:active{background:#dc3239}
 .submeet-name{font-size:1.5rem;margin-bottom:2rem}
 .submeet-info{height:3rem;line-height:3rem}
@@ -149,13 +186,16 @@ select.form-input{-moz-appearance:none;appearance:none;position:relative;color:#
 .checkbox-item{padding-top:.7rem}
 .checkbox-item input{width:1.5rem;height:1.5rem;margin-left:3rem}
 .submeet-info img{height:100%;width:auto}
-.btn-box{width:100%;text-align:center;margin-top:3rem}
+.btn-box{width:100%;text-align:center;padding:3rem 0}
 .form-textarea{position:relative;width:85.33333%;margin:2rem auto}
 .form-textarea textarea{width:100%;-webkit-box-sizing:border-box;box-sizing:border-box;height:19rem;font-size:1.5rem;border:1px #d3d3d3 solid;border-radius:5px;padding:1rem;resize:none;-webkit-box-shadow:none;box-shadow:none;outline:0;-webkit-appearance:none;-moz-appearance:none;appearance:none}
 .textarea_counter{position:absolute;color:#bfbfbf;font-size:1.2rem;bottom:.5rem;right:.5rem}
-.fileUpload{position:relative;height:9rem;line-height:9rem}
-.fileUpload input[type=file]{position:absolute;right:0;z-index:2;opacity:0}
-.fileUpload img{position:absolute;width:6.5rem;height:6.5rem;border-radius:.5rem;right:2.2rem;top:1.2rem;display:block;-webkit-box-sizing:border-box;box-sizing:border-box;overflow:hidden;z-index:1}
+.fileUpload{position:relative;height:9rem;padding:1.25rem 2.2rem}
+.fileUpload input[type=file]{position:absolute;height:6.5rem;right:0;z-index:2;opacity:0}
+.fileUpload .img-box{position:absolute;width:6.5rem;height:6.5rem;border-radius:.5rem;right:2.2rem;top:1.2rem;display:block;-webkit-box-sizing:border-box;box-sizing:border-box;overflow:hidden;z-index:1}
+.fileUpload .img-box1{position:absolute;width:8.5rem;height:6.5rem;right:2.2rem;top:1.2rem;display:block;-webkit-box-sizing:border-box;box-sizing:border-box;overflow:hidden;z-index:1}
+.fileUpload i img{width:100%}
+.ht-t1{height:5.5rem;line-height:5.5rem}
 .editormain{width:100%;min-height:30rem;background:#fff;margin-top:1rem;margin-bottom:3.5rem;padding:0 2.2rem;-webkit-box-sizing:border-box;box-sizing:border-box}
 .editor-btnBox{width:100%;height:5.5rem;line-height:5.5rem;border-bottom:1px #eee solid}
 .editor-btnBox span{position:relative;display:block;height:100%;width:3rem;overflow:hidden}
@@ -166,21 +206,22 @@ select.form-input{-moz-appearance:none;appearance:none;position:relative;color:#
 .disable{color:#848689}
 .bottomimg-btn{width:100%;height:5.5rem;background:#fff;font-size:1.7rem;outline:0;border:none;color:#606060}
 .bottomimg-btn img{width:3.5rem;height:3.5rem}
-.hotel-info-list{width:100%;height:auto;-webkit-box-sizing:border-box;box-sizing:border-box}
-.hotel-info-item{width:100%;padding:0 2.2rem;-webkit-box-sizing:border-box;box-sizing:border-box;background:#fff;margin-bottom:1rem}
-.hotel-name{color:#333;font-size:1.5rem;padding-top:2rem;margin-bottom:1.5rem}
-.hotel-name .company{margin-left:2rem}
-.hotel-address,.hotel-person,.room-num,.room-type{height:2rem;line-height:2rem;margin-bottom:1rem;color:#848689;font-size:1.2rem}
+.info-item{width:100%;padding:0 2.2rem;-webkit-box-sizing:border-box;box-sizing:border-box;background:#fff;margin-bottom:1rem}
+.info-body .t1{color:#333;font-size:1.5rem;padding-top:2rem;margin-bottom:1.5rem}
+.info-body .t1 .small{font-size:1.2rem;color:#848689}
+.info-body .t2,.info-body .t3,.info-body .t4{height:2rem;line-height:2rem;margin-bottom:1rem;color:#848689;font-size:1.2rem}
 .room-num{color:#848689}
 .room-num span{color:#f66;margin:0 1rem}
-.room-type{color:#848689}
-.room-type span{color:#f66;margin:0 1rem}
-.hotel-info{border-bottom:1px #eee solid}
-.hotel-info .icon{display:inline-block;width:2rem;height:2rem;overflow:hidden}
-.hotel-info .icon img{width:100%}
-.hotel-info .text{display:inline-block;height:2rem;line-height:2rem;margin:0 .3rem}
-.hotel-operate span{display:inline-block;width:3rem;height:3rem;margin:.5rem 0;margin-left:6rem}
-.hotel-operate span img{width:100%}
+.info-body .t3{color:#848689}
+.info-body .t3 span{color:#f66;margin:0 1rem}
+.info-body{border-bottom:1px #eee solid}
+.info-body .t2 .icon{display:inline-block;width:2rem;height:2rem;overflow:hidden}
+.info-body .t2 .icon img{width:100%}
+.info-body .t2 .text{display:inline-block;height:2rem;line-height:2rem;margin:0 .3rem}
+.info-body .t4 .icon{width:2.2rem;height:2.2rem;margin-right:.2rem}
+.info-body .t4 .icon img{width:100%}
+.item-operate span{display:inline-block;width:3rem;height:3rem;margin:.5rem 0;margin-left:6rem}
+.item-operate span img{width:100%}
 .hotel-list{width:100%;background:#fff;padding:0 2rem;-webkit-box-sizing:border-box;box-sizing:border-box;padding-bottom:1rem}
 .hotel-list li{padding:1.75rem 0;border-bottom:1px #eee solid}
 .hotel-list .name{color:#333;font-size:1.5rem;margin-bottom:1.8rem}
@@ -246,9 +287,6 @@ select.form-input{-moz-appearance:none;appearance:none;position:relative;color:#
 .index-tab button:last-child{border-left:1px #eee solid}
 .index-tab button img{width:4rem;height:auto}
 .index-tab .active{border-bottom:.5rem #00a0e9 solid}
-.loading{text-align:center;width:100%;height:4rem;line-height:4rem;padding-bottom:1rem}
-.loading i{display:inline-block;margin-right:.5rem;width:4rem;height:4rem}
-.loading i img{width:100%}
 .mtrmcod-main{width:88%;height:auto;background:#fff;border-radius:5px;margin:0 auto;padding:12% 0}
 .mtrmcod-main .code-body{width:22.5rem;height:auto;margin:0 auto}
 .codeBox{display:block;padding:1rem;width:22.5rem;height:22.5rem;-webkit-box-sizing:border-box;box-sizing:border-box;background:url(img/check_code_decorationx.png) no-repeat;-webkit-background-size:cover;background-size:cover}
@@ -280,7 +318,7 @@ select.form-input{-moz-appearance:none;appearance:none;position:relative;color:#
 .modal-body .time{display:block;width:100%;color:#00a0e9;height:2rem;margin-top:.5rem}
 .modal-body .time i{display:inline-block;width:auto;height:100%}
 .modal-body .time i img{height:100%}
-.modal-footer{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;height:5rem}
+.modal-footer{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;height:5rem;border-radius:0 0 10px 10px;overflow:hidden}
 .modal-footer button{-webkit-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1;background:#fff;height:100%;border:none;outline:0;font-size:1.5rem}
 .modal-footer button.yes{border-right:1px #eee solid;color:#00a0e9;border-radius:0 0 0 10px}
 .modal-footer button.no{color:#717171;border-radius:0 0 10px 0}
@@ -290,6 +328,11 @@ select.form-input{-moz-appearance:none;appearance:none;position:relative;color:#
 .no-meetRoom p{text-align:center;font-size:1.5rem;color:#848689;margin:2rem 0 2.8rem}
 .no-meetRoom .creatBtn{display:block;margin:0 auto;width:16rem;height:4.5rem;text-align:center;border-radius:5px;line-height:4.5rem;background:#f66;color:#fff}
 .details-mian{width:100%;height:100%}
+.member-search{background:#00a0e9}
+.member-search .search-input{background:#33b3ed;color:#fff}
+.member-search .search-input::-webkit-input-placeholder{color:#fff}
+.member-search .search-btn{background:#0183d6}
+.member-search .search-btn:active{background:#0070b7}
 .right-title{height:6.5rem;font-size:1.5rem;padding:1.75rem 2rem;-webkit-box-sizing:border-box;box-sizing:border-box}
 .right-title span{display:block;height:3rem;line-height:3rem;color:#68a5c1}
 .right-edit-btn{height:3rem;padding:0 1.5rem;background:#00a0e9;border-radius:5rem;border:none;outline:0;color:#fff}
@@ -298,6 +341,19 @@ select.form-input{-moz-appearance:none;appearance:none;position:relative;color:#
 .type_tab li i{font-size:1.4rem;color:#00a0e9;font-style:normal}
 .type_tab li .delBtn{position:absolute;right:-.75rem;top:-.75rem;width:2rem;height:2rem;overflow:hidden;background:url(img/module_delete.png) no-repeat;-webkit-background-size:cover;background-size:cover}
 .type_tab li .delBtn img{width:100%;height:auto}
+.setpsd-main{padding-top:6rem}
+.setpsd-main .phoneTitle{color:#a0e4f9;font-size:1.2rem;text-align:center;margin-bottom:2rem}
+.setpsd-main .phoneNum{text-align:center;font-size:2.4rem;color:#00e4d3;margin-bottom:4rem}
+.setpsd-form{position:relative;width:75%;height:4.5rem;border-radius:5rem;margin:0 auto 1.8rem;background:#3dbaef}
+.setpsd-form .setpsd-input{width:100%;height:100%;font-size:1.3rem;-webkit-box-sizing:border-box;box-sizing:border-box;color:#fff;padding:0 5rem;background:0 0;border:none}
+.setpsd-form .code-input{width:60%;height:100%;font-size:1.3rem;-webkit-box-sizing:border-box;box-sizing:border-box;color:#fff;padding-left:5rem;background:0 0;border:none}
+.setpsd-form .code-button{width:40%;height:100%;background:0 0;font-size:1.3rem;color:#fff;border:none;outline:0;border-left:1px #90def8 solid;-webkit-box-sizing:border-box;box-sizing:border-box}
+.setpsd-form ::-webkit-input-placeholder{color:#97e3f9}
+.setpsd-form .input-icon{position:absolute;top:.4rem;left:1rem;z-index:1;display:block;width:3.5rem;height:3.5rem}
+.setpsd-form .input-icon img{width:100%}
+.setpsd-main .setpsd-tag{font-size:1.2rem;text-align:center;color:#fff;margin-bottom:1.8rem}
+.setpsd-main .setpsd-btn-box{width:100%;text-align:center}
+.setpsd-main .setpsd-btn{width:75%;height:4.5rem;border-radius:5rem;color:#00a0e9;background:#fff;font-size:1.6rem;border:none}
 .sl-btn-list{margin-top:5rem}
 .sl-btn-list a{display:block;margin:0 auto;width:25rem;height:7rem;border-radius:5rem;line-height:7rem;margin-bottom:3.5rem;font-size:1.8rem}
 .sl-btn-list a.wt-btn{background:#fff;color:#00a0e9}
@@ -312,7 +368,7 @@ select.form-input{-moz-appearance:none;appearance:none;position:relative;color:#
 .success-main a,.success-main button{display:block;width:15rem;height:4.4rem;line-height:4.4rem;text-align:center;font-size:1.5rem;color:#fff;border:none;border-radius:.5rem;outline:0;margin:0 auto}
 .search-bar{position:relative;width:100%;height:7rem;padding:1.75rem 0;-webkit-box-sizing:border-box;box-sizing:border-box}
 .search-body{width:89%;text-align:center;height:3.5rem;margin:0 auto}
-.searchBox{position:relative;float:left;width:75%;height:3.5rem;background:#fff;border-radius:.5rem}
+.searchBox{position:relative;float:left;width:75%;height:3.5rem;border-radius:.5rem}
 .searchBox i{display:block;position:absolute;top:.8rem;width:2rem;height:2rem}
 .searchBox i.search{left:.8rem}
 .searchBox i.delete{right:.8rem}

@@ -14,11 +14,11 @@
 
 <body>
     <section class="main-cantainer">
-        <div class="page1" hidden>
-            <div class="hotel-item">
-                <div class="hotel-info">
-                    <p class="hotel-name">瞿二狗<span class="company">上海万达科技有限公司</span></p>
-                    <p class="hotel-person">
+        <div class="page1">
+            <div class="info-item">
+                <div class="info-body">
+                    <p class="t1">瞿二狗<span class="mgl2">上海万达科技有限公司</span></p>
+                    <p class="t2">
                         <span class="icon floatl"><img src="../../css/img/gender-red.png" alt="性别"></span>
                         <span class="text floatl">男</span>
                         <span class="icon floatl"><img src="../../css/img/cellphone.png" alt="电话"></span>
@@ -26,7 +26,7 @@
                     </p>
                 </div>
             </div>
-            <div class="form-group">
+            <div class="form-group js-selectHotel">
                 <label class="floatl">选择酒店:</label>
                 <span class="floatr arrowImg"><img src="../../css/img/list_arrow.png" alt=""></span>
             </div>
@@ -42,7 +42,7 @@
                 <button type="button" class="form-btn cancel-btn">保存</button>
             </div>
         </div>
-        <div class="page2">
+        <div class="page2" hidden>
             <div class="search-bar clearfix">
                 <div class="search-body">
                     <div class="searchBox">
@@ -54,26 +54,15 @@
                 </div>
             </div>
             <ul class="hotel-list">
-                <li>
+                <li class="info-item">
                     <p class="name">垄煜大酒店</p>
                     <p class="info">剩余房间总数：36间<span class="floatr">0/单人间</span><span class="floatr">0/双人间</span></p>
                 </li>
-                 <li>
-                    <p class="name">垄煜大酒店</p>
-                    <p class="info">剩余房间总数：36间<span class="floatr">0/单人间</span><span class="floatr">0/双人间</span></p>
-                </li>
-                 <li>
-                    <p class="name">垄煜大酒店</p>
-                    <p class="info">剩余房间总数：36间<span class="floatr">0/单人间</span><span class="floatr">0/双人间</span></p>
-                </li>
-                 <li>
-                    <p class="name">垄煜大酒店</p>
-                    <p class="info">剩余房间总数：36间<span class="floatr">0/单人间</span><span class="floatr">0/双人间</span></p>
-                </li>
+          
             </ul>
         </div>
     </section>
-    <script src="../../js/lib/zepto.js"></script>
+    <script src="../../js/lib/jquery.js"></script>
     <script src="../../js/common.js"></script>
     <script src="../../js/admin-hotel.js"></script>
 </body>

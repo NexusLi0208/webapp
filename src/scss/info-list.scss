@@ -1,10 +1,4 @@
-.hotel-info-list {
-    width: 100%;
-    height: auto;
-    box-sizing: border-box;
-}
-
-.hotel-info-item{
+.info-item {
     width: 100%;
     padding: 0 2.2rem;
     box-sizing: border-box;
@@ -12,21 +6,22 @@
     margin-bottom: 1rem;
 }
 
-.hotel-name {
+.info-body .t1 {
     color: #333;
     font-size: 1.5rem;
     padding-top: 2rem;
     margin-bottom: 1.5rem
 }
 
-.hotel-name .company {
-    margin-left: 2rem;
+.info-body .t1 .small {
+    font-size: 1.2rem;
+    color: #848689;
 }
 
-.room-num,
-.hotel-address,
-.hotel-person,
-.room-type {
+.info-body .t2,
+.info-body .t3,
+.info-body .t4,
+{
     height: 2rem;
     line-height: 2rem;
     margin-bottom: 1rem;
@@ -43,38 +38,48 @@
     margin: 0 1rem;
 }
 
-.room-type {
+.info-body .t3 {
     color: #848689;
 }
 
-.room-type span {
+.info-body .t3 span {
     color: #f66;
     margin: 0 1rem;
 }
 
-.hotel-info {
+.info-body {
     border-bottom: 1px #eee solid;
 }
 
-.hotel-info .icon {
+.info-body .t2 .icon {
     display: inline-block;
     width: 2rem;
     height: 2rem;
     overflow: hidden;
 }
 
-.hotel-info .icon img {
+.info-body .t2 .icon img {
     width: 100%;
 }
 
-.hotel-info .text {
+.info-body .t2 .text {
     display: inline-block;
     height: 2rem;
     line-height: 2rem;
     margin: 0 .3rem;
 }
 
-.hotel-operate span {
+.info-body .t4 .icon {
+    width: 2.2rem;
+    height: 2.2rem;
+    margin-right: .2rem;
+}
+
+.info-body .t4 .icon img {
+    width: 100%;
+}
+
+.item-operate span {
     display: inline-block;
     width: 3rem;
     height: 3rem;
@@ -82,7 +87,7 @@
     margin-left: 6rem;
 }
 
-.hotel-operate span img {
+.item-operate span img {
     width: 100%;
 }
 
@@ -92,23 +97,26 @@
     background: #fff;
     padding: 0 2rem;
     box-sizing: border-box;
-    padding-bottom:1rem;
+    padding-bottom: 1rem;
 }
-.hotel-list li{
-    padding:1.75rem 0;
-    border-bottom:1px #eee solid;
 
+.hotel-list li {
+    padding: 1.75rem 0;
+    border-bottom: 1px #eee solid;
 }
-.hotel-list .name{
-    color:#333;
+
+.hotel-list .name {
+    color: #333;
     font-size: 1.5rem;
     margin-bottom: 1.8rem;
 }
-.hotel-list .info{
-    font-size:1.2rem;
-    color:#848689;
+
+.hotel-list .info {
+    font-size: 1.2rem;
+    color: #848689;
 }
-.hotel-list .info span{
-    color:#f66;
-    margin:0 1rem;
+
+.hotel-list .info span {
+    color: #f66;
+    margin: 0 1rem;
 }
