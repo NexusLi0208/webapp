@@ -41,38 +41,73 @@
                 </section>
             </header>
             <section class="index-tab">
-                <button class="index-tab-btn active"><img src="../../css/img/icon_conference@2x.png" alt="tab-icon">会议</button>
-                <button class="index-tab-btn"><img src="../../css/img/icon_conferencehall@2x.png" alt="tab-icon">会议厅</button>
+                <button class="index-tab-btn" :class="{'active':meetList}" @click="meetList=true"><img src="../../css/img/icon_conference@2x.png" alt="tab-icon">会议</button>
+                <button class="index-tab-btn" :class="{'active':!meetList}" @click="meetList=false"><img src="../../css/img/icon_conferencehall@2x.png" alt="tab-icon">会议厅</button>
             </section>
             <section class="meet-list-main">
-                <ul class="meet-list">
-                    <a href="meet-func-list.html">
-                        <li class="meet-item">
+                <ul class="meet-list" v-show="meetList">
+                    <li class="meet-item">
+                        <a href="meet-func-list.html">
                             <div class="left"><img src="../../css/img/pic1@2x.png" alt="meetimg"></div>
                             <div class="right">
-                                <p class="meet-name">淄博职业学院：三项机制成就大学生圆梦</p>
+                                <p class="meet-name">1淄博职业学院：三项机制成就大学生圆梦</p>
                                 <time>2016-06-04</time>
+                                <button class="focus-btn">关注</button>
                             </div>
-                        </li>
-                    </a>
-                    <a href="meet-func-list.html">
-                        <li class="meet-item">
+                        </a>
+                    </li>
+                    <li class="meet-item">
+                        <a href="meet-func-list.html">
                             <div class="left"><img src="../../css/img/pic1@2x.png" alt="meetimg"></div>
                             <div class="right">
-                                <p class="meet-name">淄博职业学院：三项机制成就大学生圆梦</p>
+                                <p class="meet-name">1淄博职业学院：三项机制成就大学生圆梦</p>
                                 <time>2016-06-04</time>
+                                <button class="focus-btn">关注</button>
                             </div>
-                        </li>
-                    </a>
-                    <a href="meet-func-list.html">
-                        <li class="meet-item">
+                        </a>
+                    </li>
+                    <li class="meet-item">
+                        <a href="meet-func-list.html">
                             <div class="left"><img src="../../css/img/pic1@2x.png" alt="meetimg"></div>
                             <div class="right">
-                                <p class="meet-name">淄博职业学院：三项机制成就大学生圆梦</p>
-                                <time>2016-06-04</time> 
+                                <p class="meet-name">1淄博职业学院：三项机制成就大学生圆梦</p>
+                                <time>2016-06-04</time>
+                                <button class="focus-btn">关注</button>
                             </div>
-                        </li>
-                    </a>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="meetroom-list" v-show="!meetList">
+                    <li class="meet-item">
+                        <a href="meet-func-list.html">
+                            <div class="left"><img src="../../css/img/user-img.jpeg" alt="meetimg"></div>
+                            <div class="right">
+                                <p class="meet-name">拓跋浚的会议厅</p>
+                                <time>创建时间2016-06-04</time>
+                                <button class="focus-btn">关注</button>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="meet-item">
+                        <a href="meet-func-list.html">
+                            <div class="left"><img src="../../css/img/user-img.jpeg" alt="meetimg"></div>
+                            <div class="right">
+                                <p class="meet-name">拓跋浚的会议厅</p>
+                                <time>创建时间2016-06-04</time>
+                                <button class="focus-btn">关注</button>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="meet-item">
+                        <a href="meet-func-list.html">
+                            <div class="left"><img src="../../css/img/user-img.jpeg" alt="meetimg"></div>
+                            <div class="right">
+                                <p class="meet-name">拓跋浚的会议厅</p>
+                                <time>创建时间2016-06-04</time>
+                                <button class="focus-btn">关注</button>
+                            </div>
+                        </a>
+                    </li>
                 </ul>
                 <p class="loading"><i><img src="../../css/img/loading_pic.png" alt=""></i>正在加载更多</p>
             </section>
@@ -106,22 +141,7 @@
     <script src="../../js/plug/plug-form.js"></script>
     <script src="../../js/lib/weui.min.js"></script>
     <script src="../../js/meetIndex.js"></script>
-    <script>
-        var loading = false; //状态标记
-        $(".main-cantainer").infinite().on("infinite", function () {
-            if (loading) return;
-            loading = true;
-            setTimeout(function () {
-                for (var i = 0; i < 10; i++) {
-                    $(".meet-list").append(
-                        "<a href='meet-func-list.html'><li class='meet-item'><div class='left'><img src='../../css/img/pic1@2x.png' alt='meetimg'></div><div class='right'><p class='meet-name'>淄博职业学院：三项机制成就大学生圆梦</p><time>2016-06-04</time></div></li></a>"
-                    );
-                }
-
-                loading = false;
-            }, 500); //模拟延迟
-        });
-    </script>
+   
 </body>
 
 </html>

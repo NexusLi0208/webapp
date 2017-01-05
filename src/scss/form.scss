@@ -47,23 +47,35 @@
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     padding-right: .5rem;
 }
-.code-input{
-    width:40%;
+
+.form-time {
+    color: $blue;
+    font-size: 1.2rem;
 }
-.code-btn{
-    padding:.5rem 1rem;
+
+.code-input {
+    width: 40%;
+}
+
+.code-btn {
+    padding: .5rem 1rem;
     background: #fff;
-    color:$blue;
+    color: $blue;
     @include rounded(5rem);
     outline: none;
-    border:1px $blue solid;
+    border: 1px $blue solid;
 }
-.code-btn:active{
-    background:#c5edff;
+
+.code-btn:active {
+    background: #c5edff;
 }
+
 .form-btn {
+    display: block;
+    margin: 0 auto;
     width: 82%;
     height: 4rem;
+    line-height: 4rem;
     font-size: 1.7rem;
     color: #fff;
     border: none;
@@ -129,14 +141,13 @@ select.form-input {
     padding-right: .5rem;
 }
 
-// 子会议选择
 .meet-group {
     height: auto;
     padding: 1rem 2.2rem;
     line-height: normal;
 }
 
-.sign-up-btn {
+.btm-btn {
     width: 100%;
     height: 5.5rem;
     background: $red;
@@ -146,45 +157,83 @@ select.form-input {
     border: none;
 }
 
-.sign-up-btn:active {
+.btm-btn:active {
     background: #dc3239;
 }
 
-.submeet-name {
+// 新版分论坛
+.chmeet-item {
+    position: relative;
+    width: 100%;
+    height: 7rem;
+    padding: 1.25rem 2rem;
+    box-sizing: border-box;
+    background: #fff;
+    border-bottom: 1px #eee solid;
+}
+
+.chmeet-item .icon {
+    width: 4.5rem;
+    height: 4.5rem;
+    @include rounded(.5rem);
+    overflow: hidden;
+}
+
+.chmeet-item .chmeet-info {
+    width: 75%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     font-size: 1.5rem;
-    margin-bottom: 2rem;
+    color: #333;
+    line-height: 2.5rem;
 }
 
-.submeet-info {
-    height: 3rem;
-    line-height: 3rem;
+.chmeet-item .chmeet-info .name {
+    display: block;
+    color: #333;
+    font-size: 1.5rem;
 }
 
-.time-item,
-.checkbox-item {
-    height: 100%;
-    line-height: 100%;
+.chmeet-item .chmeet-info .time {
+    display: block;
+    color: #bfbfbf;
+    font-size: 1.2rem;
 }
 
-.time-item time {
-    color: $blue;
+.chmeet-item .title {
+    line-height: 4.5rem;
 }
 
-.checkbox-item {
-    padding-top: .7rem;
-}
-
-.checkbox-item input {
-    width: 1.5rem;
-    height: 1.5rem;
-    margin-left: 3rem;
-}
-
-.submeet-info img {
-    height: 100%;
-    width: auto;
-}
-
+// 原版分论坛
+// .submeet-name {
+//     font-size: 1.5rem;
+//     margin-bottom: 2rem;
+// }
+// .submeet-info {
+//     height: 3rem;
+//     line-height: 3rem;
+// }
+// .time-item,
+// .checkbox-item {
+//     height: 100%;
+//     line-height: 100%;
+// }
+// .time-item time {
+//     color: $blue;
+// }
+// .checkbox-item {
+//     padding-top: .7rem;
+// }
+// .checkbox-item input {
+//     width: 1.5rem;
+//     height: 1.5rem;
+//     margin-left: 3rem;
+// }
+// .submeet-info img {
+//     height: 100%;
+//     width: auto;
+// }
 // 保存按钮
 .btn-box {
     width: 100%;
@@ -333,6 +382,21 @@ select.form-input {
     resize: none;
     box-shadow: none;
     outline: none;
+}
+
+.form-txtarea1 {
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 13rem;
+    border: none;
+    background: #fff;
+    color: #848689;
+    font-size: 1.5rem;
+    padding: 2rem;
+    resize: none;
+    box-shadow: none;
+    outline: none;
+    border-radius: 0;
 }
 
 .disable {

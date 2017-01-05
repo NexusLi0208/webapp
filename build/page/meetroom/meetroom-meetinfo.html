@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>会议</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+    <section class="main-cantainer" id="vue_main">
+        <header class="header">
+            <div class="form-title"><a href="javascript:history.go(-1)"><span class="backBasic-btn"><img src="../../css/img/title_arrow_back.png" alt=""></span></a>校长联席会议</div>
+        </header>
+        <section class="meet-list-main">
+            <ul class="meet-list mtrm-infolist">
+                <li class="meet-item" @click="meetSignup">
+                        <div class="left"><img src="../../css/img/pic1@2x.png"   alt="meetimg"></div>
+                        <div class="right">
+                            <p class="meet-name">{{selectmeeinfo.meeName}}</p>
+                            <time>{{selectmeeinfo.meeTime}}</time>
+                        </div>
+                        <div class="deleteItem">
+                            邀请
+                        </div>
+                </li>
+            </ul>
+        </section>
+        <section class="meet-list-main mtrm-chlistmain">
+            <div class="mtrm-chlist-hd" @click="mtrmChlist=!mtrmChlist">
+                <i class="floatl"><img src="../../css/img/icon_check_conference.png" alt=""></i>
+                <p class="floatl">分会议</p>
+                <i class="floatr"></i>
+            </div>
+            <ul class="meet-list mtrm-infolist" v-show="mtrmChlist">
+                <li class="meet-item" v-cloak v-for="item in chmeeList">
+                    <a href="#">
+                        <div class="left"><img src="../../css/img/pic1@2x.png" alt="meetimg"></div>
+                        <div class="right">
+                            <p class="meet-name">{{item.meeName}}</p>
+                            <time>{{item.meeStartTime|getTime}}</time>
+                        </div>
+                        <div class="deleteItem">
+                            邀请
+                        </div>
+                    </a>
+                </li>
+                </a>
+            </ul>
+        </section>
+    </section>
+    <script src="../../js/lib/jquery.js"></script>
+    <script src="../../js/plug/plug-form.js"></script>
+    <script src="../../js/lib/vue-1.0.28.js"></script>
+    <script src="../../js/plug/httpPath.js"></script>
+    <script src="../../js/mtrm-meetinfo.js"></script>
+</body>
+
+</html>

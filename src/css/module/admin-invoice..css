@@ -15,7 +15,7 @@
   padding-left: 1.5rem;
   border-left: 0.5rem #f66 solid; }
 
-.info-list {
+.form-info-list {
   width: 100%;
   padding: 0 2rem;
   background: #fff;
@@ -23,7 +23,7 @@
           box-sizing: border-box;
   margin-bottom: 1rem; }
 
-.info-list .info-item {
+.form-info-list .form-group1 {
   height: 5.5rem;
   line-height: 5.5rem;
   font-size: 1.5rem;
@@ -33,14 +33,14 @@
   text-overflow: ellipsis;
   white-space: nowrap; }
 
-.info-list .info-item:last-of-type {
+.form-info-list .form-group1:last-of-type {
   border: none; }
 
-.info-list .info-item p {
+.form-info-list .form-group1 p {
   height: 100%;
   line-height: 5.5rem; }
 
-.info-list .info-item span {
+.form-info-list .form-group1 span {
   color: #848689; }
 
 .info-txt-box {

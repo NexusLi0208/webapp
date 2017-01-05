@@ -5,9 +5,11 @@ $(".float-btn").on("click", function () {
 		var _this = $(this);
 		var $menu = $(this).siblings(".float-menu-box");
 		if ($menu.is(':hidden')) {
+			_this.addClass("rotate45reg");
 			$menu.show();
 			_this.css("background", "#f87c17");
 		} else {
+				_this.removeClass("rotate45reg").addClass("rotate1");
 			$menu.hide();
 			_this.css("background", "#ffa53a");
 		}
@@ -19,8 +21,13 @@ $(".modal-bg").on("click", function () {
 $(document).on("click", ".modal-main .no", function () {
 	$(".modal-main").hide();
 });
+$(document).on("click",".modal-bg",function(){
+	$(".modal-main").hide();
+	$("#prompt-modal,#affirm_modal").remove();
+})
 $(document).on("click", ".modal-main .know", function () {
-	$("#alert-modal").remove();
+	$("#prompt-modal").remove();
+
 })
 
 // 获取文件上传路径
@@ -69,7 +76,7 @@ function showPreview(source) {
 		affirm: function (option, callback) {
 
 			var _this = this;
-			var modal = "<div class='modal-main'>" +
+			var modal = "<div class='modal-main' id='affirm_modal'>" +
 				"<div class='modal-bg'></div>" +
 				"<div class='modal-contant'>" +
 				"<div class='modal-body'>" +
@@ -82,20 +89,20 @@ function showPreview(source) {
 				"</div>" +
 				"</div>";
 			$('body').append(modal);
-			$(document).on("click", ".modal-main .yes", function () {
+			$(document).on("click", "#affirm_modal .yes", function () {
 				if (callback) {
 					callback();
 				}
-				$(".modal-main").remove();
-				$(document).off("click", ".modal-main .yes");
+				$("#affirm_modal").remove();
+				$(document).off("click", "#affirm_modal .yes");
 			})
-			$(document).on("click", "modal-main .no", function () {
-				$(".modal-main").remove();
+			$(document).on("click", "#affirm_modal .no", function () {
+				$("#affirm_modal").remove();
 			})
 		},
 		// 弹出框
-		alert: function (option) {
-			var modal = "<div class='modal-main' id='alert-modal'>" +
+		prompt: function (option) {
+			var modal = "<div class='modal-main' id='prompt-modal'>" +
 				"<div class='modal-bg'></div>" +
 				"<div class='modal-contant'>" +
 				"<div class='modal-body'>" +

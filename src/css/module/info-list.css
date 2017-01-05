@@ -70,32 +70,25 @@
   width: 3rem;
   height: 3rem;
   margin: .5rem 0;
-  margin-left: 6rem; }
+  margin-left: 5rem; }
 
 .item-operate span img {
   width: 100%; }
 
-.hotel-list {
-  width: 100%;
-  background: #fff;
-  padding: 0 2rem;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding-bottom: 1rem; }
+.item-operate i {
+  display: inline-block;
+  height: 3rem;
+  line-height: 3rem;
+  margin: .5rem 0; }
 
-.hotel-list li {
-  padding: 1.75rem 0;
-  border-bottom: 1px #eee solid; }
-
-.hotel-list .name {
-  color: #333;
-  font-size: 1.5rem;
-  margin-bottom: 1.8rem; }
-
-.hotel-list .info {
+.item-operate i a {
+  display: block;
+  height: 2.5rem;
+  line-height: 2.5rem;
   font-size: 1.2rem;
-  color: #848689; }
-
-.hotel-list .info span {
-  color: #f66;
-  margin: 0 1rem; }
+  padding: 0 1rem;
+  font-style: normal;
+  background: #fff;
+  color: #fb911a;
+  border: 1px #fb911a solid;
+  border-radius: 5rem; }

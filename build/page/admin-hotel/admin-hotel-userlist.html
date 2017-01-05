@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <section class="main-cantainer" id="scroll">
+    <section class="main-cantainer navfixr">
         <div class="search-bar clearfix">
             <div class="search-body">
                 <div class="searchBox">
@@ -41,39 +41,46 @@
                     <span class="floatr"><a href="admin-userhotel-edit.html"><img src="../../css/img/edit_pressed.png" alt="修改"></a></span>
                 </div>
             </li>
+            <li class="info-item">
+                <div class="info-body">
+                    <p class="t1">王校长<span class="mgl2">上海万达</span></p>
+                    <p class="t2">
+                        <span class="icon floatl"><img src="../../css/img/gender-red.png" alt="性别"></span>
+                        <span class="text floatl">男</span>
+                        <span class="icon floatl"><img src="../../css/img/cellphone.png" alt="电话"></span>
+                        <span class="text floatl">13854124587</span>
+                    </p>
+                    <p class="t3">所选房间类型：<span>单人间</span></p>
+                </div>
+                <div class="item-operate clearfix">
+                    <span class="floatr"><a href="javascript:;" class="js-delUserHotel"><img src="../../css/img/delete_pressed.png" alt="删除"></a></span>
+                    <span class="floatr"><a href="admin-userhotel-edit.html"><img src="../../css/img/edit_pressed.png" alt="修改"></a></span>
+                </div>
+            </li>
+            <li class="info-item">
+                <div class="info-body">
+                    <p class="t1">王校长<span class="mgl2">上海万达</span></p>
+                    <p class="t2">
+                        <span class="icon floatl"><img src="../../css/img/gender-red.png" alt="性别"></span>
+                        <span class="text floatl">男</span>
+                        <span class="icon floatl"><img src="../../css/img/cellphone.png" alt="电话"></span>
+                        <span class="text floatl">13854124587</span>
+                    </p>
+                    <p class="t3">所选房间类型：<span>单人间</span></p>
+                </div>
+                <div class="item-operate clearfix">
+                    <span class="floatr"><a href="javascript:;" class="js-delUserHotel"><img src="../../css/img/delete_pressed.png" alt="删除"></a></span>
+                    <span class="floatr"><a href="admin-userhotel-edit.html"><img src="../../css/img/edit_pressed.png" alt="修改"></a></span>
+                </div>
+            </li>
         </ul>
-        <p class="loading"><i><img src="../../css/img/loading_pic.png" alt=""></i>正在加载更多</p>
+        <p class="loading" hidden><i><img src="../../css/img/loading_pic.png" alt=""></i>正在加载更多</p>
         </div>
     </section>
-    <div class='modal-main' id="user-hotelinfo-modal" hidden>
-        <div class="modal-bg"></div>
-        <div class='modal-contant'>
-            <div class="modal-body">
-                <p class="txt text-m">是否要删除该用户的酒店信息?</p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="yes">是</button>
-                <button type="button" class="no">否</button>
-            </div>
-        </div>
-    </div>
+    <button type='button' class='btm-btn fix-btm'>导出表</button>
     <script src="../../js/lib/jquery.js"></script>
     <script src="../../js/common.js"></script>
-    <script src="../../js/lib/weui.min.js"></script>
     <script src="../../js/admin-hotel.js"></script>
-    <script>
-        var loading = false; //状态标记
-        $(".main-cantainer").infinite().on("infinite", function () {
-            if (loading) return;
-            loading = true;
-            setTimeout(function () {
-                $(".user-hotel-list").append(
-                    "<li class='hotel-info-item'><div class='hotel-info'><p class='hotel-name'>瞿二狗<span class='company'>上海万达科技有限公司</span></p><p class='hotel-person'><span class='icon floatl'><img src='../../css/img/gender-red.png' alt='性别'></span><span class='text floatl'>男</span><span class='icon floatl'><img src='../../css/img/cellphone.png' alt='电话'></span><span class='text floatl'>13854124587</span></p><p class='room-type'>所选房间类型：<span class='room-type-num'>单人间</span></p></div><div class='hotel-operate clearfix'><span class='floatr'><a href='javascript:;' class='js-delUserHotel'><img src='../../css/img/delete_pressed.png' alt='删除'></a></span><span class='floatr'><a href='admin-hotel-edit.html'><img src='../../css/img/edit_pressed.png' alt='修改'></a></span></div></li>"
-                );
-                loading = false;
-            }, 500); //模拟延迟
-        });
-    </script>
 </body>
 
 </html>

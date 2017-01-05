@@ -24,7 +24,7 @@
 
 .modal-contant {
   max-width: 26rem;
-  width: 69%;
+  width: 75%;
   background: #fff;
   position: fixed;
   left: 0;
@@ -49,8 +49,7 @@
           box-sizing: border-box;
   padding: 1rem;
   max-height: 18rem;
-  overflow: auto;
-  border-bottom: 1px #eee solid; }
+  overflow: auto; }
 
 .modal-body p.txt {
   font-size: 1.5rem;
@@ -75,10 +74,13 @@
 .modal-body .item {
   width: 100%;
   height: 3.5rem;
-  padding: .5rem 0;
+  padding: 1rem 0;
   font-size: 1.2rem;
   overflow: hidden;
   border-bottom: 1px #eee solid; }
+
+.modal-body .item:last-of-type {
+  border: none; }
 
 .modal-body .item .title {
   overflow: hidden;
@@ -105,6 +107,7 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  border-top: 1px #eee solid;
   height: 5rem;
   border-radius: 0 0 10px 10px;
   overflow: hidden; }

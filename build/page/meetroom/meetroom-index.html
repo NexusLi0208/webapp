@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>会议</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+    <section class="main-cantainer" id="vue_main">
+        <header class="header">
+            <div class="form-title"><a href="meet-room.html"><span class="backBasic-btn"><img src="../../css/img/title_arrow_back.png" alt=""></span></a>会议厅主页</div>
+        </header>
+        <section class="mtrm-idx-hd">
+            <div class="mtrm-idx-d1">
+                <div class="user-img floatl"><img src="../../css/img/user-img.jpeg" alt=""></div>
+                <div>
+                    <div class="user-info-box  floatl">
+                        <p class="user-name">{{hallInfo.hallName}}</p>
+                        <p class="user-fans"><span><img src="../../css/img/conference_funs.png" alt=""></span>15616人关注</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mtrm-idx-d2">
+                <div class="mtrm-btn"><a href="meetroom-code.html"><i><img src="../../css/img/check_code.png" alt=""></i>
+                    <p>查看二维码</p>
+                    </a>
+                </div>
+                <div class="mtrm-btn"><a href=""><i><img src="../../css/img/setting.png" alt=""></i>
+                    <p>设置会议厅</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <a class="creatMeet-btn success-btn" href="../meet/creatMeet.html">创建会议</a>
+        <section class="meet-list-main">
+            <ul class="meet-list">
+                <li class="meet-item" v-cloak v-for="item in meeList" v-bind:data-meeId="item.meeId" @click="selectMeet($event)">
+                    <a href="javascript:;">
+                        <div class="left"><img src="../../css/img/pic1@2x.png" alt="meetimg"></div>
+                        <div class="right">
+                            <p class="meet-name">{{item.meeName}}</p>
+                            <time>{{item.meeStartTime|getTime}}</time>
+                            <button class="focus-btn">关注</button>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </section>
+    <script src="../../js/lib/jquery.js"></script>
+    <script src="../../js/plug/httpPath.js"></script>
+    <script src="../../js/lib/vue-1.0.28.js"></script>
+    <script src="../../js/meetromm-index.js"></script>
+</body>
+
+</html>

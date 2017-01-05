@@ -32,7 +32,7 @@
 
     -webkit-transform: rotate(0deg);
 
-    -moz-transform: rotate(deg);
+    -moz-transform: rotate(0deg);
 
     -ms-transform: rotate(0deg);
 
@@ -48,4 +48,28 @@
 
     -ms-transition: -ms-transform 0.2s; 
 
+}
+.rotate45reg{
+    
+    transform-origin:center center;
+
+    transform: rotate(45deg); //返回原点
+
+    -webkit-transform: rotate(45deg);
+
+    -moz-transform: rotate(45deg);
+
+    -ms-transform: rotate(45deg);
+
+    -o-transform: rotate(45deg);
+
+    transition: transform 0.2s; 
+
+    -webkit-transition: -moz-transform 0.2s; 
+
+    -moz-transition: -moz-transform 0.2s; 
+
+    -o-transition: -o-transform 0.2s; 
+
+    -ms-transition: -ms-transform 0.2s; 
 }

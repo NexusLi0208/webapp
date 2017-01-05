@@ -9,6 +9,7 @@
     <meta name="renderer" content="webkit">
     <meta http-equiv="Cache-Control" content="no-siteapp" />
     <title>会议报名</title>
+    <link rel="stylesheet" href="../../css/lib/icheck/skins/all.css">
     <link rel="stylesheet" type="" href="../../css/style.css">
 </head>
 
@@ -19,7 +20,7 @@
                 <!--会议厅ID-->
                 <input type="hidden" name='meethallId' v-model="meetroomInfo.hallId">
                 <!--主会议ID-->
-                <input type="hidden" name='meetingId'  v-model="selcetmeeInfo.meeId">
+                <input type="hidden" name='meetingId' v-model="selcetmeeInfo.meeId">
                 <!--用户ID-->
                 <input type="hidden" name='userId' v-model='userInfo.userId'>
                 <div class='basic-info' v-show="formBox.basic">
@@ -46,7 +47,7 @@
                         <label for="userName" class="floatl">邮箱:</label>
                         <input type="email" class='form-input floatr' name="email" id="email" placeholder="请输入邮箱">
                     </div>
-                    <!--<div class="form-group">
+                    <div class="form-group">
                         <label for="unit" class="floatl">单位:</label>
                         <span class="floatr arrowImg"><img src="../../css/img/list_arrow.png" alt=""></span>
                         <select class='form-input floatr' id="unit">
@@ -54,25 +55,25 @@
                      <option value="1">单位一</option>
                      <option value="2">单位二</option>
                  </select>
-                    </div>-->
-                    <!--<div class="form-group">
+                    </div>
+                    <div class="form-group">
                         <label for="dentity" class="floatl">身份:</label>
                         <span class="floatr arrowImg"><img src="../../css/img/list_arrow.png" alt=""></span>
-                        <select class='form-input floatr'  id="dentity">
+                        <select class='form-input floatr' id="dentity">
                              <option value="0">请选择</option>
                      <option value="1">教师</option>
                      <option value="2">校长</option>
                  </select>
-                    </div>-->
-                    <!--<div class="form-group">
+                    </div>
+                    <div class="form-group">
                         <label for="province" class="floatl">职务:</label>
                         <span class="floatr arrowImg"><img src="../../css/img/list_arrow.png" alt=""></span>
-                        <select class='form-input floatr'  id="province">
+                        <select class='form-input floatr' id="province">
                              <option value="0">请选择</option>
                      <option value="1">校级正职</option>
                      <option value="2">校级副职</option>
                  </select>
-                    </div>-->
+                    </div>
                     <div class="form-group">
                         <label for="dietId" class="floatl">饮食:</label>
                         <span class="floatr arrowImg"><img src="../../css/img/list_arrow.png" alt=""></span>
@@ -83,7 +84,7 @@
                  </select>
                     </div>
                     <hr class="form-hr">
-                    <!--<div class="form-group">
+                    <div class="form-group">
                         <label class="floatl">酒店:</label>
                         <span class="floatr arrowImg"><img src="../../css/img/list_arrow.png" alt=""></span>
                         <select class='form-input floatr' id="hotel">
@@ -91,13 +92,13 @@
                      <option value="1">上海假日</option>
                      <option value="2">七天连锁</option>
                  </select>
-                    </div>-->
-                    <!--<div class="form-group js-tiket" @click="selectTiket">
+                    </div>
+                    <div class="form-group js-tiket" @click="selectTiket">
                         <label class="floatl">发票信息:</label>
                         <span class="floatr arrowImg"><img src="../../css/img/list_arrow.png" alt=""></span>
                         <span class='floatr form-text'>{{itemText.tiketTxt}}</span>
-                    </div>-->
-                    <!--<hr class="form-hr">-->
+                    </div>
+                    <hr class="form-hr">
                     <div class="form-group" v-if="chmeetBtn" @click="selectMeet">
                         <label class="floatl">分论坛选择：</label>
                         <span class="floatr arrowImg"><img src="../../css/img/list_arrow.png" alt=""></span>
@@ -112,36 +113,62 @@
                     <hr class="form-hr">
                     <hr class="form-hr">
                     <hr class="form-hr">
-                    <button type='button' @click="formSubmit" class='sign-up-btn'>提交报名</button>
+                    <button type='button' @click="formSubmit" class='btm-btn'>提交报名</button>
                 </div>
-                <!--<div class="js-tiket-info" v-show="formBox.tiket">
-                     <div class="form-title" ><span @click="saveTiket" class="backBasic-btn"><img src="../../css/img/title_arrow_back.png" alt=""></span>发票信息</div>
+                <div class="js-tiket-info" v-show="formBox.tiket">
+                    <div class="form-title"><span @click="saveTiket" class="backBasic-btn"><img src="../../css/img/title_arrow_back.png" alt=""></span>发票信息</div>
                     <div class="form-group">
                         <label for="userName" class="floatl">发票抬头:</label>
-                        <input type="text" class='form-input floatr'  id="" placeholder="请输入">
+                        <input type="text" class='form-input floatr' id="" placeholder="请输入">
                     </div>
                     <div class="form-group">
                         <label for="userName" class="floatl">识别号:</label>
-                        <input type="text" class='form-input floatr'  id="" placeholder="请输入">
+                        <input type="text" class='form-input floatr' id="" placeholder="请输入">
                     </div>
                     <div class="form-group">
                         <label for="userName" class="floatl">开户地址:</label>
-                        <input type="text" class='form-input floatr'  id="" placeholder="请输入">
+                        <input type="text" class='form-input floatr' id="" placeholder="请输入">
                     </div>
                     <div class="form-group">
                         <label for="userName" class="floatl">开户行:</label>
-                        <input type="text" class='form-input floatr'  id="" placeholder="请输入">
+                        <input type="text" class='form-input floatr' id="" placeholder="请输入">
                     </div>
                     <div class="form-group">
                         <label for="userName" class="floatl">开户账号:</label>
-                        <input type="text" class='form-input floatr'  id="" placeholder="请输入">
+                        <input type="text" class='form-input floatr' id="" placeholder="请输入">
                     </div>
                     <div class='btn-box'>
                         <button type="button" class="form-btn cancel-btn" @click='saveTiket'>保存</button>
                     </div>
-                </div>-->
+                </div>
                 <div class="js-meetlist-info" v-show="formBox.meetlist">
-                    <div class="form-title"><span @click="saveMeet" class="backBasic-btn"><img src="../../css/img/title_arrow_back.png" alt=""></span>分论坛选择</div>
+                    <!--<div class="form-group meet-group ">
+                        <p class="submeet-name">分论坛一</p>
+                        <div class="submeet-info">
+                            <div class="time-item floatl">
+                                <span><img src="../../css/img/clock.png" alt=""></span>
+                                <time>2016/06/24</time>
+                            </div>
+                            <div class='checkbox-item floatr'>
+                                参加<input type="checkbox" name="submeetingId">
+                            </div>
+                        </div>
+                    </div><-->
+                    <div class="form-title"><span @click="saveMeet" class="backBasic-btn"><img src="../../css/img/title_arrow_back.png" alt=""></span>已选择分会议
+                        <span class='floatr add-icon js-addChmeet'>+&nbsp;&nbsp;</span>
+                    </div>
+                    <ul id="selectChmeet">
+                        <li class="chmeet-item" data-chmeetId="0">
+                            <div class="chmeet-info floatl"><span class="name">社会主义好</span><span class="time">2016年3月6日</span></div>
+                            <span class="floatr remove-btn js-remove-admin"><img src="../../css/img/edit_icon_delete.png" alt=""></span>
+                        </li>
+                        <p class="noinfo" hidden><i><img src="../../css/img/no-meetRoom.png" alt=""></i>您还没有选择分论坛</p>
+                    </ul>
+                    <div class='btn-box'>
+                        <button type="button" class="form-btn cancel-btn" @click='saveMeet'>保存</button>
+                    </div>
+                </div>
+                <!--<div class="js-meetlist-info" v-show="formBox.meetlist">
                     <div class="form-group meet-group " v-for="item in meetInfo.list">
                         <p class="submeet-name">{{item.meeName}}</p>
                         <div class="submeet-info">
@@ -158,7 +185,7 @@
                     <div class='btn-box'>
                         <button type="button" class="form-btn cancel-btn" @click='saveMeet'>保存</button>
                     </div>
-                </div>
+                </div>-->
                 <div class="js-remark-info" v-show="formBox.remark">
                     <div class="form-title"><span @click="saveRemark" class="backBasic-btn"><img src="../../css/img/title_arrow_back.png" alt=""></span>备注</div>
                     <div class="form-textarea">
@@ -173,11 +200,91 @@
         </div>
         </div>
     </section>
+    <div class="modal-main" id="chmeet-modal" hidden>
+        <div class="modal-bg"></div>
+        <div class="modal-contant">
+            <div class="modal-header">
+                分论坛信息
+            </div>
+            <div class="modal-body">
+                <div class="item" data-chmeetId="1">
+                    <p class="title">马克思里列宁主义好</p>
+                    <time class="time"><i><img src="../../css/img/clock.png" alt=""></i>8月12日</time>
+                </div>
+                <div class="item" data-chmeetId="2">
+                    <p class="title">共产主义好</p>
+                    <time class="time"><i><img src="../../css/img/clock.png" alt=""></i>8月12日</time>
+                </div>
+                <div class="item" data-chmeetId="3">
+                    <p class="title">祖国繁荣昌盛</p>
+                    <time class="time"><i><img src="../../css/img/clock.png" alt=""></i>8月12日</time>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="../../js/lib/jquery.js"></script>
+    <script src="../../js/common.js"></script>
     <script src="../../js/plug/plug-form.js"></script>
     <script src="../../js/plug/httpPath.js"></script>
+    <script src="../../js/lib/icheck.min.js"></script>
     <script src="../../js/lib/vue-1.0.28.js"></script>
     <script src="../../js/signUp.js"></script>
+    <script>
+        $('input').iCheck({
+            checkboxClass: 'icheckbox_flat-red',
+            radioClass: 'iradio_flat-red'
+        });
+        $(function () {
+            var chmeet = {
+                chmeetId: "",
+                init: function () {
+                    this.addchmeet();
+                    this.selectChmeet();
+                },
+                addchmeet: function () {
+                    $(".js-addChmeet").on("click", function () {
+                        $("#chmeet-modal").show();
+                    })
+                },
+                selectChmeet: function () {
+                    var _this = this;
+                    $(".modal-body").on("click", ".item", function () {
+                        var judge = true;
+                        var nowId = $(this).attr("data-chmeetId");
+                        var selectChmeetList = $("#selectChmeet li");
+                        for (var i = 0; i < selectChmeetList.length; i++) {
+                            if ($(selectChmeetList[i]).attr("data-chmeetid") == nowId) {
+                                judge = false;
+                                break;
+                            } else {
+                                judge = true;
+                            }
+                        }
+                        if (judge) {
+                            _this.chmeetId = $(this).attr("data-chmeetId");
+                            _this.chmeetName = $(this).find(".title").text();
+                            _this.chmeetTime = $(this).find(".time").text();
+                            var newitem = " <li class='chmeet-item' data-chmeetId=" + _this.chmeetId +
+                                ">" +
+                                "<div class='chmeet-info floatl'><span class=name'>" + _this.chmeetName +
+                                "</span><span class='time'>" + _this.chmeetTime +
+                                "</span></div>" +
+                                "<span class='floatr remove-btn js-remove-admin'><img src='../../css/img/edit_icon_delete.png' ></span>" +
+                                "</li>";
+                            $("#selectChmeet").append(newitem);
+                            $("#chmeet-modal").hide();
+                        } else {
+                            $("#chmeet-modal").hide();
+                            $.prompt("您已经选择过该分会议了");
+                        }
+
+                    })
+                }
+
+            }
+            chmeet.init();
+        })
+    </script>
 </body>
 
 </html>

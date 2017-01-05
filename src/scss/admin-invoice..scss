@@ -1,7 +1,7 @@
 @import "lib/mixin.scss";
 @import "lib/color.scss";
 // 发票信息
-.info-title {
+ .info-title {
     width: 100%;
     height: 5.5rem;
     background: #fff;
@@ -10,7 +10,7 @@
     border-bottom: 1px #eee solid;
 }
 
-.info-title p {
+ .info-title p {
     height: 1.5rem;
     line-height: 1.5rem;
     color: #848689;
@@ -19,7 +19,7 @@
     border-left: .5rem $red solid;
 }
 
-.info-list {
+.form-info-list{
     width: 100%;
     padding: 0 2rem;
     background: #fff;
@@ -27,7 +27,7 @@
     margin-bottom: 1rem;
 }
 
-.info-list .info-item {
+.form-info-list .form-group1 {
     height: 5.5rem;
     line-height: 5.5rem;
     font-size: 1.5rem;
@@ -38,16 +38,16 @@
     white-space: nowrap;
 }
 
-.info-list .info-item:last-of-type {
+.form-info-list .form-group1:last-of-type {
     border: none;
 }
 
-.info-list .info-item p {
+.form-info-list .form-group1 p {
     height: 100%;
     line-height: 5.5rem;
 }
 
-.info-list .info-item span {
+.form-info-list .form-group1 span {
     color: #848689;
 }
 

@@ -75,6 +75,9 @@ textarea {
 .text-m {
   text-align: center; }
 
+.font-red {
+  color: #f66 !important; }
+
 .pst-btm {
   position: absolute;
   bottom: 0; }
@@ -87,7 +90,7 @@ textarea {
 
 .wt-bg {
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   background: #fff; }
 
 .bl-bg {
@@ -199,6 +202,9 @@ textarea {
 .mgl2 {
   margin-left: 2rem; }
 
+.mgbtm1 {
+  margin-bottom: 1rem; }
+
 .clearfix:after {
   content: ".";
   display: block;
@@ -298,68 +304,6 @@ textarea {
   100% {
     -webkit-transform: translateX(-500px); } }
 
-.meet-list-main {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  width: 100%;
-  min-height: 20%;
-  padding: 0 1.5rem;
-  background: #fff; }
-
-.meet-list {
-  width: 100%;
-  height: auto; }
-
-.meet-list li {
-  width: 100%;
-  height: 6.5rem;
-  border-bottom: 1px #eee solid;
-  padding: 1.75rem 0; }
-
-.meet-list li:last-of-type {
-  border: none; }
-
-.meet-item {
-  position: relative; }
-
-.meet-item .left {
-  float: left;
-  width: 30%;
-  min-width: 8.5rem;
-  height: 100%;
-  overflow: hidden; }
-
-.meet-item .left img {
-  width: auto;
-  height: 100%; }
-
-.meet-item .right {
-  width: 60%;
-  padding-left: 0.75rem;
-  float: left; }
-
-.meet-item .meet-name {
-  height: 5.25rem;
-  font-size: 1.5rem;
-  color: #333; }
-
-.meet-item .right time {
-  font-size: 12px;
-  color: #848689; }
-
-.meet-item .deleteItem {
-  position: absolute;
-  right: 0;
-  bottom: 1rem;
-  width: 6rem;
-  height: 3rem;
-  border-radius: 50px;
-  background: #ffae2e;
-  color: #fff;
-  line-height: 3rem;
-  font-size: 1.2rem;
-  text-align: center; }
-
 .float-btn-box {
   position: relative; }
 
@@ -393,6 +337,10 @@ textarea {
   color: #f87e17;
   margin: .75rem 0;
   border-radius: 5rem; }
+
+.float-menu img {
+  width: 3rem;
+  height: 3rem; }
 
 .noinfo {
   text-align: center;

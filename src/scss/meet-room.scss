@@ -156,3 +156,35 @@
     width: 100%;
     height: 100%;
 }
+// 粉丝列表
+.fans-list{
+    width:100%;
+    padding:0 2rem;
+    box-sizing: border-box;
+}
+ .fans-item{
+    height:7rem;
+    padding:1.25rem 0;
+    box-sizing: border-box;
+    border-bottom:1px #eee solid;
+}
+.fans-item i{
+    display: inline-block;
+    width:4.5rem;
+    height:4.5rem;
+    border-radius: .5rem;
+    overflow: hidden;
+}
+.fans-item i img{
+    width:100%;
+}
+.fans-item span{
+    display: inline-block;
+    height:4.5rem;
+    line-height: 4.5rem;
+    border-radius: .5rem;
+    color:#333;
+    font-size: 1.5rem;
+    overflow: hidden;
+    margin-left:1.5rem;
+}

@@ -11,7 +11,9 @@ $(function () {
 var userInfo = JSON.parse(sessionStorage.getItem("user"));
 new Vue({
     el: '#vue_main',
-    data: {}
+    data: {
+        meetList: true,
+    }
     //	过滤器
     ,
     ready: function () {
@@ -45,7 +47,7 @@ new Vue({
 
                 }
             })
-        }
+        },
     }
 });
 var loading = false; //状态标记
@@ -54,7 +56,7 @@ $(".main-cantainer").infinite().on("infinite", function () {
     loading = true;
     setTimeout(function () {
         for (var i = 0; i < 10; i++) {
-            $(".meet-list").append("<a href='meet-func-list.html'><li class='meet-item'><div class='left'><img src='../../css/img/pic1@2x.png' alt='meetimg'></div><div class='right'><p class='meet-name'>淄博职业学院：三项机制成就大学生圆梦</p><time>2016-06-04</time></div></li></a>");
+            $(".meet-list").append("<a href='meet-func-list.html'><li class='meet-item'><div class='left'><img src='../../css/img/pic1@2x.png' alt='meetimg'></div><div class='right'><p class='meet-name'>淄博职业学院：三项机制成就大学生圆梦</p><time>2016-06-04</time><button class='focus-btn'>关注</button></div></li></a>");
         }
 
         loading = false;
