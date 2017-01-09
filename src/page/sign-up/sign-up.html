@@ -100,7 +100,7 @@
                     </div>
                     <hr class="form-hr">
                     <div class="form-group" v-if="chmeetBtn" @click="selectMeet">
-                        <label class="floatl">分论坛选择：</label>
+                        <label class="floatl">分论坛选择</label>
                         <span class="floatr arrowImg"><img src="../../css/img/list_arrow.png" alt=""></span>
                         <span class='floatr form-text'>{{itemText.meetTxt}}</span>
                     </div>
@@ -157,12 +157,8 @@
                     <div class="form-title"><span @click="saveMeet" class="backBasic-btn"><img src="../../css/img/title_arrow_back.png" alt=""></span>已选择分会议
                         <span class='floatr add-icon js-addChmeet'>+&nbsp;&nbsp;</span>
                     </div>
-                    <ul id="selectChmeet">
-                        <li class="chmeet-item" data-chmeetId="0">
-                            <div class="chmeet-info floatl"><span class="name">社会主义好</span><span class="time">2016年3月6日</span></div>
-                            <span class="floatr remove-btn js-remove-admin"><img src="../../css/img/edit_icon_delete.png" alt=""></span>
-                        </li>
-                        <p class="noinfo" hidden><i><img src="../../css/img/no-meetRoom.png" alt=""></i>您还没有选择分论坛</p>
+                    <ul class="selectChmeet">
+                        <p class="noinfo mgt2" hidden><i><img src="../../css/img/no-meetRoom.png" alt=""></i>您还没有选择分论坛</p>
                     </ul>
                     <div class='btn-box'>
                         <button type="button" class="form-btn cancel-btn" @click='saveMeet'>保存</button>
@@ -202,11 +198,12 @@
     </section>
     <div class="modal-main" id="chmeet-modal" hidden>
         <div class="modal-bg"></div>
-        <div class="modal-contant">
+        <div class="modal-contant modal-lg">
             <div class="modal-header">
                 分论坛信息
             </div>
             <div class="modal-body">
+                <p class="modal-list-title">上午会议</p>
                 <div class="item" data-chmeetId="1">
                     <p class="title">马克思里列宁主义好</p>
                     <time class="time"><i><img src="../../css/img/clock.png" alt=""></i>8月12日</time>
@@ -217,6 +214,19 @@
                 </div>
                 <div class="item" data-chmeetId="3">
                     <p class="title">祖国繁荣昌盛</p>
+                    <time class="time"><i><img src="../../css/img/clock.png" alt=""></i>8月12日</time>
+                </div>
+                 <p class="modal-list-title">下午会议</p>
+                <div class="item" data-chmeetId="4">
+                    <p class="title">JetBrains WebStorm</p>
+                    <time class="time"><i><img src="../../css/img/clock.png" alt=""></i>8月12日</time>
+                </div>
+                <div class="item" data-chmeetId="5">
+                    <p class="title">Mozilla Firefox</p>
+                    <time class="time"><i><img src="../../css/img/clock.png" alt=""></i>8月12日</time>
+                </div>
+                <div class="item" data-chmeetId="6">
+                    <p class="title">Google Chrome</p>
                     <time class="time"><i><img src="../../css/img/clock.png" alt=""></i>8月12日</time>
                 </div>
             </div>
@@ -240,6 +250,8 @@
                 init: function () {
                     this.addchmeet();
                     this.selectChmeet();
+                    this.removeChmeet();
+                    this.begain();
                 },
                 addchmeet: function () {
                     $(".js-addChmeet").on("click", function () {
@@ -251,7 +263,7 @@
                     $(".modal-body").on("click", ".item", function () {
                         var judge = true;
                         var nowId = $(this).attr("data-chmeetId");
-                        var selectChmeetList = $("#selectChmeet li");
+                        var selectChmeetList = $(".selectChmeet li");
                         for (var i = 0; i < selectChmeetList.length; i++) {
                             if ($(selectChmeetList[i]).attr("data-chmeetid") == nowId) {
                                 judge = false;
@@ -269,16 +281,35 @@
                                 "<div class='chmeet-info floatl'><span class=name'>" + _this.chmeetName +
                                 "</span><span class='time'>" + _this.chmeetTime +
                                 "</span></div>" +
-                                "<span class='floatr remove-btn js-remove-admin'><img src='../../css/img/edit_icon_delete.png' ></span>" +
+                                "<span class='floatr remove-btn js-remove-chmeet'><img src='../../css/img/edit_icon_delete.png' ></span>" +
                                 "</li>";
-                            $("#selectChmeet").append(newitem);
+                            $(".selectChmeet").append(newitem);
                             $("#chmeet-modal").hide();
+                            $(".noinfo").hide();
                         } else {
                             $("#chmeet-modal").hide();
                             $.prompt("您已经选择过该分会议了");
                         }
 
                     })
+                },
+                removeChmeet: function () {
+                    var _this = this;
+                    $(".selectChmeet").on("click", ".js-remove-chmeet", function () {
+                        $(this).parents("li").remove();
+                        if (_this.selectedNum() == 0) {
+                            $(".noinfo").show();
+                        }
+                    })
+                },
+                selectedNum: function () {
+                    var num = $(".selectChmeet").find("li").size();
+                    return num;
+                },
+                begain: function () {
+                    if (this.selectedNum() == 0) {
+                        $(".noinfo").show();
+                    }
                 }
 
             }
