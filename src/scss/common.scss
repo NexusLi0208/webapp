@@ -65,15 +65,24 @@ textarea {
 
 .fix-btm {
     position: fixed;
+    width:100%;
     min-width: 320px;
     max-width: 640px;
     bottom: 0;
 }
-
+.flex-box{
+    display: flex;
+}
+.flex1{
+    flex:1;
+}
 .wt-bg {
     width: 100%;
     min-height: 100%;
     background: #fff;
+}
+.wt{
+    background: #fff!important;
 }
 
 .bl-bg {
@@ -158,12 +167,12 @@ textarea {
 }
 
 .success-btn {
-    background: $blue;
+    background: $blue!important;
     user-select: none;
 }
 
 .success-btn:active {
-    background: darken($blue, 10%);
+    background: darken($blue, 10%)!important;
 }
 
 .cancel-btn {

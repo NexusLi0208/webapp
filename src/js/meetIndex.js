@@ -16,12 +16,12 @@ new Vue({
     }
     //	过滤器
     ,
-    ready: function () {
-        if (userInfo == null) {
-            alert("请先登录");
-            window.location.href = "../login/login.html"
-        }
-    },
+    // ready: function () {
+    //     if (userInfo == null) {
+    //         alert("请先登录");
+    //         window.location.href = "../login/login.html"
+    //     }
+    // },
     filters: {
 
     }

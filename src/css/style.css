@@ -84,8 +84,11 @@ button,input,select,textarea{font-family:arial,"Microsoft YaHei";-webkit-appeara
 .text-m{text-align:center}
 .font-red{color:#f66!important}
 .pst-btm{position:absolute;bottom:0}
-.fix-btm{position:fixed;min-width:320px;max-width:640px;bottom:0}
+.fix-btm{position:fixed;width:100%;min-width:320px;max-width:640px;bottom:0}
+.flex-box{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}
+.flex1{-webkit-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1}
 .wt-bg{width:100%;min-height:100%;background:#fff}
+.wt{background:#fff!important}
 .bl-bg{width:100%;height:100%;background-color:#1d6edd;background-image:-webkit-linear-gradient(top,#00a0e9,#1d6edd);padding-top:20%;-webkit-box-sizing:border-box;box-sizing:border-box}
 .bl-bg1{width:100%;height:100%;background-color:#1d6edd;background-image:-webkit-radial-gradient(#00a0e9,#1d6edd);-webkit-box-sizing:border-box;box-sizing:border-box}
 .bl-bg2{width:100%;height:calc(100% - 4.4rem);background:#00a0e9;-webkit-box-sizing:border-box;box-sizing:border-box;padding-top:12%}
@@ -97,8 +100,8 @@ button,input,select,textarea{font-family:arial,"Microsoft YaHei";-webkit-appeara
 .backBasic-btn img{width:3rem;height:3rem}
 .top-more-btn{position:absolute;right:1rem;color:#fff}
 .top-more-btn img{width:3rem;height:3rem}
-.success-btn{background:#00a0e9;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
-.success-btn:active{background:#007db6}
+.success-btn{background:#00a0e9!important;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
+.success-btn:active{background:#007db6!important}
 .cancel-btn{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;background:#f66}
 .cancel-btn:active{background:#eb5050}
 .clearfix{zoom:1}
@@ -190,7 +193,8 @@ select.form-input{-moz-appearance:none;appearance:none;position:relative;color:#
 .form-hr{width:100%;height:1rem;background:#eee;border:none;margin:0;padding:0}
 .form-text{font-size:1.5rem;color:#00a0e9;padding-right:.5rem}
 .meet-group{height:auto;padding:1rem 2.2rem;line-height:normal}
-.btm-btn{width:100%;height:5.5rem;background:#f66;font-size:1.7rem;color:#fff;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;border:none}
+.btm-btn{display:block;width:100%;height:5.5rem;line-height:5.5rem;text-align:center;background:#f66;font-size:1.7rem;color:#fff;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;border:none}
+.btm-btn img{width:3rem;height:3rem}
 .btm-btn:active{background:#dc3239}
 .chmeet-item{position:relative;width:100%;height:7rem;padding:1.25rem 2rem;-webkit-box-sizing:border-box;box-sizing:border-box;background:#fff;border-bottom:1px #eee solid}
 .chmeet-item .icon{width:4.5rem;height:4.5rem;border-radius:.5rem;overflow:hidden}
@@ -237,7 +241,21 @@ select.form-input{-moz-appearance:none;appearance:none;position:relative;color:#
 .item-operate span img{width:100%}
 .item-operate i{display:inline-block;height:3rem;line-height:3rem;margin:.5rem 0}
 .item-operate i a{display:block;height:2.5rem;line-height:2.5rem;font-size:1.2rem;padding:0 1rem;font-style:normal;background:#fff;color:#fb911a;border:1px #fb911a solid;border-radius:5rem}
-.invite-main{width:100%;height:100%;background:url(img/invite/conference_hall_bg.png);-webkit-background-size:cover;background-size:cover;background-repeat:no-repeat}
+.invite-main{width:100%;min-height:100%;background-color:#073579;background:url(img/invite/conference_hall_bg.png);-webkit-background-size:cover;background-size:cover;text-align:center;background-repeat:no-repeat}
+.invite-main .invite-picBox{width:95%;padding-top:6.4%;margin:0 auto;-webkit-box-sizing:border-box;box-sizing:border-box}
+.invite-main .invite-picBox img{width:100%}
+.invite-main .invite-text{color:#fff;font-size:1.5rem;text-align:center;margin-bottom:8%}
+.invite-main .invitecodeBox{margin:0 auto;width:28%;height:auto}
+.invite-main .invitecodeBox canvas,.invite-main .invitecodeBox img{width:100%}
+.invite-main .invite-tag{color:#3bbbf0;font-size:1.2rem;text-align:center;margin:4% 0}
+.invite-main .invite-btn{width:46%;height:5rem;margin:0 auto;background:#f66;border:none;border-radius:.5rem;outline:0;border:none;color:#fff;font-size:1.7rem}
+.admin-invite-main .invite-top img{width:100%}
+.admin-invite-main .invite-body{width:100%;padding:0 1.5rem;-webkit-box-sizing:border-box;box-sizing:border-box}
+.admin-invite-main .invite-title{height:1.5rem;line-height:1.5rem;font-size:1.5rem;color:#00a0e9;margin-bottom:2rem}
+.invite-info-item{font-size:1.2rem;color:#848689;margin-bottom:1.5rem}
+.invite-info-item .icon{display:inline-block;width:1rem;height:1rem;border-radius:5rem;background:#ffae2e;margin-right:1rem}
+.invite-select{border:none;font-size:1.5rem;margin:-.25rem;color:#848689}
+.invite-state{font-size:1.2rem;color:#333;padding:0 2rem;line-height:2rem}
 .link-network-main{width:100%;height:100%;padding-top:6rem;-webkit-box-sizing:border-box;box-sizing:border-box;background:#fff}
 .link-input{width:55%;height:3.5rem;padding:0 1rem;border:1px #eee solid;border-radius:10rem;outline:0;-webkit-box-shadow:none;box-shadow:none;-webkit-box-sizing:border-box;box-sizing:border-box;font-size:1.4rem}
 .link-btn{height:3.5rem;border:none;-webkit-box-shadow:none;box-shadow:none;border-radius:10rem;padding:0 2rem;margin-left:.5rem;background:#00a0e9;color:#fff;font-size:1.4rem}
@@ -366,6 +384,8 @@ select.form-input{-moz-appearance:none;appearance:none;position:relative;color:#
 .no-meetRoom i img{width:100%;height:100%}
 .no-meetRoom p{text-align:center;font-size:1.5rem;color:#848689;margin:2rem 0 2.8rem}
 .no-meetRoom .creatBtn{display:block;margin:0 auto;width:16rem;height:4.5rem;text-align:center;border-radius:5px;line-height:4.5rem;background:#f66;color:#fff}
+.swiper-pagination-bullet{background:rgba(255,255,255,.5)!important}
+.swiper-pagination-bullet-active{background:#fff!important}
 .details-mian{width:100%;height:100%}
 .member-search{background:#00a0e9}
 .member-search .search-input{background:#33b3ed;color:#fff}

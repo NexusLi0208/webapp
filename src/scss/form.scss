@@ -148,13 +148,23 @@ select.form-input {
 }
 
 .btm-btn {
+    display: block;
     width: 100%;
     height: 5.5rem;
+    line-height: 5.5rem;
+    text-align: center;
     background: $red;
     font-size: 1.7rem;
     color: #fff;
     user-select: none;
     border: none;
+}
+
+
+
+.btm-btn img {
+     width: 3rem;
+    height: 3rem;
 }
 
 .btm-btn:active {
