@@ -3,8 +3,7 @@
   height: 5.5rem;
   background: #fff;
   padding: 2rem 2rem;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   border-bottom: 1px #eee solid; }
 
 .info-title p {
@@ -19,8 +18,7 @@
   width: 100%;
   padding: 0 2rem;
   background: #fff;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin-bottom: 1rem; }
 
 .form-info-list .form-group1 {
@@ -45,8 +43,7 @@
 
 .info-txt-box {
   width: 100%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   border: none;
   background: #fff;
   min-height: 5rem;

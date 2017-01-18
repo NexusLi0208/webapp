@@ -2,6 +2,8 @@
   width: 88%;
   height: auto;
   background: #fff;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
   border-radius: 5px;
   margin: 0 auto;
   padding: 12% 0; }
@@ -16,11 +18,9 @@
   padding: 1rem;
   width: 22.5rem;
   height: 22.5rem;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   background: url("img/check_code_decorationx.png") no-repeat;
-  -webkit-background-size: cover;
-          background-size: cover; }
+  background-size: cover; }
 
 .code-body p {
   margin-top: 2.5rem;

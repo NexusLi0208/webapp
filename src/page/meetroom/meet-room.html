@@ -9,10 +9,9 @@
     <meta name="renderer" content="webkit">
     <meta http-equiv="Cache-Control" content="no-siteapp" />
     <title>会议</title>
-    <link rel="stylesheet" href="../../css/lib/swiper.min.css">
+    <link rel="stylesheet" href="../../css/lib/animate.min.css">
     <link rel="stylesheet" href="../../css/style.css">
 </head>
-
 <body>
     <div id="vue_main">
         <section class="main-cantainer navfixr">
@@ -57,7 +56,7 @@
                 <a href="../admin-meetroom/admin-mtrm-manage.html">
                     <i><img src="../../css/img/meet-room/manage.png" alt=""></i> 会议厅管理
                 </a>
-                <a href="#">
+                <a href="javascript:;" class="js-service">
                     <i><img src="../../css/img/meet-room/consultation.png" alt=""></i> 客服咨询
                 </a>
                 <a href="#">
@@ -90,10 +89,28 @@
             </ul>
         </nav>
     </div>
+        <div class="modal-main" id="service-modal" hidden>
+        <div class="modal-bg"></div>
+        <div class="modal-contant  fadeInDown animated">
+            <div class="modal-body htat">
+                <p class="text-m p-title">我是您的专属客服</p>
+                <div class="modal-code">
+                    <img src="../../css/img/server-code.png" alt="二维码">
+                </div>
+                <p class="text-m">长按识别二维码加好友，享受一对一服务</p>
+            </div>
+        </div>
+    </div>
     <script src="../../js/lib/jquery.js"></script>
+    <script src="../../js/common.js"></script>
     <script src="../../js/lib/vue-1.0.28.js"></script>
     <script src="../../js/plug/httpPath.js"></script>
     <script src="../../js/meet-room.js"></script>
+    <script>
+       $(".js-service").on("click",function(){
+           $("#service-modal").show();
+       })
+    </script>
 </body>
 
 </html>

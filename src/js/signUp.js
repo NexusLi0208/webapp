@@ -1,3 +1,74 @@
+$(function () {
+	var chmeet = {
+		chmeetId: "",
+		init: function () {
+			this.addchmeet();
+			this.selectChmeet();
+			this.removeChmeet();
+			this.begain();
+		},
+		addchmeet: function () {
+			$(".js-addChmeet").on("click", function () {
+				$("#chmeet-modal").show();
+			})
+		},
+		selectChmeet: function () {
+			var _this = this;
+			$(".modal-body").on("click", ".item", function () {
+				var judge = true;
+				var nowId = $(this).attr("data-chmeetId");
+				var selectChmeetList = $(".selectChmeet li");
+				for (var i = 0; i < selectChmeetList.length; i++) {
+					if ($(selectChmeetList[i]).attr("data-chmeetid") == nowId) {
+						judge = false;
+						break;
+					} else {
+						judge = true;
+					}
+				}
+				if (judge) {
+					_this.chmeetId = $(this).attr("data-chmeetId");
+					_this.chmeetName = $(this).find(".title").text();
+					_this.chmeetTime = $(this).find(".time").text();
+					var newitem = " <li class='chmeet-item' data-chmeetId=" + _this.chmeetId +
+						">" +
+						"<div class='chmeet-info floatl'><span class=name'>" + _this.chmeetName +
+						"</span><span class='time'>" + _this.chmeetTime +
+						"</span></div>" +
+						"<span class='floatr remove-btn js-remove-chmeet'><img src='../../css/img/edit_icon_delete.png' ></span>" +
+						"</li>";
+					$(".selectChmeet").append(newitem);
+					$("#chmeet-modal").hide();
+					$(".noinfo").hide();
+				} else {
+					$("#chmeet-modal").hide();
+					$.prompt("您已经选择过该分会议了");
+				}
+
+			})
+		},
+		removeChmeet: function () {
+			var _this = this;
+			$(".selectChmeet").on("click", ".js-remove-chmeet", function () {
+				$(this).parents("li").remove();
+				if (_this.selectedNum() == 0) {
+					$(".noinfo").show();
+				}
+			})
+		},
+		selectedNum: function () {
+			var num = $(".selectChmeet").find("li").size();
+			return num;
+		},
+		begain: function () {
+			if (this.selectedNum() == 0) {
+				$(".noinfo").show();
+			}
+		}
+
+	}
+	chmeet.init();
+});
 var signup = new Vue({
 	el: '#sign-main',
 	data: {
@@ -5,13 +76,15 @@ var signup = new Vue({
 			basic: true,
 			tiket: false,
 			meetlist: false,
-			remark: false
+			remark: false,
+			hotel: false
 		},
 		chmeetBtn: true,
 		itemText: {
 			tiketTxt: '请填写',
 			meetTxt: '请选择',
-			remarkTxt: '请填写'
+			remarkTxt: '请填写',
+			hotelTxt: '请选择'
 		},
 		userInfo: JSON.parse(sessionStorage.getItem('user')),
 		meetroomInfo: JSON.parse(sessionStorage.getItem('existMeeHall')),
@@ -34,8 +107,7 @@ var signup = new Vue({
 					_this.meetInfo = data;
 					if (_this.meetInfo.list == 0) {
 						_this.chmeetBtn = false;
-					}
-					else{
+					} else {
 						_this.chmeetBtn = true;
 					}
 
@@ -80,12 +152,14 @@ var signup = new Vue({
 			this.formBox.tiket = true;
 			this.formBox.basic = false;
 		},
+
 		//  回基本信息
 		go_basic: function () {
 			this.formBox.tiket = false;
 			this.formBox.basic = true;
 			this.formBox.meetlist = false;
 			this.formBox.remark = false;
+			this.formBox.hotel = false;
 		},
 		//  保存发票信息
 		saveTiket: function () {
@@ -102,6 +176,15 @@ var signup = new Vue({
 			} else {
 				_this.itemText.tiketTxt = "请填写"
 			}
+			this.go_basic();
+		},
+		// 选择酒店
+		selectHotel: function () {
+			this.formBox.hotel = true;
+			this.formBox.basic = false;
+		},
+		saveHotel: function () {
+			this.itemText.tiketTxt = "已填写"
 			this.go_basic();
 		},
 		//  选择子会议

@@ -1,29 +1,29 @@
 //IOS激活伪类
 $('body').on("touchstart", function () {})
-	// 浮动按钮交互
+// 浮动按钮交互
 $(".float-btn").on("click", function () {
-		var _this = $(this);
-		var $menu = $(this).siblings(".float-menu-box");
-		if ($menu.is(':hidden')) {
-			_this.addClass("rotate45reg");
-			$menu.show();
-			_this.css("background", "#f87c17");
-		} else {
-				_this.removeClass("rotate45reg").addClass("rotate1");
-			$menu.hide();
-			_this.css("background", "#ffa53a");
-		}
-	})
-	// 模态框
+	var _this = $(this);
+	var $menu = $(this).siblings(".float-menu-box");
+	if ($menu.is(':hidden')) {
+		_this.addClass("rotate45reg");
+		$menu.show();
+		_this.css("background", "#f87c17");
+	} else {
+		_this.removeClass("rotate45reg").addClass("rotate1");
+		$menu.hide();
+		_this.css("background", "#ffa53a");
+	}
+})
+// 模态框
 $(".modal-bg").on("click", function () {
 	$(".modal-main").hide();
 });
 $(document).on("click", ".modal-main .no", function () {
 	$(".modal-main").hide();
 });
-$(document).on("click",".modal-bg",function(){
+$(document).on("click", ".modal-bg", function () {
 	$(".modal-main").hide();
-	$("#prompt-modal,#affirm_modal").remove();
+	$("#prompt_modal,#affirm_modal").remove();
 })
 $(document).on("click", ".modal-main .know", function () {
 	$("#prompt-modal").remove();
@@ -47,9 +47,9 @@ function getFileName(path) {
 }
 // 搜索框
 $("#search-delete").on("click", function () {
-		$(this).siblings("input").val("");
-	})
-	// 文本域字数限定
+	$(this).siblings("input").val("");
+})
+// 文本域字数限定
 $(function () {
 	$("#remarks_box").on("input", function () {
 		var markNum = document.getElementById('remarks_box').value.length;
@@ -101,8 +101,8 @@ function showPreview(source) {
 			})
 		},
 		// 弹出框
-		prompt: function (option) {
-			var modal = "<div class='modal-main' id='prompt-modal'>" +
+		prompt: function (option, callback) {
+			var modal = "<div class='modal-main' id='prompt_modal'>" +
 				"<div class='modal-bg'></div>" +
 				"<div class='modal-contant'>" +
 				"<div class='modal-body'>" +
@@ -114,6 +114,17 @@ function showPreview(source) {
 				"</div>" +
 				"</div>";
 			$('body').append(modal);
+			$(document).on("click", "#prompt_modal .know", function () {
+				if (callback) {
+					callback();
+				  $(document).off("click", "#prompt_modal .know");
+				  $("#prompt_modal").remove();
+				}
+				else{
+					$("#prompt_modal").remove();
+				}
+			})
+
 		}
 	})
 }(jQuery));

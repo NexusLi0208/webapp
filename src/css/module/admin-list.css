@@ -2,14 +2,15 @@
   width: 100%;
   height: 7rem;
   padding: 1.25rem 2rem;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   background: #fff;
   margin-bottom: 1rem; }
 
 .creater .icon {
   width: 4.5rem;
   height: 4.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
   border-radius: 0.5rem;
   overflow: hidden; }
 
@@ -31,6 +32,8 @@
   text-align: center;
   font-style: normal;
   color: #fff;
+  -webkit-border-radius: 5rem;
+  -moz-border-radius: 5rem;
   border-radius: 5rem;
   background: #3BD610; }
 
@@ -39,14 +42,15 @@
   width: 100%;
   height: 7rem;
   padding: 1.25rem 2rem;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   background: #fff;
   border-bottom: 1px #eee solid; }
 
 .admin .icon {
   width: 4.5rem;
   height: 4.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
   border-radius: 0.5rem;
   overflow: hidden; }
 
@@ -80,6 +84,8 @@
   font-style: normal;
   color: #ff9e31;
   padding: 0 1rem;
+  -webkit-border-radius: 5rem;
+  -moz-border-radius: 5rem;
   border-radius: 5rem;
   border: 1px #ff9e31 solid;
   background: #fff; }

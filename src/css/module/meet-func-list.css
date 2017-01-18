@@ -1,8 +1,7 @@
 .meet-info-list {
   width: auto;
   text-align: center;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   min-height: 100%;
   background: #fff;
   padding: 1.5rem 1%; }

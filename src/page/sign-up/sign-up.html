@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <section class="main-cantainer">
+    <section class="main-cantainer navfixr">
         <div class='form-main' id='sign-main'>
             <form action="sign-up-success.html" id="sign_up_main">
                 <!--会议厅ID-->
@@ -84,14 +84,10 @@
                  </select>
                     </div>
                     <hr class="form-hr">
-                    <div class="form-group">
-                        <label class="floatl">酒店:</label>
+                    <div class="form-group js-tiket" @click="selectHotel">
+                        <label class="floatl">选择酒店:</label>
                         <span class="floatr arrowImg"><img src="../../css/img/list_arrow.png" alt=""></span>
-                        <select class='form-input floatr' id="hotel">
-                     <option value="0">请选择</option>
-                     <option value="1">上海假日</option>
-                     <option value="2">七天连锁</option>
-                 </select>
+                        <span class='floatr form-text'>{{itemText.hotelTxt}}</span>
                     </div>
                     <div class="form-group js-tiket" @click="selectTiket">
                         <label class="floatl">发票信息:</label>
@@ -113,7 +109,7 @@
                     <hr class="form-hr">
                     <hr class="form-hr">
                     <hr class="form-hr">
-                    <button type='button' @click="formSubmit" class='btm-btn'>提交报名</button>
+                   
                 </div>
                 <div class="js-tiket-info" v-show="formBox.tiket">
                     <div class="form-title"><span @click="saveTiket" class="backBasic-btn"><img src="../../css/img/title_arrow_back.png" alt=""></span>发票信息</div>
@@ -141,6 +137,30 @@
                         <button type="button" class="form-btn cancel-btn" @click='saveTiket'>保存</button>
                     </div>
                 </div>
+                <div class="js-hotel-info" v-show="formBox.hotel">
+                    <div class="form-title"><span @click="saveTiket" class="backBasic-btn"><img src="../../css/img/title_arrow_back.png" alt=""></span>发票信息</div>
+                    <div class="form-group">
+                        <label for="province" class="floatl">酒店名:</label>
+                        <span class="floatr arrowImg"><img src="../../css/img/list_arrow.png" alt=""></span>
+                        <select class='form-input floatr' id="province">
+                             <option value="0">请选择</option>
+                     <option value="1">七天连锁</option>
+                     <option value="2">万豪国际</option>
+                 </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="province" class="floatl">房间类型:</label>
+                        <span class="floatr arrowImg"><img src="../../css/img/list_arrow.png" alt=""></span>
+                        <select class='form-input floatr' id="province">
+                             <option value="0">请选择</option>
+                     <option value="1">单间</option>
+                     <option value="2">双人间</option>
+                 </select>
+                    </div>
+                    <div class='btn-box'>
+                        <button type="button" class="form-btn cancel-btn" @click='saveHotel'>保存</button>
+                    </div>
+                </div>
                 <div class="js-meetlist-info" v-show="formBox.meetlist">
                     <!--<div class="form-group meet-group ">
                         <p class="submeet-name">分论坛一</p>
@@ -154,11 +174,12 @@
                             </div>
                         </div>
                     </div><-->
-                    <div class="form-title"><span @click="saveMeet" class="backBasic-btn"><img src="../../css/img/title_arrow_back.png" alt=""></span>已选择分会议
-                        <span class='floatr add-icon js-addChmeet'>+&nbsp;&nbsp;</span>
+                    <div class="form-title"><span  @click="saveMeet" class="backBasic-btn"><img src="../../css/img/title_arrow_back.png" alt=""></span>分会议
+                        <span class='floatr add-icon js-addChmeet'></span>
                     </div>
+                   <div class="md-txtbtn"><span>请选择分会议:</span><button class="btn success-btn mgl2 js-addChmeet" type="button">添加</button></div>
                     <ul class="selectChmeet">
-                        <p class="noinfo mgt2" hidden><i><img src="../../css/img/no-meetRoom.png" alt=""></i>您还没有选择分论坛</p>
+                        <p class="noinfo" hidden><i><img src="../../css/img/no-meetRoom.png" alt=""></i>您还没有选择分会议</p>
                     </ul>
                     <div class='btn-box'>
                         <button type="button" class="form-btn cancel-btn" @click='saveMeet'>保存</button>
@@ -196,14 +217,15 @@
         </div>
         </div>
     </section>
+     <button type='button' @click="formSubmit" class='btm-btn pst-btm'>提交报名</button>
     <div class="modal-main" id="chmeet-modal" hidden>
         <div class="modal-bg"></div>
         <div class="modal-contant modal-lg">
             <div class="modal-header">
                 分论坛信息
             </div>
+             
             <div class="modal-body">
-                <p class="modal-list-title">上午会议</p>
                 <div class="item" data-chmeetId="1">
                     <p class="title">马克思里列宁主义好</p>
                     <time class="time"><i><img src="../../css/img/clock.png" alt=""></i>8月12日</time>
@@ -216,7 +238,6 @@
                     <p class="title">祖国繁荣昌盛</p>
                     <time class="time"><i><img src="../../css/img/clock.png" alt=""></i>8月12日</time>
                 </div>
-                 <p class="modal-list-title">下午会议</p>
                 <div class="item" data-chmeetId="4">
                     <p class="title">JetBrains WebStorm</p>
                     <time class="time"><i><img src="../../css/img/clock.png" alt=""></i>8月12日</time>
@@ -244,77 +265,6 @@
             checkboxClass: 'icheckbox_flat-red',
             radioClass: 'iradio_flat-red'
         });
-        $(function () {
-            var chmeet = {
-                chmeetId: "",
-                init: function () {
-                    this.addchmeet();
-                    this.selectChmeet();
-                    this.removeChmeet();
-                    this.begain();
-                },
-                addchmeet: function () {
-                    $(".js-addChmeet").on("click", function () {
-                        $("#chmeet-modal").show();
-                    })
-                },
-                selectChmeet: function () {
-                    var _this = this;
-                    $(".modal-body").on("click", ".item", function () {
-                        var judge = true;
-                        var nowId = $(this).attr("data-chmeetId");
-                        var selectChmeetList = $(".selectChmeet li");
-                        for (var i = 0; i < selectChmeetList.length; i++) {
-                            if ($(selectChmeetList[i]).attr("data-chmeetid") == nowId) {
-                                judge = false;
-                                break;
-                            } else {
-                                judge = true;
-                            }
-                        }
-                        if (judge) {
-                            _this.chmeetId = $(this).attr("data-chmeetId");
-                            _this.chmeetName = $(this).find(".title").text();
-                            _this.chmeetTime = $(this).find(".time").text();
-                            var newitem = " <li class='chmeet-item' data-chmeetId=" + _this.chmeetId +
-                                ">" +
-                                "<div class='chmeet-info floatl'><span class=name'>" + _this.chmeetName +
-                                "</span><span class='time'>" + _this.chmeetTime +
-                                "</span></div>" +
-                                "<span class='floatr remove-btn js-remove-chmeet'><img src='../../css/img/edit_icon_delete.png' ></span>" +
-                                "</li>";
-                            $(".selectChmeet").append(newitem);
-                            $("#chmeet-modal").hide();
-                            $(".noinfo").hide();
-                        } else {
-                            $("#chmeet-modal").hide();
-                            $.prompt("您已经选择过该分会议了");
-                        }
-
-                    })
-                },
-                removeChmeet: function () {
-                    var _this = this;
-                    $(".selectChmeet").on("click", ".js-remove-chmeet", function () {
-                        $(this).parents("li").remove();
-                        if (_this.selectedNum() == 0) {
-                            $(".noinfo").show();
-                        }
-                    })
-                },
-                selectedNum: function () {
-                    var num = $(".selectChmeet").find("li").size();
-                    return num;
-                },
-                begain: function () {
-                    if (this.selectedNum() == 0) {
-                        $(".noinfo").show();
-                    }
-                }
-
-            }
-            chmeet.init();
-        })
     </script>
 </body>
 

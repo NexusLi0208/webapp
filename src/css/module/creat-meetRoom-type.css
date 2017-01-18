@@ -10,17 +10,14 @@ Power by lipeng
   color: #fff;
   font-size: 2rem;
   padding-top: 5rem;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   text-align: center;
   background: url(img/conference_hall_btn_normal.png) center center no-repeat;
-  -webkit-background-size: cover;
-          background-size: cover; }
+  background-size: cover; }
 
 .meetRoom-type-btn img {
   width: 40%; }
 
 .meetRoom-type-btn:active {
   background: url(img/conference_hall_btn_pressed.png) center center no-repeat;
-  -webkit-background-size: cover;
-          background-size: cover; }
+  background-size: cover; }

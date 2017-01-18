@@ -44,6 +44,7 @@ gulp.task('lint', function () {
 gulp.task('sass', function () {
     gulp.src('src/scss/*.scss')
         .pipe(sass())
+        .pipe(gulp.dest('src/css/module'))
         // .pipe(concat('style.css'))
         .pipe(autoprefixer({
             browsers: [
@@ -62,7 +63,7 @@ gulp.task('sass', function () {
             //        transform: rotate(45deg);
             remove: true //是否去掉不必要的前缀 默认：true 
         }))
-        .pipe(gulp.dest('src/css/module'))
+
         // 压缩
         .pipe(concat('style.css'))
         .pipe(cssmin({
@@ -70,7 +71,7 @@ gulp.task('sass', function () {
             compatibility: 'ie8', //保留ie8及以下兼容写法 类型：String 默认：''or'*' [启用兼容模式； 'ie7'：IE7兼容模式，'ie8'：IE8兼容模式，'*'：IE9+兼容模式]
             keepBreaks: true, //类型：Boolean 默认：false [是否保留换行]
             keepSpecialComments: '*'
-                //保留所有特殊前缀 当你用autoprefixer生成的浏览器前缀，如果不加这个参数，有可能将会删除你的部分前缀
+            //保留所有特殊前缀 当你用autoprefixer生成的浏览器前缀，如果不加这个参数，有可能将会删除你的部分前缀
         }))
         .pipe(gulp.dest('./src/css'));
 });
@@ -112,9 +113,9 @@ gulp.task('watch', function () {
     // 监听根目录下所有.html文件
 })
 // 临时压缩任务
-gulp.task('yasuo',function(){
+gulp.task('yasuo', function () {
     gulp.src('./src/js/test/*.js')
-    .pipe(uglify())
-       .pipe(rename('pdf2htmlEX.min.js'))
-     .pipe(gulp.dest('./yasuo'));
+        .pipe(uglify())
+        .pipe(rename('pdf2htmlEX.min.js'))
+        .pipe(gulp.dest('./yasuo'));
 })

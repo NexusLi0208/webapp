@@ -9,8 +9,7 @@
   height: 100%;
   background: #fff;
   padding-top: 20%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
+  box-sizing: border-box; }
 
 .successImg img {
   width: 100%;

@@ -4,8 +4,7 @@
   color: #00a0e9;
   background: #fff;
   padding: 2rem 2rem;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   border-bottom: 1px #eee solid;
   margin-bottom: 1rem; }
 
@@ -17,6 +16,8 @@
   line-height: 4.5rem;
   text-align: center;
   font-size: 1.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
   border-radius: 0.5rem;
   background: #ffaf48;
   color: #fff; }
@@ -33,8 +34,7 @@
   width: 100%;
   padding: 0 2rem;
   background: #fff;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin-bottom: 1rem; }
 
 .htrm-list .htrm-tag {
@@ -49,8 +49,7 @@
   height: 8rem;
   padding: 1.8rem 0;
   font-size: 1.5rem;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   color: #333;
   border-bottom: 1px #eee solid;
   overflow: hidden;
@@ -82,8 +81,7 @@
   width: 100%;
   background: #fff;
   padding: 0 2rem;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
+  box-sizing: border-box; }
 
 .hotel-list li {
   padding: 1.75rem 0;

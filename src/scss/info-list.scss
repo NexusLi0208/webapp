@@ -1,19 +1,25 @@
 @import "lib/mixin.scss";
 @import "lib/color.scss";
 .info-item {
+    position: relative;
     width: 100%;
     padding: 0 2.2rem;
     box-sizing: border-box;
     background: #fff;
-    margin-bottom:1rem;
+    margin-bottom: 1rem;
+    overflow: hidden
 }
-
 
 .info-body .t1 {
     color: #333;
     font-size: 1.5rem;
     padding-top: 2rem;
-    margin-bottom: 1.5rem
+    padding-right: 5rem;
+    margin-bottom: 1.5rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 .info-body .t1 .small {
@@ -82,6 +88,18 @@
     width: 100%;
 }
 
+.delete-btn {
+    position: absolute;
+    right:2rem;
+    top:38%;
+    display:block;
+    width: 3rem;
+}
+
+.delete-btn img {
+    width: 100%;
+}
+
 .item-operate span {
     display: inline-block;
     width: 3rem;
@@ -112,4 +130,15 @@
     color: #fb911a;
     border: 1px #fb911a solid;
     @include rounded(5rem);
+}
+
+// 会议服务列表
+.server-list .info-item:nth-child(odd) {
+    border-left: .5rem $blue solid;
+    padding-bottom: 1rem;
+}
+
+.server-list .info-item:nth-child(even) {
+    border-left: .5rem $red solid;
+    padding-bottom: 1rem;
 }

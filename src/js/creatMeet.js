@@ -1,5 +1,4 @@
 $(function () {
-
 	$('.begin-time').mobiscroll().datetime({
 		theme: "android-holo-light", // Specify theme like: theme: 'ios' or omit setting to use default 
 		mode: "scroller", //效果
@@ -122,17 +121,13 @@ new Vue({
 		},
 		//  不创建子会议
 		childfalse: function () {
-		
                	window.location.href = "creatmeet-success.html";
-		
-		
-			
 		},
 		setTime:function(e){
 			var obj=e.currentTarget;
             var obj_str=obj.value;
 			var date=new Date(obj_str.replace(/-/g,'/')).getTime();
-            $(obj).next('input').val(date);
+            $(obj).siblings('input').val(date);
 		},
 			// 创建会议
 		greatmeet: function (callback) {

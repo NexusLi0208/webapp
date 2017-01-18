@@ -5,8 +5,7 @@ Power by lipeng
   height: 6.5rem;
   font-size: 1.5rem;
   padding: 1.75rem 2rem;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
+  box-sizing: border-box; }
 
 .right-title span {
   display: block;
@@ -26,16 +25,16 @@ Power by lipeng
 .type_tab {
   width: 100%;
   padding: .5rem 1rem;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
+  box-sizing: border-box; }
 
 .type_tab li {
   width: 25%;
   height: 3rem;
   float: left;
   padding: .6rem .2rem;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
   border-radius: 0.5rem;
   border: 1px solid #00a0e9;
   background-color: #fff;
@@ -58,8 +57,7 @@ Power by lipeng
   height: 2rem;
   overflow: hidden;
   background: url(img/module_delete.png) no-repeat;
-  -webkit-background-size: cover;
-          background-size: cover; }
+  background-size: cover; }
 
 .type_tab li .delBtn img {
   width: 100%;

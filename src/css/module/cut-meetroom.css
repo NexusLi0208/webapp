@@ -2,8 +2,7 @@
   width: 100%;
   background: #fff;
   padding: 0 1rem 0 2rem;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   height: 5.5rem;
   border-bottom: 1px #eee solid; }
 
@@ -31,15 +30,13 @@
   width: 100%;
   padding: 0 2rem;
   background: #fff;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin-bottom: 1rem; }
 
 .mtrm-list .mtrm-item {
   height: 9rem;
   padding: 1rem 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   border-bottom: 1px #eee solid;
   overflow: hidden; }
 

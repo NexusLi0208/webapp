@@ -44,6 +44,7 @@
     margin: auto;
     @include rounded(10px);
 }
+
 .modal-lg {
     width: 80%;
 }
@@ -62,19 +63,21 @@
     width: 100%;
     box-sizing: border-box;
     padding: 1rem;
-    max-height:20rem;
+    max-height: 20rem;
     overflow: auto;
 }
-.modal-list-title{
-    height:2rem;
+
+.modal-list-title {
+    height: 2rem;
     line-height: 2rem;
     font-size: 1.5rem;
     background: #eee;
-    padding-left:.5rem;
+    padding-left: .5rem;
     margin-bottom: .5rem;
-    border-left:.5rem $blue solid;
-    color:#333;
+    border-left: .5rem $blue solid;
+    color: #333;
 }
+
 .modal-body p.txt {
     font-size: 1.5rem;
     color: #333;
@@ -135,7 +138,11 @@
 .modal-body .time i img {
     height: 100%;
 }
-
+.modal-body .p-title{
+    color:$blue;
+    padding:.5rem 0;
+    font-size: 1.5rem;
+}
 .modal-footer {
     display: flex;
     border-top: 1px #eee solid;
@@ -162,4 +169,43 @@
 .modal-footer button.no {
     color: #717171;
     border-radius: 0 0 10px 0;
+}
+
+// 邀请管理员选择角色
+.invite-modal-txt {
+    font-size: 1.7rem;
+    color: #333;
+    padding: 1.5rem 0;
+}
+
+.invite-modal-select {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.invite-modal-select label {
+    color: $blue;
+}
+
+.invite-modal-select select {
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+    color: #848689;
+}
+
+.modal-code {
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.htat {
+    max-height: 100%;
+}
+
+.modal-code img,
+.modal-code canvas,
+{
+    width: 100%;
 }
