@@ -37,6 +37,7 @@
 .mtrm-idx-d1 .user-img {
     width: 6.5rem;
     height: 6.5rem;
+    object-fit: cover;
     @include rounded(5px);
     border: .15rem #fff solid;
     overflow: hidden;

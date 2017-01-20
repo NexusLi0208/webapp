@@ -30,6 +30,7 @@
 .mtrm-list-hd i img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 
 .mtrm-list {
@@ -70,6 +71,8 @@
 
 .mtrm-list .mtrm-img img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .mtrm-list .mtrm-name {

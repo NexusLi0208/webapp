@@ -99,3 +99,25 @@
     line-height: 2rem;
 
 }
+// 邀请失败
+.invite-fail{
+    width:100%;
+    height:100%;
+    padding-top:10rem;
+    box-sizing: border-box;
+}
+.invite-fail i{
+    display: block;
+    width:17.5rem;
+    height:26.5rem;
+    margin:0 auto;
+
+}
+.invite-fail i img{
+    width:100%;
+}
+.invite-fail p{
+    color:$red;
+    text-align: center;
+    font-size: 2.4rem;
+}

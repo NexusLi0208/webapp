@@ -179,6 +179,8 @@
 }
 .fans-item i img{
     width:100%;
+    height:100%;
+    object-fit: cover;
 }
 .fans-item span{
     display: inline-block;

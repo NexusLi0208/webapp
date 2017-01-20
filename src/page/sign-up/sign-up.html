@@ -109,7 +109,7 @@
                     <hr class="form-hr">
                     <hr class="form-hr">
                     <hr class="form-hr">
-                   
+                    <button type='button' @click="formSubmit" class='btm-btn pst-btm'>提交报名</button>
                 </div>
                 <div class="js-tiket-info" v-show="formBox.tiket">
                     <div class="form-title"><span @click="saveTiket" class="backBasic-btn"><img src="../../css/img/title_arrow_back.png" alt=""></span>发票信息</div>
@@ -217,7 +217,7 @@
         </div>
         </div>
     </section>
-     <button type='button' @click="formSubmit" class='btm-btn pst-btm'>提交报名</button>
+    
     <div class="modal-main" id="chmeet-modal" hidden>
         <div class="modal-bg"></div>
         <div class="modal-contant modal-lg">

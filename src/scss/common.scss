@@ -8,7 +8,7 @@ Power by lipeng
 html,
 body {
     height: 100%;
-    font-size:62.5%;
+    font-size: 62.5%;
     font-family: Arial, 'Microsoft YaHei';
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -32,6 +32,7 @@ textarea {
 [v-cloak] {
     display: none;
 }
+
 // 通配样式
 .floatl {
     float: left;
@@ -117,9 +118,11 @@ textarea {
     height: 100%;
     background: $blue;
 }
-.no-mg{
-    margin:0!important;
+
+.no-mg {
+    margin: 0!important;
 }
+
 .main-cantainer {
     width: 100%;
     height: 100%;
@@ -136,6 +139,11 @@ textarea {
     content: '';
     display: block;
     height: 7rem;
+}
+.titlefixr::before{
+       content: '';
+    display: block;
+    height: 4.4rem;
 }
 
 .form-title {
@@ -171,13 +179,15 @@ textarea {
     width: 3rem;
     height: 3rem;
 }
-.btn{
-    border:none;
+
+.btn {
+    border: none;
     border-radius: .5rem;
-    color:#fff;
-    padding:.5rem 1rem;
-    outline:none;
+    color: #fff;
+    padding: .5rem 1rem;
+    outline: none;
 }
+
 .success-btn {
     background: $blue!important;
     user-select: none;
@@ -186,6 +196,7 @@ textarea {
 .success-btn:active {
     background: darken($blue, 10%)!important;
 }
+
 .cancel-btn {
     user-select: none;
     background: $red;
@@ -243,8 +254,12 @@ textarea {
 }
 
 .page-title {
-    position: relative;
-    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 99999;
+    width:100%;
+    min-width: 320px;
+    max-width: 640px;
     height: 4.4rem;
     line-height: 4.4rem;
     color: #fff;

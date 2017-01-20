@@ -89,7 +89,7 @@ function showPreview(source) {
 				"</div>" +
 				"</div>";
 			$('body').append(modal);
-			$(document).on("click", "#affirm_modal .yes", function () {
+			$("#affirm_modal .yes").on("click",function () {
 				if (callback) {
 					callback();
 				}
@@ -98,6 +98,7 @@ function showPreview(source) {
 			})
 			$(document).on("click", "#affirm_modal .no", function () {
 				$("#affirm_modal").remove();
+				$(document).off("click", "#affirm_modal .yes");
 			})
 		},
 		// 弹出框
@@ -114,10 +115,10 @@ function showPreview(source) {
 				"</div>" +
 				"</div>";
 			$('body').append(modal);
-			$(document).on("click", "#prompt_modal .know", function () {
+			$(document).on("click", "#prompt_modal .know,#prompt_modal .modal-bg", function () {
 				if (callback) {
 					callback();
-				  $(document).off("click", "#prompt_modal .know");
+				  $(document).off("click", "#prompt_modal .know,#prompt_modal .modal-bg");
 				  $("#prompt_modal").remove();
 				}
 				else{

@@ -82,7 +82,10 @@
   font-size: 1.5rem;
   color: #333;
   padding-left: .3rem;
-  margin-bottom: 1.1rem; }
+  margin-bottom: 1.1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
 
 .user-item .user-info {
   font-size: 1.2rem; }

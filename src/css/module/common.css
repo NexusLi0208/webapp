@@ -12,11 +12,7 @@ body {
   background: #fff;
   -webkit-text-size-adjust: 100%; }
 
-a {
-  color: #2d374b;
-  text-decoration: none; }
-
-a:hover {
+a, a:hover, a:active, a:visited {
   text-decoration: none; }
 
 em {
@@ -153,6 +149,11 @@ textarea {
   display: block;
   height: 7rem; }
 
+.titlefixr::before {
+  content: '';
+  display: block;
+  height: 4.4rem; }
+
 .form-title {
   position: relative;
   width: 100%;
@@ -237,8 +238,12 @@ textarea {
   height: 100%; }
 
 .page-title {
-  position: relative;
+  position: fixed;
+  top: 0;
+  z-index: 99999;
   width: 100%;
+  min-width: 320px;
+  max-width: 640px;
   height: 4.4rem;
   line-height: 4.4rem;
   color: #fff;

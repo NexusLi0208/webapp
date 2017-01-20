@@ -24,7 +24,8 @@
 
 .mtrm-list-hd i img {
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  object-fit: cover; }
 
 .mtrm-list {
   width: 100%;
@@ -57,7 +58,9 @@
   overflow: hidden; }
 
 .mtrm-list .mtrm-img img {
-  width: 100%; }
+  width: 100%;
+  height: 100%;
+  object-fit: cover; }
 
 .mtrm-list .mtrm-name {
   font-size: 1.5rem;

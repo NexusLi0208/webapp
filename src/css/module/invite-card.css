@@ -88,3 +88,23 @@
   color: #333;
   padding: 0 2rem;
   line-height: 2rem; }
+
+.invite-fail {
+  width: 100%;
+  height: 100%;
+  padding-top: 10rem;
+  box-sizing: border-box; }
+
+.invite-fail i {
+  display: block;
+  width: 17.5rem;
+  height: 26.5rem;
+  margin: 0 auto; }
+
+.invite-fail i img {
+  width: 100%; }
+
+.invite-fail p {
+  color: #f66;
+  text-align: center;
+  font-size: 2.4rem; }
