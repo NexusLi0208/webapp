@@ -1,0 +1,237 @@
+.cutBtnBox {
+  display: flex;
+  width: 100%;
+  height: 6rem;
+  justify-content: center;
+  border-bottom: .5rem #eee solid; }
+
+.cutBtnBox button {
+  position: relative;
+  flex: 1;
+  font-size: 1.5rem;
+  border: none;
+  outline: none;
+  background: none;
+  height: 100%;
+  color: #848689;
+  line-height: 6rem; }
+
+.cutBtnBox1 {
+  display: flex;
+  width: 100%;
+  height: 6rem;
+  justify-content: center;
+  border-bottom: .5rem #fff solid; }
+
+.cutBtnBox1 button {
+  position: relative;
+  flex: 1;
+  font-size: 1.5rem;
+  border: none;
+  outline: none;
+  background: #00a0e9;
+  height: 100%;
+  color: #96dffd;
+  line-height: 6rem; }
+
+.cutBtnBox .cutActive {
+  color: #00a0e9 !important; }
+
+.cutBtnBox1 .cutActive {
+  color: #fff !important; }
+
+.cutActive::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -.5rem;
+  width: 100%;
+  height: .5rem;
+  background: #1480e4; }
+
+.vote-list-title {
+  width: 100%;
+  height: 5.5rem;
+  line-height: 5.5rem;
+  padding: 0 1.25rem;
+  box-sizing: border-box;
+  border-bottom: 1px #eee solid; }
+
+.vote-list-title .title {
+  display: inline-block;
+  width: calc(100% - 7.5rem);
+  color: #848689;
+  font-size: 1.5rem; }
+
+.vote-list-title .state {
+  display: inline-block;
+  width: 7.5rem;
+  color: #848689;
+  text-align: right;
+  font-size: 1.5rem; }
+
+.vote-list-title .state img {
+  width: 3rem;
+  margin-right: .5rem; }
+
+.vote-theme-list li {
+  width: 100%;
+  height: 5.5rem;
+  line-height: 5.5rem;
+  border-bottom: 1px #eee solid;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 0 1.25rem;
+  box-sizing: border-box; }
+
+.vote-theme-list li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #333; }
+
+.vote-theme-list span {
+  display: inline-block;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-right: 1rem; }
+
+.vote-theme-list span img {
+  width: 100%; }
+
+.case-item {
+  padding: 0 2rem;
+  border-bottom: 1rem #eee solid; }
+
+.case-info {
+  height: 10rem;
+  padding: 1.75rem 0;
+  box-sizing: border-box;
+  border-bottom: 1px #eee solid; }
+
+.case-info .left {
+  width: 8.5rem;
+  height: 6.5rem; }
+
+.case-info .left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; }
+
+.case-info .right {
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: .5rem; }
+
+.picTxtList .right {
+  width: calc(100% - 8.5rem); }
+
+.case-info .title {
+  display: block;
+  width: 100%;
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 1.5rem; }
+
+.case-info .author {
+  display: block;
+  font-size: 1.2rem;
+  color: #848689; }
+
+.case-info .title img,
+.case-info .author img {
+  width: 2.5rem;
+  height: 2.5rem; }
+
+.case-operation {
+  height: 5rem;
+  padding: 1rem 0;
+  box-sizing: border-box; }
+
+.case-operation span {
+  display: block;
+  height: 3rem;
+  line-height: 3rem;
+  color: #f66;
+  font-size: 1.4rem; }
+
+.vote-tickets-list li {
+  width: 100%;
+  height: 5.5rem;
+  line-height: 5.5rem;
+  border-bottom: 1px #eee solid;
+  padding: 0 1.25rem;
+  box-sizing: border-box; }
+
+.vote-tickets-list li p {
+  float: left;
+  width: calc(100% - 4rem);
+  color: #333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+
+.vote-tickets-list li span {
+  display: inline-block;
+  width: 3.5rem;
+  text-align: center;
+  color: #f66; }
+
+.vote-info-modal {
+  padding: 1rem;
+  font-size: 1.5rem; }
+  .vote-info-modal .vote-info-title {
+    color: #333;
+    margin-bottom: 2rem; }
+  .vote-info-modal .vote-info-txt {
+    color: #848689;
+    margin-bottom: .7rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
+  .vote-info-modal .vote-info-num {
+    margin-top: 2rem; }
+    .vote-info-modal .vote-info-num span {
+      color: #f66; }
+
+.adminVote-theme-list li {
+  width: 100%;
+  border-bottom: 1rem #eee solid;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  box-sizing: border-box; }
+  .adminVote-theme-list li .item {
+    width: 100%;
+    height: 5.5rem;
+    padding: 0 1.25rem;
+    line-height: 5.5rem;
+    border-bottom: 1px #eee solid;
+    box-sizing: border-box; }
+    .adminVote-theme-list li .item a {
+      display: block;
+      width: 100%;
+      color: #333;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap; }
+    .adminVote-theme-list li .item span {
+      display: inline-block;
+      width: 2.5rem;
+      height: 2.5rem;
+      margin-right: 1rem; }
+      .adminVote-theme-list li .item span img {
+        width: 100%; }
+
+.operate {
+  height: 4rem;
+  padding-right: 2rem; }
+  .operate span {
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;
+    margin: .5rem 0;
+    margin-left: 5rem; }
+    .operate span img {
+      width: 100%; }

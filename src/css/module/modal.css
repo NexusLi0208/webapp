@@ -96,6 +96,29 @@
   overflow: hidden;
   border-bottom: 1px #eee solid; }
 
+.modal-title {
+  text-align: center;
+  color: #00a0e9;
+  font-size: 1.5rem;
+  margin: 1.5rem 0; }
+
+.modal-input {
+  margin: .5rem 0;
+  padding: 0 .5rem; }
+
+.modal-input input {
+  width: 100%;
+  height: 4rem;
+  padding: 0 1rem;
+  line-height: 2rem;
+  outline: none;
+  background: #f8fbfc;
+  border: solid 1px #e5e5e5;
+  font-size: 1.4rem;
+  border-radius: .3rem;
+  color: #333;
+  box-sizing: border-box; }
+
 .modal-body .item:last-of-type {
   border: none; }
 
@@ -177,3 +200,54 @@
 .modal-code img,
 .modal-code canvas {
   width: 100%; }
+
+.toastr-bg {
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0.3;
+  position: fixed;
+  z-index: 998;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0; }
+
+.toastr-main {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 998;
+  height: 100%; }
+
+.toastr-body {
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  max-width: 26rem;
+  width: 50%;
+  height: 8rem;
+  background: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 999;
+  margin: auto;
+  overflow: hidden;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px; }
+
+.toastr-body p {
+  padding: 1rem;
+  color: #fff;
+  font-size: 1.5rem;
+  text-align: center; }

@@ -1,5 +1,6 @@
 @import "lib/mixin.scss";
 @import "lib/color.scss";
+// 搜索框
 .search-bar {
     position: relative;
     width: 100%;
@@ -100,6 +101,7 @@
 }
 .user-item .user-info{
     font-size: 1.2rem;
+    color:#848689;
 }
 .user-item .user-info i{
     display: inline-block;

@@ -13,20 +13,24 @@
 }
 
 .user-info-box {
-    margin-left: 2rem;
-    padding: 1.25rem 0;
+    width: calc(100% - 6.8rem);
+    padding: 1.25rem 0 1.25rem .5rem;
     font-size: 1.5rem;
+    box-sizing: border-box;
 }
 
 .user-info-box .user-name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     text-indent: .5rem;
-    color:#fff;
+    color: #fff;
 }
 
 .user-info-box .user-fans {
     margin-top: .5rem;
     font-size: 1.2rem;
-    color:#fff;
+    color: #fff;
 }
 
 .user-info-box .user-fans img {
@@ -37,7 +41,6 @@
 .mtrm-idx-d1 .user-img {
     width: 6.5rem;
     height: 6.5rem;
-    object-fit: cover;
     @include rounded(5px);
     border: .15rem #fff solid;
     overflow: hidden;
@@ -45,7 +48,10 @@
 
 .mtrm-idx-d1 .user-img img {
     width: 100%;
-    height: 100%;
+    height:100%;
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
 }
 
 .mtrm-idx-d2 {
@@ -73,43 +79,44 @@
 
 .mtrm-btn i img {
     width: 100%;
-  
 }
 
 .mtrm-btn p {
     color: #949fa4;
-      font-size: 1.2rem;
+    font-size: 1.2rem;
     text-align: center;
 }
 
 .mtrm-idx-d2 .mtrm-btn:nth-child(1) {
     border-right: 1px #eee solid;
 }
-.focus-btn{
-     position:absolute;
-    right:0;
-    bottom:1rem;
-    width:6.5rem;
-    height:2.5rem;
-    border:1px #ff9e31 solid;
+
+.focus-btn {
+    position: absolute;
+    right: 0;
+    bottom: 1rem;
+    width: 6.5rem;
+    height: 2.5rem;
+    border: 1px #ff9e31 solid;
     border-radius: 50px;
-    background:none;
-    color:#ff9e31;
-    line-height:2.5rem;
+    background: none;
+    color: #ff9e31;
+    line-height: 2.5rem;
     font-size: 1.2rem;
     text-align: center;
 }
-.disfocus-btn{
-    position:absolute;
-    right:0;
-    bottom:1rem;
-    width:6.5rem;
-    height:2.5rem;
-    border:1px #bfbfbf solid;
+
+.disfocus-btn {
+    position: absolute;
+    right: 0;
+    bottom: 1rem;
+    width: 6.5rem;
+    height: 2.5rem;
+    border: 1px #bfbfbf solid;
     border-radius: 50px;
-    background:none;
-    color:#bfbfbf;
-    line-height:2.5rem;
+    background: none;
+    color: #bfbfbf;
+    line-height: 2.5rem;
     font-size: 1.2rem;
     text-align: center;
 }

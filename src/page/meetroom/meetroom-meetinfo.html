@@ -19,7 +19,21 @@
         </header>
         <section class="meet-list-main">
             <ul class="meet-list mtrm-infolist">
-                <li class="meet-item" @click="meetSignup">
+                <li class="meet-item">
+                    <div class="clearfix">
+                        <div class="left"><img src="../../css/img/pic1@2x.png" alt="meetimg"></div>
+                        <div class="right">
+                            <p class="meet-name">淄博职业学院</p>
+                            <time class="floatl">2016-02-08</time>
+                            <span class="focus floatr">256人关注</span>
+                        </div>
+                    </div>
+                    <div class="meet-item-funcBox">
+                        <a href="meet-info.html" class="btn-line">详情</a>
+                        <a class="btn-orgin floatr">邀请</a>
+                    </div>
+                </li>
+                <!--<li class="meet-item" @click="meetSignup">
                         <div class="left"><img src="../../css/img/pic1@2x.png"   alt="meetimg"></div>
                         <div class="right">
                             <p class="meet-name">{{selectmeeinfo.meeName}}</p>
@@ -28,7 +42,7 @@
                         <div class="deleteItem">
                             邀请
                         </div>
-                </li>
+                </li>-->
             </ul>
         </section>
         <section class="meet-list-main mtrm-chlistmain">
@@ -38,7 +52,7 @@
                 <i class="floatr"></i>
             </div>
             <ul class="meet-list mtrm-infolist" v-show="mtrmChlist">
-                <li class="meet-item" v-cloak v-for="item in chmeeList">
+                <!--<li class="meet-item" v-cloak v-for="item in chmeeList">
                     <a href="#">
                         <div class="left"><img src="../../css/img/pic1@2x.png" alt="meetimg"></div>
                         <div class="right">
@@ -49,8 +63,21 @@
                             邀请
                         </div>
                     </a>
+                </li>-->
+                   <li class="meet-item">
+                    <div class="clearfix">
+                        <div class="left"><img src="../../css/img/pic1@2x.png" alt="meetimg"></div>
+                        <div class="right">
+                            <p class="meet-name">淄博职业学院</p>
+                            <time class="floatl">2016-02-08</time>
+                            <span class="focus floatr">256人关注</span>
+                        </div>
+                    </div>
+                    <div class="meet-item-funcBox">
+                        <a href="meet-setting.html" class="btn-line">详情</a>
+                        <a class="btn-orgin floatr">邀请</a>
+                    </div>
                 </li>
-                </a>
             </ul>
         </section>
     </section>

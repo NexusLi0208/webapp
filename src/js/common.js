@@ -14,6 +14,13 @@ $(".float-btn").on("click", function () {
 		_this.css("background", "#ffa53a");
 	}
 })
+// 回到顶部
+$(".js_backTop").on("click", function () {
+	$('.main-cantainer').animate({
+		scrollTop: 0
+	}, 1000);
+	return false;
+});
 // 模态框
 $(".modal-bg").on("click", function () {
 	$(".modal-main").hide();
@@ -29,6 +36,11 @@ $(document).on("click", ".modal-main .know", function () {
 	$("#prompt-modal").remove();
 
 })
+$(document).on("click", ".modal-main .md-close", function () {
+	$(".modal-main").hide();
+
+})
+
 
 // 获取文件上传路径
 $("#data_upload").on("change", function () {
@@ -60,72 +72,103 @@ $(function () {
 // 读取图片并回显
 function showPreview(source) {
 	var file = source.files[0];
-	if (window.FileReader) {
-		var fr = new FileReader();
-		fr.readAsDataURL(file);
-		fr.onloadend = function (e) {
-			document.getElementById("js_uploadImg").src = e.target.result;
-		};
+	if (!/image\/\w+/.test(file.type)) {
+		$.prompt("请上传图片");
+		return false;
+	} else if (file.size > 5 * 1024 * 1024) {
+		$.prompt("你上传的文件太大了！")
+		return false;
+	} else {
+		if (window.FileReader) {
+			var fr = new FileReader();
+			fr.readAsDataURL(file);
+			fr.onloadend = function (e) {
+				document.getElementById("js_uploadImg").src = e.target.result;
+			};
 
-	}
-}
-// 确认框
-(function ($) {
-	$.extend({
-		// 确认框
-		affirm: function (option, callback) {
-
-			var _this = this;
-			var modal = "<div class='modal-main' id='affirm_modal'>" +
-				"<div class='modal-bg'></div>" +
-				"<div class='modal-contant'>" +
-				"<div class='modal-body'>" +
-				"<p class='txt text-m'>" + option + "</p>" +
-				"</div>" +
-				"<div class='modal-footer'>" +
-				" <button type='button' class='yes'>是</button>" +
-				"<button type='button' class='no'>否</button>" +
-				"</div>" +
-				"</div>" +
-				"</div>";
-			$('body').append(modal);
-			$("#affirm_modal .yes").on("click",function () {
-				if (callback) {
-					callback();
-				}
-				$("#affirm_modal").remove();
-				$(document).off("click", "#affirm_modal .yes");
-			})
-			$(document).on("click", "#affirm_modal .no", function () {
-				$("#affirm_modal").remove();
-				$(document).off("click", "#affirm_modal .yes");
-			})
-		},
-		// 弹出框
-		prompt: function (option, callback) {
-			var modal = "<div class='modal-main' id='prompt_modal'>" +
-				"<div class='modal-bg'></div>" +
-				"<div class='modal-contant'>" +
-				"<div class='modal-body'>" +
-				"<p class='txt text-m'>" + option + "</p>" +
-				"</div>" +
-				"<div class='modal-footer'>" +
-				"<button type='button' class='know'>知道了</button>" +
-				"</div>" +
-				"</div>" +
-				"</div>";
-			$('body').append(modal);
-			$(document).on("click", "#prompt_modal .know,#prompt_modal .modal-bg", function () {
-				if (callback) {
-					callback();
-				  $(document).off("click", "#prompt_modal .know,#prompt_modal .modal-bg");
-				  $("#prompt_modal").remove();
-				}
-				else{
-					$("#prompt_modal").remove();
-				}
-			})
-
+		} else {
+			$.prompt("您的设备不支持FileReader")
 		}
-	})
-}(jQuery));
+	}
+
+}
+
+// 列表切换
+$("#js_cutList1").on("click", function () {
+	$(this).addClass("cutActive").siblings().removeClass("cutActive");
+	$(".js_List1").show().siblings("ul").hide();
+})
+$("#js_cutList2").on("click", function () {
+	$(this).addClass("cutActive").siblings().removeClass("cutActive");
+	$(".js_List2").show().siblings("ul").hide();
+})
+// 确认框
+
+$.extend({
+	// 确认框
+	affirm: function (option, callback) {
+
+		var _this = this;
+		var modal = "<div class='modal-main' id='affirm_modal'>" +
+			"<div class='modal-bg'></div>" +
+			"<div class='modal-contant'>" +
+			"<div class='modal-body'>" +
+			"<p class='txt text-m'>" + option + "</p>" +
+			"</div>" +
+			"<div class='modal-footer'>" +
+			" <button type='button' class='yes'>是</button>" +
+			"<button type='button' class='no'>否</button>" +
+			"</div>" +
+			"</div>" +
+			"</div>";
+		$('body').append(modal);
+		$("#affirm_modal .yes").on("click", function () {
+			if (callback) {
+				callback();
+			}
+			$("#affirm_modal").remove();
+			$(document).off("click", "#affirm_modal .yes");
+		})
+		$(document).on("click", "#affirm_modal .no", function () {
+			$("#affirm_modal").remove();
+			$(document).off("click", "#affirm_modal .yes");
+		})
+	},
+	// 弹出框
+	prompt: function (option, callback) {
+		var modal = "<div class='modal-main' id='prompt_modal'>" +
+			"<div class='modal-bg'></div>" +
+			"<div class='modal-contant'>" +
+			"<div class='modal-body'>" +
+			"<p class='txt text-m'>" + option + "</p>" +
+			"</div>" +
+			"<div class='modal-footer'>" +
+			"<button type='button' class='know'>知道了</button>" +
+			"</div>" +
+			"</div>" +
+			"</div>";
+		$('body').append(modal);
+		$(document).on("click", "#prompt_modal .know,#prompt_modal .modal-bg", function () {
+			if (callback) {
+				callback();
+				$(document).off("click", "#prompt_modal .know,#prompt_modal .modal-bg");
+				$("#prompt_modal").remove();
+			} else {
+				$("#prompt_modal").remove();
+			}
+		})
+
+	},
+	toastr: function (option) {
+		var toastr = "<div class='toastr-main'>" +
+			"<div class='toastr-bg'></div>" +
+			"<div class='toastr-body'>" +
+			"<p class='toastr-txt'>" + option + "</p>" +
+			"</div>" +
+			"</div>";
+		$('body').append(toastr);
+		setTimeout(function () {
+			$(".toastr-main").remove();
+		}, 1000);
+	}
+})

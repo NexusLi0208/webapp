@@ -16,8 +16,7 @@
 
 .article-item {
     position: relative;
-    height: 10rem;
-    padding: 2rem 0;
+    padding: 1rem 0;
     box-sizing: border-box;
     border-bottom: 1px #eee solid;
 }
@@ -44,10 +43,13 @@
     height: 100%;
 }
 
-.title-box {
-    width: 88%;
-    float:left;
-    height:6rem;
+.article-item .title-box {
+    margin-left: 2.5rem;
+}
+
+.article-item .func-box {
+    height: 3rem;
+    line-height: 3rem;
 }
 
 .article-list-title {
@@ -56,7 +58,7 @@
     line-height: 2rem;
     color: #333;
     overflow: hidden;
-    margin-bottom:1rem;
+    margin-bottom: 1rem;
 }
 
 .article-item time {
@@ -79,11 +81,43 @@
     text-align: center;
 }
 
+.video-item {
+    position: relative;
+    color:#333;
+    padding: 1rem 0;
+    box-sizing: border-box;
+    border-bottom: 1px #eee solid;
+}
+.video-item .video-box{
+    color:#333;
+  width: 8rem;
+  height:7rem;
+  overflow: hidden;
+  background: #333;
+}
+.video-item .video-box iframe{
+    width:100%;
+}
+.video-item .title-box{
+    color:#333;
+    height: 4rem;
+    padding-left: 8.5rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+.video-item .func-box{
+    color:#848689;
+    padding-left: 8.5rem;
+    height:3rem;
+    line-height: 3rem;
+    font-size: 1.2rem;
+}
+
 // 文章详情页
 .article-main {
     width: 100%;
     min-height: 100%;
-    padding: 1.7rem 2.2rem;
+    padding: 1.7rem 1rem;
     background: #fff;
     box-sizing: border-box;
 }
@@ -116,6 +150,9 @@
     height: auto;
     margin-top: .5rem;
     overflow: hidden;
+}
+.article-imgbox iframe{
+    width:100%;
 }
 
 .article-imgbox img {

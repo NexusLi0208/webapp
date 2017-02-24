@@ -33,7 +33,7 @@
   top: 0;
   height: 100%;
   width: 1px;
-  z-index: 999;
+  z-index: 99;
   background: #eee; }
 
 .index-tab button img {
@@ -62,9 +62,9 @@
 
 .meet-list li {
   width: 100%;
-  height: 6.5rem;
+  min-height: 6.5rem;
   border-bottom: 1px #eee solid;
-  padding: 1.75rem 0; }
+  padding: 1rem 0; }
 
 .meet-list li:last-of-type {
   border: none; }
@@ -74,7 +74,7 @@
 
 .meet-list .meet-item .left {
   float: left;
-  width: 4rem;
+  width: 8.5rem;
   min-width: 8.5rem;
   height: 100%;
   overflow: hidden; }
@@ -85,7 +85,7 @@
   object-fit: cover; }
 
 .meet-list .meet-item .right {
-  width: 60%;
+  width: calc(100% - 9.25rem);
   padding-left: 0.75rem;
   float: left; }
 
@@ -110,6 +110,13 @@
   line-height: 3rem;
   font-size: 1.2rem;
   text-align: center; }
+
+.meet-item-funcBox {
+  width: 100%;
+  height: 3.25rem;
+  margin-top: 1.75rem;
+  padding-left: 8.5rem;
+  box-sizing: border-box; }
 
 .meetroom-list {
   width: 100%;

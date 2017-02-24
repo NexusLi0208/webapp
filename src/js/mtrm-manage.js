@@ -2,7 +2,14 @@ $(function () {
     var mtrmManage = {
         init: function () {
             this.addIntro();
-            this.saveIntro()
+            this.saveIntro();
+            this.editName();
+        },
+        // 填写会议厅名称
+        editName:function(){
+            $(".js-mtrmName").on("click",function(){
+                $("#mtrmName").show();
+            })
         },
         // 填写简介
         addIntro: function () {

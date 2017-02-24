@@ -16,9 +16,9 @@
     <section class="main-cantainer">
         <form action="">
             <div class="mtrm-basic-box">
-                <div class="form-group">
+                <div class="form-group js-mtrmName">
                     <label for="mtrm_name" class="floatl">会议厅名:</label>
-                    <input type="text" class='form-input floatr' name="" id="mtrm_name" placeholder="请输入">
+                    <span class='floatr form-text'>上海企想</span>
                 </div>
                 <div class="form-group fileUpload">
                     <label for="userName" class="floatl">会议图片:</label>
@@ -48,16 +48,18 @@
                 <div class="form-group">
                     <label class="floatl">会议厅链接:</label>
                     <span class="floatr arrowImg"><img src="../../css/img/list_arrow.png" alt=""></span>
-                    <span class='floatr form-text'>www.baidu.com</span>
+                    <a style="cursor: auto" href="admin-mtrm-administrator.html">
+                        <p class='floatr form-text'>admin-mtrm-administrator.html</p>
+                    </a>
                 </div>
-                <a href="admin-mtrm-creatRole.html">
-                    <div class="form-group">
+                <div class="form-group">
+                    <a href="admin-mtrm-creatRole.html">
                         <label class="floatl">会议厅角色创建:</label>
                         <span class="floatr arrowImg"><img src="../../css/img/list_arrow.png" alt=""></span>
-                    </div>
-                </a>
+                    </a>
+                </div>
                 <div class='btn-box'>
-                    <button type="button" class="form-btn cancel-btn">完成</button>
+                    <button type="button" class="form-btn cancel-btn">返回</button>
                 </div>
             </div>
             <div class="mtrm-intro-box" hidden>
@@ -71,6 +73,20 @@
             </div>
         </form>
     </section>
+    <!--会议厅名称-->
+    <div class='modal-main' hidden id="mtrmName">
+        <div class="modal-bg"></div>
+        <div class='modal-contant  modal-lg'>
+            <div class="modal-body">
+                <p class="modal-title">会议厅名</p>
+                <div class=modal-input><input type="text" maxlength="30" placeholder="请输入会议厅名"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="yes">确定</button>
+                <button type="button" class="no">取消</button>
+            </div>
+        </div>
+    </div>
     <script src="../../js/lib/jquery.js"></script>
     <script src="../../js/common.js"></script>
     <script src="../../js/mtrm-manage.js"></script>

@@ -107,7 +107,7 @@ textarea {
 
 .bl-bg2 {
     width: 100%;
-    height: calc(100% - 4.4rem);
+    height: 100%;
     background: #00a0e9;
     box-sizing: border-box;
     padding-top: 12%;
@@ -126,6 +126,7 @@ textarea {
 .main-cantainer {
     width: 100%;
     height: 100%;
+    min-height: 100%;
     background: #eee;
     margin: 0 auto;
     font-size: 1.6rem;
@@ -140,8 +141,9 @@ textarea {
     display: block;
     height: 7rem;
 }
-.titlefixr::before{
-       content: '';
+
+.titlefixr::before {
+    content: '';
     display: block;
     height: 4.4rem;
 }
@@ -231,6 +233,14 @@ textarea {
     margin-left: 2rem;
 }
 
+.pdl1 {
+    padding-left: 1rem;
+}
+
+.pdl2 {
+    padding-left: 2.5rem;
+}
+
 .mgbtm1 {
     margin-bottom: 1rem;
 }
@@ -257,7 +267,7 @@ textarea {
     position: fixed;
     top: 0;
     z-index: 99999;
-    width:100%;
+    width: 100%;
     min-width: 320px;
     max-width: 640px;
     height: 4.4rem;
@@ -334,6 +344,55 @@ textarea {
     color: $blue;
 }
 
+// 按钮
+.btn-line {
+    width: 6rem;
+    height: 3rem;
+    border: none;
+    border-radius: 50px;
+    background: #ffae2e;
+    color: #fff;
+    line-height: 3rem;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.btn-line {
+    display: inline-block;
+    width: 6rem;
+    height: 3rem;
+    border: 1px $blue solid;
+    border-radius: 50px;
+    background: #fff;
+    color: $blue;
+    line-height: 3rem;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.btn-nomarl {
+    display: inline-block;
+    width: 6rem;
+    height: 3rem;
+    border: none;
+    border-radius: 50px;
+    color: #fff;
+    outline: none;
+    line-height: 3rem;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.btn-orgin {
+    @extend .btn-nomarl;
+    background: #ffae2e;
+}
+
+.btn-red {
+    @extend .btn-nomarl;
+    background: #f66;
+}
+
 // 滚动
 .marquee {
     display: inline-block;
@@ -367,6 +426,8 @@ textarea {
     z-index: 1;
 }
 
+
+
 .float-btn img {
     width: 100%;
 }
@@ -384,8 +445,8 @@ textarea {
     text-align: center;
     line-height: 3.5rem;
     height: 3.5rem;
-    background: #fdedd9;
-    color: #f87e17;
+    background: #f87e17;
+    color: #fff;
     margin: .75rem 0;
     border-radius: 5rem;
 }
@@ -394,7 +455,26 @@ textarea {
     width: 3rem;
     height: 3rem;
 }
+// 回到顶部
+.backtop-btn {
+    display: block;
+    position: absolute;
+    right: 2.2rem;
+    bottom: 6rem;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50px;
+    background: #f66;
+    z-index: 1;
+}
 
+.backtop-btn:active {
+    background: #f25050;
+}
+
+.backtop-btn img {
+    width: 100%;
+}
 // 无数据
 .noinfo {
     text-align: center;
