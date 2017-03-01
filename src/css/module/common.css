@@ -124,12 +124,10 @@ textarea {
   background: #fff !important; }
 
 .bl-bg {
-  width: 100%;
-  height: 100%;
   /* Fallback for sad browsers */
-  background-color: #1d6edd;
+  background-color: #1d6edd !important;
   /* WebKit (Safari 5.1+, Chrome 10+) */
-  background-image: -webkit-linear-gradient(top, #00a0e9, #1d6edd);
+  background-image: -webkit-linear-gradient(top, #00a0e9, #1d6edd) !important;
   padding-top: 20%;
   box-sizing: border-box; }
 
@@ -137,15 +135,15 @@ textarea {
   width: 100%;
   height: 100%;
   /* Fallback for sad browsers */
-  background-color: #1d6edd;
+  background-color: #1d6edd !important;
   /* WebKit (Safari 5.1+, Chrome 10+) */
-  background-image: -webkit-radial-gradient(#00a0e9, #1d6edd);
+  background-image: -webkit-radial-gradient(#00a0e9, #1d6edd) !important;
   box-sizing: border-box; }
 
 .bl-bg2 {
   width: 100%;
   height: 100%;
-  background: #00a0e9;
+  background: #00a0e9 !important;
   box-sizing: border-box;
   padding-top: 12%; }
 
@@ -159,8 +157,8 @@ textarea {
 
 .main-cantainer {
   width: 100%;
-  height: 100%;
   min-height: 100%;
+  height: 100%;
   background: #eee;
   margin: 0 auto;
   font-size: 1.6rem;
@@ -323,9 +321,13 @@ textarea {
   -webkit-text-size-adjust: none;
   font-size: 0; }
 
+.index-nav ul {
+  display: flex;
+  width: 100%; }
+
 .index-nav ul li {
   display: inline-block;
-  width: 33%;
+  flex: 1;
   padding-top: 1rem;
   text-align: center;
   height: 100%; }

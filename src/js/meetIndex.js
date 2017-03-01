@@ -3,7 +3,8 @@ $(function () {
         pagination: '.swiper-pagination',
         paginationClickable: true,
         autoplay: 2000,
-        freeMode: false
+        freeMode: false,
+        loop : true,
     });
     // $('.index-nav').css('width',$('body').css('width'));
 })

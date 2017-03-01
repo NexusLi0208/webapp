@@ -71,6 +71,15 @@
 .article-text h2{width:100%;-webkit-box-sizing:border-box;box-sizing:border-box;margin-bottom:1rem;padding-left:1.7rem;color:#00a0e9;border-left:.7rem #f66 solid;line-height:1.5rem;font-weight:400;font-size:1.5rem;text-overflow:ellipsis;overflow:hidden;white-space:nowrap}
 .article-text h3{color:#848689;font-weight:400;font-size:1.2rem;text-indent:2.5rem;margin-bottom:.5rem}
 .article-text p{color:#333;font-size:1.5rem;text-indent:2em;line-height:2.5rem}
+.chartBox{width:100%;padding:1rem;-webkit-box-sizing:border-box;box-sizing:border-box}
+.chartBox .otherMsg .user-msg::before{content:'';width:1rem;height:2rem;background:url(img/chat_arrow_left.png) no-repeat;position:absolute;left:-1rem;z-index:999;top:1rem}
+.chartBox .otherMsg .user-msg{background:#fff;color:#333;border:1px #D3D3D3 solid}
+.chartBox .mineMsg .user-msg::before{content:'';width:1rem;height:2rem;background:url(img/chat_arrow_right.png) no-repeat;position:absolute;right:-1rem;z-index:999;top:1rem}
+.chartBox .mineMsg .user-msg{color:#fff;background:#0ED153}
+.chartBox .msgItem{min-height:4.5rem;margin:2rem 0}
+.chartBox .msgItem .userIcon{width:4.5rem;height:4.5rem;border-radius:.5rem;overflow:hidden}
+.chartBox .msgItem .userIcon img{width:100%;height:100%;object-fit:cover}
+.chartBox .msgItem .user-msg{position:relative;min-width:30%;max-width:calc(100% - 7.5rem);min-height:4.5rem;padding:1.25rem 1.5rem;white-space:pre-wrap;word-break:break-all;font-size:1.5rem;-webkit-box-sizing:border-box;box-sizing:border-box;line-height:2rem;border-radius:.5rem;margin:0 1.5rem}
 .phoneCode{width:300px;height:400px;margin:0 auto;-webkit-box-sizing:border-box;box-sizing:border-box;padding:10px}
 .phoneCode .p1{text-align:center;font-size:20px;line-height:1.6;margin-bottom:15px}
 .phoneCode .p2{text-align:center;font-size:13px;line-height:25px}
@@ -100,12 +109,12 @@ button,input,select,textarea{font-family:arial,"Microsoft YaHei";-webkit-appeara
 .flex1{-webkit-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1}
 .wt-bg{width:100%;min-height:100%;background:#fff}
 .wt{background:#fff!important}
-.bl-bg{width:100%;height:100%;background-color:#1d6edd;background-image:-webkit-linear-gradient(top,#00a0e9,#1d6edd);padding-top:20%;-webkit-box-sizing:border-box;box-sizing:border-box}
-.bl-bg1{width:100%;height:100%;background-color:#1d6edd;background-image:-webkit-radial-gradient(#00a0e9,#1d6edd);-webkit-box-sizing:border-box;box-sizing:border-box}
-.bl-bg2{width:100%;height:100%;background:#00a0e9;-webkit-box-sizing:border-box;box-sizing:border-box;padding-top:12%}
+.bl-bg{background-color:#1d6edd!important;background-image:-webkit-linear-gradient(top,#00a0e9,#1d6edd)!important;padding-top:20%;-webkit-box-sizing:border-box;box-sizing:border-box}
+.bl-bg1{width:100%;height:100%;background-color:#1d6edd!important;background-image:-webkit-radial-gradient(#00a0e9,#1d6edd)!important;-webkit-box-sizing:border-box;box-sizing:border-box}
+.bl-bg2{width:100%;height:100%;background:#00a0e9!important;-webkit-box-sizing:border-box;box-sizing:border-box;padding-top:12%}
 .bl-bg3{width:100%;height:100%;background:#00a0e9}
 .no-mg{margin:0!important}
-.main-cantainer{width:100%;height:100%;min-height:100%;background:#eee;margin:0 auto;font-size:1.6rem;overflow:auto;position:relative;-webkit-user-select:none;-webkit-overflow-scrolling:touch}
+.main-cantainer{width:100%;min-height:100%;height:100%;background:#eee;margin:0 auto;font-size:1.6rem;overflow:auto;position:relative;-webkit-user-select:none;-webkit-overflow-scrolling:touch}
 .navfixr:after{content:'';display:block;height:7rem}
 .titlefixr::before{content:'';display:block;height:4.4rem}
 .form-title{position:relative;width:100%;height:4.4rem;line-height:4.4rem;text-align:center;background:#00a0e9;color:#fff}
@@ -137,7 +146,8 @@ button,input,select,textarea{font-family:arial,"Microsoft YaHei";-webkit-appeara
 .index-type-list li{display:inline-block;margin-right:.75rem;font-size:1.5rem}
 .index-type-list li a{display:inline-block;font-size:1.5rem;color:#fff;text-decoration:none}
 .index-nav{position:fixed;bottom:0;width:100%;min-width:320px;max-width:640px;height:6rem;border-top:1px #eee solid;background:#fff;-webkit-text-size-adjust:none;font-size:0}
-.index-nav ul li{display:inline-block;width:33%;padding-top:1rem;text-align:center;height:100%}
+.index-nav ul{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;width:100%}
+.index-nav ul li{display:inline-block;-webkit-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1;padding-top:1rem;text-align:center;height:100%}
 .index-nav ul li img{width:3rem;height:auto}
 .index-nav ul li p{font-size:1.2rem;color:#00a0e9}
 .btn-line{width:6rem;height:3rem;border:none;border-radius:50px;background:#ffae2e;color:#fff;line-height:3rem;font-size:1.2rem;text-align:center}
@@ -319,7 +329,7 @@ select.form-input{-moz-appearance:none;appearance:none;position:relative;color:#
 .meet-info-list .item img{width:100%;height:auto}
 .meet-info-list .item p{margin-top:1rem;font-size:1.3rem;color:#848689;text-align:center}
 .article-content{padding:.5rem 0;color:#bfbfbf;font-size:1.5rem}
-.mtrm-idx-d1{width:100%;height:9rem;padding:1.25rem 2.3rem;-webkit-box-sizing:border-box;box-sizing:border-box;background-color:#1d6edd;background-image:-webkit-linear-gradient(top,#00a0e9,#1d6edd)}
+.mtrm-idx-d1{width:100%;height:9rem;padding:1.25rem 2.3rem;-webkit-box-sizing:border-box;box-sizing:border-box;background-color:#1d6edd!important;background-image:-webkit-linear-gradient(top,#00a0e9,#1d6edd)!important}
 .mtrm-idx-hd{color:#fff}
 .user-info-box{width:calc(100% - 6.8rem);padding:1.25rem 0 1.25rem .5rem;font-size:1.5rem;-webkit-box-sizing:border-box;box-sizing:border-box}
 .user-info-box .user-name{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-indent:.5rem;color:#fff}
@@ -370,10 +380,10 @@ select.form-input{-moz-appearance:none;appearance:none;position:relative;color:#
 .index-tab .active:after{content:'';position:absolute;bottom:-.5rem;left:0;width:100%;height:.5rem;font-size:1.4rem;background:#00a0e9}
 .meet-list-main{-webkit-box-sizing:border-box;box-sizing:border-box;width:100%;padding:0 1.5rem;background:#fff}
 .meet-list{width:100%;height:auto}
-.meet-list li{width:100%;min-height:6.5rem;border-bottom:1px #eee solid;padding:1rem 0}
+.meet-list li{width:100%;height:6.5rem;border-bottom:1px #eee solid;padding:1rem 0}
 .meet-list li:last-of-type{border:none}
 .meet-list .meet-item{position:relative}
-.meet-list .meet-item .left{float:left;width:8.5rem;min-width:8.5rem;height:100%;overflow:hidden}
+.meet-list .meet-item .left{float:left;width:8.5rem;height:100%;overflow:hidden}
 .meet-list .meet-item .left img{width:100%;height:100%;object-fit:cover}
 .meet-list .meet-item .right{width:calc(100% - 9.25rem);padding-left:.75rem;float:left}
 .meet-list .meet-item .meet-name{height:5.25rem;font-size:1.5rem;color:#333}
@@ -395,13 +405,15 @@ select.form-input{-moz-appearance:none;appearance:none;position:relative;color:#
 .code-body p{margin-top:2.5rem;font-size:1.2rem;line-height:2.4rem;color:#848689;text-align:center}
 .codeBox img{width:100%;height:auto}
 .mtrm-infolist{margin:0;padding:0;border:none}
+.mtrm-infolist li{height:11.5rem}
+.mtrm-infolist li .left{height:6.5rem!important}
 .mtrm-infolist .focus{font-size:1.2rem;color:#848689}
 .mtrm-chlistmain{margin-top:1rem}
 .mtrm-chlist-hd{width:100%;height:5.5rem;border-bottom:1px #eee solid}
 .mtrm-chlist-hd i{display:block;width:3rem;height:3rem;padding:1.25rem 0;margin-right:1.2rem}
 .mtrm-chlist-hd p{display:block;height:3rem;line-height:3rem;font-size:1.2rem;color:#848689;padding:1.25rem 0;margin-right:1.2rem}
 .mtrm-chlist-hd i img{width:100%;height:100%}
-.mine-header{width:100%;height:23rem;-webkit-box-sizing:border-box;box-sizing:border-box;background-color:#28c9d7;background-image:-webkit-linear-gradient(top,#00a0e9,#28c9d7);padding-top:4.4rem}
+.mine-header{width:100%;height:23rem;-webkit-box-sizing:border-box;box-sizing:border-box;background-color:#28c9d7!important;background-image:-webkit-linear-gradient(top,#00a0e9,#28c9d7)!important;padding-top:4.4rem}
 .mine-header .mine-icon{width:10.5rem;height:10.5rem;margin:0 auto;border-radius:.5rem;border:.5rem #fff solid;overflow:hidden}
 .mine-header .mine-icon img{width:100%;height:100%;object-fit:cover}
 .mine-header .mine-nickname{font-size:2rem;color:#fff;width:100%;text-align:center;margin-top:2rem}

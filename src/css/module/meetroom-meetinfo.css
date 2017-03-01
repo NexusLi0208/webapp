@@ -3,6 +3,12 @@
   padding: 0;
   border: none; }
 
+.mtrm-infolist li {
+  height: 11.5rem; }
+
+.mtrm-infolist li .left {
+  height: 6.5rem !important; }
+
 .mtrm-infolist .focus {
   font-size: 1.2rem;
   color: #848689; }

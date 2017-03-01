@@ -26,16 +26,16 @@
 }
 @mixin linear-gradient($direction,$from, $to) {
     /* Fallback for sad browsers */
-    background-color: $to;
+    background-color: $to!important;
     /* WebKit (Safari 5.1+, Chrome 10+) */
-    background-image: -webkit-linear-gradient($direction,$from, $to);
+    background-image: -webkit-linear-gradient($direction,$from, $to)!important;
 }
 @mixin fl($for){
     float:$for;
 }
 @mixin radial-gradient($from, $to) {
     /* Fallback for sad browsers */
-    background-color: $to;
+    background-color: $to!important;
     /* WebKit (Safari 5.1+, Chrome 10+) */
-    background-image: -webkit-radial-gradient($from, $to);
+    background-image: -webkit-radial-gradient($from, $to)!important;
 }

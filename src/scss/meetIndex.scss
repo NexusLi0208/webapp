@@ -80,7 +80,7 @@
 
 .meet-list li {
     width: 100%;
-    min-height: 6.5rem;
+    height: 6.5rem;
     border-bottom: 1px #eee solid;
     padding: 1rem 0;
 }
@@ -96,7 +96,6 @@
 .meet-list .meet-item .left {
     float: left;
     width: 8.5rem;
-    min-width: 8.5rem;
     height: 100%;
     overflow: hidden;
 }

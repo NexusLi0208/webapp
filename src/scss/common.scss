@@ -91,8 +91,6 @@ textarea {
 }
 
 .bl-bg {
-    width: 100%;
-    height: 100%;
     @include linear-gradient(top, #00a0e9, #1d6edd);
     padding-top: 20%;
     box-sizing: border-box;
@@ -108,7 +106,7 @@ textarea {
 .bl-bg2 {
     width: 100%;
     height: 100%;
-    background: #00a0e9;
+    background: #00a0e9!important;
     box-sizing: border-box;
     padding-top: 12%;
 }
@@ -125,8 +123,8 @@ textarea {
 
 .main-cantainer {
     width: 100%;
-    height: 100%;
     min-height: 100%;
+    height: 100%;
     background: #eee;
     margin: 0 auto;
     font-size: 1.6rem;
@@ -326,9 +324,14 @@ textarea {
     font-size: 0;
 }
 
+.index-nav ul {
+    display: flex;
+    width: 100%;
+}
+
 .index-nav ul li {
     display: inline-block;
-    width: 33%;
+    flex: 1;
     padding-top: 1rem;
     text-align: center;
     height: 100%;
@@ -426,8 +429,6 @@ textarea {
     z-index: 1;
 }
 
-
-
 .float-btn img {
     width: 100%;
 }
@@ -455,6 +456,7 @@ textarea {
     width: 3rem;
     height: 3rem;
 }
+
 // 回到顶部
 .backtop-btn {
     display: block;
@@ -475,6 +477,7 @@ textarea {
 .backtop-btn img {
     width: 100%;
 }
+
 // 无数据
 .noinfo {
     text-align: center;

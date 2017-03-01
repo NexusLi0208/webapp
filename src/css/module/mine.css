@@ -3,9 +3,9 @@
   height: 23rem;
   box-sizing: border-box;
   /* Fallback for sad browsers */
-  background-color: #28c9d7;
+  background-color: #28c9d7 !important;
   /* WebKit (Safari 5.1+, Chrome 10+) */
-  background-image: -webkit-linear-gradient(top, #00a0e9, #28c9d7);
+  background-image: -webkit-linear-gradient(top, #00a0e9, #28c9d7) !important;
   padding-top: 4.4rem; }
 
 .mine-header .mine-icon {

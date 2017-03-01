@@ -4,9 +4,9 @@
   padding: 1.25rem 2.3rem;
   box-sizing: border-box;
   /* Fallback for sad browsers */
-  background-color: #1d6edd;
+  background-color: #1d6edd !important;
   /* WebKit (Safari 5.1+, Chrome 10+) */
-  background-image: -webkit-linear-gradient(top, #00a0e9, #1d6edd); }
+  background-image: -webkit-linear-gradient(top, #00a0e9, #1d6edd) !important; }
 
 .mtrm-idx-hd {
   color: #fff; }
