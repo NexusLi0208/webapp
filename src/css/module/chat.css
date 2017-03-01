@@ -5,12 +5,14 @@
   .chartBox .otherMsg .user-msg::before {
     content: '';
     width: 1rem;
-    height: 2rem;
-    background: url("img/chat_arrow_left.png") no-repeat;
+    height: 1rem;
+    background: #fff;
+    transform: rotate(45deg);
     position: absolute;
-    left: -1rem;
-    z-index: 999;
-    top: 1rem; }
+    border: 1px #D3D3D3;
+    border-style: none none solid solid;
+    left: -.6rem;
+    top: 1.7rem; }
   .chartBox .otherMsg .user-msg {
     background: #fff;
     color: #333;
@@ -18,12 +20,14 @@
   .chartBox .mineMsg .user-msg::before {
     content: '';
     width: 1rem;
-    height: 2rem;
-    background: url("img/chat_arrow_right.png") no-repeat;
+    height: 1rem;
+    background: #0ED153;
+    transform: rotate(45deg);
     position: absolute;
-    right: -1rem;
-    z-index: 999;
-    top: 1rem; }
+    border: 1px transparent;
+    border-style: solid solid none none;
+    right: -.6rem;
+    top: 1.7rem; }
   .chartBox .mineMsg .user-msg {
     color: #fff;
     background: #0ED153; }
@@ -42,9 +46,9 @@
     .chartBox .msgItem .user-msg {
       position: relative;
       min-width: 30%;
-      max-width: calc(100% - 7.5rem);
+      max-width: calc(90% - 7.5rem);
       min-height: 4.5rem;
-      padding: 1.25rem 1.5rem;
+      padding: 1.2rem 1.5rem;
       white-space: pre-wrap;
       word-break: break-all;
       font-size: 1.5rem;
@@ -52,3 +56,34 @@
       line-height: 2rem;
       border-radius: .5rem;
       margin: 0 1.5rem; }
+
+.msgInput {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  min-width: 320px;
+  max-width: 640px;
+  height: 5rem;
+  background: #fff;
+  padding: .8rem 1rem;
+  box-sizing: border-box;
+  border-top: 1px #eee solid; }
+  .msgInput textarea {
+    width: calc(100% - 7rem);
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+    border-bottom: 1px #ddd solid;
+    border-radius: 0;
+    resize: none;
+    padding-top: .5rem;
+    box-sizing: border-box; }
+  .msgInput button {
+    width: 6rem;
+    height: 100%;
+    color: #fff;
+    font-size: 1.5rem;
+    border: none;
+    outline: none;
+    border-radius: .5rem; }
