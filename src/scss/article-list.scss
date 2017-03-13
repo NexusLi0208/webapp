@@ -1,6 +1,6 @@
 @import "lib/mixin.scss";
 @import "lib/color.scss";
-// 文章列表
+// 列表
 .article-list-main {
     width: 100%;
     min-height: 100%;
@@ -88,30 +88,30 @@
     box-sizing: border-box;
     border-bottom: 1px #eee solid;
 }
-.video-item .video-box{
-    color:#333;
-  width: 8rem;
-  height:7rem;
-  overflow: hidden;
-  background: #333;
-}
-.video-item .video-box iframe{
-    width:100%;
-}
-.video-item .title-box{
-    color:#333;
-    height: 4rem;
-    padding-left: 8.5rem;
-    font-size: 1.5rem;
-    line-height: 2rem;
-}
-.video-item .func-box{
-    color:#848689;
-    padding-left: 8.5rem;
-    height:3rem;
-    line-height: 3rem;
-    font-size: 1.2rem;
-}
+// .video-item .video-box{
+//     color:#333;
+//   width: 8rem;
+//   height:7rem;
+//   overflow: hidden;
+//   background: #333;
+// }
+// .video-item .video-box iframe{
+//     width:100%;
+// }
+// .video-item .title-box{
+//     color:#333;
+//     height: 4rem;
+//     padding-left: 8.5rem;
+//     font-size: 1.5rem;
+//     line-height: 2rem;
+// }
+// .video-item .func-box{
+//     color:#848689;
+//     padding-left: 8.5rem;
+//     height:3rem;
+//     line-height: 3rem;
+//     font-size: 1.2rem;
+// }
 
 // 文章详情页
 .article-main {

@@ -27,13 +27,14 @@ $(function () {
                 _this.uploadCard(this, "idcard_img1")
             })
         },
+                // 上传反面身份证
         uploadCard2: function () {
             var _this = this;
             $("#idcard-upload2").on("change", function () {
                 _this.uploadCard(this, "idcard_img2")
             })
         },
-        // 上传反面身份证
+
         uploadCard: function (source, imgID) {
             var file = source.files[0];
             if (window.FileReader) {

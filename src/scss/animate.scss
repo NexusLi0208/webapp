@@ -1,75 +1,70 @@
-.rotate{
-
-    transform-origin:center center; //旋转中心要是正中间 才行
-
+.rotate {
+    transform-origin: center center; //旋转中心要是正中间 才行
     transform: rotate(180deg);
-
     -webkit-transform: rotate(180deg);
-
     -moz-transform: rotate(180deg);
-
     -ms-transform: rotate(180deg);
-
     -o-transform: rotate(180deg);
-
     transition: transform 0.2s; //过度时间 可调
-
-    -webkit-transition: -moz-transform 0.2s; 
-
-    -moz-transition: -moz-transform 0.2s; 
-
-    -o-transition: -o-transform 0.2s; 
-
-    -ms-transition: -ms-transform 0.2s; 
-
+    -webkit-transition: -moz-transform 0.2s;
+    -moz-transition: -moz-transform 0.2s;
+    -o-transition: -o-transform 0.2s;
+    -ms-transition: -ms-transform 0.2s;
 }
 
-.rotate1{
-
-    transform-origin:center center;
-
+.rotate1 {
+    transform-origin: center center;
     transform: rotate(0deg); //返回原点
-
     -webkit-transform: rotate(0deg);
-
     -moz-transform: rotate(0deg);
-
     -ms-transform: rotate(0deg);
-
     -o-transform: rotate(0deg);
-
-    transition: transform 0.2s; 
-
-    -webkit-transition: -moz-transform 0.2s; 
-
-    -moz-transition: -moz-transform 0.2s; 
-
-    -o-transition: -o-transform 0.2s; 
-
-    -ms-transition: -ms-transform 0.2s; 
-
+    transition: transform 0.2s;
+    -webkit-transition: -moz-transform 0.2s;
+    -moz-transition: -moz-transform 0.2s;
+    -o-transition: -o-transform 0.2s;
+    -ms-transition: -ms-transform 0.2s;
 }
-.rotate45reg{
-    
-    transform-origin:center center;
 
+.rotate45reg {
+    transform-origin: center center;
     transform: rotate(45deg); //返回原点
-
     -webkit-transform: rotate(45deg);
-
     -moz-transform: rotate(45deg);
-
     -ms-transform: rotate(45deg);
-
     -o-transform: rotate(45deg);
+    transition: transform 0.2s;
+    -webkit-transition: -moz-transform 0.2s;
+    -moz-transition: -moz-transform 0.2s;
+    -o-transition: -o-transform 0.2s;
+    -ms-transition: -ms-transform 0.2s;
+}
 
-    transition: transform 0.2s; 
 
-    -webkit-transition: -moz-transform 0.2s; 
-
-    -moz-transition: -moz-transform 0.2s; 
-
-    -o-transition: -o-transform 0.2s; 
-
-    -ms-transition: -ms-transform 0.2s; 
+.rotate0reg {
+    transform-origin: center center;
+    transform: rotate(0deg); //返回原点
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transition: transform 0.2s;
+    -webkit-transition: -moz-transform 0.2s;
+    -moz-transition: -moz-transform 0.2s;
+    -o-transition: -o-transform 0.2s;
+    -ms-transition: -ms-transform 0.2s;
+}
+// 旋转90度
+.rotate90reg {
+    transform-origin: center center;
+    transform: rotate(90deg); //返回原点
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transition: transform 0.2s;
+    -webkit-transition: -moz-transform 0.2s;
+    -moz-transition: -moz-transform 0.2s;
+    -o-transition: -o-transform 0.2s;
+    -ms-transition: -ms-transform 0.2s;
 }

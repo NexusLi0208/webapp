@@ -1,0 +1,81 @@
+.repository-list-title {
+  width: 100%;
+  height: 5.5rem;
+  line-height: 5.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 0 1.25rem;
+  box-sizing: border-box; }
+  .repository-list-title span {
+    display: inline-block;
+    width: 2.5rem;
+    margin-right: 1rem; }
+    .repository-list-title span img {
+      width: 100%; }
+
+.repository-secondList li {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 0 1.25rem;
+  box-sizing: border-box; }
+  .repository-secondList li a {
+    display: block;
+    width: 100%;
+    height: 5.5rem;
+    line-height: 5.5rem;
+    border-bottom: 1px #eee solid;
+    color: #333; }
+  .repository-secondList li span {
+    display: inline-block;
+    width: 2.5rem;
+    margin-right: 1rem; }
+    .repository-secondList li span img {
+      width: 100%; }
+
+.repository-thirdList li {
+  width: 100%;
+  overflow: hidden;
+  padding: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  box-sizing: border-box; }
+  .repository-thirdList li a {
+    display: block;
+    width: 100%;
+    padding-left: 2rem;
+    height: 5.5rem;
+    line-height: 5.5rem;
+    border-bottom: 1px #eee solid;
+    color: #333; }
+  .repository-thirdList li span {
+    display: inline-block;
+    width: 2.5rem;
+    margin-right: 1rem; }
+    .repository-thirdList li span img {
+      width: 100%; }
+
+.repository-fourthList li {
+  width: 100%;
+  overflow: hidden;
+  padding: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  box-sizing: border-box; }
+  .repository-fourthList li a {
+    display: block;
+    width: 100%;
+    padding-left: 4rem;
+    height: 5.5rem;
+    line-height: 5.5rem;
+    border-bottom: 1px #eee solid;
+    color: #333; }
+  .repository-fourthList li span {
+    display: inline-block;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-right: 1rem; }
+    .repository-fourthList li span img {
+      width: 100%; }

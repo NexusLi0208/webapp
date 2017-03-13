@@ -92,7 +92,20 @@ function showPreview(source) {
 	}
 
 }
-
+// 多级菜单下拉
+$(function () {
+	$("[select = true]").on("click", function () {
+		var _this = $(this);
+		var $nextList = $(this).next("ul");
+		if ($nextList.is(":hidden")) {
+			_this.children("span").removeClass("rotate0reg").addClass("rotate90reg");
+			$nextList.show();
+		} else {
+			$nextList.hide();
+			_this.children("span").removeClass("rotate90reg").addClass("rotate0reg");
+		}
+	})
+})
 // 列表切换
 $("#js_cutList1").on("click", function () {
 	$(this).addClass("cutActive").siblings().removeClass("cutActive");

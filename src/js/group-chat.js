@@ -22,7 +22,7 @@ $(function () {
             console.log("登录成功");
         },
         onTextMessage: function (message) {
-            // 在此接收和处理消息，根据message.type区分消息来源，私聊或群组或聊天室
+            // 在此接收和处理消息，根据message.tnype区分消息来源，私聊或群组或聊天室
             console.log(message);
             groupChat.getGroupMsg(message);
 
@@ -145,14 +145,12 @@ $(function () {
         } // 黑名单变动
     });
 
-
-
-
-
-
-
     // 业务逻辑---------------------------------------
     var groupChat = {
+        // 群组用户信息
+        userinfo:{
+
+        },
         init: function () {
             this.login();
             this.sendMsg();
@@ -172,7 +170,7 @@ $(function () {
             var _this = this;
             $("#sendMsg").on("click", function () {
                 _this.sendGroupText();
-                
+
             })
         },
         // 滚至底部
@@ -183,11 +181,11 @@ $(function () {
         },
         //接收群组消息
         getGroupMsg: function (message) {
-            var _this=this;
+            var _this = this;
             $(".js-chartBox").append("<div class='msgItem otherMsg clearfix'>" +
                 "<div class='userIcon floatl'><img src='../../css/img/usericon.jpg' ></div>" +
                 "<p class='user-msg floatl'>" + message.data + "</div>")
-                _this.scrollbtm();
+            _this.scrollbtm();
         },
         // 发送群消息
         sendGroupText: function () {

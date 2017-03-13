@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>会议议程demo2</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="css/lib/swiper.min.css">
+    <link rel="stylesheet" href="css/meet-agenda-city.css">
+</head>
+
+<body>
+    <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide ">
+                <div class="index">
+                    <hgroup class="title">
+                        <h3>2017</h3>
+                        <h1>HTML5游戏运营专场</h1>
+                    </hgroup>
+                    <p>地点:二号会议厅</p>
+                    <p>时间:14:00-16:00</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="pageTitle">会议流程</div>
+                <ul class="flowList">
+                    <li><span>13:30~13:55</span>主持人开场、介绍</li>
+                    <li><span>13:30~13:55</span>开放平台数据分析及服务落地 </li>
+                    <li><span>13:30~13:55</span>游戏案例分享</li>
+                    <li><span>13:30~13:55</span>主持人开场、介绍</li>
+                    <li><span>13:30~13:55</span>开放平台数据分析及服务落地 </li>
+                    <li><span>13:30~13:55</span>游戏案例分享</li>
+                    <li><span>13:30~13:55</span>主持人开场、介绍</li>
+                    <li><span>13:30~13:55</span>开放平台数据分析及服务落地 </li>
+                    <li><span>13:30~13:55</span>游戏案例分享</li>
+                </ul>
+            </div>
+            <div class="swiper-slide">
+                <div class="pageTitle">会议嘉宾</div>
+                <ul class="guestList">
+                    <li><i class="imgBox"><img src="img/city/11.png" alt=""></i>
+                        <span><i class="guestName">白鹭时代创始人：阿萨</i><br>开放平台数据分析及服务落地进展</span>
+                    </li>
+                     <li><i class="imgBox"><img src="img/city/11.png" alt=""></i>
+                        <span><i class="guestName">白鹭时代创始人：阿萨</i><br>开放平台数据分析及服务落地进展</span>
+                    </li>
+                     <li><i class="imgBox"><img src="img/city/11.png" alt=""></i>
+                        <span><i class="guestName">白鹭时代创始人：阿萨</i><br>开放平台数据分析及服务落地进展</span>
+                    </li>
+                    
+                </ul>
+            </div>
+            <div class="swiper-slide">
+                <div class="pageTitle">会议备注</div>
+                <div class="remark">
+                    <form action="">
+                        <div class="inputBox">
+                          <input type="text" placeholder="姓名">
+                        </div>
+                        <div class="inputBox">
+                          <input type="number" placeholder="手机">
+                        </div>
+                        <div class="inputBox">
+                          <input type="text" placeholder="微信号">
+                        </div>
+                        <div class="inputBox">
+                          <input type="text" placeholder="公司">
+                        </div>
+                        <div class="inputBox">
+                         <button class="submit" type="button">提交</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+    <!-- Swiper JS -->
+    <script src="js/lib/jquery.js"></script>
+    <script src="js/lib/swiper.min.js"></script>
+    <script src="js/lib/swiper.animate1.0.2.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            onInit: function (swiper) { //Swiper2.x的初始化是onFirstInit
+                swiperAnimateCache(swiper); //隐藏动画元素 
+                swiperAnimate(swiper); //初始化完成开始动画
+            },
+            paginationClickable: true,
+            direction: 'vertical',
+            effect: 'fade',
+            fade: {
+                crossFade: false,
+            }
+        });
+    </script>
+</body>
+
+</html>

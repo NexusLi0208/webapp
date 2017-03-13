@@ -71,6 +71,7 @@ $(function () {
                 url: message.url,
                 headers: {
                     'Accept': 'audio/mp4'
+                    
                 },
                 onFileDownloadComplete: function (response) {
                     var objectURL = WebIM.utils.parseDownloadResponse.call(conn, response);

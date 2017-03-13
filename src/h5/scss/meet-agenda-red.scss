@@ -1,0 +1,209 @@
+        @import "lib/rest.scss";
+        html,
+        body {
+            height: 100%;
+            font-size: 62.5%;
+            font-family: Arial, 'Microsoft YaHei';
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        }
+        
+        body {
+            max-width: 640px;
+            min-width: 320px;
+            margin: 0 auto;
+            position: relative;
+            line-height: 1;
+        }
+        
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        
+        .swiper-slide {
+            position: relative;
+            background: url(../img/red/bg.png) no-repeat;
+            background-size: cover;
+            /* Center slide text vertically */
+            // display: flex;
+            // justify-content: center;
+            // align-items: center;
+        }
+        /*颜色*/
+        
+        .ft-wt {
+            color: #fff;
+        }
+        
+        .ft-gr {
+            color: #8fc41e;
+        }
+        
+        .pageTitle {
+            width: 100%;
+            height:5rem;
+            line-height: 3rem;
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #fff;
+            margin: 2rem 0;
+            i{
+                display: inline-block;
+                height:100%;
+                margin-right: 2rem;
+                img{
+                    height:100%;
+                }
+            }
+        }
+        
+        .test {
+            text-align: center;
+            span {
+                margin: .5rem;
+            }
+        }
+        
+        // 首页
+        .index {
+            position: absolute;
+            width: 100%;
+            padding: 0 2rem;
+            box-sizing: border-box;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            .title-img {
+                display: block;
+                width: 60%;
+                margin: 0 auto 2rem;
+                img {
+                    width: 100%;
+                }
+            }
+            hgroup {
+                text-align: center;
+                color: #fff;
+                h1 {
+                    font-size: 3rem;
+                    margin: .5rem 0;
+                }
+            }
+            p {
+                margin: .5rem 0;
+                height: 2rem;
+                text-align: center;
+                font-size: 1.5rem;
+                color: #fff;
+                border-bottom: 2px #ad1f24 solid;
+                span {
+                    margin-right: 1rem;
+                }
+            }
+            .hr1 {
+                background: #ad1f24;
+            }
+        }
+        
+        // 会议流程
+        .flowList {
+            width: 100%;
+            padding: 0 2rem;
+            margin-top: 5rem;
+            box-sizing: border-box;
+            li {
+                position: relative;
+                color: #fff;
+                font-size: 1.5rem;
+                height: 2.5rem;
+                line-height: 2.5rem;
+                margin-top: 1.5rem;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                span {
+                    padding:1rem;
+                    background: #ad1f24;
+                    margin-right: .5rem;
+                }
+            }
+        }
+        
+        // 会议嘉宾
+        .guestList {
+            width: 100%;
+            padding: 0 2rem;
+            margin-top: 5rem;
+            box-sizing: border-box;
+            li {
+                position: relative;
+                width:90%;
+                height: 10rem;
+                background: #fff;
+                margin: 1.5rem 0;
+                .imgBox {
+                    position: absolute;
+                    margin:auto;
+                    top:0;
+                    bottom:0;
+                    right:-2rem;
+                    display: block;
+                    float: left;
+                    width: 8rem;
+                    height: 8rem;
+                    box-sizing: border-box;
+                    img {
+                        width: 100%;
+                    }
+                }
+                span {
+                    display: block;
+                    width: calc(100% - 7rem);
+                    float: left;
+                    height: 100%;
+                    box-sizing: border-box;
+                    padding: 1rem 0 1rem 1rem;
+                    font-size: 1.2rem;
+                    color: #333;
+                    line-height: 1.6rem;
+              
+                    .guestName {
+                        font-style: normal;
+                        font-weight: bold;
+                        font-size: 1.5rem;
+                        color:#ad1f24;
+                    }
+                }
+            }
+        }
+        
+        // 备注
+        .remark {
+            margin-top: 6rem;
+            .inputBox {
+                width: 70%;
+                margin: 2rem auto;
+                height: 5rem;
+                font-size: 1.5rem;
+                input {
+                    width: 100%;
+                    height: 100%;
+                    border: none;
+                    outline: none;
+                    border-radius: 0;
+                    font-size: 1.5rem;
+                    text-indent: 2rem;
+                }
+                .submit {
+                    border-radius: .5rem;
+                    background: #ad1f24;
+                    color: #fff;
+                    width: 100%;
+                    height: 100%;
+                    border: none;
+                    font-size: 1.5rem;
+                    outline: none;
+                }
+            }
+        }

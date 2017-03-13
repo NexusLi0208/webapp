@@ -1,0 +1,314 @@
+@import "lib/mixin.scss";
+@import "lib/color.scss";
+// 知识库列表
+.repository-data-list {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 0 2.2rem;
+}
+
+.repository-item {
+    position: relative;
+    padding: 1rem 0;
+    box-sizing: border-box;
+    border-bottom: 1px #eee solid;
+    .list-icon {
+        display: block;
+        float: left;
+        margin-right: .5rem;
+        width: .5rem;
+        height: 1.7rem;
+        background: $red;
+    }
+    .data-icon {
+        display: block;
+        margin-right: .5rem;
+        float: left;
+        width: 2rem;
+        height: 2rem;
+    }
+    .title-box {
+        margin-left: 2.5rem;
+    }
+    .func-box {
+        height: 3rem;
+        line-height: 3rem;
+        time {
+            color: #848689;
+            font-size: 1.2rem;
+        }
+        .from {
+            display: block;
+            float: left;
+            width: calc(100% - 4rem);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            color: #848689;
+            font-size: 1.2rem;
+        }
+        .func-btn {
+            float: right;
+            width: 3rem;
+            height: 3rem;
+            img {
+                width: 100%;
+            }
+        }
+        .collect-data {
+            background: url(img/collection_selected.png) no-repeat;
+            background-size: cover;
+        }
+          .uncollect-data {
+            background: url(img/collection_unselected.png) no-repeat;
+            background-size: cover;
+        }
+    }
+    .repository-title {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        color: #333;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        margin-bottom: 1rem;
+    }
+    .data-icon img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+// 主类列表------------------------------------------------------------------------------
+.repository-mainList li {
+    width: 100%;
+    border-bottom: 1rem #eee solid;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    box-sizing: border-box;
+    .item {
+        width: 100%;
+        height: 5.5rem;
+        padding: 0 1.25rem;
+        line-height: 5.5rem;
+        border-bottom: 1px #eee solid;
+        box-sizing: border-box;
+        a {
+            display: block;
+            width: 100%;
+            color: #333;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        span {
+            display: inline-block;
+            width: 2.5rem;
+            height: 2.5rem;
+            margin-right: 1rem;
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+// 修改删除
+.operate {
+    height: 4rem;
+    padding-right: 2rem;
+    span {
+        display: inline-block;
+        width: 3rem;
+        height: 3rem;
+        margin: .5rem 0;
+        margin-left: 5rem;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+// 点击主类
+.operate-modal {
+    .operate-content {
+        width: 100%;
+        height: 100%;
+        min-width: 320px;
+        max-width: 640px;
+        padding-top: 10rem;
+        background: rgba(0, 160, 233, .8);
+        position: absolute;
+        z-index: 998;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        box-sizing: border-box;
+        .operate-btn {
+            width: 13rem;
+            height: 13rem;
+            background: #fff;
+            border-radius: 10rem;
+            text-align: center;
+            padding: 2.5rem 0;
+            box-sizing: border-box;
+            margin: 0 auto;
+            margin-bottom: 4.5rem;
+            i {
+                display: block;
+                width: 4.5rem;
+                height: 4.5rem;
+                margin: .5rem auto;
+                img {
+                    width: 100%;
+                }
+            }
+            span {
+                color: #848689;
+                font-size: 1.5rem;
+            }
+        }
+        .close-btn {
+            display: block;
+            width: 4.5rem;
+            height: 4.5rem;
+            margin: 0 auto;
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+// 与会人员
+// 知识库下拉列表
+.repository-list-title {
+    width: 100%;
+    height: 5.5rem;
+    line-height: 5.5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 0 1.25rem;
+    box-sizing: border-box;
+    span {
+        display: inline-block;
+        width: 2.5rem;
+        margin-right: 1rem;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+// 一级列表
+.repository-firstList li {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 0 1.25rem;
+    box-sizing: border-box;
+    a {
+        display: block;
+        width: 100%;
+        height: 5.5rem;
+        line-height: 5.5rem;
+        border-bottom: 1px #eee solid;
+        color: #333;
+    }
+    span {
+        display: inline-block;
+        width: 2.5rem;
+        margin-right: 1rem;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+// 二级列表
+.repository-secondList li {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 0 1.25rem;
+    box-sizing: border-box;
+    a {
+        display: block;
+        width: 100%;
+        height: 5.5rem;
+        line-height: 5.5rem;
+        border-bottom: 1px #eee solid;
+        color: #333;
+    }
+    span {
+        display: inline-block;
+        width: 2.5rem;
+        margin-right: 1rem;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+// 三级列表
+.repository-thirdList {
+    li {
+        width: 100%;
+        overflow: hidden;
+        padding: 0;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        box-sizing: border-box;
+        a {
+            display: block;
+            width: 100%;
+            padding-left: 2rem;
+            height: 5.5rem;
+            line-height: 5.5rem;
+            border-bottom: 1px #eee solid;
+            color: #333;
+        }
+        span {
+            display: inline-block;
+            width: 2.5rem;
+            margin-right: 1rem;
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+// 四级列表
+.repository-fourthList li {
+    width: 100%;
+    overflow: hidden;
+    padding: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    box-sizing: border-box;
+    a {
+        display: block;
+        width: 100%;
+        padding-left: 4rem;
+        height: 5.5rem;
+        line-height: 5.5rem;
+        border-bottom: 1px #eee solid;
+        color: #333;
+    }
+    span {
+        display: inline-block;
+        width: 2.5rem;
+        height: 2.5rem;
+        margin-right: 1rem;
+        img {
+            width: 100%;
+        }
+    }
+}
