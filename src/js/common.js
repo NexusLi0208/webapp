@@ -1,3 +1,7 @@
+
+$(function(){
+	$(".js_backTop").hide();
+})
 //IOS激活伪类
 $('body').on("touchstart", function () {})
 // 浮动按钮交互
@@ -14,13 +18,22 @@ $(".float-btn").on("click", function () {
 		_this.css("background", "#ffa53a");
 	}
 })
+
 // 回到顶部
+$(".main-cantainer").scroll(function () {
+	if ($(".main-cantainer").scrollTop() > 500) {
+		$(".js_backTop").stop().fadeIn(500);
+	} else {
+		$(".js_backTop").stop().fadeOut(500);
+	}
+});
 $(".js_backTop").on("click", function () {
 	$('.main-cantainer').animate({
 		scrollTop: 0
 	}, 1000);
 	return false;
 });
+
 // 模态框
 $(".modal-bg").on("click", function () {
 	$(".modal-main").hide();
@@ -57,10 +70,12 @@ function getFileName(path) {
 	else
 		return path.substring(pos + 1);
 }
+
 // 搜索框
 $("#search-delete").on("click", function () {
 	$(this).siblings("input").val("");
 })
+
 // 文本域字数限定
 $(function () {
 	$("#remarks_box").on("input", function () {
@@ -92,6 +107,7 @@ function showPreview(source) {
 	}
 
 }
+
 // 多级菜单下拉
 $(function () {
 	$("[select = true]").on("click", function () {
@@ -106,6 +122,7 @@ $(function () {
 		}
 	})
 })
+
 // 列表切换
 $("#js_cutList1").on("click", function () {
 	$(this).addClass("cutActive").siblings().removeClass("cutActive");
@@ -115,7 +132,7 @@ $("#js_cutList2").on("click", function () {
 	$(this).addClass("cutActive").siblings().removeClass("cutActive");
 	$(".js_List2").show().siblings("ul").hide();
 })
-// 确认框
+
 
 $.extend({
 	// 确认框

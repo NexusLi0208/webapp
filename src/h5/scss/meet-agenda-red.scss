@@ -30,30 +30,21 @@
             // justify-content: center;
             // align-items: center;
         }
-        /*颜色*/
-        
-        .ft-wt {
-            color: #fff;
-        }
-        
-        .ft-gr {
-            color: #8fc41e;
-        }
         
         .pageTitle {
             width: 100%;
-            height:5rem;
+            height: 5rem;
             line-height: 3rem;
             font-size: 2.5rem;
             font-weight: bold;
             color: #fff;
             margin: 2rem 0;
-            i{
+            i {
                 display: inline-block;
-                height:100%;
+                height: 100%;
                 margin-right: 2rem;
-                img{
-                    height:100%;
+                img {
+                    height: 100%;
                 }
             }
         }
@@ -76,7 +67,7 @@
             transform: translate(-50%, -50%);
             .title-img {
                 display: block;
-                width: 60%;
+                width: 58%;
                 margin: 0 auto 2rem;
                 img {
                     width: 100%;
@@ -96,13 +87,13 @@
                 text-align: center;
                 font-size: 1.5rem;
                 color: #fff;
-                border-bottom: 2px #ad1f24 solid;
+                border-bottom: 2px #bb1f36 solid;
                 span {
                     margin-right: 1rem;
                 }
             }
             .hr1 {
-                background: #ad1f24;
+                background: #bb1f36;
             }
         }
         
@@ -118,13 +109,13 @@
                 font-size: 1.5rem;
                 height: 2.5rem;
                 line-height: 2.5rem;
-                margin-top: 1.5rem;
+                margin-top: 2rem;
                 overflow: hidden;
                 text-overflow: ellipsis;
                 white-space: nowrap;
                 span {
-                    padding:1rem;
-                    background: #ad1f24;
+                    padding: 1rem;
+                    background: #bb1f36;
                     margin-right: .5rem;
                 }
             }
@@ -138,24 +129,40 @@
             box-sizing: border-box;
             li {
                 position: relative;
-                width:90%;
+                width: 90%;
                 height: 10rem;
                 background: #fff;
                 margin: 1.5rem 0;
                 .imgBox {
                     position: absolute;
-                    margin:auto;
-                    top:0;
-                    bottom:0;
-                    right:-2rem;
+                    margin: auto;
+                    top: 0;
+                    bottom: 0;
+                    right: -2rem;
                     display: block;
                     float: left;
                     width: 8rem;
                     height: 8rem;
+                    border: 3px #fff solid;
                     box-sizing: border-box;
                     img {
                         width: 100%;
                     }
+                }
+                .guestNum {
+                    display: block;
+                    position: absolute;
+                    left: 2rem;
+                    bottom: -.5rem;
+                    margin: auto;
+                    width: 4rem;
+                    height: 2.75rem;
+                    background: #bb1f36;
+                    color: #fff;
+                    text-align: center;
+                    font-size: 1.4rem;
+                    line-height: 2.75rem;
+                    font-style: normal;
                 }
                 span {
                     display: block;
@@ -167,12 +174,11 @@
                     font-size: 1.2rem;
                     color: #333;
                     line-height: 1.6rem;
-              
                     .guestName {
                         font-style: normal;
                         font-weight: bold;
                         font-size: 1.5rem;
-                        color:#ad1f24;
+                        color: #bb1f36;
                     }
                 }
             }
@@ -191,19 +197,22 @@
                     height: 100%;
                     border: none;
                     outline: none;
-                    border-radius: 0;
-                    font-size: 1.5rem;
+                    border-radius: .5rem;
+                    font-size: 1.8rem;
                     text-indent: 2rem;
                 }
                 .submit {
                     border-radius: .5rem;
-                    background: #ad1f24;
+                    background: #bb1f36;
                     color: #fff;
                     width: 100%;
                     height: 100%;
                     border: none;
-                    font-size: 1.5rem;
+                    font-size: 2rem;
                     outline: none;
+                    &:active{
+                        background: #b41019;
+                    }
                 }
             }
         }

@@ -37,13 +37,13 @@
         }
         
         .ft-gr {
-            color: #8fc41e;
+            color: #72b330;
         }
         
         .pageTitle {
             position: relative;
             text-align: center;
-            font-size: 2.7rem;
+            font-size: 2.8rem;
             font-weight: bold;
             color: #fff;
             margin: 2rem 0;
@@ -51,23 +51,23 @@
                 content: '';
                 position: absolute;
                 width: 4rem;
-                height: .3rem;
-                background: #8fc41e;
+                height: .2rem;
+                background: #72b330;
                 margin: auto;
                 top: 0;
                 bottom: 0;
-                right: 15%;
+                right: 2.5rem;
             }
             &::before {
                 content: '';
                 position: absolute;
                 width: 4rem;
-                height: .3rem;
-                background: #8fc41e;
+                height: .2rem;
+                background: #72b330;
                 margin: auto;
                 top: 0;
                 bottom: 0;
-                left: 15%;
+                left: 2.5rem;
             }
         }
         
@@ -88,19 +88,17 @@
             left: 50%;
             transform: translate(-50%, -50%);
             hgroup {
-                text-align: left;
-                color: #8fc41e;
-                h3 {
-                    font-size: 2.7rem;
-                }
+                text-align: center;
+                color: #72b330;
                 h1 {
                     font-size: 3rem;
                     margin: .5rem 0;
+                    font-weight: normal;
                 }
             }
             p {
-                margin: .5rem 0;
-                text-align: left;
+                margin: 1rem 0;
+                text-align: center;
                 font-size: 2rem;
                 color: #fff;
             }
@@ -115,27 +113,21 @@
             li {
                 position: relative;
                 color: #fff;
-                font-size: 1.5rem;
+                font-size: 1.2rem;
                 height: 2.5rem;
                 line-height: 2.5rem;
-                padding-left: 2.5rem;
                 margin-top: 1.5rem;
                 overflow: hidden;
                 text-overflow: ellipsis;
                 white-space: nowrap;
-                &:before {
-                    position: absolute;
-                    top: .2rem;
-                    left: 0;
-                    content: '';
-                    background: url(../img/city/list-style.png) no-repeat;
-                    background-size: cover;
+                span {
+                    margin: 0 1rem;
                     display: inline-block;
                     width: 2rem;
                     height: 2rem;
-                }
-                span {
-                    padding-right: 1rem;
+                    img {
+                        width: 100%;
+                    }
                 }
             }
         }
@@ -156,7 +148,7 @@
                     border-radius: 5rem;
                     height: 6rem;
                     padding: .3rem;
-                    border: .3rem solid #8fc41e;
+                    border: .3rem solid #72b330;
                     box-sizing: border-box;
                     img {
                         width: 100%;
@@ -172,13 +164,13 @@
                     padding: 1rem 0 1rem 1rem;
                     font-size: 1.5rem;
                     color: #fff;
-                    line-height: 1.6rem;
+                    line-height: 1.7rem;
                     overflow: hidden;
                     text-overflow: ellipsis;
                     white-space: nowrap;
                     .guestName {
                         font-style: normal;
-                        color: #8fc41e;
+                        color: #72b330;
                     }
                 }
             }
@@ -195,20 +187,20 @@
                 input {
                     width: 100%;
                     height: 100%;
+                    border-radius: 1rem;
                     border: none;
                     outline: none;
-                    border-radius: 0;
-                    font-size: 1.5rem;
+                    font-size: 1.8rem;
                     text-indent: 2rem;
                 }
                 .submit {
-                    border-radius: .5rem;
-                    background: #8fc41e;
+                    border-radius: 1rem;
+                    background: #72b330;
                     color: #fff;
                     width: 100%;
                     height: 100%;
                     border: none;
-                     font-size: 1.5rem;
+                    font-size: 2rem;
                     outline: none;
                 }
             }

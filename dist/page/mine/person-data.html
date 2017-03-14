@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>个人中心</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+    <section class="main-cantainer navfixr">
+        <div class="form-group fileUpload">
+            <label for="userName" class="floatl">头像:</label>
+            <input type="file" id='file_upload' onchange="showPreview(this)" class='form-input floatr' name="" id="">
+            <i class="img-box"><img id="js_uploadImg" src="../../css/img/user-img.jpeg" alt=""></i>
+        </div>
+        <div class="form-group js-meetTime">
+            <label class="floatl">昵称:</label>
+            <input type="text" class='form-input floatr' value="jessmcatne" placeholder="请输入姓名">
+        </div>
+        <div class='btn-box'>
+            <button type="button" class="form-btn cancel-btn">保存</button>
+        </div>
+    </section>
+    <script src="../../js/lib/jquery.js"></script>
+    <script src="../../js/common.js"></script>
+</body>
+
+</html>

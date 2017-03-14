@@ -41,6 +41,10 @@
   color: #848689;
   margin-left: .5rem; }
 
+.form-group .form-link {
+  width: 60%;
+  height: 100%; }
+
 .form-input {
   width: 60%;
   height: 100%;

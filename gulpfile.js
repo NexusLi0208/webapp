@@ -12,6 +12,11 @@ var webserver = require('gulp-webserver');
 var autoprefixer = require('gulp-autoprefixer');
 var del = require('del');
 
+// 主项目流程
+// 默认任务
+gulp.task('default', ['webserver', 'sass', 'watch'])
+
+
 // 注册任务
 gulp.task('webserver', function () {
     gulp.src('./src') // 服务器目录（./代表根目录）
@@ -26,20 +31,7 @@ gulp.task('lint', function () {
         .pipe(jshint())
         .pipe(jshint.reporter('default'));
 });
-//压缩css
-// gulp.task('cssmin', function () {
-//     gulp.src('src/css/module/*.css')
-//         .pipe(concat('style.css'))
-//         .pipe(cssmin({
-//             advanced: false, //类型：Boolean 默认：true [是否开启高级优化（合并选择器等）]
-//             compatibility: 'ie8', //保留ie8及以下兼容写法 类型：String 默认：''or'*' [启用兼容模式； 'ie7'：IE7兼容模式，'ie8'：IE8兼容模式，'*'：IE9+兼容模式]
-//             keepBreaks: true, //类型：Boolean 默认：false [是否保留换行]
-//             keepSpecialComments: '*'
-//                 //保留所有特殊前缀 当你用autoprefixer生成的浏览器前缀，如果不加这个参数，有可能将会删除你的部分前缀
-//         }))
-//         .pipe(gulp.dest('./src/css'))
 
-// });
 
 // 编译h5页面
 gulp.task('h5Sass', function () {
@@ -133,8 +125,7 @@ gulp.task('html', function () {
 })
 
 
-// 默认任务
-gulp.task('default', ['webserver', 'sass', 'watch'])
+
 
 // 监听文件变化
 gulp.task('watch', function () {
@@ -142,6 +133,7 @@ gulp.task('watch', function () {
     gulp.watch('*.html', ['html']);
     // 监听根目录下所有.html文件
 })
+
 // 临时压缩任务
 gulp.task('yasuo', function () {
     gulp.src('./src/js/test/*.js')
@@ -151,6 +143,11 @@ gulp.task('yasuo', function () {
 })
 
 // 监听h5目录
-gulp.task('gulp1',function(){
-    gulp.watch('./src/h5/scss/*scss',['h5Sass']);
+gulp.task('gulp1', function () {
+    gulp.watch('./src/h5/scss/*scss', ['h5Sass']);
+})
+
+//发布
+gulp.task('build',function(){
+    gulp.src('src/page/**/*').pipe(gulp.dest('dist/page'))
 })

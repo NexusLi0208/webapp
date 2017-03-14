@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>会议报名</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+    <section class="main-cantainer">
+        <div class="success-main">
+            <div class="successImg">
+                <img src="../../css/img/success@2x.png" alt="">
+            </div>
+            <p>会议创建成功!</p>
+            <a href="javascript:;" onclick="mark()" class="cancel-btn ">返回会议厅查看</a>
+        </div>
+        </div>
+    </section>
+    <script>
+        function mark(){
+             sessionStorage.setItem('backMark',1);
+            window.location.href="../meetroom/meetroom-index.html";
+        }
+        window.onload=function(){
+              var backMark=sessionStorage.getItem('backMark');
+              if(backMark==0){
+                 return ;
+                 }
+        else{
+            window.location.href="../meetroom/meetroom-index.html";
+             }
+        }
+    </script>
+</body>
+
+</html>

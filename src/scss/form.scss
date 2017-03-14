@@ -50,6 +50,11 @@
     margin-left: .5rem;
 }
 
+.form-group .form-link {
+    width: 60%;
+    height: 100%;
+}
+
 .form-input {
     width: 60%;
     height: 100%;
@@ -63,16 +68,13 @@
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     padding-right: .5rem;
 }
-
 .form-time {
     color: $blue;
     font-size: 1.2rem;
 }
-
 .code-input {
     width: 40%;
 }
-
 .code-btn {
     padding: .5rem 1rem;
     background: #fff;
@@ -81,11 +83,9 @@
     outline: none;
     border: 1px $blue solid;
 }
-
 .code-btn:active {
     background: #c5edff;
 }
-
 .form-btn {
     display: block;
     margin: 0 auto;
@@ -98,7 +98,6 @@
     border-radius: .5rem;
     outline: none;
 }
-
 .input-btn {
     height: 3rem;
     font-size: 1.7rem;
@@ -108,13 +107,11 @@
     outline: none;
     font-size: 1.2rem;
 }
-
 .getCode {
     position: absolute;
     left: 25%;
     top: 30%;
 }
-
 select.form-input {
     appearance: none;
     position: relative;
@@ -122,26 +119,21 @@ select.form-input {
     -webkit-appearance: none;
     direction: rtl;
 }
-
 .arrowImg {
     position: absolute;
     right: 1rem;
 }
-
 .arrowImg img {
     width: 1.1rem;
 }
-
 .deletImg {
     position: absolute;
     width: 3rem;
     right: 1rem;
 }
-
 .deletImg img {
     width: 100%;
 }
-
 .form-hr {
     width: 100%;
     height: 1rem;
@@ -150,7 +142,6 @@ select.form-input {
     margin: 0;
     padding: 0;
 }
-
 .form-text {
     font-size: 1.5rem;
     color: $blue;
@@ -162,13 +153,11 @@ select.form-input {
     text-overflow: ellipsis;
     user-select: text!important;
 }
-
 .meet-group {
     height: auto;
     padding: 1rem 2.2rem;
     line-height: normal;
 }
-
 .btm-btn {
     display: block;
     width: 100%;
@@ -181,16 +170,13 @@ select.form-input {
     user-select: none;
     border: none;
 }
-
 .btm-btn img {
     width: 3rem;
     height: 3rem;
 }
-
 .btm-btn:active {
     background: #dc3239;
 }
-
 // 新版分论坛
 .chmeet-item {
     position: relative;
@@ -201,14 +187,12 @@ select.form-input {
     background: #fff;
     border-bottom: 1px #eee solid;
 }
-
 .chmeet-item .icon {
     width: 4.5rem;
     height: 4.5rem;
     @include rounded(.5rem);
     overflow: hidden;
 }
-
 .chmeet-item .chmeet-info {
     width: 75%;
     overflow: hidden;
@@ -218,23 +202,19 @@ select.form-input {
     color: #333;
     line-height: 2.5rem;
 }
-
 .chmeet-item .chmeet-info .name {
     display: block;
     color: #333;
     font-size: 1.5rem;
 }
-
 .chmeet-item .chmeet-info .time {
     display: block;
     color: #bfbfbf;
     font-size: 1.2rem;
 }
-
 .chmeet-item .title {
     line-height: 4.5rem;
 }
-
 // 原版分论坛
 // .submeet-name {
 //     font-size: 1.5rem;
@@ -270,14 +250,12 @@ select.form-input {
     text-align: center;
     padding: 3rem 0;
 }
-
 // 备注信息
 .form-textarea {
     position: relative;
     width: percentage(640px/750px);
     margin: 2rem auto;
 }
-
 .form-textarea textarea {
     width: 100%;
     box-sizing: border-box;
@@ -292,7 +270,6 @@ select.form-input {
     -webkit-appearance: none;
     appearance: none;
 }
-
 .textarea_counter {
     position: absolute;
     color: #bfbfbf;
@@ -300,15 +277,13 @@ select.form-input {
     bottom: .5rem;
     right: .5rem;
 }
-
 .fileUpload {
     position: relative;
     height: 9rem;
 }
-.fileUpload label{
+.fileUpload label {
     line-height: 9rem;
 }
-
 .fileUpload input[type='file'] {
     position: absolute;
     height: 100%;
@@ -316,7 +291,6 @@ select.form-input {
     z-index: 2;
     opacity: 0;
 }
-
 .fileUpload .img-box {
     position: absolute;
     width: 6.5rem;
@@ -333,7 +307,6 @@ select.form-input {
     // background-position: center center;
     z-index: 1;
 }
-
 .fileUpload .img-box1 {
     position: absolute;
     width: 8.5rem;
@@ -349,17 +322,16 @@ select.form-input {
     // background-position: center center;
     z-index: 1;
 }
-
 .fileUpload i img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.inlineFileUpload{
-    input[type="file"]{
+.inlineFileUpload {
+    input[type="file"] {
         position: absolute;
-        right:0;
-        top:0;
+        right: 0;
+        top: 0;
         opacity: 0;
     }
 }
@@ -400,14 +372,12 @@ select.form-input {
     padding: 5px;
     overflow: visible;
     border-radius: 0!important;
-   box-shadow: none;
+    box-shadow: none;
 }
-
 .progress .progress-bar {
     position: relative;
     animation: animate-positive 2s;
 }
-
 .progress .progress-value {
     display: block;
     padding: 3px 7px;
@@ -420,7 +390,6 @@ select.form-input {
     top: 20px;
     right: -10px;
 }
-
 .progress .progress-value:after {
     content: "";
     border-bottom: 10px solid #191919;
@@ -430,29 +399,24 @@ select.form-input {
     top: -6px;
     left: 26%;
 }
-
 .progress-bar.active {
     animation: reverse progress-bar-stripes 0.40s linear infinite, animate-positive 2s;
 }
-
 @-webkit-keyframes animate-positive {
     0% {
         width: 0;
     }
 }
-
 @keyframes animate-positive {
     0% {
         width: 0;
     }
 }
-
 .ht-t1 {
     height: 5.5rem;
     line-height: 5.5rem;
     padding: 0 2.2rem;
 }
-
 .editormain {
     width: 100%;
     min-height: 30rem;
@@ -462,14 +426,12 @@ select.form-input {
     padding: 0 2.2rem;
     box-sizing: border-box;
 }
-
 .editor-btnBox {
     width: 100%;
     height: 5.5rem;
     line-height: 5.5rem;
     border-bottom: 1px #eee solid;
 }
-
 .editor-btnBox span {
     position: relative;
     display: block;
@@ -477,11 +439,9 @@ select.form-input {
     width: 3rem;
     overflow: hidden;
 }
-
 .editor-btnBox span img {
     width: 100%;
 }
-
 .editor-body {
     width: 100%;
     font-size: 1.5rem!important;
@@ -489,7 +449,6 @@ select.form-input {
     line-height: 2rem;
     min-height: 20rem;
 }
-
 .filebtn {
     height: 5.5rem;
     opacity: 0;
@@ -497,7 +456,6 @@ select.form-input {
     top: 0;
     left: 0;
 }
-
 .form-txtarea {
     width: 100%;
     box-sizing: border-box;
@@ -509,7 +467,6 @@ select.form-input {
     box-shadow: none;
     outline: none;
 }
-
 .form-txtarea1 {
     width: 100%;
     box-sizing: border-box;
@@ -524,11 +481,9 @@ select.form-input {
     outline: none;
     border-radius: 0;
 }
-
 .disable {
     color: #848689;
 }
-
 // 文件上传
 .bottomimg-btn {
     width: 100%;
@@ -539,12 +494,10 @@ select.form-input {
     border: none;
     color: #606060;
 }
-
 .bottomimg-btn img {
     width: 3.5rem;
     height: 3.5rem;
 }
-
 .md-txtbtn {
     text-align: center;
     font-size: 1.5rem;

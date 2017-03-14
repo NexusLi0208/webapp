@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>我的二维码</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+    <section class="main-cantainer bl-bg2">
+        <div class="mtrmcod-main">
+            <div class="code-body">
+                <i class="codeBox" id="codeBox"></i>
+                <p>
+                    长按保存二维码图片
+                </p>
+            </div>
+        </div>
+    </section>
+    <script src="../../js/lib/jquery.js"></script>
+    <script src="../../js/lib/qrcode.min.js"></script>
+    <script>
+        var qrcode = new QRCode("codeBox");
+        qrcode.makeCode("asdasdadadas");
+    </script>
+</body>
+
+</html>

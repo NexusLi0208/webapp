@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>上传资料</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+    <section class="main-cantainer">
+        <form action="">
+            <div class="form-group">
+                <label for="" class="floatl">资料名称:</label>
+                <input type="text" class='form-input floatr' placeholder="请输入">
+            </div>
+            <div class="form-group">
+                <label for="" class="floatl">url地址:</label>
+                <input type="text" class='form-input floatr' placeholder="请填写">
+            </div>
+            <div class='btn-box'>
+                <button type="button" class="form-btn cancel-btn">保存</button>
+            </div>
+        </form>
+    </section>
+    <script src="../../js/lib/jquery.js"></script>
+    <script src="../../js/common.js"></script>
+    <script>
+        $("#file_upload").on("change", function () {
+            var file = this.files[0];
+            if (file) {
+                $(this).siblings(".form-text").text("已选择");
+            } else {
+                $(this).siblings(".form-text").text("请选择");
+            }
+        })
+    </script>
+</body>
+
+</html>
