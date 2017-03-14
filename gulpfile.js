@@ -66,8 +66,6 @@ gulp.task('h5Sass', function () {
 gulp.task('sass', function () {
     gulp.src('src/scss/*.scss')
         .pipe(sass())
-        .pipe(gulp.dest('src/css/module'))
-        // .pipe(concat('style.css'))
         .pipe(autoprefixer({
             browsers: [
                 'ie >= 8',
@@ -87,7 +85,6 @@ gulp.task('sass', function () {
         }))
 
         // 压缩
-        .pipe(concat('style.css'))
         .pipe(cssmin({
             advanced: true, //类型：Boolean 默认：true [是否开启高级优化（合并选择器等）]
             compatibility: 'ie8', //保留ie8及以下兼容写法 类型：String 默认：''or'*' [启用兼容模式； 'ie7'：IE7兼容模式，'ie8'：IE8兼容模式，'*'：IE9+兼容模式]
@@ -129,7 +126,7 @@ gulp.task('html', function () {
 
 // 监听文件变化
 gulp.task('watch', function () {
-    gulp.watch('./src/scss/*.scss', ['sass']);
+    gulp.watch('./src/scss/**/*.scss', ['sass']);
     gulp.watch('*.html', ['html']);
     // 监听根目录下所有.html文件
 })
@@ -149,5 +146,7 @@ gulp.task('gulp1', function () {
 
 //发布
 gulp.task('build',function(){
-    gulp.src('src/page/**/*').pipe(gulp.dest('dist/page'))
+    gulp.src('src/page/**/*').pipe(gulp.dest('dist/page'));
+    gulp.src('src/css/**/*').pipe(gulp.dest('dist/css'));
+     gulp.src('src/js/**/*').pipe(gulp.dest('dist/js'));
 })
