@@ -41,7 +41,7 @@
         .from {
             display: block;
             float: left;
-            width: calc(100% - 4rem);
+            width: calc(100% - 9rem);
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
@@ -56,11 +56,19 @@
                 width: 100%;
             }
         }
+        .download-data {
+            background: url(img/download_btn_normal.png) no-repeat;
+            background-size: cover;
+            &:active {
+                background: url(img/download_btn_pressed.png) no-repeat;
+                background-size: cover;
+            }
+        }
         .collect-data {
             background: url(img/collection_selected.png) no-repeat;
             background-size: cover;
         }
-          .uncollect-data {
+        .uncollect-data {
             background: url(img/collection_unselected.png) no-repeat;
             background-size: cover;
         }
@@ -95,6 +103,7 @@
         line-height: 5.5rem;
         border-bottom: 1px #eee solid;
         box-sizing: border-box;
+        cursor: pointer;
         a {
             display: block;
             width: 100%;
@@ -138,7 +147,6 @@
         height: 100%;
         min-width: 320px;
         max-width: 640px;
-        padding-top: 10rem;
         background: rgba(0, 160, 233, .8);
         position: absolute;
         z-index: 998;
@@ -147,6 +155,12 @@
         top: 0;
         bottom: 0;
         box-sizing: border-box;
+        .operate-body {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+        }
         .operate-btn {
             width: 13rem;
             height: 13rem;

@@ -1,19 +1,44 @@
 @import "lib/mixin.scss";
 @import "lib/color.scss";
-.member-search{
-    background:$blue;
-}
-.member-search .search-input{
-    background: #33b3ed;
-    color:#fff;
-}
-.member-search .search-input::-webkit-input-placeholder{
-    color:#fff;
+.member-search {
+    background: $blue;
 }
 
-.member-search .search-btn{
+.member-search .search-input {
+    background: #33b3ed;
+    color: #fff;
+}
+
+.member-search .search-input::-webkit-input-placeholder {
+    color: #fff;
+}
+
+.member-search .search-btn {
     background: #0183d6;
 }
-.member-search .search-btn:active{
+
+.member-search .search-btn:active {
     background: #0070b7;
+}
+
+.member-role-list {
+    width: 100%;
+    padding: 0 2rem;
+    box-sizing: border-box;
+    li {
+        height: 5.5rem;
+        line-height: 5.5rem;
+        font-size: 1.5rem;
+        color: #333;
+        border-bottom:1px #eee solid;
+        span {
+            display: inline-block;
+            width: 3rem;
+            height: 3rem;
+            margin:0 0 0 2.5rem;
+            img {
+                width: 100%;
+            }
+        }
+    }
 }

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,41 +10,20 @@
     <title>群聊</title>
     <link rel="stylesheet" href="../../css/style.css">
 </head>
-
 <body>
     <section class="main-cantainer  navfixr">
+        <div class="group-user-btn"><a href="javascript:;" class="js-groupUserInfo">查看群成员信息</a>
+        </div>
         <div class="chartBox js-chartBox">
             <div class="msgItem otherMsg clearfix">
                 <div class="userIcon floatl"><img src="../../css/img/usericon.jpg" alt=""></div>
                 <p class="user-msg floatl">3月30日的会议参加么</p>
-            </div>
-            <div class="msgItem otherMsg clearfix">
-                <div class="userIcon floatl"><img src="../../css/img/usericon.jpg" alt=""></div>
-                <p class="user-msg floatl">3月30日的会议参加么</p>
+                <span class="user-info text-l floatl">乔尔 <br><span class="time">16:28</span></span>
             </div>
             <div class="msgItem mineMsg clearfix">
                 <div class="userIcon floatr"><img src="../../css/img/usericon.jpg" alt=""></div>
-                <p class="user-msg floatr">3月30日的会议参加么3月30日的会议参加么3月30日的会议参加么3月30日的会议参加么3月30日的会议参加么3月30日的会议参加么</p>
-            </div>
-            <div class="msgItem otherMsg clearfix">
-                <div class="userIcon floatl"><img src="../../css/img/usericon.jpg" alt=""></div>
-                <p class="user-msg floatl">3月30日的会议参加么</p>
-            </div>
-            <div class="msgItem otherMsg clearfix">
-                <div class="userIcon floatl"><img src="../../css/img/usericon.jpg" alt=""></div>
-                <p class="user-msg floatl">3月30日的会议参加么</p>
-            </div>
-            <div class="msgItem otherMsg clearfix">
-                <div class="userIcon floatl"><img src="../../css/img/usericon.jpg" alt=""></div>
-                <p class="user-msg floatl">3月30日的会议参加么</p>
-            </div>
-            <div class="msgItem mineMsg clearfix">
-                <div class="userIcon floatr"><img src="../../css/img/usericon.jpg" alt=""></div>
-                <p class="user-msg floatr">3月30日的会议参加么3月30日的会议参加么3月30日的会议参加么3月30日的会议参加么3月30日的会议参加么3月30日的会议参加么</p>
-            </div>
-            <div class="msgItem otherMsg clearfix">
-                <div class="userIcon floatl"><img src="../../css/img/usericon.jpg" alt=""></div>
-                <p class="user-msg floatl">3月30日的会议参加么</p>
+                <p class="user-msg floatr">3月30日的会议参加么</p>
+                <span class="user-info text-r floatr">艾莉<br><span class="time">16:28</span> </span>
             </div>
         </div>
     </section>
@@ -53,12 +31,30 @@
         <textarea id="msgbox" class="floatl" placeholder="请输入消息"></textarea>
         <button id="sendMsg" type="button" class="success-btn floatr">发送</button>
     </div>
+    <!--<div class="group-user-box">
+        <div class="grou-user-bg"></div>
+  
+    </div>-->
+    <div class='modal-main' id="groupUser" hidden>
+        <div class="modal-bg"></div>
+
+        <div class="modal-contant modal-lg">
+            <div class="modal-header">成员信息</div>
+            <div class="modal-body group-user-box">
+                <ul class="group-user-list">
+                    <li><i class="userIcon"><img src="../../css/img/usericon.jpg" alt=""></i><span>王二狗</span><button class="success-btn">添加</button></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
     <script src="../../js/lib/jquery.js"></script>
     <script src="../../js/common.js"></script>
     <!--环信配置文件-->
     <script src="../../js/lib/webim.config.js"></script>
     <script src="../../js/lib/strophe-1.2.8.min.js"></script>
     <script src="../../js/lib/websdk-1.4.10.js"></script>
+    <!--<script src='http://downloads.easemob.com/downloads/cdn/websdk-1.4.5.js'></script>-->
     <script src="../../js/group-chat.js"></script>
 </body>
 

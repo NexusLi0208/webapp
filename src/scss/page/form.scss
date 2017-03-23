@@ -2,8 +2,6 @@
 @import "lib/color.scss";
 .form-main {
     width: 100%;
-    min-height: 100%;
-    background: #eee;
     user-select: none;
 }
 
@@ -54,7 +52,9 @@
     width: 60%;
     height: 100%;
 }
-
+.form-group a{
+    color:#848689;
+}
 .form-input {
     width: 60%;
     height: 100%;

@@ -39,3 +39,8 @@
     /* WebKit (Safari 5.1+, Chrome 10+) */
     background-image: -webkit-radial-gradient($from, $to)!important;
 }
+@mixin wdLine{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

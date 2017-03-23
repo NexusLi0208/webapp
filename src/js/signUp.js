@@ -77,14 +77,17 @@ var signup = new Vue({
 			tiket: false,
 			meetlist: false,
 			remark: false,
-			hotel: false
+			hotel: false,
+			unit: false
 		},
 		chmeetBtn: true,
 		itemText: {
 			tiketTxt: '请填写',
 			meetTxt: '请选择',
 			remarkTxt: '请填写',
-			hotelTxt: '请选择'
+			hotelTxt: '请选择',
+			unitTxt: '请选择'
+
 		},
 		userInfo: JSON.parse(sessionStorage.getItem('user')),
 		meetroomInfo: JSON.parse(sessionStorage.getItem('existMeeHall')),
@@ -160,6 +163,7 @@ var signup = new Vue({
 			this.formBox.meetlist = false;
 			this.formBox.remark = false;
 			this.formBox.hotel = false;
+			this.formBox.unit = false;
 		},
 		//  保存发票信息
 		saveTiket: function () {
@@ -185,6 +189,19 @@ var signup = new Vue({
 		},
 		saveHotel: function () {
 			this.itemText.tiketTxt = "已填写"
+			this.go_basic();
+		},
+		// 选择单位
+		selectUnit: function () {
+			this.formBox.unit = true;
+			this.formBox.basic = false;
+		},
+		// 保存单位
+		saveUnit: function (e) {
+			var obj = e.currentTarget;
+			$("#unitId").val($(obj).attr("id"));
+			alert($(obj).find("a").text())
+			this.itemText.unitTxt = $(obj).find("a").text();
 			this.go_basic();
 		},
 		//  选择子会议

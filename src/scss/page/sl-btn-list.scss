@@ -1,13 +1,17 @@
 @import "lib/mixin.scss";
 @import "lib/color.scss";
 .sl-btn-list {
-    margin-top:5rem;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
 }
 
 .sl-btn-list a {
     display: block;
     margin: 0 auto;
-    width: 25rem;
+    width: 80%;
     height: 7rem;
     border-radius: 5rem;
     line-height: 7rem;
@@ -20,11 +24,12 @@
     color: $blue;
 }
 
-.sl-btn-list a.ts-btn{
-    background:rgba(255,255,255,.2);
-    color:#fff;
+.sl-btn-list a.ts-btn {
+    background: rgba(255, 255, 255, .2);
+    color: #fff;
 }
- .sl-btn-list a span {
+
+.sl-btn-list a span {
     display: inline-block;
     width: 4rem;
     height: 4rem;

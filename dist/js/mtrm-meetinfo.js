@@ -1,18 +1,17 @@
-
-var aaa=new Vue({
+var aaa = new Vue({
 	el: '#vue_main',
 	data: {
-		mtrmChlist:'true',
-		chmeeList:{},
-        meetInfo:'',
-		selectmeeinfo:''
-        //hallInfo:''
+		mtrmChlist: 'true',
+		chmeeList: {},
+		meetInfo: '',
+		selectmeeinfo: ''
+		//hallInfo:''
 	},
 	ready: function () {
-            var _this=this;
-			this.meetInfo=JSON.parse(sessionStorage.getItem('meetInfo'));
-            this.selectmeeinfo=JSON.parse(sessionStorage.getItem('selectmeeinfo'));
-                
+			var _this = this;
+			this.meetInfo = JSON.parse(sessionStorage.getItem('meetInfo'));
+			this.selectmeeinfo = JSON.parse(sessionStorage.getItem('selectmeeinfo'));
+
 			$.ajax({
 				url: meetingpath + '/meetingInfo/selectSubMeeByParentId',
 				data: JSON.stringify({
@@ -22,10 +21,10 @@ var aaa=new Vue({
 				contentType: 'application/json',
 				success: function (data) {
 					if (data.code == 6360) {
-					  console.log(data.list)
-                       _this.chmeeList=data.list;
+						console.log(data.list)
+						_this.chmeeList = data.list;
 					} else {
-					    console.log('查询失败');
+						console.log('查询失败');
 					}
 				},
 				error: function () {
@@ -51,8 +50,8 @@ var aaa=new Vue({
 	//方法
 	,
 	methods: {
-		meetSignup:function(){
-			window.location.href="../meet/meet-func-list.html"
+		meetSignup: function () {
+			window.location.href = "../meet/meet-func-list.html"
 		}
 	}
 });

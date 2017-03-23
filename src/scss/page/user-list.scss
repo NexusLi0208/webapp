@@ -5,7 +5,7 @@
     position: relative;
     width: 100%;
     height: 7rem;
-    padding:1.75rem 0;
+    padding: 1.75rem 0;
     box-sizing: border-box;
 }
 
@@ -13,7 +13,7 @@
     width: 89%;
     text-align: center;
     height: 3.5rem;
-    margin:0 auto;
+    margin: 0 auto;
 }
 
 .searchBox {
@@ -73,45 +73,68 @@
     background: #fff;
     min-height: 10rem;
     padding: 0 2.2rem 2rem;
-    user-select:none;
+    user-select: none;
 }
-.user-list .userinfo-box{
-    width:80%;
+
+.user-list .userinfo-box {
+    width: 70%;
 }
+
 .user-list .user-item {
     position: relative;
+    width: 100%;
     height: 7rem;
     border-bottom: 1px #eee solid;
+    display: inline-block;
+    span {
+        line-height: 4rem;
+        &.state {
+            height: 4rem;
+            padding-right: 1.5rem;
+            font-size: 1.2rem;
+            color: #848689;
+        }
+        img {
+            width: 1rem;
+        }
+    }
 }
-.user-item .arrowImg{
-    right:0;
+
+.user-item .arrowImg {
+    right: 0;
 }
-.user-item{
-      padding:1.5rem 0;
-      box-sizing: border-box;
+
+.user-item {
+    padding: 1.5rem 0;
+    box-sizing: border-box;
 }
-.user-item .user-name{
+
+.user-item .user-name {
     font-size: 1.5rem;
-    color:#333;
-    padding-left:.3rem;
+    color: #333;
+    padding-left: .3rem;
     margin-bottom: 1.1rem;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
-.user-item .user-info{
+
+.user-item .user-info {
     font-size: 1.2rem;
-    color:#848689;
+    color: #848689;
 }
-.user-item .user-info i{
+
+.user-item .user-info i {
     display: inline-block;
-    width:2rem;
-    margin:0 .5rem;
-    height:2rem;
+    width: 2rem;
+    margin: 0 .5rem;
+    height: 2rem;
 }
-.user-item .user-info i img{
-    width:100%;
+
+.user-item .user-info i img {
+    width: 100%;
 }
-.user-item .arrowImg{
-    top:3rem;
+
+.user-item .arrowImg {
+    top: 3rem;
 }

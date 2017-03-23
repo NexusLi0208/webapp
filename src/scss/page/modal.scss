@@ -37,10 +37,10 @@
     max-width: 26rem;
     width: 65%;
     background: #fff;
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 20%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
     z-index: 999;
     margin: auto;
     @include rounded(10px);
@@ -224,14 +224,17 @@
     padding: 1rem;
     box-sizing: border-box;
 }
+
 .htat {
     max-height: 100%;
 }
+
 .modal-code img,
 .modal-code canvas,
 {
     width: 100%;
 }
+
 .invite-modal {
     .invite-modal-header {
         height: 5.5rem;

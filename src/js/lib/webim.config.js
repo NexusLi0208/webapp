@@ -18,7 +18,9 @@ WebIM.config = {
     /*
      * Application AppKey
      */
-    appkey: '1148170220178457#lipeng',
+    // appkey: '1148170220178457#lipeng',
+    appkey: 'sephiroth#meeting',
+    // 
     /*
      * Whether to use wss
      * @parameter {Boolean} true or false

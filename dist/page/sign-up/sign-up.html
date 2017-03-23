@@ -23,6 +23,7 @@
                 <input type="hidden" name='meetingId' v-model="selcetmeeInfo.meeId">
                 <!--用户ID-->
                 <input type="hidden" name='userId' v-model='userInfo.userId'>
+                <!--信息主面板-->
                 <div class='basic-info' v-show="formBox.basic">
                     <div class="form-title">
                         </span>会议报名</div>
@@ -47,7 +48,7 @@
                         <label for="userName" class="floatl">邮箱:</label>
                         <input type="email" class='form-input floatr' name="email" id="email" placeholder="请输入邮箱">
                     </div>
-                    <div class="form-group">
+                    <!--<div class="form-group">
                         <label for="unit" class="floatl">单位:</label>
                         <span class="floatr arrowImg"><img src="../../css/img/list_arrow.png" alt=""></span>
                         <select class='form-input floatr' id="unit">
@@ -55,6 +56,12 @@
                      <option value="1">单位一</option>
                      <option value="2">单位二</option>
                  </select>
+                    </div>-->
+                    <div class="form-group js-tiket" @click="selectUnit">
+                        <label class="floatl">单位:</label>
+                        <span class="floatr arrowImg"><img src="../../css/img/list_arrow.png" alt=""></span>
+                        <span class='floatr form-text'>{{itemText.unitTxt}}</span>
+                        <input type="hidden" name="unitId" value="">
                     </div>
                     <div class="form-group">
                         <label for="dentity" class="floatl">身份:</label>
@@ -111,6 +118,23 @@
                     <hr class="form-hr">
                     <button type='button' @click="formSubmit" class='btm-btn pst-btm'>提交报名</button>
                 </div>
+                <!--单位信息-->
+                <div class="js-dentity-info" v-show="formBox.unit">
+                    <div class="search-bar member-search clearfix">
+                        <div class="search-body">
+                            <div class="searchBox">
+                                <i class="search"><img src="../../css/img/search_icon_wt.png"  alt=""></i>
+                                <input class="search-input" type="text" name="" value="" placeholder="单位名称">
+                                <i class="delete" id="search-delete"><img src="../../css/img/connection_search_delete_wt.png" alt=""></i>
+                            </div>
+                            <button class="search-btn" type="">搜索</button>
+                        </div>
+                    </div>
+                    <div class="form-group" id="aa1"  @click="saveUnit($event)">
+                        <a href="javascript:;" >上海企想信息技术有限公司</a>
+                    </div>
+                </div>
+                <!--发票信息-->
                 <div class="js-tiket-info" v-show="formBox.tiket">
                     <div class="form-title"><span @click="saveTiket" class="backBasic-btn"><img src="../../css/img/title_arrow_back.png" alt=""></span>发票信息</div>
                     <div class="form-group">
@@ -137,6 +161,7 @@
                         <button type="button" class="form-btn cancel-btn" @click='saveTiket'>保存</button>
                     </div>
                 </div>
+                <!--酒店信息-->
                 <div class="js-hotel-info" v-show="formBox.hotel">
                     <div class="form-title"><span @click="saveTiket" class="backBasic-btn"><img src="../../css/img/title_arrow_back.png" alt=""></span>发票信息</div>
                     <div class="form-group">
@@ -161,6 +186,7 @@
                         <button type="button" class="form-btn cancel-btn" @click='saveHotel'>保存</button>
                     </div>
                 </div>
+                <!--分会议选择-->
                 <div class="js-meetlist-info" v-show="formBox.meetlist">
                     <!--<div class="form-group meet-group ">
                         <p class="submeet-name">分论坛一</p>
@@ -174,10 +200,10 @@
                             </div>
                         </div>
                     </div><-->
-                    <div class="form-title"><span  @click="saveMeet" class="backBasic-btn"><img src="../../css/img/title_arrow_back.png" alt=""></span>分会议
+                    <div class="form-title"><span @click="saveMeet" class="backBasic-btn"><img src="../../css/img/title_arrow_back.png" alt=""></span>分会议
                         <span class='floatr add-icon js-addChmeet'></span>
                     </div>
-                   <div class="md-txtbtn"><span>请选择分会议:</span><button class="btn success-btn mgl2 js-addChmeet" type="button">添加</button></div>
+                    <div class="md-txtbtn"><span>请选择分会议:</span><button class="btn success-btn mgl2 js-addChmeet" type="button">添加</button></div>
                     <ul class="selectChmeet">
                         <p class="noinfo" hidden><i><img src="../../css/img/no-meetRoom.png" alt=""></i>您还没有选择分会议</p>
                     </ul>
@@ -185,24 +211,7 @@
                         <button type="button" class="form-btn cancel-btn" @click='saveMeet'>保存</button>
                     </div>
                 </div>
-                <!--<div class="js-meetlist-info" v-show="formBox.meetlist">
-                    <div class="form-group meet-group " v-for="item in meetInfo.list">
-                        <p class="submeet-name">{{item.meeName}}</p>
-                        <div class="submeet-info">
-                            <div class="time-item floatl">
-                                <span><img src="../../css/img/clock.png" alt=""></span>
-                                <time>{{item.meeTime}}</time>
-                            </div>
-                            <div class='checkbox-item floatr'>
-                                参加<input type="checkbox" name="submeetingId" v-bind:value="item.meeId">
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class='btn-box'>
-                        <button type="button" class="form-btn cancel-btn" @click='saveMeet'>保存</button>
-                    </div>
-                </div>-->
+                <!--备注信息-->
                 <div class="js-remark-info" v-show="formBox.remark">
                     <div class="form-title"><span @click="saveRemark" class="backBasic-btn"><img src="../../css/img/title_arrow_back.png" alt=""></span>备注</div>
                     <div class="form-textarea">
@@ -217,14 +226,14 @@
         </div>
         </div>
     </section>
-    
+    <!--分论坛选择-->
     <div class="modal-main" id="chmeet-modal" hidden>
         <div class="modal-bg"></div>
         <div class="modal-contant modal-lg">
             <div class="modal-header">
                 分论坛信息
             </div>
-             
+
             <div class="modal-body">
                 <div class="item" data-chmeetId="1">
                     <p class="title">马克思里列宁主义好</p>

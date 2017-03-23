@@ -22,9 +22,9 @@ $(function () {
             console.log("登录成功");
         },
         onTextMessage: function (message) {
-            // 在此接收和处理消息，根据message.type区分消息来源，私聊或群组或聊天室
-            console.log(message);
+            // 在此接收和处理消息，根据message.tnype区分消息来源，私聊或群组或聊天室
             groupChat.getGroupMsg(message);
+
         }, //收到文本消息
         onEmojiMessage: function (message) {
             // 当为WebIM添加了Emoji属性后，若发送的消息含WebIM.Emoji里特定的字符串，connection就会自动将
@@ -71,7 +71,6 @@ $(function () {
                 url: message.url,
                 headers: {
                     'Accept': 'audio/mp4'
-                    
                 },
                 onFileDownloadComplete: function (response) {
                     var objectURL = WebIM.utils.parseDownloadResponse.call(conn, response);
@@ -145,24 +144,41 @@ $(function () {
         } // 黑名单变动
     });
 
-
-
-
-
-
-
     // 业务逻辑---------------------------------------
     var groupChat = {
+        // 登录用户信息
+        userName: "587ecd5b86427077a8901913",
+        userPsd: "e10adc3949ba59abbe56e057f20f883e",
+        // 群组所有用户信息
+        userinfo: "",
+        // 群组ID
+        groupId: "10561139048463",
+        // 入口函数
         init: function () {
             this.login();
             this.sendMsg();
+        },
+        getUserInfo: function () {
+            var _this = this;
+            $.ajax({
+                url: "../../js/test/test2.json",
+                type: "GET",
+                contentType: 'application/json',
+                success: function (data) {
+                    _this.userinfo = data;
+                },
+                error: function () {
+                    // 查询失败
+
+                }
+            })
         },
         // 自动登录
         login: function () {
             var option = {
                 apiUrl: WebIM.config.apiURL,
-                user: 'lipeng111',
-                pwd: 'li940208',
+                user: this.userName,
+                pwd: this.userPsd,
                 appKey: WebIM.config.appkey
             };
             conn.open(option);
@@ -170,40 +186,76 @@ $(function () {
         // 发送群消息
         sendMsg: function () {
             var _this = this;
+            $("#msgbox").on("keypress", function () {
+                if (event.keyCode == 13) {
+                    $("#sendMsg").click();
+                }
+            });
             $("#sendMsg").on("click", function () {
-                _this.sendGroupText();
+                var msgTxt = $("#msgbox").val();
+                _this.sendGroupText(msgTxt, _this.groupId);
             })
         },
         // 滚至底部
         scrollbtm: function () {
+            var boxHeight = $(".chartBox").height();
             $('.main-cantainer').animate({
-                scrollTop: 10000
-            }, 500);
+                scrollTop: boxHeight
+            }, 0);
+        },
+        // 获取当前时间
+        getNowTime: function () {
+            var nowDate = new Date();
+            var time = nowDate.getHours() + ":" + nowDate.getMinutes();
+            return time;
+        },
+        // 创建发送消息
+        creatMineMsg: function (name, msg, time) {
+            var msgItem = "<div class='msgItem mineMsg clearfix'>" +
+                "<div class='userIcon floatr'><img src='../../css/img/usericon.jpg' alt=''></div>" +
+                "<p class='user-msg floatr'>" + msg + "</p>" +
+                "<span class='user-info text-l floatr'>" + name + " <br><span class='time'>" + time + "</span></span>" +
+                "</div>";
+            return msgItem;
+        },
+        // 创建接受消息
+        creatOtherMsg: function (name, msg, time) {
+            var msgItem = "<div class='msgItem otherMsg clearfix'>" +
+                "<div class='userIcon floatl'><img src='../../css/img/usericon.jpg' alt=''></div>" +
+                "<p class='user-msg floatl'>" + msg + "</p>" +
+                "<span class='user-info text-l floatl'>" + name + " <br><span class='time'>" + time + "</span></span>" +
+                "</div>";
+            return msgItem;
         },
         //接收群组消息
         getGroupMsg: function (message) {
-            var _this = this;
-            $(".js-chartBox").append("<div class='msgItem otherMsg clearfix'>" +
-                "<div class='userIcon floatl'><img src='../../css/img/usericon.jpg' ></div>" +
-                "<p class='user-msg floatl'>" + message.data + "</div>")
-            _this.scrollbtm();
+            var msgTime;
+            if (message.delay) {
+                var historyTime = new Date(message.delay);
+                msgTime = historyTime.getHours() + ":" + historyTime.getMinutes();
+            } else {
+                msgTime = this.getNowTime();
+            }
+            var msgItem = this.creatOtherMsg("艾莉", message.data, msgTime);
+            console.log(message);
+            $(".js-chartBox").append(msgItem);
+            this.scrollbtm();
         },
         // 发送群消息
-        sendGroupText: function () {
+        sendGroupText: function (msgTxt, groupId) {
             var _this = this;
-            var msgTxt = $("#msgbox").val();
+            var msgTime = this.getNowTime();
             var id = conn.getUniqueId(); // 生成本地消息id
             var msg = new WebIM.message('txt', id); // 创建文本消息
             var option = {
                 msg: msgTxt, // 消息内容
-                to: '9207342497796', // 接收消息对象(群组id)
+                to: groupId, // 接收消息对象(群组id)
                 roomType: false,
                 chatType: 'chatRoom',
                 success: function () {
                     $("#msgbox").val("");
-                    $(".js-chartBox").append("<div data-userId='" + id + "'  class='msgItem mineMsg clearfix'>" +
-                        "<div class='userIcon floatr'><img src='../../css/img/usericon.jpg' ></div>" +
-                        "<p class='user-msg floatr'>" + msgTxt + "</div>");
+                    var msgItem = _this.creatMineMsg("乔尔", msgTxt, msgTime);
+                    $(".js-chartBox").append(msgItem);
                     _this.scrollbtm();
                 },
                 fail: function () {
@@ -216,4 +268,5 @@ $(function () {
         }
     }
     groupChat.init();
+    groupChat.getUserInfo();
 })
