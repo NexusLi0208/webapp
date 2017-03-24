@@ -75,7 +75,15 @@
     object-fit: cover;
 }
 
+.mtrm-list .mtrm-info {
+    display: inline-block;
+    width: calc(100% - 11rem);
+}
+
 .mtrm-list .mtrm-name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     font-size: 1.5rem;
     color: #333;
     margin-top: 1rem;
