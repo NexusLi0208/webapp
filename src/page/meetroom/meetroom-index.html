@@ -39,13 +39,23 @@
         <a class="creatMeet-btn success-btn" href="../meet/creatMeet.html">创建会议</a>
         <section class="meet-list-main">
             <ul class="meet-list">
-                <li class="meet-item" v-cloak v-for="item in meeList" v-bind:data-meeId="item.meeId" @click="selectMeet($event)">
+                <!--<li class="meet-item" v-cloak v-for="item in meeList" v-bind:data-meeId="item.meeId" @click="selectMeet($event)">
                     <a href="javascript:;">
                         <div class="left"><img src="../../css/img/pic1@2x.png" alt="meetimg"></div>
                         <div class="right">
                             <p class="meet-name">{{item.meeName}}</p>
                             <time>{{item.meeStartTime|getTime}}</time>
                             <button class="focus-btn">关注</button>
+                        </div>
+                    </a>
+                </li>-->
+                <li class="meet-item">
+                    <a href="meetroom-meetinfo.html">
+                        <div class="left"><img src="../../css/img/pic1@2x.png" alt="meetimg"></div>
+                        <div class="right">
+                            <p class="meet-name">全国高职校长联席会议</p>
+                            <span class="time floatl">2017-04-26</span>
+                            <span class="fucus-num floatr">156人</span>
                         </div>
                     </a>
                 </li>

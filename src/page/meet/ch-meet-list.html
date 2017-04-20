@@ -25,7 +25,7 @@
                         <div class="left"><img src="../../css/img/pic1@2x.png" alt="meetimg"></div>
                         <div class="right">
                             <p class="meet-name">{{item.meeName}}</p>
-                            <time>{{item.meeStartTime|getTime}}</time>
+                            <span class="time floatl">{{item.meeStartTime|getTime}}</span>
                         </div>
                     </a>
                     <div class="deleteItem" @click="removeItem($index,$event)">

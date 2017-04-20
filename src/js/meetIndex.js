@@ -57,7 +57,7 @@ $(".main-cantainer").infinite().on("infinite", function () {
     loading = true;
     setTimeout(function () {
         for (var i = 0; i < 10; i++) {
-            $(".meet-list").append("<li class='meet-item'><div class='left'><img src='../../css/img/pic1@2x.png' alt='meetimg'></div><div class='right'><p class='meet-name'>淄博职业学院：三项机制成就大学生圆梦</p><time>2016-06-04</time><button class='focus-btn'>关注</button></div></li>");
+            $(".meet-list").append("<li class='meet-item'><div class='left'><img src='../../css/img/pic1@2x.png' alt='meetimg'></div><div class='right'><p class='meet-name'>淄博职业学院：三项机制成就大学生圆梦</p><span class='time floatl'>2016-06-04</span><span class='fucus-num floatr'>154人关注</span></div></li>");
         }
 
         loading = false;

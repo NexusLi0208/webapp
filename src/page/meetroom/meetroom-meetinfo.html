@@ -14,72 +14,37 @@
 
 <body>
     <section class="main-cantainer" id="vue_main">
-        <header class="header">
+        <!--<header class="header">
             <div class="form-title"><a href="javascript:history.go(-1)"><span class="backBasic-btn"><img src="../../css/img/title_arrow_back.png" alt=""></span></a>校长联席会议</div>
-        </header>
-        <section class="meet-list-main">
-            <ul class="meet-list mtrm-infolist">
+        </header>-->
+        <div class="meet-list-main">
+            <ul class="meet-list">
                 <li class="meet-item clearfix">
                     <div class="clearfix">
                         <div class="left"><img src="../../css/img/pic1@2x.png" alt="meetimg"></div>
                         <div class="right">
-                            <p class="meet-name">淄博职业学院</p>
-                            <time class="floatl">2016-02-08</time>
-                            <span class="focus floatr">256人关注</span>
-                        </div>
-                    </div>
-                    <div class="clearfix"><a href="javascript:;" class="funcBtn js-funcBtn floatr">查看详情<i class="funcOn"></i></a></div>
-                    <div class="meet-item-funcBox" hidden>
-                        <a href="meet-info.html">会议管理</a>
-                        <a href="#">邀请参会者</a>
-                        <a href="meet-info.html">参会者角色</a>
-                        <a href="#">邀请管理员</a>
-                    </div>
-                </li>
-
-            </ul>
-        </section>
-        <section class="meet-list-main mtrm-chlistmain">
-            <div class="mtrm-chlist-hd" @click="mtrmChlist=!mtrmChlist">
-                <i class="floatl"><img src="../../css/img/icon_check_conference.png" alt=""></i>
-                <p class="floatl">分会议</p>
-                <i class="floatr"><img src="../../css/img/icon_add_conference.png" alt=""></i>
-            </div>
-            <ul class="meet-list mtrm-infolist" v-show="mtrmChlist">
-
-                <li class="meet-item clearfix">
-                    <div class="clearfix">
-                        <div class="left"><img src="../../css/img/pic1@2x.png" alt="meetimg"></div>
-                        <div class="right">
-                            <p class="meet-name">淄博职业学院</p>
-                            <time class="floatl">2016-02-08</time>
-                            <span class="focus floatr">查看详情</span>
+                            <p class="meet-name">全国高职校长联席会议</p>
+                            <span class="time floatl">2017-04-26</span>
+                            <a class="btn floatr" href="javascript:;">邀请</a>
                         </div>
                     </div>
                 </li>
             </ul>
-        </section>
+        </div>
+        <div class="meet-func-main">
+            <ul class="meet-func-list">
+                <li><i><img src="../../css/img/meet-icon/conference.png" alt=""></i><a href="">子会议<span class="floatr"><img src="../../css/img/list_arrow.png" alt=""></span></a></li>
+                <li><i><img src="../../css/img/meet-icon/management.png" alt=""></i><a href="">会议管理<span class="floatr"><img src="../../css/img/list_arrow.png" alt=""></span></a></li>
+                <li><i><img src="../../css/img/meet-icon/detail.png" alt=""></i><a href="">会议详情<span class="floatr"><img src="../../css/img/list_arrow.png" alt=""></span></a></li>
+                <li><i><img src="../../css/img/meet-icon/function.png" alt=""></i><a href="">会议功能<span class="floatr"><img src="../../css/img/list_arrow.png" alt=""></span></a></li>
+                <li><i><img src="../../css/img/meet-icon/propaganda.png" alt=""></i><a href="">会议宣传<span class="floatr"><img src="../../css/img/list_arrow.png" alt=""></span></a></li>
+                <li><i><img src="../../css/img/meet-icon/enroll.png" alt=""></i><a href="">会议报名<span class="floatr"><img src="../../css/img/list_arrow.png" alt=""></span></a></li>
+            </ul>
+        </div>
     </section>
     <script src="../../js/lib/jquery.js"></script>
     <script src="../../js/common.js"></script>
-    <script src="../../js/plug/plug-form.js"></script>
-    <script src="../../js/lib/vue-1.0.28.js"></script>
-    <script src="../../js/plug/httpPath.js"></script>
     <script src="../../js/mtrm-meetinfo.js"></script>
-    <script>
-        $(".js-funcBtn").on("click", function () {
-            var _this = $(this);
-            var $funBox = $(".meet-item-funcBox")
-            if ($funBox.is(":hidden")) {
-                _this.find("i").removeClass("funcOn").addClass("funcOff")
-
-                $funBox.show();
-            } else {
-                _this.find("i").removeClass("funcOff").addClass("funcOn");
-                $funBox.hide();
-            }
-        })
-    </script>
 </body>
 
 </html>

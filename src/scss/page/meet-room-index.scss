@@ -90,32 +90,3 @@
     border-right: 1px #eee solid;
 }
 
-.focus-btn {
-    position: absolute;
-    right: 0;
-    bottom: 1rem;
-    width: 6.5rem;
-    height: 2.5rem;
-    border: 1px #ff9e31 solid;
-    border-radius: 50px;
-    background: none;
-    color: #ff9e31;
-    line-height: 2.5rem;
-    font-size: 1.2rem;
-    text-align: center;
-}
-
-.disfocus-btn {
-    position: absolute;
-    right: 0;
-    bottom: 1rem;
-    width: 6.5rem;
-    height: 2.5rem;
-    border: 1px #bfbfbf solid;
-    border-radius: 50px;
-    background: none;
-    color: #bfbfbf;
-    line-height: 2.5rem;
-    font-size: 1.2rem;
-    text-align: center;
-}
