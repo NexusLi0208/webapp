@@ -1,136 +1,121 @@
  // 通配样式
-.floatl {
-    float: left;
-}
+ .floatl {
+     float: left;
+ }
 
-.floatr {
-    float: right;
-}
+ .floatr {
+     float: right;
+ }
 
-.text-l {
-    text-align: left!important;
-}
+ .text-l {
+     text-align: left!important;
+ }
 
-.text-r {
-    text-align: right
-}
+ .text-r {
+     text-align: right
+ }
 
-.text-m {
-    text-align: center
-}
+ .text-m {
+     text-align: center
+ }
 
-.font-red {
-    color: $red!important;
-    ;
-}
+ .font-red {
+     color: $red!important;
+ }
 
-.pst-btm {
-    position: absolute;
-    bottom: 0;
-}
+ .pst-btm {
+     position: absolute;
+     bottom: 0;
+ }
 
-.fix-btm {
-    position: fixed;
-    width: 100%;
-    min-width: 320px;
-    max-width: 640px;
-    bottom: 0;
-}
 
-.flex-box {
-    display: flex;
-}
+ .hr1 {
+     width: 100%;
+     height: 1rem;
+     border: none;
+     margin: 0;
+     padding: 0;
+     background: #eee;
+ }
 
-.flex1 {
-    flex: 1;
-}
+ .wt-bg {
+     width: 100%;
+     min-height: 100%;
+     background: #fff;
+ }
 
-.hr1 {
-    width: 100%;
-    height: 1rem;
-    border: none;
-    margin: 0;
-    padding: 0;
-    background: #eee;
-}
+ .wt {
+     background: #fff!important;
+ }
 
-.wt-bg {
-    width: 100%;
-    min-height: 100%;
-    background: #fff;
-}
+ .bl-bg {
+     @include linear-gradient(top, #00a0e9, #1d6edd);
+     box-sizing: border-box;
+ }
 
-.wt {
-    background: #fff!important;
-}
+ .bl-bg1 {
+     width: 100%;
+     height: 100%;
+     @include radial-gradient(#00a0e9, #1d6edd);
+    
+ }
 
-.bl-bg {
-    @include linear-gradient(top, #00a0e9, #1d6edd);
-    box-sizing: border-box;
-}
 
-.bl-bg1 {
-    width: 100%;
-    height: 100%;
-    @include radial-gradient(#00a0e9, #1d6edd);
-    box-sizing: border-box;
-}
+ .bl-bg2 {
+     width: 100%;
+     height: 100%;
+     background: #00a0e9!important;
+     box-sizing: border-box;
+     padding-top: 12%;
+ }
 
-.bl-bg2 {
-    width: 100%;
-    height: 100%;
-    background: #00a0e9!important;
-    box-sizing: border-box;
-    padding-top: 12%;
-}
+ .bl-bg3 {
+     width: 100%;
+     height: 100%;
+     background: $blue;
+ }
 
-.bl-bg3 {
-    width: 100%;
-    height: 100%;
-    background: $blue;
-}
+ .no-mg {
+     margin: 0!important;
+ }
 
-.no-mg {
-    margin: 0!important;
-}
+ // 公共控制
+ .no-pd {
+     padding: 0!important;
+ }
 
-// 公共控制
-.no-pd {
-    padding: 0!important;
-}
+ .no-bd {
+     border: none!important;
+ }
 
-.no-bd {
-    border: none!important;
-}
+ .r0 {
+     right: 0!important;
+ }
 
-.r0 {
-    right: 0!important;
-}
+ .mgt2 {
+     margin-top: 2rem;
+ }
 
-.mgt2 {
-    margin-top: 2rem;
-}
+ .mgl2 {
+     margin-left: 2rem;
+ }
 
-.mgl2 {
-    margin-left: 2rem;
-}
+ .pdl1 {
+     padding-left: 1rem;
+ }
 
-.pdl1 {
-    padding-left: 1rem;
-}
+ .pdl2 {
+     padding-left: 2.5rem;
+ }
 
-.pdl2 {
-    padding-left: 2.5rem;
-}
+ .mgbtm1 {
+     margin-bottom: 1rem;
+ }
 
-.mgbtm1 {
-    margin-bottom: 1rem;
-}
-
-.clearfix:after {
-    content: ".";
-    display: block;
-    height: 0;
-    visibility: hidden;
-    clear: both;
-}
+ .clearfix:after {
+     content: ".";
+     display: block;
+     height: 0;
+     visibility: hidden;
+     clear: both;
+ }

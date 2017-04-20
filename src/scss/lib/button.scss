@@ -1,0 +1,102 @@
+// 底部定位按钮
+.fix-btm {
+    position: fixed;
+    width: 100%;
+    min-width: 320px;
+    max-width: 640px;
+    bottom: 0;
+}
+
+.default-btn {
+    background: #fff;
+    cursor: pointer;
+    color: #fb911a;
+}
+
+.flex-box {
+    display: flex;
+    height: 5rem;
+    line-height: 5rem;
+    border-top: 1px #eee solid;
+    a {
+        position: relative;
+        font-size: 1.7rem;
+        text-align: center;
+        &:nth-of-type(1) {
+            &:after {
+                content: '';
+                display: block;
+                height: 3.5rem;
+                width: 1px;
+                background: #eee;
+                position: absolute;
+                right: 0;
+                top: .8rem;
+            }
+        }
+        &:nth-of-type(3) {
+            &:before {
+                content: '';
+                display: block;
+                height: 3.5rem;
+                width: 1px;
+                background: #eee;
+                position: absolute;
+                left: 0;
+                top: .8rem;
+            }
+        }
+        i {
+            display: inline-block;
+            width: 3rem;
+            height: 3rem;
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.flex1 {
+    flex: 1;
+}
+
+.success-btn {
+    background: $blue!important;
+    user-select: none;
+    color: #fff;
+    &:active {
+        background: darken($blue, 10%)!important;
+    }
+}
+
+.cancel-btn {
+    user-select: none;
+    background: $red;
+    color: #fff;
+    &:active {
+        background: $red_active;
+    }
+}
+
+.cancel-btn:active {
+    background: $red_active;
+}
+
+.yellow-btn {
+    user-select: none;
+    background: #fdc42c;
+    color: #fff;
+    &:active {
+        background: #fba721;
+    }
+}
+
+.red-btn {
+    user-select: none;
+    background: $red;
+    color: #fff;
+    &:active {
+        background: $red_active;
+    }
+}

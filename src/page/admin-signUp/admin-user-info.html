@@ -13,68 +13,35 @@
 </head>
 
 <body>
-    <section class="main-cantainer">
+    <section class="main-cantainer navfixr">
         <div class='form-main'>
-            <form action="sign-up-success.html" id="sign_up_main">
-                <div class='basic-info'>
-                    <div class="form-group">
-                        <label class="floatl">姓名:</label>
-                        <span class='floatr form-text'>ANGLEA</span>
-                    </div>
-                    <div class="form-group">
-                        <label class="floatl">性别:</label>
-                        <span class='floatr form-text'>男</span>
-                    </div>
-                    <div class="form-group">
-                        <label class="floatl">手机:</label>
-                        <span class='floatr form-text'>13937988294</span>
-                    </div>
-                    <div class="form-group">
-                        <label class="floatl">邮箱:</label>
-                        <span class='floatr form-text'>327263458@qq.com</span>
-                    </div>
-                    <div class="form-group">
-                        <label class="floatl">单位:</label>
-                        <span class='floatr form-text'>上海企想</span>
-                    </div>
-                    <div class="form-group">
-                        <label class="floatl">身份:</label>
-                        <span class='floatr form-text'>码农</span>
-                    </div>
-                    <div class="form-group">
-                        <label class="floatl">职务:</label>
-                        <span class='floatr form-text'>职员</span>
-                    </div>
-                    <div class="form-group">
-                        <label class="floatl">饮食:</label>
-                        <span class='floatr form-text'>清真</span>
-                    </div>
-                    <hr class="form-hr">
-                    <div class="form-group">
-                        <label class="floatl">酒店:</label>
-                        <span class='floatr form-text'>爱丽丝大酒店</span>
-                    </div>
-                    <div class="form-group js-tiket-on">
-                        <label class="floatl">发票信息:</label>
-                        <span class="floatr arrowImg"><img src="../../css/img/list_arrow.png" alt=""></span>
-                    </div>
-                    <hr class="form-hr">
-                    <div class="form-group js-chmeet-on">
-                        <label class="floatl">分论坛信息:</label>
-                        <span class="floatr arrowImg"><img src="../../css/img/list_arrow.png" alt=""></span>
-                    </div>
-                    <hr class="form-hr">
-                    <div class="form-group js-remark-on">
-                        <label class="floatl">备注:</label>
-                        <span class="floatr arrowImg"><img src="../../css/img/list_arrow.png" alt=""></span>
-                    </div>
-                </div>
-            </form>
+
+            <div class="form-group">
+                <label for="realName" class="floatl">姓名:</label>
+                <input type="text" class='form-input floatr' v-model="userInfo.realName" name="realName" id="realName" placeholder="请输入姓名">
+            </div>
+            <div class="form-group">
+                <label for="sex" class="floatl">姓别:</label>
+                <span class="floatr arrowImg"><img src="../../css/img/list_arrow.png" alt=""></span>
+                <select class='form-input floatr' name="sex">
+                    <option value="0">请选择</option>
+                    <option value="1">男</option>
+                    <option value="2">女</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="phone" class="floatl">手机:</label>
+                <input type="tel" class='form-input floatr' id="phone" v-model="userInfo.phone" placeholder="请输入手机">
+            </div>
+            <div class="form-group">
+                <label for="userName" class="floatl">邮箱:</label>
+                <input type="email" class='form-input floatr' name="email" id="email" placeholder="请输入邮箱">
+            </div>
         </div>
         </div>
         <!--发票信息-->
     </section>
-    <div class='modal-main' id="tiket_md" hidden>
+    <!--<div class='modal-main' id="tiket_md" hidden>
         <div class="modal-bg"></div>
         <div class='modal-contant'>
             <div class="modal-header">
@@ -92,35 +59,9 @@
                 <button type="button" class="no">取消</button>
             </div>
         </div>
-    </div>
-    <!--分论坛信息-->
-    <div class='modal-main' id="chmeet_md" hidden>
-        <div class="modal-bg"></div>
-        <div class='modal-contant'>
-            <div class="modal-header">
-                分论坛信息
-            </div>
-            <div class="modal-body">
-                <div class="item">
-                    <p class="title">"现代学徒制试点(集团化办学)"分论坛</p>
-                    <time class="time"><i><img src="../../css/img/clock.png" alt=""></i>8月12日</time>
-                </div>
-                <div class="item">
-                    <p class="title">"现代学徒制试点(集团化办学)"分论坛</p>
-                    <time class="time"><i><img src="../../css/img/clock.png" alt=""></i>8月12日</time>
-                </div>
-                <div class="item">
-                    <p class="title">"现代学徒制试点(集团化办学)"分论坛啊是大多数</p>
-                    <time class="time"><i><img src="../../css/img/clock.png" alt=""></i>8月12日</time>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="yes">确定</button>
-                <button type="button" class="no">取消</button>
-            </div>
-        </div>
-    </div>
-    <!--备注信息-->
+    </div>-->
+
+    <!--备注信息
     <div class='modal-main' id="remark_md" hidden>
         <div class="modal-bg"></div>
         <div class='modal-contant'>
@@ -135,12 +76,10 @@
                 <button type="button" class="no">取消</button>
             </div>
         </div>
-    </div>
-    <div class="float-btn-box">
-        <span class="float-btn"><img src="../../css/img/menu_more_btn_normal.png" alt=""></span>
-        <div class="float-menu-box animate fadeInUp" hidden>
-            <a class="float-menu" href="#">编辑</a>
-        </div>
+    </div>-->
+    <div class="fix-btm flex-box">
+        <a class='flex1 default-btn'><i><img src="../../css/img/reject_icon.png" alt=""></i>拒绝</a>
+        <a class='flex1 red-btn'><i><img src="../../css/img/pass_icon.png" alt=""></i>通过</a>
     </div>
     <script src="../../js/lib/jquery.js"></script>
     <script src="../../js/common.js"></script>

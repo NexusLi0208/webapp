@@ -12,41 +12,41 @@ $(function () {
 				$("#chmeet-modal").show();
 			})
 		},
-		selectChmeet: function () {
-			var _this = this;
-			$(".modal-body").on("click", ".item", function () {
-				var judge = true;
-				var nowId = $(this).attr("data-chmeetId");
-				var selectChmeetList = $(".selectChmeet li");
-				for (var i = 0; i < selectChmeetList.length; i++) {
-					if ($(selectChmeetList[i]).attr("data-chmeetid") == nowId) {
-						judge = false;
-						break;
-					} else {
-						judge = true;
-					}
-				}
-				if (judge) {
-					_this.chmeetId = $(this).attr("data-chmeetId");
-					_this.chmeetName = $(this).find(".title").text();
-					_this.chmeetTime = $(this).find(".time").text();
-					var newitem = " <li class='chmeet-item' data-chmeetId=" + _this.chmeetId +
-						">" +
-						"<div class='chmeet-info floatl'><span class=name'>" + _this.chmeetName +
-						"</span><span class='time'>" + _this.chmeetTime +
-						"</span></div>" +
-						"<span class='floatr remove-btn js-remove-chmeet'><img src='../../css/img/edit_icon_delete.png' ></span>" +
-						"</li>";
-					$(".selectChmeet").append(newitem);
-					$("#chmeet-modal").hide();
-					$(".noinfo").hide();
-				} else {
-					$("#chmeet-modal").hide();
-					$.prompt("您已经选择过该分会议了");
-				}
+		// selectChmeet: function () {
+		// 	var _this = this;
+		// 	$(".modal-body").on("click", ".item", function () {
+		// 		var judge = true;
+		// 		var nowId = $(this).attr("data-chmeetId");
+		// 		var selectChmeetList = $(".selectChmeet li");
+		// 		for (var i = 0; i < selectChmeetList.length; i++) {
+		// 			if ($(selectChmeetList[i]).attr("data-chmeetid") == nowId) {
+		// 				judge = false;
+		// 				break;
+		// 			} else {
+		// 				judge = true;
+		// 			}
+		// 		}
+		// 		if (judge) {
+		// 			_this.chmeetId = $(this).attr("data-chmeetId");
+		// 			_this.chmeetName = $(this).find(".title").text();
+		// 			_this.chmeetTime = $(this).find(".time").text();
+		// 			var newitem = " <li class='chmeet-item' data-chmeetId=" + _this.chmeetId +
+		// 				">" +
+		// 				"<div class='chmeet-info floatl'><span class=name'>" + _this.chmeetName +
+		// 				"</span><span class='time'>" + _this.chmeetTime +
+		// 				"</span></div>" +
+		// 				"<span class='floatr remove-btn js-remove-chmeet'><img src='../../css/img/edit_icon_delete.png' ></span>" +
+		// 				"</li>";
+		// 			$(".selectChmeet").append(newitem);
+		// 			$("#chmeet-modal").hide();
+		// 			$(".noinfo").hide();
+		// 		} else {
+		// 			$("#chmeet-modal").hide();
+		// 			$.prompt("您已经选择过该分会议了");
+		// 		}
 
-			})
-		},
+		// 	})
+		// },
 		removeChmeet: function () {
 			var _this = this;
 			$(".selectChmeet").on("click", ".js-remove-chmeet", function () {

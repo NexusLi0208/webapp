@@ -1,5 +1,4 @@
-@import "lib/mixin.scss";
-@import "lib/color.scss";
+
 .info-item {
     position: relative;
     width: 100%;
@@ -7,14 +6,14 @@
     box-sizing: border-box;
     background: #fff;
     margin-bottom: 1rem;
-    overflow: hidden
+    overflow: hidden;
+  
 }
 
 .info-body .t1 {
     color: #333;
     font-size: 1.5rem;
     padding-top: 2rem;
-    padding-right: 5rem;
     margin-bottom: 1.5rem;
     display: -webkit-box;
     -webkit-line-clamp: 2;

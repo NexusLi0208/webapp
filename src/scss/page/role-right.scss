@@ -1,8 +1,7 @@
 /*
 Power by lipeng
  */
-@import "lib/mixin.scss";
-@import "lib/color.scss";
+
 .right-title{
     height:6.5rem;
     font-size: 1.5rem;
@@ -12,6 +11,7 @@ Power by lipeng
 .right-title span{
     display: block;
     height:3rem;
+    margin:0 .5rem;
     line-height: 3rem;
     color:#68a5c1;
 }
@@ -26,6 +26,7 @@ Power by lipeng
 }
 .type_tab{
     width: 100%;
+    min-height:8.5rem;
     padding: .5rem 1rem;
     box-sizing: border-box;
 }

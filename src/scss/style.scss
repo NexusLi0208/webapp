@@ -1,69 +1,78 @@
 // 预留函数
- @import "lib/mixin.scss";
- //  颜色
- @import "lib/color.scss";
- //  公共
- @import "page/common.scss";
+@import "lib/rest.scss";
+// 颜色
+@import "lib/color.scss";
+@import "lib/mixin.scss";
+@import "lib/global.scss";
+@import "lib/mixin.scss"; 
+//  按钮
+@import "lib/button.scss"; 
+//  公共
+@import "page/common.scss";
  //  管理员酒店
- @import "page/admin-hotel.scss";
+@import "page/admin-hotel.scss";
+//  管理员报名
+@import "page/admin-signup.scss";
 //  管理员发票
- @import "page/admin-invoice.scss";
+@import "page/admin-invoice.scss";
 //  管理员列表
- @import "page/admin-list.scss";
+@import "page/admin-list.scss";
 //  动画
- @import "page/animate.scss";
+@import "page/animate.scss";
 //  文章列表
- @import "page/article-list.scss";
+@import "page/article-list.scss";
 // web聊天
- @import "page/chat.scss";
+@import "page/chat.scss";
 //  二维码登录
- @import "page/codelogin.scss";
+@import "page/codelogin.scss";
 //  创建组织会议厅
- @import "page/creat-meetRoom-organize.scss";
+@import "page/creat-meetRoom-organize.scss";
 //  创建会议厅类型
- @import "page/creat-meetRoom-type.scss";
+@import "page/creat-meetRoom-type.scss";
 //  切换会议厅
- @import "page/cut-meetroom.scss";
+@import "page/cut-meetroom.scss";
 //  表单相关
- @import "page/form.scss";
+@import "page/form.scss";
 //  信息列表
- @import "page/info-list.scss";
+@import "page/info-list.scss";
 //  邀请卡
- @import "page/invite-card.scss";
+@import "page/invite-card.scss";
 //  连接网络(爬虫)
- @import "page/link-network.scss";
+@import "page/link-network.scss";
 //  地图相关
- @import "page/map-about.scss";
+@import "page/map-about.scss";
 //  会议功能列表
- @import "page/meet-func-list.scss";
+@import "page/meet-func-list.scss";
 //  会议厅首页
- @import "page/meet-room-index.scss";
+@import "page/meet-room-index.scss";
+//  会议详情
+@import "page/meet-details.scss";
 //  会议厅
- @import "page/meet-room.scss";
+@import "page/meet-room.scss";
 // 首页
- @import "page/meetIndex.scss";
+@import "page/meetIndex.scss";
 //  会议厅二维码
- @import "page/meetroom-code.scss";
+@import "page/meetroom-code.scss";
 //  会议厅会议信息
- @import "page/meetroom-meetinfo.scss";
+@import "page/meetroom-meetinfo.scss";
 //  我的界面
- @import "page/mine.scss";
+@import "page/mine.scss";
 // 模态框
- @import "page/modal.scss";
+@import "page/modal.scss";
 //  无会议厅
- @import "page/no-meetRroom.scss";
+@import "page/no-meetRroom.scss";
 //  页面修复
- @import "page/page-fix.scss";
- @import "page/pdfdetails.scss";
- @import "page/person-member.scss";
- @import "page/repository.scss";
- @import "page/role-right.scss";
+@import "page/page-fix.scss";
+@import "page/pdfdetails.scss";
+@import "page/person-member.scss";
+@import "page/repository.scss";
+@import "page/role-right.scss";
 //  设置密码
- @import "page/setpsd.scss";
- @import "page/sl-btn-list.scss";
+@import "page/setpsd.scss";
+@import "page/sl-btn-list.scss";
 //  成功页面
- @import "page/success.scss";
+@import "page/success.scss";
 //  用户列表
- @import "page/user-list.scss";
+@import "page/user-list.scss";
 //  投票
- @import "page/vote.scss";
+@import "page/vote.scss";

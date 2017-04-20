@@ -1,11 +1,6 @@
 /*
 Power by lipeng
  */
-
-@import "lib/rest.scss";
-@import "lib/mixin.scss";
-@import "lib/color.scss";
-@import "lib/global.scss";
 html,
 body {
     height: 100%;
@@ -101,23 +96,7 @@ textarea {
     outline: none;
 }
 
-.success-btn {
-    background: $blue!important;
-    user-select: none;
-}
 
-.success-btn:active {
-    background: darken($blue, 10%)!important;
-}
-
-.cancel-btn {
-    user-select: none;
-    background: $red;
-}
-
-.cancel-btn:active {
-    background: $red_active;
-}
 
 .clearfix {
     zoom: 1;
@@ -134,54 +113,7 @@ textarea {
     height: 100%;
 }
 
-.page-title {
-    position: absolute;
-    top: 0;
-    z-index: 99999;
-    width: 100%;
-    min-width: 320px;
-    max-width: 640px;
-    height: 4.4rem;
-    line-height: 4.4rem;
-    color: #fff;
-    background: $blue;
-    padding: 0 1.5rem;
-    box-sizing: border-box;
-}
 
-.add-icon {
-    color: #fff;
-    font-size: 2.5rem;
-}
-
-.page-title .top-btn {
-    display: inline-block;
-    width: 5rem;
-    height: 2rem;
-    font-size: 1.2rem;
-    color: #fff;
-    border-radius: 2.5rem;
-    border: 1px #fff solid;
-    background: none;
-}
-
-.index-type-list {
-    display: inline-block;
-    margin-left: 1rem;
-}
-
-.index-type-list li {
-    display: inline-block;
-    margin-right: 0.75rem;
-    font-size: 1.5rem;
-}
-
-.index-type-list li a {
-    display: inline-block;
-    font-size: 1.5rem;
-    color: #fff;
-    text-decoration: none;
-}
 
 // 导航
 .index-nav {

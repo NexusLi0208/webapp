@@ -1,9 +1,6 @@
-@import "lib/mixin.scss";
-@import "lib/color.scss";
 // 列表
 .article-list-main {
     width: 100%;
-    min-height: 100%;
     background: #fff;
 }
 
@@ -19,6 +16,9 @@
     padding: 1rem 0;
     box-sizing: border-box;
     border-bottom: 1px #eee solid;
+    &:nth-last-of-type(1){
+        border:none;
+    }
 }
 
 .article-item .list-icon {

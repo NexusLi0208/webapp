@@ -1,0 +1,106 @@
+// 管理员报名管理
+// 子会议管理
+.chmeet-main {
+    background: #fff;
+    padding: 0 2rem;
+    overflow: hidden;
+    .admin-chmeet-item {
+        border-bottom: 1px #eee solid;
+        p {
+            height: 2.2rem;
+            font-size: 1.2rem;
+            color: #848689;
+            i {
+                display: inline-block;
+                width: 2.2rem;
+                height: 2.2rem;
+                margin-right: 1rem;
+                img {
+                    width: 100%;
+                }
+            }
+            &.title {
+                color: #333;
+                font-size: 1.5rem;
+                margin: 1.5rem 0 2rem;
+            }
+        }
+        .status-limit {
+            width: 100%;
+            box-sizing: border-box;
+            padding-left: 3.2rem;
+            height: 2.5rem;
+            line-height: 2.5rem;
+            margin-bottom: .5rem;
+            span {
+                color: $blue;
+                font-size: 1.2rem;
+                margin-right: .5rem;
+            }
+            a {
+                display: block;
+                width: 5rem;
+                height: 2.5rem;
+                line-height: 2.5rem;
+                text-align: center;
+                color: #f66;
+                border: 1px solid #f66;
+                font-size: 1.2rem;
+                border-radius: 5rem;
+                box-sizing: border-box;
+                &:active {
+                    background: #f66;
+                    color: #fff;
+                }
+            }
+        }
+        &:nth-last-of-type(1) {
+            border: none;
+        }
+    }
+}
+
+// 身份选择
+.chmeet-limit-main {
+    margin-bottom: 1rem;
+    background: #fff;
+}
+
+.chmeet-limit-hd {
+    height: 5.5rem;
+    line-height: 5.5rem;
+    padding: 0 2rem;
+    box-sizing: border-box;
+    border-bottom: 1px #eee solid;
+    span {
+        position: relative;
+        padding-left: 2rem;
+        font-size: 1.5rem;
+        color: #848689;
+        &:before {
+            position: absolute;
+            top: -.25rem;
+            left: 0;
+            content: '';
+            display: block;
+            width: .5rem;
+            height: 2rem;
+            background: #f66;
+            border-radius: .25rem;
+        }
+    }
+}
+
+.chmeet-limit-list {
+    padding: 0 2rem;
+    li {
+        height: 5.5rem;
+        line-height: 5.5rem;
+        color: #333;
+        font-size: 1.5rem;
+        border-bottom:1px #eee solid;
+        &:nth-last-of-type(1){
+            border:none;
+        }
+    }
+}

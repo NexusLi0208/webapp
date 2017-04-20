@@ -1,5 +1,81 @@
-@import "lib/mixin.scss";
-@import "lib/color.scss";
+
+// 主页搜索
+.page-title {
+    position: absolute;
+    top: 0;
+    z-index: 99999;
+    width: 100%;
+    min-width: 320px;
+    max-width: 640px;
+    height: 4.4rem;
+    color: #fff;
+    background: $blue;
+    padding: .7rem 1rem;
+    box-sizing: border-box;
+    .index-search {
+        text-align: center;
+        height:3rem;
+         line-height: 3rem;
+         font-size: 1.2rem;
+        a {
+            display: inline-block;
+            text-align: left;
+            padding-left:.5rem;
+            margin-right: .5rem;
+            width: 69%;
+            height: 3rem;
+            box-sizing: border-box;
+            color: #bfbfbf;
+            background: #fff;
+            border-radius: 5rem;
+            span{
+                display: inline-block;
+                width:2rem;
+                height:2rem;
+                img{
+                    width:100%;
+                }
+            }
+        }
+       
+    }
+}
+
+// 主题分类
+.add-icon {
+    color: #fff;
+    font-size: 2.5rem;
+}
+
+.page-title .top-btn {
+    display: inline-block;
+    width: 5rem;
+    height: 2rem;
+    font-size: 1.2rem;
+    color: #fff;
+    border-radius: 2.5rem;
+    border: 1px #fff solid;
+    background: none;
+}
+
+.index-type-list {
+    display: inline-block;
+    margin-left: 1rem;
+}
+
+.index-type-list li {
+    display: inline-block;
+    margin-right: 0.75rem;
+    font-size: 1.5rem;
+}
+
+.index-type-list li a {
+    display: inline-block;
+    font-size: 1.5rem;
+    color: #fff;
+    text-decoration: none;
+}
+
 // banner
 .index-banner {
     width: 100%;
@@ -140,7 +216,7 @@
     display: block;
     height: 2.5rem;
     line-height: 2.5rem;
-    font-size: 1rem;
+    font-size: 1.5rem;
     color: #bfbfbf;
     span {
         height: 2.5rem;
@@ -176,7 +252,7 @@
         line-height: 3rem;
         border: 1px #ffae2e solid;
         color: #ffae2e;
-        margin:.5rem .2%;
+        margin: .5rem .2%;
         font-size: 1.2rem;
         &:active {
             background: #ffae2e;
