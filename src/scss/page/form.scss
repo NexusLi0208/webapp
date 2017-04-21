@@ -503,9 +503,8 @@ select.form-input {
 // 
 .editormain {
     width: 100%;
-    min-height: 30rem;
+    height: calc(100% - 10,rem);
     background: #fff;
-    margin-top: 1rem;
     margin-bottom: 3.5rem;
     padding: 0 2.2rem;
     box-sizing: border-box;
@@ -535,7 +534,8 @@ select.form-input {
     font-size: 1.5rem!important;
     padding: 1rem 0;
     line-height: 2rem;
-    min-height: 20rem;
+    box-sizing: border-box;
+    height: calc(100% - 6.5rem);
 }
 
 .filebtn {

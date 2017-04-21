@@ -1,0 +1,30 @@
+.meet-publicity-header {
+    width: 100%;
+    height: 11.5rem;
+    padding: 1.5rem 2rem;
+    box-sizing: border-box;
+    background: #fff;
+    margin-bottom: 1rem;
+    h1 {
+        color: #333;
+        font-size: 1.5rem;
+        font-weight: normal;
+        margin-bottom: 2rem;
+    }
+    h2 {
+        color: #848689;
+        font-size: 1.5rem;
+        font-weight: normal;
+        line-height: 2rem;
+        margin-bottom: 1rem;
+        i {
+            display: inline-block;
+            width: 2rem;
+            height: 2rem;
+            margin-right: 1rem;
+            img {
+                width: 100%;
+            }
+        }
+    }
+}

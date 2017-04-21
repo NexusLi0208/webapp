@@ -1,0 +1,55 @@
+.role-main {
+    width: 100%;
+    background: #fff;
+    padding: 0 2rem;
+    box-sizing: border-box;
+    h1 {
+        font-weight: normal;
+        height: 5.5rem;
+        line-height: 5.5rem;
+        font-size: 1.5rem;
+        color: #848689;
+        border-bottom: 1px #eee solid;
+    }
+}
+
+.role-list {
+    li {
+        height: 5.5rem;
+        padding:1.25rem 0;
+        box-sizing: border-box;
+        border-bottom: 1px #eee solid;
+        &:nth-last-of-type(1){
+            border: none;
+        }
+        span{
+            height:3rem;
+            line-height: 3rem;
+            float: left;
+        }
+        .set-btn {
+            float: right;
+            display: block;
+            width: 6rem;
+            height: 3rem;
+            line-height: 3rem;
+            text-align: center;
+            font-size: 1.2rem;
+            color: $red;
+            border: 1px $red solid;
+            border-radius: 5rem;
+            box-sizing: border-box;
+            margin:0 1rem;
+            
+        }
+        i {
+            float: right;
+            display: block;
+            width: 3rem;
+            height: 3rem;
+            img {
+                width: 100%;
+            }
+        }
+    }
+}

@@ -61,5 +61,5 @@ $(".main-cantainer").infinite().on("infinite", function () {
         }
 
         loading = false;
-    }, 500); //模拟延迟
+    }, 5000); //模拟延迟
 });
