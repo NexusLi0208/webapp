@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>身份</title>
+    <link rel="stylesheet" href="../../css/lib/icheck/skins/all.css">
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+    <section class="main-cantainer navfixr">
+        <div class="identity-list-main">
+            <ul class="identity-list">
+                <li><span>正校级</span><i><img src="../../css/img/edit_icon_delete.png" alt=""></i></li>
+                <li><span>副校级</span><i><img src="../../css/img/edit_icon_delete.png" alt=""></i></li>
+            </ul>
+        </div>
+    </section>
+    <div class="fix-btm flex-box">
+        <a class="flex1 default-btn js-addidentity">添加身份</a>
+        <a class="flex1 red-btn">保存</a>
+    </div>
+    <!--添加身份弹出-->
+    <div class='modal-main' hidden id="identity_modal">
+        <div class="modal-bg"></div>
+        <div class='modal-contant  modal-lg'>
+            <div class="modal-body">
+                <p class="modal-title">身份名</p>
+                <div class=modal-input><input type="text" maxlength="30" placeholder="请输入身份名称"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="yes">确定</button>
+                <button type="button" class="no">取消</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../js/lib/jquery.js"></script>
+    <script src="../../js/common.js"></script>
+    <script>
+        $(function () {
+            $(".js-addidentity").on("click", function () {
+                $("#identity_modal").show();
+            })
+        })
+    </script>
+</body>
+
+</html>

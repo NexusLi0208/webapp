@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>编辑会议动态</title>
+    <link rel="stylesheet" href="../../css/lib/wangEditor/css/wangEditor.css">
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+    <section class="main-cantainer">
+        <div class="editormain">
+            <div class="editor-btnBox">
+                <span><img src="../../css/img/picture_normal.png" alt=""><input class="filebtn" type="file" id="imageUpload" ></span>
+            </div>
+            <div id="content" oninput="textLimit.txt(this)" class="editor-content"></div>
+       </div>
+        <div>
+        </div>
+    </section>
+    <button type="button" class="btm-btn pst-btm">完成</button>
+    <script src="../../js/lib/jquery.js"></script>
+    <script src="../../js/lib/wangEditor.js"></script>
+    <script src="../../js/lib/artEditor.min.js"></script>
+    <script>
+        $('#content').artEditor({
+            imgTar: '#imageUpload',
+            limitSize: 5, // 兆
+            showServer: false,
+            uploadUrl: '',
+            data: {},
+            uploadField: 'image',
+            placeholader: '<p>请输入文章正文内容</p>',
+            validHtml: ["br"],
+            uploadSuccess: function (res) {
+                // return img url
+                return res.path;
+            },
+            uploadError: function (res) {
+                // something error
+                console.log(res);
+            }
+        })
+        $(function () {
+            var editor = new wangEditor('content');
+
+            editor.config.menus = [
+                'source',
+                '|', // '|' 是菜单组的分割线
+                'bold',
+                'underline',
+                'alignleft',
+                'aligncenter',
+                'alignright',
+            ];
+            editor.create();
+        })
+
+        var textLimit = {
+            nowHtml: '',
+            txt: function (_this) {
+                var textLength = $(_this).text();
+                if (textLength.length > 10000) {
+                    alert('超出最大字符数');
+                    $("#content").html(this.nowHtml);
+                } else {
+                    this.nowHtml = $("#content").html();
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

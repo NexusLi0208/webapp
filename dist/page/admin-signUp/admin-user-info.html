@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>ANGLEA</title>
+    <link rel="stylesheet" type="" href="../../css/style.css">
+</head>
+
+<body>
+    <section class="main-cantainer navfixr">
+        <div class='form-main'>
+
+            <div class="form-group">
+                <label for="realName" class="floatl">姓名:</label>
+                <input type="text" class='form-input floatr' v-model="userInfo.realName" name="realName" id="realName" placeholder="请输入姓名">
+            </div>
+            <div class="form-group">
+                <label for="sex" class="floatl">姓别:</label>
+                <span class="floatr arrowImg"><img src="../../css/img/list_arrow.png" alt=""></span>
+                <select class='form-input floatr' name="sex">
+                    <option value="0">请选择</option>
+                    <option value="1">男</option>
+                    <option value="2">女</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="phone" class="floatl">手机:</label>
+                <input type="tel" class='form-input floatr' id="phone" v-model="userInfo.phone" placeholder="请输入手机">
+            </div>
+            <div class="form-group">
+                <label for="userName" class="floatl">邮箱:</label>
+                <input type="email" class='form-input floatr' name="email" id="email" placeholder="请输入邮箱">
+            </div>
+        </div>
+        </div>
+        <!--发票信息-->
+    </section>
+    <!--<div class='modal-main' id="tiket_md" hidden>
+        <div class="modal-bg"></div>
+        <div class='modal-contant'>
+            <div class="modal-header">
+                发票信息
+            </div>
+            <div class="modal-body">
+                <p class="info"><span class="title">发票抬头:</span>上海企想信息技术有限公司</p>
+                <p class="info"><span class="title">纳税人识别号:</span>9594949449494</p>
+                <p class="info"><span class="title">开户地址:</span>上海马戏城</p>
+                <p class="info"><span class="title">开户行:</span>上海马戏城支行</p>
+                <p class="info"><span class="title">开户账号:</span>621411412354414</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="yes">确定</button>
+                <button type="button" class="no">取消</button>
+            </div>
+        </div>
+    </div>-->
+
+    <!--备注信息
+    <div class='modal-main' id="remark_md" hidden>
+        <div class="modal-bg"></div>
+        <div class='modal-contant'>
+            <div class="modal-header">
+                备注
+            </div>
+            <div class="modal-body">
+                <p class="section">这里是您的您的备注信您的备注信您的备注信您的备注信备注信息</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="yes">确定</button>
+                <button type="button" class="no">取消</button>
+            </div>
+        </div>
+    </div>-->
+    <div class="fix-btm flex-box">
+        <a class='flex1 default-btn'><i><img src="../../css/img/reject_icon.png" alt=""></i>拒绝</a>
+        <a class='flex1 red-btn'><i><img src="../../css/img/pass_icon.png" alt=""></i>通过</a>
+    </div>
+    <script src="../../js/lib/jquery.js"></script>
+    <script src="../../js/common.js"></script>
+    <script src="../../js/admin-user-info.js"></script>
+</body>
+
+</html>

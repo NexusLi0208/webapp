@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>子会议</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+    <section class="main-cantainer navfixr" id="chMeet-list">
+        <!--<div class="page-title meetRoom-title">
+            <span class="floatl">子会议列表</span>
+            <a href="creat-chMeet.html"><span class="floatr add-icon">+</span></a>
+        </div>-->
+        <section class="meet-list-main">
+            <ul class="meet-list">
+                <li class="meet-item" v-cloak v-for="item in chmeetlist" v-bind:data-chMeeId="item.meeId">
+                    <a href="#">
+                        <div class="left"><img src="../../css/img/pic1@2x.png" alt="meetimg"></div>
+                        <div class="right">
+                            <p class="meet-name">{{item.meeName}}</p>
+                            <span class="time floatl">{{item.meeStartTime|getTime}}</span>
+                        </div>
+                    </a>
+                    <div class="deleteItem" @click="removeItem($index,$event)">
+                        删除
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <button type="button" @click="creatChMeet" class="btm-btn pst-btm">完成</button>
+    </section>
+       <div class="float-btn-box">
+      <span class="float-btn"><img src="../../css/img/menu_more_btn_normal.png" alt=""></span>
+      <div class="float-menu-box animate fadeInUp" hidden>
+      <a class="float-menu" href="creat-chMeet.html">创建子会议</a>
+      </div>
+    </div>
+    <script src="../../js/lib/jquery.js"></script>
+    <script src="../../js/common.js"></script>
+    <script src="../../js/lib/vue-1.0.28.js"></script>
+    <script src="../../js/plug/httpPath.js"></script>
+    <script src="../../js/ch-meet-list.js"></script>
+    
+</body>
+
+</html>

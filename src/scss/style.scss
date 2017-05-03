@@ -2,18 +2,20 @@
 @import "lib/rest.scss";
 // 颜色
 @import "lib/color.scss";
-@import "lib/mixin.scss";
-@import "lib/global.scss";
+// 公共函数
 @import "lib/mixin.scss";
 //  按钮
 @import "lib/button.scss";
 //  公共
-@import "page/common.scss"; //  管理员酒店
+@import "page/common.scss";
+//  管理员酒店
 @import "page/admin-hotel.scss";
 //  管理员报名
 @import "page/admin-signup.scss";
 //  管理员发票
 @import "page/admin-invoice.scss";
+// 会议首页
+@import "page/meet-home.scss";
 // 会议列表 
 @import "page/meet-list.scss";
 // 会议宣传
@@ -46,8 +48,8 @@
 @import "page/link-network.scss";
 //  地图相关
 @import "page/map-about.scss";
-//  会议功能列表
-@import "page/meet-func-list.scss";
+// 搜索栏
+@import "page/search-bar.scss";
 //  会议厅首页
 @import "page/meet-room-index.scss";
 //  会议详情
@@ -68,9 +70,13 @@
 @import "page/no-meetRroom.scss";
 //  页面修复
 @import "page/page-fix.scss";
-@import "page/pdfdetails.scss";
+// 时间选择器修改
+@import "lib/datetimepiker.scss";
+// 个人会员
 @import "page/person-member.scss";
+// 知识库
 @import "page/repository.scss";
+// 角色权限
 @import "page/role-right.scss";
 //  设置密码
 @import "page/setpsd.scss";
@@ -81,3 +87,4 @@
 @import "page/user-list.scss";
 //  投票
 @import "page/vote.scss";
+@import "lib/global.scss";

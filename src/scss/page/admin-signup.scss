@@ -1,106 +1,228 @@
-// 管理员报名管理
-// 子会议管理
-.chmeet-main {
-    background: #fff;
-    padding: 0 2rem;
-    overflow: hidden;
-    .admin-chmeet-item {
-        border-bottom: 1px #eee solid;
-        p {
-            height: 2.2rem;
-            font-size: 1.2rem;
+    // 管理员报名管理
+    // 字段管理
+    .signup-item-main {
+        width: 100%;
+        h1 {
+            position: relative;
+            width: 100%;
+            height: 5.5rem;
+            padding: 0 2.2rem;
+            box-sizing: border-box;
+            line-height: 5.5rem;
             color: #848689;
+            font-size: 1.5rem;
+            font-weight: normal;
+            border-bottom: 1px #eee solid;
+            &:before {
+                content: '';
+                width: .5rem;
+                height: 1.5rem;
+                background: #f66;
+                border-radius: 5rem;
+                position: absolute;
+                left: 0;
+                top: 2rem;
+            }
+        }
+        .fixed-item {
+            padding: 0 2.2rem;
+            background: #fff;
+            margin-bottom: 1rem;
+            ul {
+                padding: 2rem 0;
+                li {
+                    display: inline-block;
+                    width: 30%;
+                    color: $blue;
+                    margin: 1rem 0;
+                }
+            }
+        }
+        .new-item {
+            background: #fff;
+            padding: 0 2.2rem;
+            ul {
+                li {
+                    height: 5.5rem;
+                    padding: 1.25rem 0;
+                    box-sizing: border-box;
+                    border-bottom: 1px #eee solid;
+                    &:nth-last-of-type(1) {
+                        border: none;
+                    }
+                    span {
+                        height: 3rem;
+                        line-height: 3rem;
+                        float: left;
+                    }
+                    .set-btn {
+                        float: right;
+                        display: block;
+                        width: 6rem;
+                        height: 3rem;
+                        line-height: 3rem;
+                        text-align: center;
+                        font-size: 1.2rem;
+                        color: $red;
+                        border: 1px $red solid;
+                        border-radius: 5rem;
+                        box-sizing: border-box;
+                        margin: 0 1rem;
+                    }
+                    i {
+                        float: right;
+                        display: block;
+                        width: 3rem;
+                        height: 3rem;
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    } // 身份管理
+    .identity-list-main {
+        background: #fff;
+        padding:0 2.2rem;
+        box-sizing: border-box;
+        li {
+            height: 5.5rem;
+            padding: 1.25rem 0;
+            box-sizing: border-box;
+            border-bottom: 1px #eee solid;
+            &:nth-last-of-type(1) {
+                border: none;
+            }
+            span {
+                height: 3rem;
+                line-height: 3rem;
+                float: left;
+            }
+            .set-btn {
+                float: right;
+                display: block;
+                width: 6rem;
+                height: 3rem;
+                line-height: 3rem;
+                text-align: center;
+                font-size: 1.2rem;
+                color: $red;
+                border: 1px $red solid;
+                border-radius: 5rem;
+                box-sizing: border-box;
+                margin: 0 1rem;
+            }
             i {
-                display: inline-block;
-                width: 2.2rem;
-                height: 2.2rem;
-                margin-right: 1rem;
+                float: right;
+                display: block;
+                width: 3rem;
+                height: 3rem;
                 img {
                     width: 100%;
                 }
             }
-            &.title {
-                color: #333;
-                font-size: 1.5rem;
-                margin: 1.5rem 0 2rem;
-            }
         }
-        .status-limit {
-            width: 100%;
-            box-sizing: border-box;
-            padding-left: 3.2rem;
-            height: 2.5rem;
-            line-height: 2.5rem;
-            margin-bottom: .5rem;
-            span {
-                color: $blue;
+    } // 子会议管理
+    .chmeet-main {
+        background: #fff;
+        padding: 0 2rem;
+        overflow: hidden;
+        .admin-chmeet-item {
+            border-bottom: 1px #eee solid;
+            p {
+                height: 2.2rem;
                 font-size: 1.2rem;
-                margin-right: .5rem;
-            }
-            a {
-                display: block;
-                width: 5rem;
-                height: 2.5rem;
-                line-height: 2.5rem;
-                text-align: center;
-                color: #f66;
-                border: 1px solid #f66;
-                font-size: 1.2rem;
-                border-radius: 5rem;
-                box-sizing: border-box;
-                &:active {
-                    background: #f66;
-                    color: #fff;
+                color: #848689;
+                i {
+                    display: inline-block;
+                    width: 2.2rem;
+                    height: 2.2rem;
+                    margin-right: 1rem;
+                    img {
+                        width: 100%;
+                    }
+                }
+                &.title {
+                    color: #333;
+                    font-size: 1.5rem;
+                    margin: 1.5rem 0 2rem;
                 }
             }
+            .status-limit {
+                width: 100%;
+                box-sizing: border-box;
+                padding-left: 3.2rem;
+                height: 2.5rem;
+                line-height: 2.5rem;
+                margin-bottom: .5rem;
+                span {
+                    color: $blue;
+                    font-size: 1.2rem;
+                    margin-right: .5rem;
+                }
+                a {
+                    display: block;
+                    width: 5rem;
+                    height: 2.5rem;
+                    line-height: 2.5rem;
+                    text-align: center;
+                    color: #f66;
+                    border: 1px solid #f66;
+                    font-size: 1.2rem;
+                    border-radius: 5rem;
+                    box-sizing: border-box;
+                    &:active {
+                        background: #f66;
+                        color: #fff;
+                    }
+                }
+            }
+            &:nth-last-of-type(1) {
+                border: none;
+            }
         }
-        &:nth-last-of-type(1) {
-            border: none;
-        }
+    } // 身份选择
+    .chmeet-limit-main {
+        margin-bottom: 1rem;
+        background: #fff;
     }
-}
 
-// 身份选择
-.chmeet-limit-main {
-    margin-bottom: 1rem;
-    background: #fff;
-}
-
-.chmeet-limit-hd {
-    height: 5.5rem;
-    line-height: 5.5rem;
-    padding: 0 2rem;
-    box-sizing: border-box;
-    border-bottom: 1px #eee solid;
-    span {
-        position: relative;
-        padding-left: 2rem;
-        font-size: 1.5rem;
-        color: #848689;
-        &:before {
-            position: absolute;
-            top: -.25rem;
-            left: 0;
-            content: '';
-            display: block;
-            width: .5rem;
-            height: 2rem;
-            background: #f66;
-            border-radius: .25rem;
-        }
-    }
-}
-
-.chmeet-limit-list {
-    padding: 0 2rem;
-    li {
+    .chmeet-limit-hd {
         height: 5.5rem;
         line-height: 5.5rem;
-        color: #333;
-        font-size: 1.5rem;
-        border-bottom:1px #eee solid;
-        &:nth-last-of-type(1){
-            border:none;
+        padding: 0 2rem;
+        box-sizing: border-box;
+        border-bottom: 1px #eee solid;
+        span {
+            position: relative;
+            padding-left: 2rem;
+            font-size: 1.5rem;
+            color: #848689;
+            &:before {
+                position: absolute;
+                top: -.25rem;
+                left: 0;
+                content: '';
+                display: block;
+                width: .5rem;
+                height: 2rem;
+                background: #f66;
+                border-radius: .25rem;
+            }
         }
     }
-}
+
+    .chmeet-limit-list {
+        padding: 0 2rem;
+        li {
+            height: 5.5rem;
+            line-height: 5.5rem;
+            color: #333;
+            font-size: 1.5rem;
+            border-bottom: 1px #eee solid;
+            &:nth-last-of-type(1) {
+                border: none;
+            }
+        }
+    }

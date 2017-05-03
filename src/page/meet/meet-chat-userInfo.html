@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>个人信息</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+    <section class="main-cantainer navfixr">
+        <div class="form-group fileUpload">
+            <label for="userName" class="floatl">头像:</label>
+            <input type="file" id='file_upload' onchange="showPreview(this)" class='form-input floatr' name="" id="">
+            <i class="img-box"><img id="js_uploadImg" src="../../css/img/user-img.jpeg" alt=""></i>
+        </div>
+        <div class="form-group">
+            <label class="floatl">姓名:</label>
+            <input type="text" class='form-input floatr' value="jessmcatne" placeholder="请输入姓名">
+        </div>
+        <div class="form-group">
+            <label for="province" class="floatl">性别:</label>
+            <span class="floatr arrowImg"><img src="../../css/img/list_arrow.png" alt=""></span>
+            <select class='form-input floatr' id="province">
+                <option value="1">男</option>
+                <option value="2">女</option>
+            </select>
+        </div>
+           <div class="form-group">
+            <label class="floatl">职务:</label>
+            <input type="text" class='form-input floatr' value="设计" placeholder="请输入职务">
+        </div>
+           <div class="form-group">
+            <label class="floatl">公司:</label>
+            <input type="text" class='form-input floatr' value="上海企想信息技术有限公司" placeholder="请输入公司">
+        </div>
+           <div class="form-group">
+            <label class="floatl">手机:</label>
+            <input type="text" class='form-input floatr' value="13937988294" placeholder="请输入手机">
+        </div>
+           <div class="form-group">
+            <label class="floatl">邮箱:</label>
+            <input type="email" class='form-input floatr' value="327263458@qq.com" placeholder="请输入邮箱">
+        </div>
+    </section>
+    <button type="button" class="pst-btm btm-btn">保存</button>
+    <script src="../../js/lib/jquery.js"></script>
+    <script src="../../js/common.js"></script>
+</body>
+
+</html>

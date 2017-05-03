@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>会议设置</title>
+    <link href="../../css/lib/mobiscroll.css" rel="stylesheet" />
+    <link href="../../css/lib/mobiscroll_date.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+    <section class="main-cantainer navfixr">
+        <div class="form-group fileUpload">
+            <label for="userName" class="floatl">会议图片:</label>
+            <input type="file" id='file_upload' onchange="showPreview(this)" class='form-input floatr' name="" id="">
+            <i class="img-box"><img id="js_uploadImg" src="../../css/img/user-img.jpeg" alt=""></i>
+        </div>
+        <div class="form-group">
+            <label class="floatl">会议名称:</label>
+            <input type="text" class='form-input floatr' name="" id="" placeholder="请输入">
+        </div>
+        <div class="form-group">
+            <label for="meeStartTime" class="floatl">会议开始时间:</label>
+            <input type="data" class='form-input floatr js-time' value="" id="" placeholder="请选择">
+            <input type="hidden" name="meeStartTime">
+        </div>
+        <div class="form-group">
+            <label for="meeEndTime" class="floatl">会议结束时间:</label>
+            <input type="data" class='form-input floatr js-time' value="" id="" placeholder="请选择">
+            <input type="hidden" name="meeEndTime">
+        </div>
+        <div class="form-group">
+            <label class="floatl">会议地址:</label>
+            <input type="text" class='form-input floatr' name="meeName" id="" placeholder="请输入">
+        </div>
+        <div class="info-title">
+            <p>简介</p>
+        </div>
+        <textarea class="info-txt-box" placeholder="请输入会议简介"></textarea>
+    </section>
+    <button type='button' class='btm-btn fix-btm'>保存</button>
+    <script src="../../js/lib/jquery.js"></script>
+    <script src="../../js/lib/mobiscroll_date.js"></script>
+    <script src="../../js/lib/mobiscroll.js"></script>
+    <script src="../../js/common.js"></script>
+    <script>
+        $(function () {
+            $('.js-time').mobiscroll().datetime({
+                theme: "android-holo-light", // Specify theme like: theme: 'ios' or omit setting to use default 
+                mode: "scroller", //效果
+                display: "bottom", // 显示位置
+                lang: "zh", //中文
+                minDate: new Date(), //最小日期
+                maxDate: new Date(new Date().setMonth(new Date().getMonth() + 6)), //最大日期
+                dateFormat: "yy-mm-dd",
+                timeFormat: "HH:ii",
+                stepMinute: 1 // More info about stepMinute: http://docs.mobiscroll.com/2-16-1/datetime#!opt-stepMinute
+            });
+
+        });
+    </script>
+</body>
+
+</html>

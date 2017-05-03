@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>添加案例</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+    <section class="main-cantainer">
+        <form action="">
+            <div class="form-group">
+                <label for="realName" class="floatl">标题:</label>
+                <input type="text" class='form-input floatr' placeholder="请输入">
+            </div>
+            <div class="form-group">
+                <label for="dietId" class="floatl">省会:</label>
+                <span class="floatr arrowImg"><img src="../../css/img/list_arrow.png" alt=""></span>
+                <select class='form-input floatr' name="dietId" id="dietId">
+                             <option value="0" selected>请选择</option>
+                     <option value="1">上海市</option>
+                     <option value="2">北京市</option>
+                 </select>
+            </div>
+            <div class="form-group">
+                <label for="realName" class="floatl">单位:</label>
+                <input type="text" class='form-input floatr' placeholder="请输入">
+            </div>
+            <!--<div class="form-group inlineFileUpload">
+                <label for="userName" class="floatl">文件:</label>
+                <span class='floatr form-text'>请上传</span>
+                <input type="file" id='file_upload' class='form-input floatr' name="" id="">
+            </div>-->
+            <div class='btn-box'>
+                <button type="button" class="form-btn cancel-btn">保存</button>
+            </div>
+        </form>
+    </section>
+    <script src="../../js/lib/jquery.js"></script>
+    <script src="../../js/common.js"></script>
+    <script>
+        $("#file_upload").on("change", function () {
+            var file = this.files[0];
+            if (file) {
+                $(this).siblings(".form-text").text("已上传");
+            } else {
+                $(this).siblings(".form-text").text("请上传");
+            }
+
+        })
+    </script>
+</body>
+
+</html>

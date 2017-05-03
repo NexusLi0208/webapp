@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>群聊</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+    <section class="main-cantainer  navfixr">
+        <div class="chartBox js-chartBox">
+            <div class="msgItem otherMsg clearfix">
+                <div class="userIcon floatl"><img src="../../css/img/usericon.jpg" alt=""></div>
+                <p class="user-msg floatl">3月30日的会议参加么</p>
+                <span class="user-info text-l floatl">乔尔 <br><span class="time">16:28</span></span>
+            </div>
+            <div class="msgItem mineMsg clearfix">
+                <div class="userIcon floatr"><img src="../../css/img/usericon.jpg" alt=""></div>
+                <p class="user-msg floatr">3月30日的会议参加么</p>
+                <span class="user-info text-r floatr">艾莉<br><span class="time">16:28</span> </span>
+            </div>
+        </div>
+    </section>
+    <div class="msgInput">
+        <textarea id="msgbox" class="floatl" placeholder="请输入消息"></textarea>
+        <button id="sendMsg" type="button" class="success-btn floatr">发送</button>
+    </div>
+    <script src="../../js/lib/jquery.js"></script>
+    <script src="../../js/common.js"></script>
+    <!--环信配置文件-->
+    <script src="../../js/lib/webim.config.js"></script>
+    <script src="../../js/lib/strophe-1.2.8.min.js"></script>
+    <script src="../../js/lib/websdk-1.4.10.js"></script>
+    <script src="../../js/group-chat2.js"></script>
+</body>
+
+</html>

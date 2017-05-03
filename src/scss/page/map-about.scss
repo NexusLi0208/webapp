@@ -1,4 +1,60 @@
-.map-cantainer{
+.map-cantainer {
     width: 100%;
-    height:100%;
+    height: 100%;
+    position: relative;
+}
+
+#panel {
+    width: 100%;
+    height: auto;
+    background-color: white;
+    max-height: 90%;
+    overflow-y: auto;
+
+    right: 1rem;
+    width: 100%;
+}
+#panel2 {
+    width: 100%;
+
+    background-color: white;
+    max-height: 90%;
+    overflow-y: auto;
+
+    width: 100%;
+    z-index: 500;
+}
+
+#bus {
+    width: 5rem;
+    height: 3rem;
+    z-index: 999;
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+}
+
+#car {
+    width: 5rem;
+    height: 3rem;
+    z-index: 999;
+    position: absolute;
+    top: 4.5rem;
+    left: 1.5rem;
+}
+
+.plan {
+    width: 100%;
+}
+
+.amap-lib-driving {
+    width: 100%;
+}
+.path-btn {
+    position: absolute;
+    bottom: 2rem;
+    z-index: 999;
+    left:32%;
+    line-height: 3rem;
+    width:66%;
 }

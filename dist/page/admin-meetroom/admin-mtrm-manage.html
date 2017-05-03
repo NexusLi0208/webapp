@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>会议厅管理</title>
+    <link rel="stylesheet" type="" href="../../css/style.css">
+</head>
+
+<body>
+    <section class="main-cantainer">
+        <form action="">
+            <div class="mtrm-basic-box">
+                <div class="form-group js-mtrmName">
+                    <label for="mtrm_name" class="floatl">会议厅名:</label>
+                    <span class='floatr form-text'>上海企想</span>
+                </div>
+                <div class="form-group fileUpload">
+                    <label for="userName" class="floatl">会议图片:</label>
+                    <input type="file" id='file_upload' onchange="showPreview(this)" class='form-input floatr' name="" id="">
+                    <i class="img-box"><img id="js_uploadImg" src="../../css/img/user-img.jpeg" alt=""></i>
+                </div>
+                <div class="form-group js-add-intro">
+                    <label class="floatl">会议厅简介:</label>
+                    <span class="floatr arrowImg"><img src="../../css/img/list_arrow.png" alt=""></span>
+                </div>
+                <div class="form-group">
+
+                    <label class="floatl">会议厅邀请卡:</label>
+                    <a class=" floatl form-link" href="admin-mtrm-invite.html">
+                    </a>
+                    <span class="floatr arrowImg"><img src="../../css/img/list_arrow.png" alt=""></span>
+
+                </div>
+                <div class="form-group">
+                    <label class="floatl">会议厅管理员:</label>
+                    <a class=" floatl form-link" href="admin-mtrm-administrator.html"></a>
+                    <span class="floatr arrowImg"> <img src="../../css/img/list_arrow.png" alt=""></span>
+
+                </div>
+                <div class="form-group">
+                    <label class="floatl">会议厅认证:</label>
+                    <span class="floatr arrowImg"><img src="../../css/img/list_arrow.png" alt=""></span>
+                </div>
+                <div class="form-group">
+                    <label class="floatl">会议厅链接:</label>
+                    <span class="floatr arrowImg"><img src="../../css/img/list_arrow.png" alt=""></span>
+                    <a class=" floatl form-link" href="admin-mtrm-administrator.html">
+                        <p class='floatr form-text'>admin-mtrm-administrator.html</p>
+                    </a>
+                </div>
+                <div class="form-group">
+
+                    <label class="floatl">会议厅角色创建:</label>
+                    <a class=" floatl form-link" href="admin-mtrm-creatRole.html"> </a>
+                    <span class="floatr arrowImg"><img src="../../css/img/list_arrow.png" alt=""></span>
+
+                </div>
+                <div class='btn-box'>
+                    <button type="button" class="form-btn cancel-btn">返回</button>
+                </div>
+            </div>
+            <div class="mtrm-intro-box" hidden>
+                <div class="form-textarea">
+                    <textarea id='remarks_box' name="disp" placeholder="请输入会议简介" value="" maxlength="200"></textarea>
+                    <div class="textarea_counter"><span id="text-num">0</span>/200</div>
+                </div>
+                <div class='btn-box'>
+                    <button type="button" class="form-btn cancel-btn js-save-intro">保存</button>
+                </div>
+            </div>
+        </form>
+    </section>
+    <!--会议厅名称-->
+    <div class='modal-main' hidden id="mtrmName">
+        <div class="modal-bg"></div>
+        <div class='modal-contant  modal-lg'>
+            <div class="modal-body">
+                <p class="modal-title">会议厅名</p>
+                <div class=modal-input><input type="text" maxlength="30" placeholder="请输入会议厅名"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="yes">确定</button>
+                <button type="button" class="no">取消</button>
+            </div>
+        </div>
+    </div>
+    <script src="../../js/lib/jquery.js"></script>
+    <script src="../../js/common.js"></script>
+    <script src="../../js/mtrm-manage.js"></script>
+</body>
+
+</html>

@@ -47,6 +47,9 @@
  .wt {
      background: #fff!important;
  }
+ .bk{
+     background: #000!important;
+ }
 
  .bl-bg {
      @include linear-gradient(top, #00a0e9, #1d6edd);

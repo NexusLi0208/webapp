@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>知识库管理</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+    <section class="main-cantainer navfixr wt">
+        <ul class="repository-mainList">
+            <li>
+                <div class="item js-repositoryItem"><span><img src="../../css/img/main_category.png" alt=""></span>淄博职业学院</div>
+                <div class="operate clearfix">
+                    <span class="floatr"><a href="javascript:;" ><img src="../../css/img/delete_unpressed_bl.png" alt="删除"></a></span>
+                    <span class="floatr"><a href="javascript:;" class="js-editItem"><img src="../../css/img/edit_unpressed_bl.png" alt="修改"></a></span>
+                </div>
+            </li>
+            <li>
+                <div class="item js-repositoryItem"><span><img src="../../css/img/main_category.png" alt=""></span>淄博职业学院</div>
+                <div class="operate clearfix">
+                    <span class="floatr"><a href="javascript:;" ><img src="../../css/img/delete_unpressed_bl.png" alt="删除"></a></span>
+                    <span class="floatr"><a href="javascript:;" class="js-editItem"><img src="../../css/img/edit_unpressed_bl.png" alt="修改"></a></span>
+                </div>
+            </li>
+        </ul>
+    </section>
+    <a href="javascript:;" id="addItem" class="btm-btn pst-btm">添加主类</a>
+    <!--添加类弹出-->
+    <div class='modal-main' hidden id="addItemModal">
+        <div class="modal-bg"></div>
+        <div class='modal-contant  modal-lg'>
+            <div class="modal-body">
+                <p class="modal-title">添加主类</p>
+                <div class=modal-input><input type="text" maxlength="30" placeholder="主类名称"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="yes">确定</button>
+                <button type="button" class="no">取消</button>
+            </div>
+        </div>
+    </div>
+    <!--添加类弹出结束-->
+    <!--修改类名弹出-->
+    <div class='modal-main' hidden id="editItemModal">
+        <div class="modal-bg"></div>
+        <div class='modal-contant  modal-lg'>
+            <div class="modal-body">
+                <p class="modal-title">修改主类</p>
+                <div class=modal-input><input type="text" maxlength="30" placeholder="主类名称"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="yes">确定</button>
+                <button type="button" class="no">取消</button>
+            </div>
+        </div>
+    </div>
+    <!--修改类名弹出结束-->
+    <div class="operate-modal" id="operate_modal" hidden>
+        <div class="operate-content">
+            <div class="operate-body">
+                <div class="operate-btn">
+                    <a href="admin-repository-chList.html">
+                        <i><img src="../../css/img/add_subclass.png" alt=""></i>
+                        <span>添加子类</span>
+                    </a>
+                </div>
+                <div class="operate-btn">
+                    <a href="admin-repository-dataList.html">
+                        <i><img src="../../css/img/binding_materials.png" alt=""></i>
+                        <span>绑定资料</span>
+                    </a>
+                </div>
+                <i class="close-btn" id="js_closeModal"><img src="../../css/img/hint_icon_cancel.png" alt=""></i>
+            </div>
+        </div>
+    </div>
+    <script src="../../js/lib/jquery.js"></script>
+    <script src="../../js/common.js"></script>
+    <script src="../../js/admin-respository.js"></script>
+</body>
+
+</html>

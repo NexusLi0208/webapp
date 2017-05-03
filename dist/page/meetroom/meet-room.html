@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>会议</title>
+    <link rel="stylesheet" href="../../css/lib/animate.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+    <div id="vue_main">
+        <section class="main-cantainer navfixr">
+            <header class="index-header">
+                <!--<div class="page-title meetRoom-title">
+                    <span class='floatl'>会议厅</span>
+                    <a href=""><span class='floatr add-icon'>+</span></a>
+                </div>-->
+                <div class="message-roll ">
+                    <div class="message-icon"><img src="../../css/img/notice.png" alt=""></div>
+                    <p><span class="marquee"> 会议过程中也能上传文件了，随时随地分享！会议过程中也能上传文件了，随时随地分享！会议过程中也能上传文件了，随时随地分享！</span></p>
+                </div>
+            </header>
+            <section class="meetRoom-userInfo clearfix">
+                <div class="user-info clearfix">
+                    <div class="user-img floatl"><img src="../../css/img/user-img.jpeg" alt=""></div>
+                    <div class="user-name floatl">会议厅会议厅会议厅</div>
+                    <button type="button" class="cutMeetroom floatr" onclick="window.location.href='cut-meetroom.html'">切换直播间</button>
+                </div>
+                <div class="userData">
+                    <div class="fans floatl">
+                        <a href="fans-list.html">
+                        <p class="data-num">26</p>
+                        <p class="data-title">
+                            <img src="../../css/img/funs@2x.png" alt="">所有粉丝数
+                        </p>
+                        </a>
+                    </div>
+                    <div class="visit floatr">
+                        <p class="data-num">{{hallInfo.hallVisits}}</p>
+                        <p class="data-title">
+                            <img src="../../css/img/visited_number@2x.png" alt="">访问量
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <a class="creatMeet-btn success-btn" href="creat-meetRoom-type.html" >创建会议厅</a>
+            <div class="meetRoom-menu">
+                <a href="meetroom-index.html">
+                    <i><img src="../../css/img/meet-room/main_page.png" alt=""></i> 会议管理
+                </a>
+                <a href="../admin-meetroom/admin-mtrm-manage.html">
+                    <i><img src="../../css/img/meet-room/manage.png" alt=""></i> 会议厅管理
+                </a>
+                <a href="javascript:;" class="js-service">
+                    <i><img src="../../css/img/meet-room/consultation.png" alt=""></i> 客服咨询
+                </a>
+                <a href="#">
+                    <i><img src="../../css/img/meet-room/tutorial.png" alt=""></i> 使用教程
+                </a>
+                <a href="#">
+                    <i><img src="../../css/img/meet-room/data_statistics.png" alt=""></i> 数据统计
+                </a>
+            </div>
+        </section>
+        <nav class="index-nav">
+            <ul>
+                <li>
+                    <a href="../meet/meet-index.html">
+                        <img src="../../css/img/home.png" alt="home">
+                        <p>会议</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="meet-room.html"><img src="../../css/img/meet.png" alt="home">
+                        <p>会议厅</p>
+                    </a>
+                </li>
+                     <li>
+                    <a href="../mine/person-center.html">
+                     <img src="../../css/img/user.png" alt="home">
+                    <p>我的</p>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+        <div class="modal-main" id="service-modal" hidden>
+        <div class="modal-bg"></div>
+        <div class="modal-contant">
+            <div class="modal-body htat">
+                <p class="text-m p-title">我是您的专属客服</p>
+                <div class="modal-code">
+                    <img src="../../css/img/server-code.png" alt="二维码">
+                </div>
+                <p class="text-m">长按识别二维码加好友，享受一对一服务</p>
+            </div>
+        </div>
+    </div>
+    <script src="../../js/lib/jquery.js"></script>
+    <script src="../../js/common.js"></script>
+    <script src="../../js/lib/vue-1.0.28.js"></script>
+    <script src="../../js/plug/httpPath.js"></script>
+    <script src="../../js/meet-room.js"></script>
+    <script>
+       $(".js-service").on("click",function(){
+           $("#service-modal").show();
+       })
+    </script>
+</body>
+
+</html>

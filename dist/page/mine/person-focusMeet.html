@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>个人中心</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+    <section class="main-cantainer navfixr">
+        <!--<div class="form-title"><span onclick="javascript:history.back(-1)" class="backBasic-btn"><img src="../../css/img/title_arrow_back.png" alt=""></span>我关注的会议</div>-->
+        <section class="index-tab">
+            <button class="index-tab-btn active js_nostart_btn">未开始</button>
+            <button class="index-tab-btn js_start_btn">已结束</button>
+        </section>
+        <section class="meet-list-main">
+            <ul class="meet-list" id="nostarted_list">
+                <li class="meet-item">
+                    <a href="#">
+                        <div class="left"><img src="../../css/img/pic1@2x.png" alt="meetimg"></div>
+                        <div class="right">
+                            <p class="meet-name">未开始</p>
+                            <span class="time floatl">2016-12-13</time>
+                        </div>
+                    </a>
+                </li>
+                <li class="meet-item">
+                    <a href="#">
+                        <div class="left"><img src="../../css/img/pic1@2x.png" alt="meetimg"></div>
+                        <div class="right">
+                            <p class="meet-name">子会议名</p>
+                             <span class="time floatl">2016-12-13</time>
+                        </div>
+                    </a>
+                </li>
+                <li class="meet-item">
+                    <a href="#">
+                        <div class="left"><img src="../../css/img/pic1@2x.png" alt="meetimg"></div>
+                        <div class="right">
+                            <p class="meet-name">子会议名</p>
+                              <span class="time floatl">2016-12-13</time>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <ul class="meet-list" id="started_list" hidden>
+                <li class="meet-item">
+                    <a href="#">
+                        <div class="left"><img src="../../css/img/pic1@2x.png" alt="meetimg"></div>
+                        <div class="right">
+                            <p class="meet-name">已结束</p>
+                              <span class="time floatl">2016-12-13</time>
+                        </div>
+                    </a>
+                </li>
+                <li class="meet-item">
+                    <a href="#">
+                        <div class="left"><img src="../../css/img/pic1@2x.png" alt="meetimg"></div>
+                        <div class="right">
+                            <p class="meet-name">子会议名</p>
+                              <span class="time floatl">2016-12-13</time>
+                        </div>
+                    </a>
+                </li>
+                <li class="meet-item">
+                    <a href="#">
+                        <div class="left"><img src="../../css/img/pic1@2x.png" alt="meetimg"></div>
+                        <div class="right">
+                            <p class="meet-name">子会议名</p>
+                              <span class="time floatl">2016-12-13</time>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </section>
+
+    <script src="../../js/lib/jquery.js"></script>
+    <script src="../../js/person-focusMeet.js"></script>
+</body>
+
+</html>

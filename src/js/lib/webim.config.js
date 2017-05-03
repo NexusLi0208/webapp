@@ -14,12 +14,12 @@ WebIM.config = {
     /*
      * Backend REST API URL
      */
-  apiURL: 'http://a1.easemob.com',  
+    apiURL: 'http://a1.easemob.com',  
     /*
      * Application AppKey
      */
     // appkey: '1148170220178457#lipeng',
-    appkey: 'sephiroth#meeting',
+    appkey: '1148170220178457#lipeng',
     // 
     /*
      * Whether to use wss

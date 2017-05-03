@@ -1,0 +1,38 @@
+    .mbsc-android-holo {
+        // 标题显示
+        .dwv {
+            background: #00a0e9;
+            color: #fff;
+            height: 5rem;
+            font-size: 1.5rem;
+            line-height: 5rem;
+            border: none;
+        } // 被选择文字
+        .dw-i {
+            color: #BFBFBF;
+            font-size: 1.5rem;
+            font-weight: normal;
+        }
+        .dw-sel {
+            .dw-i {
+                color: #00a0e9;
+                font-size: 2rem;
+                font-weight: bold;
+            }
+        } // 被选择边框
+        .dwwol {
+            border: none;
+        }
+        .dwbc {
+            height: 5rem;
+            border-color: #eee;
+        }
+        .dwwo {
+            background: none;
+        }
+        .dwb {
+            height: 100%;
+            line-height: 5rem;
+            border-color: #eee!important;
+        }
+    }

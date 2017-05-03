@@ -149,54 +149,7 @@ textarea {
     color: $blue;
 }
 
-// 按钮
-.btn-line {
-    width: 6rem;
-    height: 3rem;
-    border: none;
-    border-radius: 50px;
-    background: #ffae2e;
-    color: #fff;
-    line-height: 3rem;
-    font-size: 1.2rem;
-    text-align: center;
-}
 
-.btn-line {
-    display: inline-block;
-    width: 6rem;
-    height: 3rem;
-    border: 1px $blue solid;
-    border-radius: 50px;
-    background: #fff;
-    color: $blue;
-    line-height: 3rem;
-    font-size: 1.2rem;
-    text-align: center;
-}
-
-.btn-nomarl {
-    display: inline-block;
-    width: 6rem;
-    height: 3rem;
-    border: none;
-    border-radius: 50px;
-    color: #fff;
-    outline: none;
-    line-height: 3rem;
-    font-size: 1.2rem;
-    text-align: center;
-}
-
-.btn-orgin {
-    @extend .btn-nomarl;
-    background: #ffae2e;
-}
-
-.btn-red {
-    @extend .btn-nomarl;
-    background: #f66;
-}
 
 // 滚动
 .marquee {

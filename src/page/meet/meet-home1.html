@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>会议首页</title>
+    <link rel="stylesheet" href="../../css/lib/animate.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <script src="https://cdn.bootcss.com/selectivizr/1.0.2/selectivizr-min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <section class="main-cantainer">
+        <div class="meet-home-header">
+            <!--海报-->
+            <div class="title-img">
+                <img src="../../css/img/banner.png" alt="">
+            </div>
+            <!--视频直播-->
+            <!--<div class="viedo-box">
+                <video src="movie.ogg" controls="controls">
+                    您的浏览器不支持 video 标签。
+                </video>
+            </div>-->
+        </div>
+        <div class="meet-home-operate"><i class="floatl"><img src="../../css/img/icon_chat_roomname.png" alt="聊天"></i>
+            <a class="meet-name floatl"><select>
+                <option value="">高职高专校长联席会议</option>
+            </select><i class="floatr"><img src="../../css/img/arrow_up1.png" alt="切换聊天室"></i>
+            </a>
+            <button class="red-btn js-open-funcbox"><img src="../../css/img/icon_function.png" alt="会议功能">会议功能</button>
+        </div>
+        <div class="chartBox js-chartBox">
+            <div class="msgItem otherMsg clearfix">
+                <div class="userIcon floatl js-chatUserInfo"><img src="../../css/img/usericon.jpg" alt=""></div>
+                <p class="user-msg floatl">3月30日的会议参加么</p>
+                <span class="user-info text-l floatl">乔尔 <br><span class="time">16:28</span></span>
+            </div>
+            <div class="msgItem mineMsg clearfix">
+                <div class="userIcon floatr js-chatMyInfo"><img src="../../css/img/usericon.jpg" alt=""></div>
+                <p class="user-msg floatr">3月30日的会议参加么</p>
+                <span class="user-info text-r floatr">艾莉<br><span class="time">16:28</span> </span>
+            </div>
+        </div>
+
+    </section>
+    <!--输入框-->
+    <div class="msgInput">
+        <a href="meet-group-user.html" class="floatl"><img src="../../css/img/icon_group.png" alt=""></a>
+        <textarea id="msgbox" class="floatl" placeholder="请输入消息"></textarea>
+        <button id="sendMsg" type="button" class="floatr">发送</button>
+    </div>
+    <!--会议功能-->
+    <div class="meet-func-box" hidden>
+        <div class="meet-func-bg"></div>
+        <ul class="meet-info-list  clearfix">
+            <li class="item">
+                <a href="../sign-up/sign-up.html">
+                    <img src="../../css/img/meet-info/registration.png">
+                    <p>会议报名</p>
+                </a>
+            </li>
+            <li class="item">
+                <a href="">
+                    <img src="../../css/img/meet-info/agenda.png">
+                    <p>会议议程</p>
+                </a>
+            </li>
+            <li class="item">
+                <a href="../meet-func/meet-dynamic.html">
+                    <img src="../../css/img/meet-info/dynamics.png">
+                    <p>会议动态</p>
+                </a>
+            </li>
+            <li class="item">
+                <a href="../meet-func/meet-introduction.html">
+                    <img src="../../css/img/meet-info/introduction.png">
+                    <p>会议导读</p>
+                </a>
+            </li>
+            <li class="item">
+                <a href="../meet-serve/meet-server-func.html">
+                    <img src="../../css/img/meet-info/service.png">
+                    <p>会议服务</p>
+                </a>
+            </li>
+            <li class="item">
+                <a href="../meet-func/meet-data.html">
+                    <img src="../../css/img/meet-info/material.png">
+                    <p>会议材料</p>
+                </a>
+            </li>
+            <li class="item">
+                <a href="">
+                    <img src="../../css/img/meet-info/scenevote.png">
+                    <p>现场投票</p>
+                </a>
+            </li>
+            <li class="item">
+                <a href="../admin-signUp/admin-user-list.html">
+                    <img src="../../css/img/meet-info/registration.png">
+                    <p>管报名</p>
+                </a>
+            </li>
+            <li class="item">
+                <a href="../meet-func/hotel.html">
+                    <img src="../../css/img/meet-info/all_icon_hotel.png">
+                    <p>酒店管理</p>
+                </a>
+            </li>
+            <li class="item">
+                <a href="../admin-hotel/admin-hotel-func.html">
+                    <img src="../../css/img/meet-info/all_icon_hotel.png">
+                    <p>管酒店</p>
+                </a>
+            </li>
+            <li class="item">
+                <a href="../admin-invoice/admin-userInvoice-list.html">
+                    <img src="../../css/img/meet-info/all_icon_invoice.png">
+                    <p>发票管理</p>
+                </a>
+            </li>
+            <li class="item">
+                <a href="../person-member/member-func.html">
+                    <img src="../../css/img/meet-info/all_icon_dues.png">
+                    <p>会员管理</p>
+                </a>
+            </li>
+            <li class="item">
+                <a href="../vote/vote-theme-list.html">
+                    <img src="../../css/img/meet-info/all_icon_vote.png">
+                    <p>案例投票</p>
+                </a>
+            </li>
+            <li class="item">
+                <a href="../admin-vote/admin-vote-func.html">
+                    <img src="../../css/img/meet-info/all_icon_vote.png">
+                    <p>管投票</p>
+                </a>
+            </li>
+            <li class="item">
+                <a href="../repository/repository-main-list.html">
+                    <img src="../../css/img/meet-info/all_icon_knowledge_library.png">
+                    <p>知识库</p>
+                </a>
+            </li>
+            <li class="item">
+                <a href="../admin-repository/admin-repository-mainList.html">
+                    <img src="../../css/img/meet-info/all_icon_knowledge_library.png">
+                    <p>管知识库</p>
+                </a>
+            </li>
+        </ul>
+        <div class="operate">
+            <button class="js-close-funcbox">取消</button>
+        </div>
+    </div>
+    <!--用户信息-->
+    <div class='modal-main' id="chatUserInfo_modal" hidden>
+        <div class="modal-bg"></div>
+        <div class='modal-contant modal-lg'>
+            <div class="chat-user-info">
+                <div class="header">
+                    <i class="user-img floatl"><img src="../../css/img/usericon.jpg" alt=""></i><span class="user-name floatl">Bobo</span>
+                    <i class="sex floatl"><img src="../../css/img/chat/personal_information_female.png" alt=""></i>
+                </div>
+                <div class="content">
+                    <p><span>职务:</span>教务管理员</p>
+                    <p><span>公司:</span>上海企想信息技术有限公司</p>
+                    <p><span>手机:</span>1654584587</p>
+                    <p><span>邮箱:</span>327416464@asd.com</p>
+                </div>
+                <div class="footer">
+                    <!--<p>已添加为好友</p>-->
+                    <button>发送名片</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--我的信息-->
+    <div class='modal-main' id="chatMyInfo_modal" hidden>
+        <div class="modal-bg"></div>
+        <div class='modal-contant modal-lg'>
+            <div class="chat-user-info">
+                <div class="header">
+                    <i class="user-img floatl"><img src="../../css/img/usericon.jpg" alt=""></i><span class="user-name floatl">Bobo</span>
+                    <i class="sex floatl"><img src="../../css/img/chat/personal_information_female.png" alt=""></i>
+                    <i class="edit floatr"><img src="../../css/img/chat/edit_unpressed.png" alt=""></i>
+                </div>
+                <div class="content">
+                    <p><span>职务:</span>教务管理员</p>
+                    <p><span>公司:</span>上海企想信息技术有限公司</p>
+                    <p><span>手机:</span>1654584587</p>
+                    <p><span>邮箱:</span>327416464@asd.com</p>
+                </div>
+                <div class="footer">
+                    <div class="code-box">
+                        <img src="../../css/img/code.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../js/lib/jquery.js"></script>
+    <script src="../../js/common.js"></script>
+    <script src="../../js/lib/webim.config.js"></script>
+    <script src="../../js/lib/strophe-1.2.8.min.js"></script>
+    <script src="../../js/lib/websdk-1.4.10.js"></script>
+    <script src="../../js/meet-home1.js"></script>
+    <script>
+        $(".js-open-funcbox").on("click", function () {
+            $(".meet-func-box").show();
+        });
+        $(".js-close-funcbox").on("click", function () {
+            $(".meet-func-box").hide();
+        })
+    </script>
+</body>
+
+</html>

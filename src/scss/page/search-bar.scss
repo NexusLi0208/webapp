@@ -1,0 +1,72 @@
+// 搜索框
+.search-bar {
+    position: relative;
+    width: 100%;
+    height: 7rem;
+    padding: 1.75rem 0;
+    box-sizing: border-box;
+    background: $blue;
+}
+
+.search-body {
+    width: 89%;
+    text-align: center;
+    height: 3.5rem;
+    margin: 0 auto;
+}
+
+.searchBox {
+    position: relative;
+    float: left;
+    width: 75%;
+    height: 3.5rem;
+    border-radius: .5rem;
+    i {
+        display: block;
+        position: absolute;
+        top: .8rem;
+        width: 2rem;
+        height: 2rem;
+        &.search {
+            left: .8rem;
+        }
+        &.delete {
+            right: .8rem;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .search-input {
+        background: #33b3ed;
+        color:#fff;
+        border-radius: .5rem;
+        outline: none;
+        font-size: 1.2rem;
+        text-indent: 3rem;
+        width: 100%;
+        height: 100%;
+        border: none;
+        margin: 0;
+        padding: 0;
+        &::-webkit-input-placeholder {
+            color: #fff;
+        }
+    }
+}
+
+.search-btn {
+    width: 5.5rem;
+    height: 3.5rem;
+    background: #0183d6;
+    float: right;
+    border-radius: .5rem;
+    outline: none;
+    border: none;
+    font-size: 1.3rem;
+    color: #fff;
+    &:active {
+        background: #0070b7;
+    }
+}

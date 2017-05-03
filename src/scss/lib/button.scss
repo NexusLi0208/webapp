@@ -5,7 +5,7 @@
     min-width: 320px;
     max-width: 640px;
     bottom: 0;
-    z-index: 999;
+    z-index: 99;
 }
 
 .default-btn {
@@ -14,37 +14,128 @@
     color: #fb911a;
 }
 
+.btn-line {
+    width: 6rem;
+    height: 3rem;
+    border: none;
+    border-radius: 50px;
+    background: #ffae2e;
+    color: #fff;
+    line-height: 3rem;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.btn-line {
+    display: inline-block;
+    width: 6rem;
+    height: 3rem;
+    border: 1px $blue solid;
+    border-radius: 50px;
+    background: #fff;
+    color: $blue;
+    line-height: 3rem;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.btn-nomarl {
+    display: inline-block;
+    width: 6rem;
+    height: 3rem;
+    border: none;
+    border-radius: 50px;
+    color: #fff;
+    outline: none;
+    line-height: 3rem;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.btn-orgin {
+    @extend .btn-nomarl;
+    background: #ffae2e;
+}
+
+.btn-red {
+    @extend .btn-nomarl;
+    background: #f66;
+}
+
 .flex-box {
     display: flex;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     height: 5rem;
     line-height: 5rem;
+    box-sizing: border-box;
     border-top: 1px #eee solid;
     a {
         position: relative;
         font-size: 1.7rem;
-        text-align: center;
-        &:nth-of-type(1) {
-            &:after {
-                content: '';
-                display: block;
-                height: 3.5rem;
-                width: 1px;
-                background: #eee;
-                position: absolute;
-                right: 0;
-                top: .8rem;
+        text-align: center; // 图标按钮
+        &.btm-icon-btn {
+            font-size: 1.2rem;
+            color: #848689;
+            background: #fff;
+            line-height: 0;
+            cursor: pointer;
+            padding: .5rem 0;
+            box-sizing: border-box;
+            i {
+                width: 2.5rem;
+                height: 2.5rem;
+                margin-bottom: .5rem;
+                img {
+                    width: 100%;
+                }
+                &.focus {
+                    background: url(img/icon_focused_btn_pressed.png) no-repeat;
+                    background-size: cover;
+                }
+                &.unfocus {
+                    background: url(img/icon_focused_btn_normal.png) no-repeat;
+                    background-size: cover;
+                }
             }
-        }
-        &:nth-of-type(3) {
-            &:before {
-                content: '';
-                display: block;
-                height: 3.5rem;
-                width: 1px;
-                background: #eee;
-                position: absolute;
-                left: 0;
-                top: .8rem;
+            &:nth-of-type(1) {
+                &:after {
+                    content: '';
+                    display: block;
+                    height: 100%;
+                    width: 1px;
+                    background: #eee;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                }
+            }
+        } // 默认按钮
+        &.default-btn {
+            &:nth-of-type(1) {
+                &:after {
+                    content: '';
+                    display: block;
+                    height: 3.5rem;
+                    width: 1px;
+                    background: #eee;
+                    position: absolute;
+                    right: 0;
+                    top: .8rem;
+                }
+            }
+            &:nth-of-type(3) {
+                &:before {
+                    content: '';
+                    display: block;
+                    height: 3.5rem;
+                    width: 1px;
+                    background: #eee;
+                    position: absolute;
+                    left: 0;
+                    top: .8rem;
+                }
             }
         }
         i {
@@ -60,6 +151,10 @@
 
 .flex1 {
     flex: 1;
+}
+
+.flex2 {
+    flex: 2;
 }
 
 .success-btn {
