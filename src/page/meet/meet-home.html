@@ -18,31 +18,83 @@
     <![endif]-->
 </head>
 
-<body>
+<body onbeforeunload="return myFunction()">
     <section class="main-cantainer">
         <div class="meet-home-header">
             <!--海报-->
-            <!--<div class="title-img">
+            <div class="title-img">
                 <img src="../../css/img/banner.png" alt="">
-            </div>-->
+            </div>
             <!--视频直播-->
-            <div class="video-box">
+            <!--<div class="video-box">
                 <video autoplay="autoplay" src="../../viedo/viedo.mp4" controls="controls">
                     您的浏览器不支持 video 标签。
                 </video>
+            </div>-->
+            <div class="online-num">在线人数：1213</div>
+            <div class="focus-box">
+                <div class="focus-main">
+                    <div class="focus-num">
+                        <i><img src="../../css/img/meet-info/icon_focused_btn_normal.png" alt=""></i>
+                        <!--<i><img src="../../css/img/meet-info/icon_focused_btn_pressed.png" alt=""></i>-->
+                        关注<span>1554人关注</span></div>
+                </div>
             </div>
         </div>
-        <div class="meet-home-operate"><i class="floatl"><img src="../../css/img/icon_chat_roomname.png" alt="聊天"></i>
-            <a class="meet-name floatl"><select>
-                <option value="">高职高专校长联席会议</option>
-            </select><i class="floatr"><img src="../../css/img/arrow_up1.png" alt="切换聊天室"></i>
-            </a>
-            <button class="red-btn js-open-funcbox"><img src="../../css/img/icon_function.png" alt="会议功能">会议功能</button>
+        <div class="meet-home-operate">
+            <ul class="group-list js-groupList">
+                <li class="active" data-group-id="9207342497796" id="to9207342497796">游客</li>
+                <li data-group-id="15186739134465" id="to15186739134465">与会者</li>
+                <li data-group-id="15184837017601" id="to15184837017601">管理员</li>
+                <li data-group-id="4" id="to4">高职会议</li>
+                <li data-group-id="5" id="to5">中职会议</li>
+                <li data-group-id="6" id="to6">小学会议</li>
+            </ul>
+            <span class="more-group-btn floatr">
+                <i class="js-showMoreGroup"><img src="../../css/img/meet-info/icon_arrow_down.png" alt=""></i>
+            </span>
+            <div class="more-group-box" hidden>
+                <ul class="more-group-list js-groupList clearfix">
+                    <li class="active" data-group-id="9207342497796"><a href="#to9207342497796">游客</a></li>
+                    <li data-group-id="15186739134465"><a href="#to15186739134465">与会者</a></li>
+                    <li data-group-id="15184837017601"><a href="#to15184837017601">管理员</a></li>
+                    <li data-group-id="4"><a href="#to4">高职会议</a></li>
+                    <li data-group-id="5"><a href="#to5">中职会议</a></li>
+                    <li data-group-id="6"><a href="#to6">小学会议</a></li>
+                </ul>
+            </div>
         </div>
-        <div class="chartBox js-chartBox">
+        <!--群聊一-->
+        <div class="chartBox" id="9207342497796">
             <div class="msgItem otherMsg clearfix">
                 <div class="userIcon floatl js-chatUserInfo"><img src="../../css/img/usericon.jpg" alt=""></div>
-                <p class="user-msg floatl">3月30日的会议参加么</p>
+                <p class="user-msg floatl">你好这里是群聊一群</p>
+                <span class="user-info text-l floatl">乔尔 <br><span class="time">16:28</span></span>
+            </div>
+            <div class="msgItem mineMsg clearfix">
+                <div class="userIcon floatr js-chatMyInfo"><img src="../../css/img/usericon.jpg" alt=""></div>
+                <p class="user-msg floatr">3月30日的会议参加么</p>
+                <span class="user-info text-r floatr">艾莉<br><span class="time">16:28</span> </span>
+            </div>
+        </div>
+        <!--群聊二-->
+        <div class="chartBox" id="15186739134465" hidden>
+            <div class="msgItem otherMsg clearfix">
+                <div class="userIcon floatl js-chatUserInfo"><img src="../../css/img/usericon.jpg" alt=""></div>
+                <p class="user-msg floatl">你好这里是群聊二群</p>
+                <span class="user-info text-l floatl">乔尔 <br><span class="time">16:28</span></span>
+            </div>
+            <div class="msgItem mineMsg clearfix">
+                <div class="userIcon floatr js-chatMyInfo"><img src="../../css/img/usericon.jpg" alt=""></div>
+                <p class="user-msg floatr">3月30日的会议参加么</p>
+                <span class="user-info text-r floatr">艾莉<br><span class="time">16:28</span> </span>
+            </div>
+        </div>
+        <!--群聊三-->
+        <div class="chartBox" id="15184837017601" hidden>
+            <div class="msgItem otherMsg clearfix">
+                <div class="userIcon floatl js-chatUserInfo"><img src="../../css/img/usericon.jpg" alt=""></div>
+                <p class="user-msg floatl">你好这里是群聊三群</p>
                 <span class="user-info text-l floatl">乔尔 <br><span class="time">16:28</span></span>
             </div>
             <div class="msgItem mineMsg clearfix">
@@ -55,13 +107,16 @@
     </section>
     <!--输入框-->
     <div class="msgInput">
-        <a href="meet-group-user.html" class="floatl"><img src="../../css/img/icon_group.png" alt=""></a>
+        <a href="javascript:;" class="floatl js-groupUserInfo"><img src="../../css/img/icon_group.png" alt=""></a>
         <textarea id="msgbox" class="floatl" placeholder="请输入消息"></textarea>
         <button id="sendMsg" type="button" class="floatr">发送</button>
     </div>
+    <div class="float-btn-box">
+        <span class="float-btn js-open-funcbox"><img src="../../css/img/meet-info/icon_function.png" alt=""></span>
+    </div>
     <!--会议功能-->
     <div class="meet-func-box" hidden>
-        <div class="meet-func-bg"></div>
+        <div class="meet-func-bg js-close-funcbox"></div>
         <ul class="meet-info-list  clearfix">
             <li class="item">
                 <a href="../sign-up/sign-up.html">
@@ -147,23 +202,141 @@
                     <p>管投票</p>
                 </a>
             </li>
-            <li class="item">
+            <!--<li class="item">
                 <a href="../repository/repository-main-list.html">
                     <img src="../../css/img/meet-info/all_icon_knowledge_library.png">
                     <p>知识库</p>
                 </a>
-            </li>
+            </li>-->
+
             <li class="item">
-                <a href="../admin-repository/admin-repository-mainList.html">
+                <a href="meet-group-join.html">
                     <img src="../../css/img/meet-info/all_icon_knowledge_library.png">
-                    <p>管知识库</p>
+                    <p>与会人员</p>
                 </a>
             </li>
+
         </ul>
         <div class="operate">
             <button class="js-close-funcbox">取消</button>
         </div>
     </div>
+    <!--所有成员信息-->
+    <div class="chat-user-box" id="groupUser" hidden>
+        <div class="search-bar clearfix">
+            <div class="search-body">
+                <div class="searchBox">
+                    <i class="search"><img src="../../css/img/search_icon_wt.png" alt=""></i>
+                    <input class="search-input" type="text" id="searchText" value="" placeholder="组织名称/角色">
+                    <i class="delete" id="search-delete"><img src="../../css/img/connection_search_delete_wt.png" alt=""></i>
+                </div>
+                <button class="search-btn js-searchUser" type="">搜索</button>
+            </div>
+        </div>
+        <div class="operate">
+            <button class="js-close-userbox">取消</button>
+        </div>
+        <ul class="chat-user-list">
+            <li>
+                <p class="letter" id="A" name="A">A</p>
+                <ul class="item-list">
+                    <li class="js-chatUserInfo">
+                        <i class="user-img floatl"><img src="../../css/img/user-img.jpeg" alt=""></i>
+                        <div class="user-info ">
+                            <span class="name floatl">狗蛋1</span>
+                            <span class="sex floatl"><img src="../../css/img/chat/personal_information_female.png" alt=""></span>
+                            <span class="friend floatr">已是好友</span>
+                        </div>
+                    </li>
+                    <li class="js-chatUserInfo">
+                        <i class="user-img floatl"><img src="../../css/img/user-img.jpeg" alt=""></i>
+                        <div class="user-info ">
+                            <span class="name floatl">铁柱4</span>
+                            <span class="sex floatl"><img src="../../css/img/chat/personal_information_female.png" alt=""></span>
+                            <span class="friend floatr">已是好友</span>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p class="letter" id="B" name="B">B</p>
+                <ul class="item-list">
+                    <li class="js-chatUserInfo">
+                        <i class="user-img floatl"><img src="../../css/img/user-img.jpeg" alt=""></i>
+                        <div class="user-info ">
+                            <span class="name floatl">铁柱4</span>
+                            <span class="sex floatl"><img src="../../css/img/chat/personal_information_female.png" alt=""></span>
+                            <span class="friend floatr">已是好友</span>
+                        </div>
+                    </li>
+                    <li class="js-chatUserInfo">
+                        <i class="user-img floatl"><img src="../../css/img/user-img.jpeg" alt=""></i>
+                        <div class="user-info ">
+                            <span class="name floatl">铁柱4</span>
+                            <span class="sex floatl"><img src="../../css/img/chat/personal_information_female.png" alt=""></span>
+                            <span class="friend floatr">已是好友</span>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                <p class="letter" id="C" name="C">C</p>
+                <ul class="item-list">
+                    <li class="js-chatUserInfo">
+                        <i class="user-img floatl"><img src="../../css/img/user-img.jpeg" alt=""></i>
+                        <div class="user-info ">
+                            <span class="name floatl">狗蛋5</span>
+                            <span class="sex floatl"><img src="../../css/img/chat/personal_information_female.png" alt=""></span>
+                            <span class="friend floatr">已是好友</span>
+                        </div>
+                    </li>
+                    <li class="js-chatUserInfo">
+                        <i class="user-img floatl"><img src="../../css/img/user-img.jpeg" alt=""></i>
+                        <div class="user-info ">
+                            <span class="name floatl">狗蛋6</span>
+                            <span class="sex floatl"><img src="../../css/img/chat/personal_information_female.png" alt=""></span>
+                            <span class="friend floatr">已是好友</span>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p class="letter" id="D" name="D">D</p>
+                <ul class="item-list">
+                    <li class="js-chatUserInfo">
+                        <i class="user-img floatl"><img src="../../css/img/user-img.jpeg" alt=""></i>
+                        <div class="user-info ">
+                            <span class="name floatl">狗蛋7</span>
+                            <span class="sex floatl"><img src="../../css/img/chat/personal_information_female.png" alt=""></span>
+                            <span class="friend floatr">已是好友</span>
+                        </div>
+                    </li>
+                    <li class="js-chatUserInfo">
+                        <i class="user-img floatl"><img src="../../css/img/user-img.jpeg" alt=""></i>
+                        <div class="user-info ">
+                            <span class="name floatl">狗蛋8</span>
+                            <span class="sex floatl"><img src="../../css/img/chat/personal_information_female.png" alt=""></span>
+                            <span class="friend floatr">已是好友</span>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <!--<div class="letter-list">
+            <a href="#A">A</a>
+            <a href="#B">B</a>
+            <a href="#C">C</a>
+            <a href="#D">D</a>
+            <a href="#E">E</a>
+            <a href="#F">F</a>
+            <a href="#G">G</a>
+            <a href="#H">H</a>
+
+        </div>-->
+    </div>
+
     <!--用户信息-->
     <div class='modal-main' id="chatUserInfo_modal" hidden>
         <div class="modal-bg"></div>
@@ -217,12 +390,6 @@
     <script src="../../js/lib/websdk-1.4.10.js"></script>
     <script src="../../js/meet-home.js"></script>
     <script>
-        $(".js-open-funcbox").on("click", function () {
-            $(".meet-func-box").show();
-        });
-        $(".js-close-funcbox").on("click", function () {
-            $(".meet-func-box").hide();
-        })
     </script>
 </body>
 

@@ -4,6 +4,35 @@
     background: #fff;
 }
 
+.help-hint {
+    margin: 2rem 0;
+    color: #848689;
+    text-align: center;
+    font-size: 1.3rem;
+    cursor: pointer;
+    img {
+        width: 2.5rem;
+    }
+}
+
+.help-table {
+    border-collapse: separate;
+    border-spacing: 0 1rem;
+    vertical-align: top;
+    line-height: 1.8rem;
+    .title {
+        width: 30%;
+        color: #333;
+        vertical-align: top;
+        font-size: 1.2rem;
+    }
+    .content {
+        vertical-align: top;
+        color: #848689;
+        font-size: 1.2rem;
+    }
+}
+
 .meet-func-list {
     width: 100%;
     padding: 0 2rem;

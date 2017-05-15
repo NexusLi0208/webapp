@@ -15,12 +15,12 @@
 <body>
     <section class="main-cantainer navfixr">
         <!--<div class="form-title"><span onclick="javascript:history.back(-1)" class="backBasic-btn"><img src="../../css/img/title_arrow_back.png" alt=""></span>我参与的会议</div>-->
-        <section class="index-tab">
-            <button class="index-tab-btn active js_nostart_btn">未开始</button>
-            <button class="index-tab-btn js_start_btn">已结束</button>
-        </section>
+        <div class="cutBtnBox">
+            <button type="button" class="cutActive" id="js_cutList1">未开始</button>
+            <button type="button" id="js_cutList2">已结束</button>
+        </div>
         <section class="meet-list-main">
-            <ul class="meet-list" id="nostarted_list">
+            <ul class="meet-list js_List1">
                 <li class="meet-item">
                     <a href="#">
                         <div class="left"><img src="../../css/img/pic1@2x.png" alt="meetimg"></div>
@@ -49,7 +49,7 @@
                     </a>
                 </li>
             </ul>
-            <ul class="meet-list" id="started_list" hidden>
+            <ul class="meet-list js_List2" id="started_list" hidden>
                 <li class="meet-item">
                     <a href="#">
                         <div class="left"><img src="../../css/img/pic1@2x.png" alt="meetimg"></div>
@@ -82,7 +82,7 @@
     </section>
 
     <script src="../../js/lib/jquery.js"></script>
-    <script src="../../js/person-jionMeet.js"></script>
+     <script src="../../js/common.js"></script>
 </body>
 
 </html>

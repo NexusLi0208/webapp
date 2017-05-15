@@ -114,7 +114,7 @@ textarea {
 
 // 导航
 .index-nav {
-    position: fixed;
+    position: absolute;
     bottom: 0;
     width: 100%;
     min-width: 320px;
@@ -149,8 +149,6 @@ textarea {
     color: $blue;
 }
 
-
-
 // 滚动
 .marquee {
     display: inline-block;
@@ -175,12 +173,11 @@ textarea {
 .float-btn {
     display: block;
     position: absolute;
-    right: 2.2rem;
+    right: 1rem;
     bottom: 6rem;
-    width: 5rem;
-    height: 5rem;
-    border-radius: 50px;
-    background: #ffa53a;
+    width: 6.5rem;
+    height: 6.5rem;
+    border-radius: 5rem;
     z-index: 1;
 }
 
@@ -273,4 +270,56 @@ textarea {
 
 .loading i img {
     width: 100%;
+}
+
+// 列表切换
+.cutBtnBox {
+    display: flex;
+    width: 100%;
+    height: 5.5rem;
+    justify-content: center;
+    background: #fff;
+    border-bottom: .5rem #fff solid;
+}
+
+.cutBtnBox button {
+    position: relative;
+    flex: 1;
+    font-size: 1.5rem;
+    border: none;
+    outline: none;
+    background: none;
+    height: 100%;
+    color: #848689;
+    border-bottom: 1px #eee solid;
+}
+
+.cutBtnBox .cutActive {
+    color: $blue!important;
+}
+
+.cutActive::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -.5rem;
+    width: 100%;
+    height: .5rem;
+    background: #1480e4;
+}
+
+// 无数据
+.no-data {
+    width: 49%;
+    height: auto;
+    margin:20% auto;
+    img {
+        width: 100%;
+    }
+    p{
+        text-align: center;
+        color:#848689;
+        font-size: 1.5rem;
+
+    }
 }

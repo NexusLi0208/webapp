@@ -43,9 +43,53 @@
         <div class='btn-box '>
             <button type="button" class="form-btn cancel-btn">保存</button>
         </div>
+        <div class="help-hint js-help">
+            <i><img src="../../css/img/meet-icon/help_hint.png" alt=""></i> 查看帮助
+        </div>
     </section>
+    <!--帮助弹出-->
+    <div class='modal-main' hidden id="help_modal">
+        <div class="modal-bg"></div>
+        <div class='modal-contant  modal-lg'>
+            <div class="modal-header">帮助提示</div>
+            <div class="modal-body">
+                <table class="help-table ">
+                    <tr>
+                        <td class="title">子会议设置:</td>
+                        <td class="content">用于给主会议添加子会议</td>
+                    </tr>
+                    <tr>
+                        <td class="title">管理员设置:</td>
+                        <td class="content">创建管理员去管理会议</td>
+                    </tr>
+                    <tr>
+                        <td class="title">会议简介:</td>
+                        <td class="content">设置会议的图片、名称、时间、地址、介绍</td>
+                    </tr>
+                    <tr>
+                        <td class="title">会议功能:</td>
+                        <td class="content">选择会议功能的模块</td>
+                    </tr>
+                    <tr>
+                        <td class="title">宣传页设置:</td>
+                        <td class="content">设置会议海报模板库和会议介绍</td>
+                    </tr>
+                    <tr>
+                        <td class="title">报名设置:</td>
+                        <td class="content">设置会议角色、报名字段、时间，进行会议审核</td>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+    </div>
     <script src="../../js/lib/jquery.js"></script>
     <script src="../../js/common.js"></script>
+    <script>
+        $(".js-help").on("click", function () {
+            $("#help_modal").show();
+        })
+    </script>
 </body>
 
 </html>

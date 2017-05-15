@@ -5,19 +5,19 @@ $(function(){
 //IOS激活伪类
 $('body').on("touchstart", function () {})
 // 浮动按钮交互
-$(".float-btn").on("click", function () {
-	var _this = $(this);
-	var $menu = $(this).siblings(".float-menu-box");
-	if ($menu.is(':hidden')) {
-		_this.addClass("rotate45reg");
-		$menu.show();
-		_this.css("background", "#f87c17");
-	} else {
-		_this.removeClass("rotate45reg").addClass("rotate1");
-		$menu.hide();
-		_this.css("background", "#ffa53a");
-	}
-})
+// $(".float-btn").on("click", function () {
+// 	var _this = $(this);
+// 	var $menu = $(this).siblings(".float-menu-box");
+// 	if ($menu.is(':hidden')) {
+// 		_this.addClass("rotate45reg");
+// 		$menu.show();
+// 		_this.css("background", "#f87c17");
+// 	} else {
+// 		_this.removeClass("rotate45reg").addClass("rotate1");
+// 		$menu.hide();
+// 		_this.css("background", "#ffa53a");
+// 	}
+// })
 
 // 回到顶部
 $(".main-cantainer").scroll(function () {

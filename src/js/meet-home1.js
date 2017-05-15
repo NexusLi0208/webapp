@@ -19,13 +19,19 @@ $(function () {
             //如果isAutoLogin设置为false，那么必须手动设置上线，否则无法收消息
             // 手动上线指的是调用conn.setPresence(); 在本例中，conn初始化时已将isAutoLogin设置为true
             // 所以无需调用conn.setPresence();
-
             $.toastr("环信连接成功");
-
         },
         onTextMessage: function (message) {
             // 在此接收和处理消息，根据message.tnype区分消息来源，私聊或群组或聊天
-            groupChat.getGroupMsg(message);
+            console.log(message);
+            if (message.type == "groupchat") {
+                var fromGroup = message.to;
+                groupChat.getGroupMsg(message, fromGroup);
+            } else if (message.type == "chatroom") {
+                var fromGroup = message.to;
+                groupChat.getGroupMsg(message, fromGroup);
+            }
+
 
         }, //收到文本消息
         onEmojiMessage: function (message) {
@@ -93,7 +99,7 @@ $(function () {
             console.log('offline');
         }, //本机网络掉线
         onError: function (message) {
-            console.log('Error');
+            $.toastr("抱歉,网络掉线")
         }, //失败回调
         onBlacklistUpdate: function (list) {
             // 查询黑名单，将好友拉黑，将好友从黑名单移除都会回调这个函数，list则是黑名单现有的所有好友信息
@@ -115,8 +121,12 @@ $(function () {
         userPsd: "li940208",
         // 群组所有用户信息
         userinfo: "",
+        // 用户个人头像
+        userSelfIcon: "../../css/img/user-img.jpeg",
         // 群组ID
-        groupId: "9207342497796",
+        groupId: [9207342497796,15186739134465,15186739134465],
+        // 当前聊天窗口
+        nowGroupId: "9207342497796",
         // 入口函数
         init: function () {
             this.login();
@@ -204,14 +214,19 @@ $(function () {
             });
             $("#sendMsg").on("click", function () {
                 var msgTxt = $("#msgbox").val();
-                _this.sendGroupText(msgTxt, _this.groupId);
+                if (msgTxt !== '') {
+                    _this.sendGroupText(msgTxt, _this.nowGroupId);
+                }
+                return;
+
             })
         },
         // 滚至底部
-        scrollbtm: function () {
-            $('.chartBox').animate({
-                scrollTop: 1000000
-            }, 0);
+        scrollbtm: function (chartBoxId) {
+            // $('.chartBox').animate({
+            //     scrollTop: 1000000
+            // }, 0);
+            $('#' + chartBoxId).scrollTop($('#' + chartBoxId)[0].scrollHeight);
         },
         // 获取当前时间
         getNowTime: function () {
@@ -228,57 +243,78 @@ $(function () {
         },
 
         // 创建发送消息
-        creatMineMsg: function (name, msg, time) {
+        creatMineMsg: function (name, msg, userSelfIcon, time, userId) {
             var msgItem = "<div class='msgItem mineMsg clearfix'>" +
-                "<div class='userIcon floatr js-chatMyInfo'><img src='../../css/img/usericon.jpg' alt=''></div>" +
+                "<div class='userIcon floatr js-chatMyInfo' id=" + userId + "><img src='" + userSelfIcon + "' alt=''></div>" +
                 "<p class='user-msg floatr'>" + msg + "</p>" +
                 "<span class='user-info text-l floatr'>" + name + " <br><span class='time'>" + time + "</span></span>" +
                 "</div>";
             return msgItem;
         },
         // 创建接受消息
-        creatOtherMsg: function (name, msg, time) {
+        creatOtherMsg: function (name, msg, userIcon, time, userId) {
             var msgItem = "<div class='msgItem otherMsg clearfix'>" +
-                "<div class='userIcon floatl js-chatUserInfo'><img src='../../css/img/usericon.jpg' alt=''></div>" +
+                "<div class='userIcon floatl js-chatUserInfo' id=" + userId + "><img src='" + userIcon + "' alt=''></div>" +
                 "<p class='user-msg floatl'>" + msg + "</p>" +
                 "<span class='user-info text-l floatl'>" + name + " <br><span class='time'>" + time + "</span></span>" +
                 "</div>";
             return msgItem;
         },
         //接收群组消息
-        getGroupMsg: function (message) {
-            // 判断用户信息是否存在
-            var userId = message.from;
+        getGroupMsg: function (message, from) {
             // 确认时间
             var msgTime;
-            if (message.delay) {
+            var userIcon;
+            var nickName;
+            // 确认时间
+            if (!!message.delay) {
                 var historyTime = new Date(message.delay);
                 msgTime = historyTime.getHours() + ":" + historyTime.getMinutes();
             } else {
                 msgTime = this.getNowTime();
             }
+            // 判断用户头像
+            if (!!message.ext && !!message.ext.userIcon) {
+                userIcon = message.ext.userIcon;
+            } else {
+                // 默认头像
+                userIcon = ""
+            }
+            // 判断用户昵称
+            if (!!message.ext && !!message.ext.nickName) {
+                nickName = message.ext.nickName;
+            } else {
+                nickName = "未知用户";
+            }
+            //   拼装消息
+            var msgItem = this.creatOtherMsg("艾莉", message.data, userIcon, msgTime, "asdasd");
 
-            var msgItem = this.creatOtherMsg("艾莉", message.data, msgTime);
-            console.log(message);
-            $(".js-chartBox").append(msgItem);
-            this.scrollbtm();
+            $("#" + from).append(msgItem);
+            this.scrollbtm(this.nowGroupId);
         },
         // 发送群消息
-        sendGroupText: function (msgTxt, groupId) {
+        sendGroupText: function (msgTxt, nowGroupId) {
             var _this = this;
             var msgTime = this.getNowTime();
             var id = conn.getUniqueId(); // 生成本地消息id
             var msg = new WebIM.message('txt', id); // 创建文本消息
             var option = {
                 msg: msgTxt, // 消息内容
-                to: groupId, // 接收消息对象(群组id)
+                to: nowGroupId, // 接收消息对象(群组id)
                 roomType: false,
-                chatType: 'chatRoom',
+                chatType: 'groupchat',
+                // 自定义字段
+                ext: {
+                    // 用户头头像
+                    userIcon: _this.userSelfIcon,
+                    // 用户昵称
+                    nickName: "狗蛋"
+                },
                 success: function (data) {
                     $("#msgbox").val("");
-                    var msgItem = _this.creatMineMsg("乔尔", msgTxt, msgTime);
-                    $(".js-chartBox").append(msgItem);
-                    _this.scrollbtm();
+                    var msgItem = _this.creatMineMsg("乔尔", msgTxt, _this.userSelfIcon, msgTime, "");
+                    $("#" + nowGroupId).append(msgItem);
+                    _this.scrollbtm(_this.nowGroupId);
                 },
                 fail: function () {
                     console.log('failed');
@@ -297,6 +333,26 @@ $(function () {
     $(".js-close-funcbox").on("click", function () {
         $(".meet-func-box").hide();
     })
+    $(".js-close-userbox").on("click", function () {
+        $("#groupUser").hide();
+    })
+    // 切换群聊
+    $(".js-cutGroup").on("change", function () {
+        var groupName = $(this).val();
+        var groupNum = groupChat.groupId.length;
+        if (!!groupChat.groupId) {
+            for (var i = 0; i < groupNum; i++) {
+                if (groupName == groupChat.groupId[i]) {
+                    // 记录当前聊天窗口
+                    groupChat.nowGroupId = groupName;
+                    $("#" + groupChat.groupId[i]).show().siblings(".chartBox").hide();
+                }
+            }
+        } else {
+            $.toastr("该会议暂无群信息")
+        }
 
+
+    })
 
 })

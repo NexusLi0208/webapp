@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="renderer" content="webkit">
     <meta http-equiv="Cache-Control" content="no-siteapp" />
-    <title>全部群成员</title>
+    <title>与会人员</title>
     <link rel="stylesheet" href="../../css/lib/animate.min.css">
     <link rel="stylesheet" href="../../css/style.css">
     <!--[if lt IE 9]>
@@ -19,11 +20,35 @@
 
 <body>
     <section class="main-cantainer">
-        <ul class="chat-user-list">
+        <div class="cutBtnBox">
+            <button type="button" class="cutActive" id="js_cutList1">全部参会人员</button>
+            <button type="button" id="js_cutList2">我的好友</button>
+        </div>
+        <ul class="ck js_List1">
             <li class="js-chatUserInfo">
                 <i class="user-img floatl"><img src="../../css/img/user-img.jpeg" alt=""></i>
                 <div class="user-info floatl ">
                     <div class="clearfix"><span class="name floatl">狗蛋</span><span class="sex floatl"><img src="../../css/img/chat/personal_information_female.png" alt=""></span>
+                        <span class="friend floatr">已是好友</span>
+                    </div>
+                    <div class="clearfix"><span class="post floatl">设计师</span><span class="company floatl">魔源科技</span></div>
+                </div>
+            </li>
+            <li class="js-chatUserInfo">
+                <i class="user-img floatl"><img src="../../css/img/user-img.jpeg" alt=""></i>
+                <div class="user-info floatl ">
+                    <div class="clearfix"><span class="name floatl">狗蛋</span><span class="sex floatl"><img src="../../css/img/chat/personal_information_female.png" alt=""></span>
+                        <span class="friend floatr">已是好友</span>
+                    </div>
+                    <div class="clearfix"><span class="post floatl">设计师</span><span class="company floatl">魔源科技</span></div>
+                </div>
+            </li>
+        </ul>
+           <ul class="chat-join-list js_List2" hidden>
+            <li class="js-chatUserInfo">
+                <i class="user-img floatl"><img src="../../css/img/user-img.jpeg" alt=""></i>
+                <div class="user-info floatl ">
+                    <div class="clearfix"><span class="name floatl">a狗蛋</span><span class="sex floatl"><img src="../../css/img/chat/personal_information_female.png" alt=""></span>
                         <span class="friend floatr">已是好友</span>
                     </div>
                     <div class="clearfix"><span class="post floatl">设计师</span><span class="company floatl">魔源科技</span></div>

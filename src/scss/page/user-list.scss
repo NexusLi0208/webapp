@@ -1,68 +1,67 @@
-.user-list {
-    background: #fff;
-    padding: 0 2.2rem 2rem;
-    user-select: none;
-}
-
-.user-list .userinfo-box {
-    width: 70%;
-}
-
-.user-list .user-item {
-    position: relative;
-    width: 100%;
-    height: 7rem;
-    border-bottom: 1px #eee solid;
-    display: inline-block;
-    span {
-        line-height: 4rem;
-        &.state {
-            height: 4rem;
-            padding-right: 1.5rem;
-            font-size: 1.2rem;
-            color: #848689;
+    .user-list {
+        background: #fff;
+        padding: 0 2.2rem 0;
+        user-select: none;
+        .userinfo-box {
+            width: 70%;
+        } // 列表项
+        .user-item {
+            position: relative;
+            width: 100%;
+            height: 7rem;
+            padding: 1.5rem 0;
+            box-sizing: border-box;
+            border-bottom: 1px #eee solid;
+            display: inline-block;
+            &>a {
+                display: block;
+            }
+            span {
+                line-height: 4rem;
+                &.state {
+                    height: 4rem;
+                    padding-right: 1.5rem;
+                    font-size: 1.2rem;
+                    color: #848689;
+                }
+                &.arrowImg {
+                    display: block;
+                    width: 2rem;
+                    right: 0;
+                    img {
+                        width: 100%;
+                    }
+                }
+                img {
+                    width: 2.5rem;
+                }
+            }
+            &:nth-last-of-type(1) {
+                border: none;
+            }
         }
-        &.arrowImg {
-            display: block;
+    }
+
+    .user-item .user-name {
+        font-size: 1.5rem;
+        color: #333;
+        padding-left: .3rem;
+        margin-bottom: 1.1rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .user-item .user-info {
+        font-size: 1.2rem;
+        color: #848689;
+        i {
+            display: inline-block;
             width: 2rem;
-            right: 0;
+            margin: 0 .5rem;
+            height: 2rem;
             img {
                 width: 100%;
             }
         }
-        img {
-            width: 2.5rem;
-        }
     }
-}
-
-.user-item {
-    padding: 1.5rem 0;
-    box-sizing: border-box;
-}
-
-.user-item .user-name {
-    font-size: 1.5rem;
-    color: #333;
-    padding-left: .3rem;
-    margin-bottom: 1.1rem;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-
-.user-item .user-info {
-    font-size: 1.2rem;
-    color: #848689;
-}
-
-.user-item .user-info i {
-    display: inline-block;
-    width: 2rem;
-    margin: 0 .5rem;
-    height: 2rem;
-}
-
-.user-item .user-info i img {
-    width: 100%;
-}
